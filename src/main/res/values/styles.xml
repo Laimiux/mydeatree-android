@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PrivateIdeaTitle">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/private_idea_title_color</item>
+    </style>
+    <style name="PrivateIdeaText">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/private_idea_text_color</item>
+    </style>
+    <style name="PrivateIdeaDate">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/private_idea_date_color</item>
+    </style>
+    <style name="PublicIdeaOwnerText">
+        <item name="android:textColor">@color/owner_text_color</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="PublicIdeaTitle" parent="@style/PrivateIdeaTitle">
+
+    </style>
+    <style name="BoldTitle">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RegularText">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/regular_text_color</item>
+    </style>
+    <style name="PublicIdeaText" parent="@style/PrivateIdeaText">
+
+    </style>
+    <style name="ButtonTextStyle">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

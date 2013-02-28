@@ -30,7 +30,7 @@ object General {
     proguardSettings ++
     AndroidManifestGenerator.settings ++
     AndroidMarketPublish.settings ++ Seq (
-      keyalias in Android := "change-me",
+      keyalias in Android := "mydeatree",
       libraryDependencies += "org.scalatest" %% "scalatest" % "1.8" % "test",
       libraryDependencies ++= Seq("com.actionbarsherlock" % "actionbarsherlock" % "4.2.0" artifacts(Artifact("actionbarsherlock", "apklib", "apklib")) from
         "https://oss.sonatype.org/content/groups/scala-tools/",

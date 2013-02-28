@@ -1,0 +1,4 @@
+[0m[[0mdebug[0m] [0m/Applications/adt-bundle-mac/sdk/platform-tools/adb -d install -r  /Users/Laimiux/mydeatree/target/mydeatree-0.1.apk[0m
+[0m[[0minfo[0m] [0m4199 KB/s (1549824 bytes in 0.360s)[0m
+[0m[[0minfo[0m] [0m	pkg: /data/local/tmp/mydeatree-0.1.apk[0m
+[0m[[0minfo[0m] [0mSuccess[0m

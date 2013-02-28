@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <style name="Theme.mydeatree" parent="@style/Theme.Sherlock.Light.DarkActionBar">
+        <item name="actionBarItemBackground">@drawable/selectable_background_mydeatree</item>
+        <item name="popupMenuStyle">@style/mydeatree_PopupMenu</item>
+        <item name="dropDownListViewStyle">@style/mydeatree_DropDownListView</item>
+        <item name="actionBarTabStyle">@style/mydeatree_ActionBarTabStyle</item>
+        <item name="actionDropDownStyle">@style/mydeatree_DropDownNav</item>
+        <item name="actionBarStyle">@style/mydeatree_solid_ActionBar</item>
+
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_mydeatree</item>
+        <item name="android:popupMenuStyle">@style/mydeatree_PopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/mydeatree_DropDownListView</item>
+        <item name="android:actionBarTabStyle">@style/mydeatree_ActionBarTabStyle</item>
+        <item name="android:actionDropDownStyle">@style/mydeatree_DropDownNav</item>
+        <item name="android:actionBarStyle">@style/mydeatree_solid_ActionBar</item>
+        <item name="android:panelBackground">@drawable/menu_hardkey_panel_mydeatree</item>
+        
+                <!-- Light.DarkActionBar specific -->
+        <item name="actionBarWidgetTheme">@style/Theme.mydeatree.widget</item>
+        <item name="android:actionBarWidgetTheme">@style/Theme.mydeatree.widget</item>
+
+        <item name="android:editTextStyle">@style/EditTextMydeaTree</item>
+
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMydeaTree</item>
+
+        <item name="android:checkboxStyle">@style/CheckBoxMydeaTree</item>
+
+        <item name="android:radioButtonStyle">@style/RadioButtonMydeaTree</item>
+
+        <item name="android:buttonStyle">@style/ButtonMydeaTree</item>
+
+        <item name="android:imageButtonStyle">@style/ImageButtonMydeaTree</item>
+
+        <item name="android:spinnerStyle">@style/SpinnerMydeaTree</item>
+
+        <item name="android:dropDownSpinnerStyle">@style/SpinnerMydeaTree.DropDown</item>
+
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemMydeaTree</item>
+
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarMydeaTree</item>
+
+        <item name="android:seekBarStyle">@style/SeekBarMydeaTree</item>
+
+        <item name="android:ratingBarStyle">@style/RatingBarMydeaTree</item>
+
+        <item name="android:ratingBarStyleIndicator">@style/RatingBarBigMydeaTree</item>
+
+        <item name="android:ratingBarStyleSmall">@style/RatingBarSmallMydeaTree</item>
+
+        <item name="android:buttonStyleToggle">@style/ToggleMydeaTree</item>
+
+        <item name="android:listViewStyle">@style/ListViewMydeaTree</item>
+
+        <item name="android:listViewWhiteStyle">@style/ListViewMydeaTree.White</item>
+
+        <item name="android:spinnerItemStyle">@style/SpinnerItemMydeaTree</item>
+
+    </style>
+
+    <style name="mydeatree_solid_ActionBar" parent="@style/Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+        <item name="background">@drawable/ab_solid_mydeatree</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_mydeatree</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_solid_mydeatree</item>
+        <item name="progressBarStyle">@style/mydeatree_ProgressBar</item>
+
+        <item name="android:background">@drawable/ab_solid_mydeatree</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_mydeatree</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_mydeatree</item>
+        <item name="android:progressBarStyle">@style/mydeatree_ProgressBar</item>
+    </style>
+
+    <style name="mydeatree_transparent_ActionBar" parent="@style/Widget.Sherlock.ActionBar">
+        <item name="background">@drawable/ab_transparent_mydeatree</item>
+        <item name="progressBarStyle">@style/mydeatree_ProgressBar</item>
+        
+        <item name="android:background">@drawable/ab_transparent_mydeatree</item>
+        <item name="android:progressBarStyle">@style/mydeatree_ProgressBar</item>
+    </style>
+	
+    <style name="mydeatree_PopupMenu" parent="@style/Widget.Sherlock.ListPopupWindow">	
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_mydeatree</item>	
+    </style>
+	
+    <style name="mydeatree_DropDownListView" parent="@style/Widget.Sherlock.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_mydeatree</item>
+    </style>
+
+    <style name="mydeatree_ActionBarTabStyle" parent="@style/Widget.Sherlock.ActionBar.TabView">
+        <item name="background">@drawable/tab_indicator_ab_mydeatree</item>
+
+        <item name="android:background">@drawable/tab_indicator_ab_mydeatree</item>
+    </style>
+	
+    <style name="mydeatree_DropDownNav" parent="@style/Widget.Sherlock.Spinner.DropDown.ActionBar">
+        <item name="background">@drawable/spinner_background_ab_mydeatree</item>
+
+        <item name="android:background">@drawable/spinner_background_ab_mydeatree</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_mydeatree</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_mydeatree</item>
+    </style>
+    
+    <style name="mydeatree_ProgressBar" parent="@style/Widget.Sherlock.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_mydeatree</item>
+    </style>
+    
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.mydeatree.widget" parent="@style/Theme.Sherlock">
+        <item name="popupMenuStyle">@style/mydeatree_PopupMenu</item>
+        <item name="dropDownListViewStyle">@style/mydeatree_DropDownListView</item>
+        
+        <item name="android:popupMenuStyle">@style/mydeatree_PopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/mydeatree_DropDownListView</item>
+    </style>
+
+</resources>

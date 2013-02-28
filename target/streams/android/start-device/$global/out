@@ -1,0 +1,2 @@
+[0m[[0mdebug[0m] [0m/Applications/adt-bundle-mac/sdk/platform-tools/adb -d shell am start -a android.intent.action.MAIN -n com.limeblast.mydeatree/.ForwardingActivity[0m
+[0m[[0minfo[0m] [0mStarting: Intent { act=android.intent.action.MAIN cmp=com.limeblast.mydeatree/.ForwardingActivity }[0m

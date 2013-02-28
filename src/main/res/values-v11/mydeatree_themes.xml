@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="MydeaTree" parent="android:Theme.Holo.Light">
+
+    <item name="android:editTextBackground">@drawable/edit_text_holo_light</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMydeaTree</item>
+
+    <item name="android:listChoiceIndicatorMultiple">@drawable/btn_check_holo_light</item>
+
+    <item name="android:listChoiceIndicatorSingle">@drawable/btn_radio_holo_light</item>
+
+    <item name="android:buttonStyle">@style/ButtonMydeaTree</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonMydeaTree</item>
+
+    <item name="android:dropDownSpinnerStyle">@style/SpinnerMydeaTree</item>
+
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarMydeaTree</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarMydeaTree</item>
+
+    <item name="android:ratingBarStyle">@style/RatingBarMydeaTree</item>
+
+    <item name="android:ratingBarStyleIndicator">@style/RatingBarBigMydeaTree</item>
+
+    <item name="android:ratingBarStyleSmall">@style/RatingBarSmallMydeaTree</item>
+
+    <item name="android:buttonStyleToggle">@style/ToggleMydeaTree</item>
+
+    <item name="android:listChoiceBackgroundIndicator">@drawable/list_selector_holo_light</item>
+
+    <item name="android:activatedBackgroundIndicator">@drawable/activated_background_holo_light</item>
+
+    <item name="android:fastScrollThumbDrawable">@drawable/fastscroll_thumb_holo</item>
+
+  </style>
+
+</resources>

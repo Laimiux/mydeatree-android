@@ -1,3 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MydeaTree</string>
+    <string name="app_name">mydeaTREE</string>
+    <string name="menu_preferences">Preferences</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="login">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="sort_by">Sort Ideas By</string>
+    <string name="title_hint">Title</string>
+    <string name="text_hint">Text</string>
+    <string name="edit_idea_button">Edit</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="make_idea_public">Make idea public?</string>
+    <string name="username_hint">Username</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="repeat_password_hint">Repeat the password</string>
+    <string name="new_idea_button">New Idea</string>
+    <string name="create_new_idea_button">Create</string>
+    <string name="sign_up_button">Create Account</string>
+    <string name="login_button">Sign In</string>
+    <string name="sort_button">Sort</string>
+    <string name="user_needed">To have private ideas you need to create an account and login with it.</string>
+    <string name="user_needed_title">Please Sign In</string>
+    <string name="share_button">Share</string>
+    <string name="favorite">Favorite</string>
+    <string name="unfavorite">Unfavorite</string>
+    <string name="forgot_password_link">https://mydeatree.appspot.com/accounts/password/reset/</string>
+    <string name="forgot_password"><a href="https://mydeatree.appspot.com/accounts/password/reset/">Forgot password?</a></string>
+    <string name="no_connection">No internet connection</string>
+    <string name="registration_link">https://mydeatree.appspot.com/accounts/register/</string>
+    <string name="link_to_register"><a href="">Sign Up for MydeaTree</a></string>
 </resources>

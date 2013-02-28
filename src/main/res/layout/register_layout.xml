@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/app_main_bg">
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username_edit" android:layout_gravity="center" android:hint="@string/username_hint"/>
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_edit" android:layout_gravity="center" android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"/>
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password1_edit" android:layout_gravity="center" android:hint="@string/password_hint"
+            android:password="true" android:inputType="textPassword"/>
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password2_edit" android:layout_gravity="center"
+            android:hint="@string/repeat_password_hint" android:password="true" android:inputType="textPassword"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up_button"
+                android:id="@+id/sign_up_button" android:layout_gravity="center" android:layout_weight="1"/>
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel_button"
+                android:id="@+id/cancel_button" android:layout_weight="2"/>
+    </LinearLayout>
+</LinearLayout>

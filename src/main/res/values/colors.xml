@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="owner_text_color">#C1C1C1</color>
+    <color name="idea_frame_color">#2F2C2C</color>
+    <color name="private_idea_date_color">#2F2C2C</color>
+    <color name="private_idea_text_color">#576734</color>
+    <color name="private_idea_title_color">#FF6E6D</color>
+    <color name="regular_text_color">#2F2C2C</color>
+    <color name="darkest_background_color">#444D31</color>
+    <color name="dark_background_color">#576734</color>
+    <color name="light_background_color">#A4B382</color>
+    <color name="red_background_color">#FF6E6D</color>
+    <color name="watermelon_color">#FF6E6D</color>
+    <color name="bay_leaf_color">#738A5B</color>
+    <color name="aurora_color">#DEFFBA</color>
+    <color name="silhouette_color">#2F2C2C</color>
+    <color name="silhouette2_color">#232222</color>
+    <color name="silhouette3_color">#485157</color>
+    <color name="grey_color">#333333</color>
+</resources>

@@ -1,0 +1,37 @@
+package com.limeblast.scala.rest
+
+import android.content.Context
+import android.net.Uri
+import android.util.Log
+import org.apache.http.HttpResponse
+import org.apache.http.client.HttpClient
+import org.apache.http.client.methods.HttpUriRequest
+import org.apache.http.impl.client.DefaultHttpClient
+
+import java.io.IOException
+
+/**
+ * Provides a runnable that uses an HttpClient to asynchronously load a given
+ * URI.  After the network content is loaded, the task delegates handling of the
+ * request to a ResponseHandler specialized to handle the given content.
+ */
+class UriRequestTask with Runnable(val requestTag: String,
+                          val siteProvider: RESTfulContentProvider,
+                          val request: HttpUriRequest,
+                          val handler: ResponseHandler, val appContext: Context) { 
+  private var mRawResponse = -1
+
+  def setRawResponse(rawResponse: Int) = { 
+    mRawResponse = rawResponse
+  }
+
+  def run() = { 
+    var response: HttpResponse
+    
+    try { 
+      response = execute(request)
+      
+    }
+  }
+
+}

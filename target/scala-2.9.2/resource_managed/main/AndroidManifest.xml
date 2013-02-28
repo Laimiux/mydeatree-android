@@ -1,14 +1,56 @@
 <manifest android:versionName="0.1" package="com.limeblast.mydeatree" android:versionCode="0" xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <application android:debuggable="true" android:label="@string/app_name" android:icon="@drawable/android:star_big_on">
+    <application android:theme="@style/Theme.mydeatree" android:debuggable="true" android:label="@string/app_name" android:icon="@drawable/icon">
 
-        <activity android:name=".MainActivity" android:label="@string/app_name">
-            <intent-filter>
+        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name=".ForwardingActivity" android:label="">
+            <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.MAIN"></action>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
+
+        <activity android:configChanges="orientation" android:uiOptions="splitActionBarWhenNarrow" android:name=".MainActivity" android:label="">
+        </activity>
+
+        <activity android:windowSoftInputMode="adjustResize" android:name=".LoginActivity" android:label="Login"></activity>
+        <activity android:name=".PreferencesActivity" android:label="MydeaTree Preferences"></activity>
+
+        <activity android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="adjustResize" android:name=".NewIdeaActivity" android:label="New Idea"></activity>
+        <activity android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="adjustResize" android:name=".IdeaEditActivity" android:label="Editing Idea"></activity>
+
+
+        <activity android:launchMode="singleTop" android:label="Idea Search" android:name=".SearchResultsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+            <meta-data android:resource="@xml/searchable" android:name="android.app.searchable"></meta-data>
+        </activity>
+
+
+        <activity android:label="Sample Activity" android:name=".activities.SampleActivity"></activity>
+
+        <provider android:exported="false" android:name=".IdeaContentProvider" android:authorities="com.limeblast.mydeatree">
+        </provider>
+        <receiver android:enabled="true" android:name=".PublicSyncAlarmReceiver">
+            <intent-filter>
+                <action android:name="com.limeblast.mydeatree.ACTION_REFRESH_PUBLIC_IDEAS_ALARM"></action>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".PublicIdeaSyncService" android:enabled="true"></service>
+        <service android:name=".PrivateIdeaSyncService" android:enabled="true"></service>
+        <service android:name=".IdeaUpdateService" android:enabled="true"></service>
+        <service android:name=".IdeaCreateService" android:enabled="true"></service>
+        <service android:name=".IdeaDeleteService" android:enabled="true"></service>
+
+        <meta-data android:value=".SearchResultsActivity" android:name="android.app.default_searchable"></meta-data>
     </application>
 
-    <uses-sdk android:minSdkVersion="10"></uses-sdk>
+
+    <uses-sdk android:targetSdkVersion="17" android:minSdkVersion="10"></uses-sdk>
+
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
 </manifest>

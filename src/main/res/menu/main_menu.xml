@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_item_preferences" android:title="@string/menu_preferences"/>
+    <group android:id="@+id/menu_loggedin">
+        <item android:id="@+id/menu_item_logout" android:title="@string/sign_out"/>
+    </group>
+    <group android:id="@+id/menu_loggedout">
+        <item android:id="@+id/menu_item_login" android:title="@string/login" />
+        <item android:id="@+id/menu_item_register" android:title="@string/sign_up" />
+    </group>
+    <group android:id="@+id/menu_public_actions">
+        <item android:id="@+id/menu_item_new_public_idea"
+              android:icon="@drawable/ic_action_new"
+              android:showAsAction="ifRoom"
+              android:title="New Public Idea"/>
+        <item android:id="@+id/menu_item_sort_public_ideas"
+              android:icon="@drawable/ic_action_sort"
+              android:showAsAction="ifRoom"
+              android:title="Sort"/>
+        <item android:id="@+id/menu_item_sync_public_ideas"
+              android:icon="@drawable/ic_action_sync"
+              android:showAsAction="ifRoom"
+              android:title="Sync"/>
+    </group>
+    <group android:id="@+id/menu_private_actions">
+        <item android:id="@+id/menu_item_new_private_idea"
+              android:icon="@drawable/ic_action_new"
+              android:showAsAction="ifRoom"
+              android:title="New Personal Idea"/>
+        <item android:id="@+id/menu_item_sort_private_ideas"
+              android:icon="@drawable/ic_action_sort"
+              android:showAsAction="ifRoom"
+              android:title="Sort"/>
+        <item android:id="@+id/menu_item_sync_private_ideas"
+              android:icon="@drawable/ic_action_sync"
+              android:showAsAction="ifRoom"
+              android:title="Sync"/>
+    </group>
+</menu>

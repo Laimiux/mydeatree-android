@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="8dp"
+              android:paddingRight="8dp"
+              android:paddingTop="5dp" android:paddingBottom="3dp">
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/idea_selector">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="0dp">
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/title_selector">
+                <TextView
+                        style="@style/PublicIdeaTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/idea_title"
+                        android:gravity="left" android:text="Unknown Title" android:layout_gravity="left"/>
+                <TextView
+                        style="@style/PublicIdeaOwnerText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/idea_owner"
+                        android:gravity="right" android:text="Anonymous Owner" android:layout_gravity="right"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        style="@style/PublicIdeaText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/idea_text" android:layout_gravity="center|left"/>
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Date Unknown"
+                        android:id="@+id/public_idea_date" android:gravity="right" android:password="false"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/button_holder"
+                android:orientation="horizontal">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/public_idea_share_layout" android:layout_weight="1"
+                    android:layout_gravity="center_horizontal" android:gravity="center_horizontal">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/share_icon" android:background="@drawable/ic_share"
+                        android:layout_gravity="center_horizontal"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/share_button"
+                        android:id="@+id/share_txt"
+                        android:gravity="bottom" android:layout_gravity="bottom"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" android:id="@+id/public_idea_favorite_layout"
+                    android:focusable="true" android:layout_weight="1" android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/favorite_icon" android:longClickable="false"
+                        android:layout_gravity="center_horizontal" android:background="@drawable/ic_star_empty"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/favorite"
+                        android:id="@+id/favorite_txt"
+                        android:gravity="bottom" android:layout_gravity="bottom"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

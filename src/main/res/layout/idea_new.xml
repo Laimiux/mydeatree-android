@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idea_title_edit" android:layout_gravity="center" android:hint="@string/title_hint"
+            android:inputType="textCapWords"/>
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idea_text_edit" android:layout_gravity="center" android:hint="@string/text_hint"
+            android:inputType="textMultiLine|textCapSentences" android:editable="true" android:enabled="true"/>
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/make_idea_public"
+            android:id="@+id/idea_public_check_box" android:layout_gravity="center"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_new_idea_button"
+                android:id="@+id/idea_submit_button" android:layout_gravity="center" android:layout_weight="1"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel_button"
+                android:id="@+id/idea_cancel_button" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
