@@ -7,21 +7,56 @@
 		revision="0.1"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
-		date="20130305002904"/>
+		date="20130305224314"/>
 	<dependencies>
+		<module organisation="junit" name="junit">
+			<revision name="3.8.2" status="release" pubdate="20070514143453" resolver="Maven Search" artresolver="Maven Search" homepage="http://junit.org" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="5">
+				<license name="Common Public License Version 1.0" url="http://www.opensource.org/licenses/cpl1.0.txt"/>
+				<metadata-artifact status="successful" details="" size="747" time="197" location="/Users/Laimiux/.ivy2/cache/junit/junit/ivy-3.8.2.xml" searched="true" original-local-location="/Users/Laimiux/.ivy2/cache/junit/junit/ivy-3.8.2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/junit/junit/3.8.2/junit-3.8.2.pom"/>
+				<caller organisation="mydeatreetests" name="mydeatreetests_2.9.2" conf="compile" rev="3.8.2" rev-constraint-default="3.8.2" rev-constraint-dynamic="3.8.2" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="junit" type="jar" ext="jar" status="successful" details="" size="120640" time="5760" location="/Users/Laimiux/.ivy2/cache/junit/junit/jars/junit-3.8.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/junit/junit/3.8.2/junit-3.8.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.jayway.android.robotium" name="robotium-solo">
+			<revision name="2.4" status="release" pubdate="20110713095246" resolver="Maven Search" artresolver="Maven Search" homepage="" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="4">
+				<metadata-artifact status="successful" details="" size="829" time="1998" location="/Users/Laimiux/.ivy2/cache/com.jayway.android.robotium/robotium-solo/ivy-2.4.xml" searched="true" original-local-location="/Users/Laimiux/.ivy2/cache/com.jayway.android.robotium/robotium-solo/ivy-2.4.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/jayway/android/robotium/robotium-solo/2.4/robotium-solo-2.4.pom"/>
+				<caller organisation="mydeatreetests" name="mydeatreetests_2.9.2" conf="compile" rev="2.4" rev-constraint-default="2.4" rev-constraint-dynamic="2.4" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="robotium-solo" type="jar" ext="jar" status="successful" details="" size="49197" time="961" location="/Users/Laimiux/.ivy2/cache/com.jayway.android.robotium/robotium-solo/jars/robotium-solo-2.4.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/jayway/android/robotium/robotium-solo/2.4/robotium-solo-2.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="mydeatree" name="mydeatree_2.9.2">
-			<revision name="0.1" status="integration" pubdate="20130305002904" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="0">
+			<revision name="0.1" status="integration" pubdate="20130305224314" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="0">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="mydeatreetests" name="mydeatreetests_2.9.2" conf="compile" rev="0.1" rev-constraint-default="0.1" rev-constraint-dynamic="0.1" callerrev="0.1"/>
 				<artifacts>
 				</artifacts>
 			</revision>
 		</module>
+		<module organisation="com.actionbarsherlock" name="actionbarsherlock">
+			<revision name="4.2.0" status="release" pubdate="20121007174011" resolver="Maven Search" artresolver="Maven Search" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="3">
+				<metadata-artifact status="no" details="" size="5482" time="0" location="/Users/Laimiux/.ivy2/cache/com.actionbarsherlock/actionbarsherlock/ivy-4.2.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/actionbarsherlock/actionbarsherlock/4.2.0/actionbarsherlock-4.2.0.pom"/>
+				<caller organisation="mydeatree" name="mydeatree_2.9.2" conf="compile" rev="4.2.0" rev-constraint-default="4.2.0" rev-constraint-dynamic="4.2.0" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="actionbarsherlock" type="apklib" ext="apklib" status="no" details="" size="557420" time="0" location="/Users/Laimiux/.ivy2/cache/com.actionbarsherlock/actionbarsherlock/apklibs/actionbarsherlock-4.2.0.apklib">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/actionbarsherlock/actionbarsherlock/4.2.0/actionbarsherlock-4.2.0.apklib"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="com.google.android" name="support-v4">
-			<revision name="r7" status="release" pubdate="20120413093203" resolver="public" artresolver="public" homepage="http://developer.android.com/sdk/compatibility-library.html" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="3">
+			<revision name="r7" status="release" pubdate="20120413093203" resolver="Maven Search" artresolver="Maven Search" homepage="http://developer.android.com/sdk/compatibility-library.html" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="2">
 				<license name="Apache License Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3481" time="0" location="/Users/Laimiux/.ivy2/cache/com.google.android/support-v4/ivy-r7.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/google/android/support-v4/r7/support-v4-r7.pom"/>
 				<caller organisation="mydeatree" name="mydeatree_2.9.2" conf="compile" rev="r7" rev-constraint-default="r7" rev-constraint-dynamic="r7" callerrev="0.1"/>
+				<caller organisation="com.actionbarsherlock" name="actionbarsherlock" conf="default, compile, runtime, master" rev="r7" rev-constraint-default="r7" rev-constraint-dynamic="r7" callerrev="4.2.0"/>
 				<artifacts>
 					<artifact name="support-v4" type="jar" ext="jar" status="no" details="" size="270463" time="0" location="/Users/Laimiux/.ivy2/cache/com.google.android/support-v4/jars/support-v4-r7.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/google/android/support-v4/r7/support-v4-r7.jar"/>
@@ -29,24 +64,10 @@
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="com.actionbarsherlock" name="actionbarsherlock">
-			<revision name="4.2.0" status="release" pubdate="20130228101054" resolver="local" artresolver="local" downloaded="false" searched="false" default="true" conf="default(compile), default" position="2">
-				<metadata-artifact status="no" details="" size="570" time="0" location="/Users/Laimiux/.ivy2/cache/com.actionbarsherlock/actionbarsherlock/ivy-4.2.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/actionbarsherlock/actionbarsherlock/4.2.0/actionbarsherlock-4.2.0.pom"/>
-				<caller organisation="mydeatree" name="mydeatree_2.9.2" conf="compile" rev="4.2.0" rev-constraint-default="4.2.0" rev-constraint-dynamic="4.2.0" callerrev="0.1"/>
-				<artifacts>
-					<artifact name="actionbarsherlock" type="org/maven2/" ext="org/maven2/" status="no" details="" size="967" time="0" location="/Users/Laimiux/.ivy2/cache/com.actionbarsherlock/actionbarsherlock/org/maven2/s/actionbarsherlock-4.2.0.org/maven2">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/"/>
-					</artifact>
-					<artifact name="actionbarsherlock" type="apklib" ext="apklib" status="no" details="" size="557420" time="0" location="/Users/Laimiux/.ivy2/cache/com.actionbarsherlock/actionbarsherlock/apklibs/actionbarsherlock-4.2.0.apklib">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/actionbarsherlock/actionbarsherlock/4.2.0/actionbarsherlock-4.2.0.apklib"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.9.2" status="release" pubdate="20120413052921" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="1">
+			<revision name="2.9.2" status="release" pubdate="20120413052921" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="1">
 				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
-				<metadata-artifact status="no" details="" size="2586" time="0" location="/Users/Laimiux/.ivy2/cache/org.scala-lang/scala-library/ivy-2.9.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.9.2/scala-library-2.9.2.pom"/>
+				<metadata-artifact status="no" details="" size="2391" time="0" location="/Users/Laimiux/.ivy2/cache/org.scala-lang/scala-library/ivy-2.9.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.9.2/scala-library-2.9.2.pom"/>
 				<caller organisation="mydeatree" name="mydeatree_2.9.2" conf="compile" rev="2.9.2" rev-constraint-default="2.9.2" rev-constraint-dynamic="2.9.2" callerrev="0.1"/>
 				<caller organisation="mydeatreetests" name="mydeatreetests_2.9.2" conf="compile" rev="2.9.2" rev-constraint-default="2.9.2" rev-constraint-dynamic="2.9.2" callerrev="0.1"/>
 				<artifacts>

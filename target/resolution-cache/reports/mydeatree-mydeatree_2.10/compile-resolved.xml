@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="mydeatree"
+		module="mydeatree_2.10"
+		revision="0.1"
+		conf="compile"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
+		date="20130306020622"/>
+	<dependencies>
+		<module organisation="com.actionbarsherlock" name="actionbarsherlock">
+			<revision name="4.2.0" status="release" pubdate="20121007174011" resolver="Maven Search" artresolver="Maven Search" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="5">
+				<metadata-artifact status="no" details="" size="5482" time="0" location="/Users/Laimiux/.ivy2/cache/com.actionbarsherlock/actionbarsherlock/ivy-4.2.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/actionbarsherlock/actionbarsherlock/4.2.0/actionbarsherlock-4.2.0.pom"/>
+				<caller organisation="mydeatree" name="mydeatree_2.10" conf="compile" rev="4.2.0" rev-constraint-default="4.2.0" rev-constraint-dynamic="4.2.0" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="actionbarsherlock" type="apklib" ext="apklib" status="no" details="" size="557420" time="0" location="/Users/Laimiux/.ivy2/cache/com.actionbarsherlock/actionbarsherlock/apklibs/actionbarsherlock-4.2.0.apklib">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/actionbarsherlock/actionbarsherlock/4.2.0/actionbarsherlock-4.2.0.apklib"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalaz" name="scalaz_2.10">
+			<revision name="6.0.4" status="release" pubdate="20130102010508" resolver="Maven Search" artresolver="Maven Search" homepage="http://scalaz.org" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="4">
+				<license name="BSD-style" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="successful" details="" size="2665" time="684" location="/Users/Laimiux/.ivy2/cache/org.scalaz/scalaz_2.10/ivy-6.0.4.xml" searched="true" original-local-location="/Users/Laimiux/.ivy2/cache/org.scalaz/scalaz_2.10/ivy-6.0.4.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scalaz/scalaz_2.10/6.0.4/scalaz_2.10-6.0.4.pom"/>
+				<caller organisation="mydeatree" name="mydeatree_2.10" conf="compile" rev="6.0.4" rev-constraint-default="6.0.4" rev-constraint-dynamic="6.0.4" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="scalaz_2.10" type="jar" ext="jar" status="successful" details="" size="317" time="1130" location="/Users/Laimiux/.ivy2/cache/org.scalaz/scalaz_2.10/jars/scalaz_2.10-6.0.4.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scalaz/scalaz_2.10/6.0.4/scalaz_2.10-6.0.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.j256.ormlite" name="ormlite-android">
+			<revision name="4.43" status="release" pubdate="20130205204821" resolver="Maven Search" artresolver="Maven Search" homepage="http://ormlite.sourceforge.net/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="2">
+				<license name="ISC License" url="http://ormlite.com/docs/license"/>
+				<metadata-artifact status="no" details="" size="4999" time="0" location="/Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-android/ivy-4.43.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/j256/ormlite/ormlite-android/4.43/ormlite-android-4.43.pom"/>
+				<caller organisation="mydeatree" name="mydeatree_2.10" conf="compile" rev="4.43" rev-constraint-default="4.43" rev-constraint-dynamic="4.43" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="ormlite-android" type="jar" ext="jar" status="no" details="" size="51442" time="0" location="/Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-android/jars/ormlite-android-4.43.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/j256/ormlite/ormlite-android/4.43/ormlite-android-4.43.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.j256.ormlite" name="ormlite-core">
+			<revision name="4.43" status="release" pubdate="20130205204429" resolver="Maven Search" artresolver="Maven Search" homepage="http://ormlite.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="3">
+				<license name="ISC License" url="http://ormlite.com/docs/license"/>
+				<metadata-artifact status="no" details="" size="4283" time="0" location="/Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-core/ivy-4.43.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/j256/ormlite/ormlite-core/4.43/ormlite-core-4.43.pom"/>
+				<caller organisation="com.j256.ormlite" name="ormlite-android" conf="default, compile, runtime, master" rev="4.43" rev-constraint-default="4.43" rev-constraint-dynamic="4.43" callerrev="4.43"/>
+				<artifacts>
+					<artifact name="ormlite-core" type="jar" ext="jar" status="no" details="" size="285768" time="0" location="/Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-core/jars/ormlite-core-4.43.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/j256/ormlite/ormlite-core/4.43/ormlite-core-4.43.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.android" name="support-v4">
+			<revision name="r7" status="release" pubdate="20120413093203" resolver="Maven Search" artresolver="Maven Search" homepage="http://developer.android.com/sdk/compatibility-library.html" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="1">
+				<license name="Apache License Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3481" time="0" location="/Users/Laimiux/.ivy2/cache/com.google.android/support-v4/ivy-r7.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/google/android/support-v4/r7/support-v4-r7.pom"/>
+				<caller organisation="mydeatree" name="mydeatree_2.10" conf="compile" rev="r7" rev-constraint-default="r7" rev-constraint-dynamic="r7" callerrev="0.1"/>
+				<caller organisation="com.actionbarsherlock" name="actionbarsherlock" conf="default, compile, runtime, master" rev="r7" rev-constraint-default="r7" rev-constraint-dynamic="r7" callerrev="4.2.0"/>
+				<artifacts>
+					<artifact name="support-v4" type="jar" ext="jar" status="no" details="" size="270463" time="0" location="/Users/Laimiux/.ivy2/cache/com.google.android/support-v4/jars/support-v4-r7.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/google/android/support-v4/r7/support-v4-r7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10.0" status="release" pubdate="20121219232916" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="0">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2392" time="0" location="/Users/Laimiux/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.0/scala-library-2.10.0.pom"/>
+				<caller organisation="mydeatree" name="mydeatree_2.10" conf="compile" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.1"/>
+				<caller organisation="org.scalaz" name="scalaz_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="6.0.4"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

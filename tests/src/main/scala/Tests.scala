@@ -12,7 +12,7 @@ class AndroidTests extends AndroidTestCase {
   }
 }
 
-class ActivityTests extends ActivityInstrumentationTestCase2(classOf[MainActivity]) {
+class ActivityTests extends ActivityInstrumentationTestCase2(classOf[ForwardingActivity]) {
    def testHelloWorldIsShown() {
      val activity = getActivity
      assertEquals(activity.getSupportActionBar.getNavigationMode, ActionBar.NAVIGATION_MODE_TABS)

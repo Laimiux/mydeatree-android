@@ -80,3 +80,29 @@ compile
 run last actionbarsherlock/android:manifest-path 
 compile
 android:start-device
+compile
+test
+run tests
+run tests Tests.scala
+run tests ActivityTests
+run tests/AndroidTests
+compile
+alias
+ alias instrument = ;android:package-debug;android:install-device;tests/android:package-debug;tests/android:install-device;tests/android:test-device;
+instrument
+ alias instrument = ;android:package-debug;android:install-device;tests/android:package-debug;tests/android:install-device;tests/android:test-device;
+instrument
+ alias instrument = ;android:package-debug;android:install-device;tests/android:package-debug;tests/android:install-device;tests/android:test-device;
+instrument
+instrument()
+test
+compile
+test
+compile
+gen-idea no-classifiers
+compile
+android:start-device
+compile
+android:start-device
+console
+android:start-device

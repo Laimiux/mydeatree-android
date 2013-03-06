@@ -16,33 +16,23 @@ import android.view.ViewGroup.LayoutParams
 import scala.concurrent.ops.spawn
 import android.text.TextUtils
 
-import com.limeblast.androidhelpers.AndroidImplicits
+import com.limeblast.androidhelpers.{ScalaHandler, AndroidImplicits}
 import AndroidImplicits.toListener
 
 
 class NewIdeaActivity extends SherlockActivity with TypedActivity {
-  private var titleField: EditText = _
-  private var textField: EditText = _
-  private var publicCheckBox: CheckBox = _
-  private var submitButton: Button = _
 
-  private var handler: Handler = _
+  lazy val titleField = findView(TR.idea_title_edit)
+  lazy val textField = findView(TR.idea_text_edit)
+  lazy val publicCheckBox = findView(TR.idea_public_check_box)
 
-
-  private var parent_uri: String = null;
+  private var parent_uri: String = null
 
   override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.idea_new)
 
     getWindow().setLayout(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT)
-
-    handler = new Handler()
-
-    titleField = findView(TR.idea_title_edit)
-    textField = findView(TR.idea_text_edit)
-    publicCheckBox = findView(TR.idea_public_check_box)
-
 
     // Set the check box
     val isPublic = getIntent.getBooleanExtra("public", false)

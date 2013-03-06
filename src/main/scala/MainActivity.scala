@@ -13,13 +13,14 @@ import com.actionbarsherlock.app.ActionBar.Tab
 
 import scala.collection.JavaConversions._
 import android.net.Uri
+import com.limeblast.androidhelpers.ScalaHandler
 
 /**
  * Start activity that starts the app flow.
  */
 class MainActivity extends SherlockFragmentActivity with TypedActivity {
 
-  val handler: Handler = new Handler()
+  val handler: Handler = new ScalaHandler()
 
   // For tab names
   private val TAB_PRIVATE = "Personal"
@@ -57,12 +58,6 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity {
     actionBar.setDisplayShowTitleEnabled(false)
     actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS)
 
-    /*publicIdeaTab =
-    publicIdeaTab.setText(TAB_PUBLIC)
-
-    privateIdeaTab = actionBar.newTab()
-    privateIdeaTab.setText(TAB_PRIVATE)
-    */
 
     // Set the proper tab showing
     if (savedInstanceState != null) {
@@ -157,40 +152,32 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity {
   //-------------------------------------------------------\\
   //------------ VARIOUS ACTIVITY HANDLERS ----------------\\
   //-------------------------------------------------------\\
-  override def onOptionsItemSelected(item: MenuItem): Boolean = {
+  override def onOptionsItemSelected(item: MenuItem): Boolean =
     item.getItemId match {
-      // Logging out
       case R.id.menu_item_logout => {
         logout()
         true
       }
-      // Preferences
       case R.id.menu_item_preferences => {
         val intent = new Intent(MainActivity.this, classOf[PreferencesActivity])
         startActivityForResult(intent, SHOW_PREFERENCES)
         true
       }
-
       case _ => super.onOptionsItemSelected(item)
     }
-  }
 
-  override def onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
-    super.onActivityResult(requestCode, resultCode, data)
-
+  override def onActivityResult(requestCode: Int, resultCode: Int, data: Intent) =
     requestCode match {
-      case SHOW_PREFERENCES => {
-        updateFromPreferences()
-      }
-      case _ => if (AppSettings.DEBUG) Log.d(APP_TAG, "Unhandled activity result. This should never happen.")
+      case SHOW_PREFERENCES => updateFromPreferences()
+      case _ => super.onActivityResult(requestCode, resultCode, data)
     }
 
-  }
+
+
 
   //-------------------------------------------------------\\
   //---------------- LOG OUT FUNCTION ---------------------\\
   //-------------------------------------------------------\\
-
   def logout() {
     val context = getApplicationContext
     val prefs = PreferenceManager.getDefaultSharedPreferences(context)
@@ -220,15 +207,11 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity {
   //-------------------------------------------------------\\
   //---------- HANDLE ACTIONBAR MENU PHASES ---------------\\
   //-------------------------------------------------------\\
-
-  def updateMenu() {
-    val tabSelected = actionBar.getSelectedNavigationIndex
-    if (tabSelected == 0) {
-      setToPublicMenu()
-    } else if (tabSelected == 1) {
-      setToPrivateMenu()
+  def updateMenu() =
+    actionBar.getSelectedNavigationIndex match {
+      case 0 => setToPublicMenu()
+      case 1 => setToPrivateMenu()
     }
-  }
 
 
   def setToPublicMenu() {

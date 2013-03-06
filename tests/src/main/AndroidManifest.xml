@@ -1,11 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.limeblast.mydeatree.tests">
     <application>
-        <activity android:name=".MainActivity" android:label="@string/app_name">
+        <!--
+        <activity android:name="com.limeblast.mydeatree.ForwardingActivity" android:label="@string/app_name">
            <intent-filter>
                <action android:name="android.intent.action.MAIN"/>
                <category android:name="android.intent.category.LAUNCHER"/>
            </intent-filter>
         </activity>
+        -->
 
         <uses-library android:name="android.test.runner"/>
     </application>
@@ -14,5 +16,5 @@
                      android:targetPackage="com.limeblast.mydeatree"
                      android:name="android.test.InstrumentationTestRunner"/>
 
-    <uses-sdk android:minSdkVersion="10"/>
+    <uses-sdk android:minSdkVersion="7"/>
 </manifest>

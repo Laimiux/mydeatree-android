@@ -1,0 +1,66 @@
+[0m[[0mdebug[0m] [0m/Applications/adt-bundle-mac/sdk/platform-tools/adb -d shell am instrument -r -w com.limeblast.mydeatree.tests/android.test.InstrumentationTestRunner[0m
+[0m[[0minfo[0m] [0mtesting com.limeblast.mydeatree.tests (1 test)[0m
+[0m[[0mdebug[0m] [0mtestStarted: android.test.suitebuilder.TestSuiteBuilder$FailedToCreateTests#testSuiteConstructionFailed[0m
+[0m[[31merror[0m] [0mfailed: android.test.suitebuilder.TestSuiteBuilder$FailedToCreateTests#testSuiteConstructionFailed[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mjava.lang.RuntimeException: Exception during suite construction[0m
+[0m[[31merror[0m] [0mat android.test.suitebuilder.TestSuiteBuilder$FailedToCreateTests.testSuiteConstructionFailed(TestSuiteBuilder.java:238)[0m
+[0m[[31merror[0m] [0mat java.lang.reflect.Method.invokeNative(Native Method)[0m
+[0m[[31merror[0m] [0mat android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:190)[0m
+[0m[[31merror[0m] [0mat android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:175)[0m
+[0m[[31merror[0m] [0mat android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:555)[0m
+[0m[[31merror[0m] [0mat android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1661)[0m
+[0m[[31merror[0m] [0mCaused by: java.lang.reflect.InvocationTargetException[0m
+[0m[[31merror[0m] [0mat java.lang.reflect.Constructor.constructNative(Native Method)[0m
+[0m[[31merror[0m] [0mat java.lang.reflect.Constructor.newInstance(Constructor.java:417)[0m
+[0m[[31merror[0m] [0mat android.test.suitebuilder.TestMethod.instantiateTest(TestMethod.java:87)[0m
+[0m[[31merror[0m] [0mat android.test.suitebuilder.TestMethod.createTest(TestMethod.java:73)[0m
+[0m[[31merror[0m] [0mat android.test.suitebuilder.TestSuiteBuilder.addTest(TestSuiteBuilder.java:262)[0m
+[0m[[31merror[0m] [0mat android.test.suitebuilder.TestSuiteBuilder.build(TestSuiteBuilder.java:184)[0m
+[0m[[31merror[0m] [0mat android.test.InstrumentationTestRunner.onCreate(InstrumentationTestRunner.java:379)[0m
+[0m[[31merror[0m] [0mat android.app.ActivityThread.handleBindApplication(ActivityThread.java:4382)[0m
+[0m[[31merror[0m] [0mat android.app.ActivityThread.access$1300(ActivityThread.java:141)[0m
+[0m[[31merror[0m] [0mat android.app.ActivityThread$H.handleMessage(ActivityThread.java:1294)[0m
+[0m[[31merror[0m] [0mat android.os.Handler.dispatchMessage(Handler.java:99)[0m
+[0m[[31merror[0m] [0mat android.os.Looper.loop(Looper.java:137)[0m
+[0m[[31merror[0m] [0mat android.app.ActivityThread.main(ActivityThread.java:5041)[0m
+[0m[[31merror[0m] [0mat java.lang.reflect.Method.invokeNative(Native Method)[0m
+[0m[[31merror[0m] [0mat com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)[0m
+[0m[[31merror[0m] [0mat com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)[0m
+[0m[[31merror[0m] [0mat dalvik.system.NativeStart.main(Native Method)[0m
+[0m[[31merror[0m] [0mCaused by: java.lang.NoClassDefFoundError: com.limeblast.mydeatree.ForwardingActivity[0m
+[0m[[31merror[0m] [0mat com.limeblast.mydeatree.tests.ActivityTests.<init>(Tests.scala:15)[0m
+[0m[[31merror[0m] [0m... 18 more[0m
+[0m[[0mdebug[0m] [0m{}[0m
+java.lang.RuntimeException: Failed tests: android.test.suitebuilder.TestSuiteBuilder$FailedToCreateTests#testSuiteConstructionFailed
+	at scala.sys.package$.error(package.scala:27)
+	at AndroidTest$$anonfun$parseTests$2.apply(AndroidTest.scala:46)
+	at AndroidTest$$anonfun$parseTests$2.apply(AndroidTest.scala:46)
+	at scala.Option.map(Option.scala:133)
+	at AndroidTest$.parseTests(AndroidTest.scala:46)
+	at AndroidTest$$anonfun$instrumentationTestAction$1.apply(AndroidTest.scala:27)
+	at AndroidTest$$anonfun$instrumentationTestAction$1.apply(AndroidTest.scala:24)
+	at sbt.Scoped$$anonfun$hf4$1.apply(Structure.scala:580)
+	at sbt.Scoped$$anonfun$hf4$1.apply(Structure.scala:580)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:49)
+	at sbt.Scoped$Reduced$$anonfun$combine$1$$anonfun$apply$12.apply(Structure.scala:311)
+	at sbt.Scoped$Reduced$$anonfun$combine$1$$anonfun$apply$12.apply(Structure.scala:311)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:41)
+	at sbt.std.Transform$$anon$5.work(System.scala:71)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:232)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:232)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:18)
+	at sbt.Execute.work(Execute.scala:238)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:232)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:232)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:160)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:30)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:680)
+[0m[[31merror[0m] [0m(tests/android:[31mtest-device[0m) Failed tests: android.test.suitebuilder.TestSuiteBuilder$FailedToCreateTests#testSuiteConstructionFailed[0m

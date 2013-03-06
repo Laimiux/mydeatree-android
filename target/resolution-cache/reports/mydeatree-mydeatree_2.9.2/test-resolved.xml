@@ -7,10 +7,10 @@
 		revision="0.1"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
-		date="20130305214523"/>
+		date="20130306002127"/>
 	<dependencies>
 		<module organisation="org.scalatest" name="scalatest_2.9.2">
-			<revision name="1.8" status="release" pubdate="20120527121313" resolver="Maven Search" artresolver="Maven Search" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="3">
+			<revision name="1.8" status="release" pubdate="20120527121313" resolver="Maven Search" artresolver="Maven Search" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="5">
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="4596" time="0" location="/Users/Laimiux/.ivy2/cache/org.scalatest/scalatest_2.9.2/ivy-1.8.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scalatest/scalatest_2.9.2/1.8/scalatest_2.9.2-1.8.pom"/>
 				<caller organisation="mydeatree" name="mydeatree_2.9.2" conf="test, compile, runtime" rev="1.8" rev-constraint-default="1.8" rev-constraint-dynamic="1.8" callerrev="0.1"/>
@@ -22,12 +22,36 @@
 			</revision>
 		</module>
 		<module organisation="com.actionbarsherlock" name="actionbarsherlock">
-			<revision name="4.2.0" status="release" pubdate="20121007174011" resolver="Maven Search" artresolver="Maven Search" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="2">
+			<revision name="4.2.0" status="release" pubdate="20121007174011" resolver="Maven Search" artresolver="Maven Search" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="4">
 				<metadata-artifact status="no" details="" size="5482" time="0" location="/Users/Laimiux/.ivy2/cache/com.actionbarsherlock/actionbarsherlock/ivy-4.2.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/actionbarsherlock/actionbarsherlock/4.2.0/actionbarsherlock-4.2.0.pom"/>
 				<caller organisation="mydeatree" name="mydeatree_2.9.2" conf="test, compile, runtime" rev="4.2.0" rev-constraint-default="4.2.0" rev-constraint-dynamic="4.2.0" callerrev="0.1"/>
 				<artifacts>
 					<artifact name="actionbarsherlock" type="apklib" ext="apklib" status="no" details="" size="557420" time="0" location="/Users/Laimiux/.ivy2/cache/com.actionbarsherlock/actionbarsherlock/apklibs/actionbarsherlock-4.2.0.apklib">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/actionbarsherlock/actionbarsherlock/4.2.0/actionbarsherlock-4.2.0.apklib"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.j256.ormlite" name="ormlite-android">
+			<revision name="4.43" status="release" pubdate="20130205204821" resolver="Maven Search" artresolver="Maven Search" homepage="http://ormlite.sourceforge.net/" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="2">
+				<license name="ISC License" url="http://ormlite.com/docs/license"/>
+				<metadata-artifact status="successful" details="" size="8989" time="413" location="/Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-android/ivy-4.43.xml" searched="true" original-local-location="/Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-android/ivy-4.43.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/j256/ormlite/ormlite-android/4.43/ormlite-android-4.43.pom"/>
+				<caller organisation="mydeatree" name="mydeatree_2.9.2" conf="test, compile, runtime" rev="4.43" rev-constraint-default="4.43" rev-constraint-dynamic="4.43" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="ormlite-android" type="jar" ext="jar" status="successful" details="" size="51442" time="503" location="/Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-android/jars/ormlite-android-4.43.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/j256/ormlite/ormlite-android/4.43/ormlite-android-4.43.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.j256.ormlite" name="ormlite-core">
+			<revision name="4.43" status="release" pubdate="20130205204429" resolver="Maven Search" artresolver="Maven Search" homepage="http://ormlite.sourceforge.net/" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="3">
+				<license name="ISC License" url="http://ormlite.com/docs/license"/>
+				<metadata-artifact status="successful" details="" size="8217" time="347" location="/Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-core/ivy-4.43.xml" searched="true" original-local-location="/Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-core/ivy-4.43.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/j256/ormlite/ormlite-core/4.43/ormlite-core-4.43.pom"/>
+				<caller organisation="com.j256.ormlite" name="ormlite-android" conf="default, compile, runtime, master" rev="4.43" rev-constraint-default="4.43" rev-constraint-dynamic="4.43" callerrev="4.43"/>
+				<artifacts>
+					<artifact name="ormlite-core" type="jar" ext="jar" status="successful" details="" size="285768" time="611" location="/Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-core/jars/ormlite-core-4.43.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/j256/ormlite/ormlite-core/4.43/ormlite-core-4.43.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

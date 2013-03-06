@@ -206,35 +206,28 @@ class LoginActivity extends SherlockActivity with TypedActivity {
       dialog = null
 
       loggingIn = false
-    } catch {
-      case _ =>
     }
   }
 
 
   protected override def onDestroy() {
     super.onDestroy()
-    if (dialog != null) {
-      dialog.dismiss()
-      dialog = null
-    }
+    removeLoader()
   }
 
   private def savePreferences() {
-    val user: String = userField.getText.toString
-    val pw: String = passwordField.getText.toString
+    USERNAME = userField.getText.toString
+    PASSWORD = passwordField.getText.toString
 
     val context = getApplicationContext
     val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
     // Save login information to SharedPrefs
     val editor = prefs.edit()
-    editor.putString(PREF_USERNAME, user)
-    editor.putString(PREF_PASSWORD, pw)
+    editor.putString(PREF_USERNAME, USERNAME)
+    editor.putString(PREF_PASSWORD, PASSWORD)
     editor.commit()
-    // Save the login info to the object
-    USERNAME = user
-    PASSWORD = pw
+
   }
 
 }

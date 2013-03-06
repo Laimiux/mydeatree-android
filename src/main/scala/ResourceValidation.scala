@@ -2,7 +2,7 @@ package com.limeblast.mydeatree
 
 object ResourceValidation {
 
-  def validate_idea(idea: Idea): (Boolean, String) = {
+  def validate_idea(idea: Idea): (Boolean, String) =
     if(idea.title.length < 5)
       (false, "Title is too short; it has to be 5 or more characters")
     else if(idea.title.length > 30)
@@ -13,5 +13,5 @@ object ResourceValidation {
       (false, "Text is too long: it has to be 140 or less characters")
     else
       (true, "Validated correctly")
-  }
+
 }

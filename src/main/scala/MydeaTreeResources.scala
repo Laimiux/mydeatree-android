@@ -3,6 +3,7 @@ package com.limeblast.mydeatree
 import reflect.BeanInfo
 
 import java.util.List
+import com.j256.ormlite.table.DatabaseTable
 
 
 class ObjectIdWithDate(val id: String, val modified_date: String)
@@ -35,3 +36,14 @@ abstract class BasicIdea(val id: String, val title: String, val text: String, va
 @BeanInfo class PublicIdeas(meta: Meta, objects: List[PublicIdea]) extends DjangoRootObject(meta, objects)
 @BeanInfo class PersonalIdeas(meta: Meta, objects: List[Idea]) extends DjangoRootObject(meta, objects)
 @BeanInfo class Users(meta: Meta, objects: List[User]) extends DjangoRootObject(meta, objects)
+
+
+
+/*
+
+*/
+@DatabaseTable(tableName = "favorite_ideas")
+@BeanInfo class FavoriteIdea(val owner: String, val id: String, val idea: String)
+
+@com.limeblast.scaliteorm.DatabaseTable(tableName = "some_table")
+class SomeTable(val id: String, val description: String)
