@@ -10,6 +10,7 @@ object General {
     versionCode := 0,
     scalaVersion := "2.9.2",
     platformName in Android := "android-14",
+    compileOrder := CompileOrder.JavaThenScala,
     javacOptions += "-g:none",
     javacOptions ++= Seq("-source", "1.6"),
     resolvers += "Maven Search" at  "http://repo1.maven.org/maven2/",
@@ -39,12 +40,14 @@ object General {
     AndroidMarketPublish.settings ++ Seq (
       keyalias in Android := "mydeatree",
       libraryDependencies += "org.scalatest" %% "scalatest" % "1.8" % "test",
+      libraryDependencies += "com.google.android" % "support-v4" % "r7",
 	//libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0" artifacts(Artifact("actionbarsherlock", "apklib", "apklib")) from "https://oss.sonatype.org/content/groups/scala-tools/",
 //    libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0"  artifacts(Artifact("actionbarsherlock-4.2.0", "apklib", "apklib")) from "http://repo1.maven.org/maven2/",
       //artifacts(Artifact("actionbarsherlock", "apklib", "apklib")) from "https://oss.sonatype.org/content/groups/scala-tools/",
-      //libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0"  artifacts(Artifact("actionbarsherlock", "apklib", "apklib")),
-      libraryDependencies += "com.actionbarsherlock" % "library" % "4.0.2"  artifacts(Artifact("library", "apklib", "apklib")),
-      libraryDependencies += "com.google.android" % "support-v4" % "r7"
+
+      libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0"  artifacts(Artifact("actionbarsherlock", "apklib", "apklib"))
+      //libraryDependencies += "com.actionbarsherlock" % "library" % "4.0.2"  artifacts(Artifact("library", "apklib", "apklib")),
+
     )
 }
 
@@ -52,11 +55,16 @@ object AndroidBuild extends Build {
   lazy val actionbarsherlock = Project (
     "actionbarsherlock",
     file("actionbarsherlock"),
+    settings = General.fullAndroidSettings ++ Seq(
+      name := "ActionBarSherlock"
+    )
+  /*
     settings = General.settings ++
       AndroidTest.androidSettings ++
       General.proguardSettings ++ Seq (
       name := "ActionBarSherlock"
     )
+    */
   )
 
   lazy val main = Project (

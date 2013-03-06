@@ -1,25 +1,28 @@
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
-[0m[[0mdebug[0m] [0m	added: Set(/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsProgressBar.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockPreferenceActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ShareActionProvider.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/StandaloneActionMode.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/view/animation/AnimatorProxy.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/BaseMenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CollapsibleActionViewWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockExpandableListActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/SubMenuBuilder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/Animator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ActivityChooserView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CapitalizingTextView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/TypeEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ActionBarSherlockNative.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/SubMenu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsLinearLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/SubMenuWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ActivityChooserModel.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/CollapsibleActionView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsAdapterView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionMode.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/View_HasStateListenerSupport.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/view/NineViewGroup.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ActionBarSherlockCompat.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuItemView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsColorDrawable.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuItemImpl.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ScrollingTabContainerView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/View_OnAttachStateChangeListener.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SearchView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/IntEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CapitalizingButton.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/IntKeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuItemWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/FloatKeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/PropertyValuesHolder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsAbsSpinner.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ListMenuItemView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarContextView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarImpl.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorListenerAdapter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionProvider.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/ObjectAnimator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SuggestionsAdapter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ResourcesCompat.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuPopupHelper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Window.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuBuilder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsSpinner.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineFrameLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/KeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarContainer.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/AbsActionBarView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineLinearLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/FloatEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/ActionProviderWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuItem.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineHorizontalScrollView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/FakeDialogPhoneWindow.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/R.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsListPopupWindow.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarView.java)[0m
+[0m[[0mdebug[0m] [0m	added: Set(/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsProgressBar.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockPreferenceActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ShareActionProvider.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/StandaloneActionMode.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/view/animation/AnimatorProxy.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/BaseMenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CollapsibleActionViewWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockExpandableListActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/SubMenuBuilder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/Animator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ActivityChooserView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CapitalizingTextView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/TypeEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ActionBarSherlockNative.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/SubMenu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsLinearLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/SubMenuWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ActivityChooserModel.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/CollapsibleActionView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsAdapterView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionMode.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/View_HasStateListenerSupport.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/view/NineViewGroup.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ActionBarSherlockCompat.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuItemView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsColorDrawable.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuItemImpl.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ScrollingTabContainerView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/View_OnAttachStateChangeListener.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SearchView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/IntEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CapitalizingButton.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/IntKeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuItemWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/FloatKeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/PropertyValuesHolder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsAbsSpinner.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ListMenuItemView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarContextView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarImpl.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorListenerAdapter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionProvider.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/ObjectAnimator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SuggestionsAdapter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ResourcesCompat.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuPopupHelper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Window.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuBuilder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsSpinner.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineFrameLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/KeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarContainer.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/AbsActionBarView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineLinearLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/FloatEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/ActionProviderWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuItem.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineHorizontalScrollView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/FakeDialogPhoneWindow.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsListPopupWindow.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarView.java)[0m
 [0m[[0mdebug[0m] [0m	modified: Set()[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mModified external sources: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsProgressBar.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockPreferenceActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ShareActionProvider.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/StandaloneActionMode.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/view/animation/AnimatorProxy.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/BaseMenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CollapsibleActionViewWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockExpandableListActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/SubMenuBuilder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/Animator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ActivityChooserView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CapitalizingTextView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/TypeEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ActionBarSherlockNative.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/SubMenu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsLinearLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/SubMenuWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ActivityChooserModel.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/CollapsibleActionView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsAdapterView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionMode.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/View_HasStateListenerSupport.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/view/NineViewGroup.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ActionBarSherlockCompat.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuItemView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsColorDrawable.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuItemImpl.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ScrollingTabContainerView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/View_OnAttachStateChangeListener.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SearchView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/IntEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CapitalizingButton.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/IntKeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuItemWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/FloatKeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/PropertyValuesHolder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsAbsSpinner.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ListMenuItemView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarContextView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarImpl.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorListenerAdapter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionProvider.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/ObjectAnimator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SuggestionsAdapter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ResourcesCompat.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuPopupHelper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Window.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuBuilder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsSpinner.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineFrameLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/KeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarContainer.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/AbsActionBarView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineLinearLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/FloatEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/ActionProviderWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuItem.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineHorizontalScrollView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/FakeDialogPhoneWindow.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/R.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsListPopupWindow.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarView.java)[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsProgressBar.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockPreferenceActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ShareActionProvider.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/StandaloneActionMode.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/view/animation/AnimatorProxy.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/BaseMenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CollapsibleActionViewWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockExpandableListActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/SubMenuBuilder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/Animator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ActivityChooserView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CapitalizingTextView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/TypeEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ActionBarSherlockNative.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/SubMenu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsLinearLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/SubMenuWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ActivityChooserModel.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/CollapsibleActionView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsAdapterView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionMode.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/View_HasStateListenerSupport.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/view/NineViewGroup.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ActionBarSherlockCompat.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuItemView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsColorDrawable.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuItemImpl.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ScrollingTabContainerView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/View_OnAttachStateChangeListener.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SearchView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/IntEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CapitalizingButton.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/IntKeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuItemWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/FloatKeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/PropertyValuesHolder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsAbsSpinner.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ListMenuItemView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarContextView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarImpl.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorListenerAdapter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionProvider.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/ObjectAnimator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SuggestionsAdapter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ResourcesCompat.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuPopupHelper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Window.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuBuilder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsSpinner.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineFrameLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/KeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarContainer.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/AbsActionBarView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineLinearLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/FloatEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/ActionProviderWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuItem.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineHorizontalScrollView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/FakeDialogPhoneWindow.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsListPopupWindow.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarView.java)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mInitially invalidated: Set(/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsProgressBar.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockPreferenceActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ShareActionProvider.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/StandaloneActionMode.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/view/animation/AnimatorProxy.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/BaseMenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CollapsibleActionViewWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockExpandableListActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/SubMenuBuilder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/Animator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ActivityChooserView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CapitalizingTextView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/TypeEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ActionBarSherlockNative.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/SubMenu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsLinearLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/SubMenuWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ActivityChooserModel.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/CollapsibleActionView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsAdapterView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionMode.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/View_HasStateListenerSupport.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/view/NineViewGroup.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ActionBarSherlockCompat.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuItemView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsColorDrawable.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuItemImpl.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ScrollingTabContainerView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/View_OnAttachStateChangeListener.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SearchView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/IntEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CapitalizingButton.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/IntKeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuItemWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/FloatKeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/PropertyValuesHolder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsAbsSpinner.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ListMenuItemView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarContextView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarImpl.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorListenerAdapter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionProvider.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/ObjectAnimator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SuggestionsAdapter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ResourcesCompat.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuPopupHelper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Window.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuBuilder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsSpinner.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineFrameLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/KeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarContainer.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/AbsActionBarView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineLinearLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/FloatEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/ActionProviderWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuItem.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineHorizontalScrollView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/FakeDialogPhoneWindow.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/R.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsListPopupWindow.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarView.java)[0m
-[0m[[0mdebug[0m] [0mRecompiling all 85 sources: invalidated sources (85) exceeded 50.0% of all sources[0m
-[0m[[0minfo[0m] [0mCompiling 85 Java sources to /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/target/scala-2.9.2/classes...[0m
+[0m[[0mdebug[0m] [0mInitially invalidated: Set(/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsProgressBar.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockPreferenceActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ShareActionProvider.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/StandaloneActionMode.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/view/animation/AnimatorProxy.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/BaseMenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CollapsibleActionViewWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockExpandableListActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/SubMenuBuilder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/Animator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ActivityChooserView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CapitalizingTextView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/TypeEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ActionBarSherlockNative.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/SubMenu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsLinearLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/SubMenuWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ActivityChooserModel.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/CollapsibleActionView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsAdapterView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionMode.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/View_HasStateListenerSupport.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/view/NineViewGroup.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ActionBarSherlockCompat.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuItemView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsColorDrawable.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuItemImpl.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ScrollingTabContainerView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuPresenter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/View_OnAttachStateChangeListener.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SearchView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/IntEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/CapitalizingButton.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/IntKeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuItemWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/FloatKeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/PropertyValuesHolder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsAbsSpinner.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ListMenuItemView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarContextView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarImpl.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorListenerAdapter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionProvider.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/ObjectAnimator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SuggestionsAdapter.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/ResourcesCompat.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuPopupHelper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Window.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListActivity.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/MenuBuilder.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsSpinner.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineFrameLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/KeyframeSet.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenu.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarContainer.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/AbsActionBarView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineLinearLayout.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/FloatEvaluator.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/ActionProviderWrapper.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuItem.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineHorizontalScrollView.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/FakeDialogPhoneWindow.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/IcsListPopupWindow.java, /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/widget/ActionBarView.java)[0m
+[0m[[0mdebug[0m] [0mRecompiling all 84 sources: invalidated sources (84) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 84 Java sources to /Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/target/scala-2.9.2/classes...[0m
 [0m[[0mdebug[0m] [0mCalling Javac with arguments:[0m
+[0m[[0mdebug[0m] [0m	-g:none[0m
+[0m[[0mdebug[0m] [0m	-source[0m
+[0m[[0mdebug[0m] [0m	1.6[0m
 [0m[[0mdebug[0m] [0m	-d[0m
 [0m[[0mdebug[0m] [0m	/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/target/scala-2.9.2/classes[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
-[0m[[0mdebug[0m] [0m	/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/target/scala-2.9.2/classes:/Applications/adt-bundle-mac/sdk/platforms/android-14/android.jar:/Users/Laimiux/.sbt/boot/scala-2.9.2/lib/scala-library.jar:/Users/Laimiux/.sbt/boot/scala-2.9.2/lib/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/target/scala-2.9.2/classes:/Users/Laimiux/.sbt/boot/scala-2.9.2/lib/scala-library.jar:/Users/Laimiux/.sbt/boot/scala-2.9.2/lib/scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java[0m
 [0m[[0mdebug[0m] [0m	/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java[0m
 [0m[[0mdebug[0m] [0m	/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java[0m
@@ -104,8 +107,55 @@
 [0m[[0mdebug[0m] [0m	/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SearchView.java[0m
 [0m[[0mdebug[0m] [0m	/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/ShareActionProvider.java[0m
 [0m[[0mdebug[0m] [0m	/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SuggestionsAdapter.java[0m
-[0m[[0mdebug[0m] [0m	/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/R.java[0m
 [0m[[0mdebug[0m] [0mAttempting to call javac directly...[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:3: package android.util does not exist[0m
+[0m[[31merror[0m] [0mimport android.util.Log;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:4: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.View;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:5: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.Window;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:3: package android.view.ViewGroup does not exist[0m
+[0m[[31merror[0m] [0mimport static android.view.ViewGroup.LayoutParams.MATCH_PARENT;[0m
+[0m[[31merror[0m] [0m                                    ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:3: static import only from classes and interfaces[0m
+[0m[[31merror[0m] [0mimport static android.view.ViewGroup.LayoutParams.MATCH_PARENT;[0m
+[0m[[31merror[0m] [0m^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:12: package android.app does not exist[0m
+[0m[[31merror[0m] [0mimport android.app.Activity;[0m
+[0m[[31merror[0m] [0m                  ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:13: package android.content does not exist[0m
+[0m[[31merror[0m] [0mimport android.content.Context;[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:14: package android.content.res does not exist[0m
+[0m[[31merror[0m] [0mimport android.content.res.Configuration;[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:15: package android.os does not exist[0m
+[0m[[31merror[0m] [0mimport android.os.Build;[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:16: package android.os does not exist[0m
+[0m[[31merror[0m] [0mimport android.os.Bundle;[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:17: package android.util does not exist[0m
+[0m[[31merror[0m] [0mimport android.util.DisplayMetrics;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:18: package android.util does not exist[0m
+[0m[[31merror[0m] [0mimport android.util.Log;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:19: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.KeyEvent;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:20: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.View;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:21: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.ViewGroup;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:22: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.Window;[0m
+[0m[[31merror[0m] [0m                   ^[0m
 [0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:16: cannot find symbol[0m
 [0m[[31merror[0m] [0msymbol: class FragmentActivity[0m
 [0m[[31merror[0m] [0mpublic abstract class Watson extends FragmentActivity implements OnCreatePanelMenuListener, OnPreparePanelListener, OnMenuItemSelectedListener {[0m
@@ -115,408 +165,336 @@
 [0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
 [0m[[31merror[0m] [0m    private ArrayList<Fragment> mCreatedMenus;[0m
 [0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java:19: package android.content does not exist[0m
+[0m[[31merror[0m] [0mimport android.content.ComponentName;[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java:20: package android.content does not exist[0m
+[0m[[31merror[0m] [0mimport android.content.Intent;[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java:21: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.KeyEvent;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:86: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class View[0m
+[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
+[0m[[31merror[0m] [0m    public boolean onPreparePanel(int featureId, View view, Menu menu) {[0m
+[0m[[31merror[0m] [0m                                                 ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java:19: package android.content does not exist[0m
+[0m[[31merror[0m] [0mimport android.content.Intent;[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java:20: package android.graphics.drawable does not exist[0m
+[0m[[31merror[0m] [0mimport android.graphics.drawable.Drawable;[0m
+[0m[[31merror[0m] [0m                                ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java:21: package android.view.ContextMenu does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.ContextMenu.ContextMenuInfo;[0m
+[0m[[31merror[0m] [0m                               ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java:22: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.View;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:23: package org.xmlpull.v1 does not exist[0m
+[0m[[31merror[0m] [0mimport org.xmlpull.v1.XmlPullParser;[0m
+[0m[[31merror[0m] [0m                     ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:24: package org.xmlpull.v1 does not exist[0m
+[0m[[31merror[0m] [0mimport org.xmlpull.v1.XmlPullParserException;[0m
+[0m[[31merror[0m] [0m                     ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:25: package android.content does not exist[0m
+[0m[[31merror[0m] [0mimport android.content.Context;[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:26: package android.content.res does not exist[0m
+[0m[[31merror[0m] [0mimport android.content.res.TypedArray;[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:27: package android.content.res does not exist[0m
+[0m[[31merror[0m] [0mimport android.content.res.XmlResourceParser;[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:28: package android.util does not exist[0m
+[0m[[31merror[0m] [0mimport android.util.AttributeSet;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:29: package android.util does not exist[0m
+[0m[[31merror[0m] [0mimport android.util.Log;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:30: package android.util does not exist[0m
+[0m[[31merror[0m] [0mimport android.util.TypedValue;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:31: package android.util does not exist[0m
+[0m[[31merror[0m] [0mimport android.util.Xml;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:32: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.InflateException;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:33: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.View;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:35: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class R[0m
+[0m[[31merror[0m] [0mlocation: package com.actionbarsherlock[0m
+[0m[[31merror[0m] [0mimport com.actionbarsherlock.R;[0m
+[0m[[31merror[0m] [0m                            ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:154: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Activity[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
+[0m[[31merror[0m] [0m    public static ActionBarSherlock wrap(Activity activity) {[0m
+[0m[[31merror[0m] [0m                                         ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:167: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Activity[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
+[0m[[31merror[0m] [0m    public static ActionBarSherlock wrap(Activity activity, int flags) {[0m
+[0m[[31merror[0m] [0m                                         ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:246: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Activity[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
+[0m[[31merror[0m] [0m    protected final Activity mActivity;[0m
+[0m[[31merror[0m] [0m                    ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:255: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Activity[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
+[0m[[31merror[0m] [0m    protected ActionBarSherlock(Activity activity, int flags) {[0m
+[0m[[31merror[0m] [0m                                ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:19: package android.content does not exist[0m
+[0m[[31merror[0m] [0mimport android.content.Context;[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:20: package android.content.res does not exist[0m
+[0m[[31merror[0m] [0mimport android.content.res.TypedArray;[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:21: package android.graphics.drawable does not exist[0m
+[0m[[31merror[0m] [0mimport android.graphics.drawable.Drawable;[0m
+[0m[[31merror[0m] [0m                                ^[0m
 [0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:22: cannot find symbol[0m
 [0m[[31merror[0m] [0msymbol  : class FragmentTransaction[0m
 [0m[[31merror[0m] [0mlocation: package android.support.v4.app[0m
 [0m[[31merror[0m] [0mimport android.support.v4.app.FragmentTransaction;[0m
 [0m[[31merror[0m] [0m                             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:868: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class FragmentTransaction[0m
-[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.app.ActionBar.TabListener[0m
-[0m[[31merror[0m] [0m        public void onTabSelected(Tab tab, FragmentTransaction ft);[0m
-[0m[[31merror[0m] [0m                                           ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:879: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class FragmentTransaction[0m
-[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.app.ActionBar.TabListener[0m
-[0m[[31merror[0m] [0m        public void onTabUnselected(Tab tab, FragmentTransaction ft);[0m
-[0m[[31merror[0m] [0m                                             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:890: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class FragmentTransaction[0m
-[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.app.ActionBar.TabListener[0m
-[0m[[31merror[0m] [0m        public void onTabReselected(Tab tab, FragmentTransaction ft);[0m
-[0m[[31merror[0m] [0m                                             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java:4: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class DialogFragment[0m
-[0m[[31merror[0m] [0mlocation: package android.support.v4.app[0m
-[0m[[31merror[0m] [0mimport android.support.v4.app.DialogFragment;[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:23: package android.util does not exist[0m
+[0m[[31merror[0m] [0mimport android.util.AttributeSet;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:24: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.Gravity;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:25: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.View;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:26: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.ViewDebug;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:27: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.ViewGroup;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:28: package android.view.ViewGroup does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.ViewGroup.MarginLayoutParams;[0m
 [0m[[31merror[0m] [0m                             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java:15: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol: class DialogFragment[0m
-[0m[[31merror[0m] [0mpublic class SherlockDialogFragment extends DialogFragment implements OnCreateOptionsMenuListener, OnPrepareOptionsMenuListener, OnOptionsItemSelectedListener {[0m
-[0m[[31merror[0m] [0m                                            ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java:4: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class Fragment[0m
-[0m[[31merror[0m] [0mlocation: package android.support.v4.app[0m
-[0m[[31merror[0m] [0mimport android.support.v4.app.Fragment;[0m
-[0m[[31merror[0m] [0m                             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java:15: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol: class Fragment[0m
-[0m[[31merror[0m] [0mpublic class SherlockFragment extends Fragment implements OnCreateOptionsMenuListener, OnPrepareOptionsMenuListener, OnOptionsItemSelectedListener {[0m
-[0m[[31merror[0m] [0m                                      ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListFragment.java:4: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class ListFragment[0m
-[0m[[31merror[0m] [0mlocation: package android.support.v4.app[0m
-[0m[[31merror[0m] [0mimport android.support.v4.app.ListFragment;[0m
-[0m[[31merror[0m] [0m                             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockListFragment.java:15: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol: class ListFragment[0m
-[0m[[31merror[0m] [0mpublic class SherlockListFragment extends ListFragment implements OnCreateOptionsMenuListener, OnPrepareOptionsMenuListener, OnOptionsItemSelectedListener {[0m
-[0m[[31merror[0m] [0m                                          ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarImpl.java:29: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class FragmentActivity[0m
-[0m[[31merror[0m] [0mlocation: package android.support.v4.app[0m
-[0m[[31merror[0m] [0mimport android.support.v4.app.FragmentActivity;[0m
-[0m[[31merror[0m] [0m                             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarImpl.java:30: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class FragmentTransaction[0m
-[0m[[31merror[0m] [0mlocation: package android.support.v4.app[0m
-[0m[[31merror[0m] [0mimport android.support.v4.app.FragmentTransaction;[0m
-[0m[[31merror[0m] [0m                             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarWrapper.java:9: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class FragmentActivity[0m
-[0m[[31merror[0m] [0mlocation: package android.support.v4.app[0m
-[0m[[31merror[0m] [0mimport android.support.v4.app.FragmentActivity;[0m
-[0m[[31merror[0m] [0m                             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarWrapper.java:10: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class FragmentTransaction[0m
-[0m[[31merror[0m] [0mlocation: package android.support.v4.app[0m
-[0m[[31merror[0m] [0mimport android.support.v4.app.FragmentTransaction;[0m
-[0m[[31merror[0m] [0m                             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/internal/app/ActionBarWrapper.java:21: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class FragmentTransaction[0m
-[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.internal.app.ActionBarWrapper[0m
-[0m[[31merror[0m] [0m    private FragmentTransaction mFragmentTransaction;[0m
-[0m[[31merror[0m] [0m            ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SearchView.java:39: package android.support.v4.view does not exist[0m
-[0m[[31merror[0m] [0mimport android.support.v4.view.KeyEventCompat;[0m
-[0m[[31merror[0m] [0m                              ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SearchView.java:40: package android.support.v4.widget does not exist[0m
-[0m[[31merror[0m] [0mimport android.support.v4.widget.CursorAdapter;[0m
-[0m[[31merror[0m] [0m                                ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SuggestionsAdapter.java:33: package android.support.v4.widget does not exist[0m
-[0m[[31merror[0m] [0mimport android.support.v4.widget.ResourceCursorAdapter;[0m
-[0m[[31merror[0m] [0m                                ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SuggestionsAdapter.java:58: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol: class ResourceCursorAdapter[0m
-[0m[[31merror[0m] [0mclass SuggestionsAdapter extends ResourceCursorAdapter implements OnClickListener {[0m
-[0m[[31merror[0m] [0m                                 ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SearchView.java:121: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class CursorAdapter[0m
-[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.widget.SearchView[0m
-[0m[[31merror[0m] [0m    private CursorAdapter mSuggestionsAdapter;[0m
-[0m[[31merror[0m] [0m            ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SearchView.java:694: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class CursorAdapter[0m
-[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.widget.SearchView[0m
-[0m[[31merror[0m] [0m    public void setSuggestionsAdapter(CursorAdapter adapter) {[0m
-[0m[[31merror[0m] [0m                                      ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/widget/SearchView.java:704: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class CursorAdapter[0m
-[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.widget.SearchView[0m
-[0m[[31merror[0m] [0m    public CursorAdapter getSuggestionsAdapter() {[0m
-[0m[[31merror[0m] [0m           ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:50: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class Fragment[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m            ArrayList<Fragment> newMenus = null;[0m
-[0m[[31merror[0m] [0m                      ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:51: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : variable mFragments[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m            if (mFragments.mAdded != null) {[0m
-[0m[[31merror[0m] [0m                ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:52: package mFragments does not exist[0m
-[0m[[31merror[0m] [0m                for (int i = 0; i < mFragments.mAdded.size(); i++) {[0m
-[0m[[31merror[0m] [0m                                              ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:53: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class Fragment[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m                    Fragment f = mFragments.mAdded.get(i);[0m
-[0m[[31merror[0m] [0m                    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:53: package mFragments does not exist[0m
-[0m[[31merror[0m] [0m                    Fragment f = mFragments.mAdded.get(i);[0m
-[0m[[31merror[0m] [0m                                           ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:58: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class Fragment[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m                            newMenus = new ArrayList<Fragment>();[0m
-[0m[[31merror[0m] [0m                                                     ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:67: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class Fragment[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m                    Fragment f = mCreatedMenus.get(i);[0m
-[0m[[31merror[0m] [0m                    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:94: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : variable mFragments[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m            if (mFragments.mAdded != null) {[0m
-[0m[[31merror[0m] [0m                ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:95: package mFragments does not exist[0m
-[0m[[31merror[0m] [0m                for (int i = 0; i < mFragments.mAdded.size(); i++) {[0m
-[0m[[31merror[0m] [0m                                              ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:96: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class Fragment[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m                    Fragment f = mFragments.mAdded.get(i);[0m
-[0m[[31merror[0m] [0m                    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:96: package mFragments does not exist[0m
-[0m[[31merror[0m] [0m                    Fragment f = mFragments.mAdded.get(i);[0m
-[0m[[31merror[0m] [0m                                           ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:123: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : variable mFragments[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m            if (mFragments.mAdded != null) {[0m
-[0m[[31merror[0m] [0m                ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:124: package mFragments does not exist[0m
-[0m[[31merror[0m] [0m                for (int i = 0; i < mFragments.mAdded.size(); i++) {[0m
-[0m[[31merror[0m] [0m                                              ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:125: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : class Fragment[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m                    Fragment f = mFragments.mAdded.get(i);[0m
-[0m[[31merror[0m] [0m                    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/android/support/v4/app/Watson.java:125: package mFragments does not exist[0m
-[0m[[31merror[0m] [0m                    Fragment f = mFragments.mAdded.get(i);[0m
-[0m[[31merror[0m] [0m                                           ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:32: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method wrap(com.actionbarsherlock.app.SherlockFragmentActivity,int)[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:29: package android.widget does not exist[0m
+[0m[[31merror[0m] [0mimport android.widget.SpinnerAdapter;[0m
+[0m[[31merror[0m] [0m                     ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:289: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Configuration[0m
 [0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
-[0m[[31merror[0m] [0m            mSherlock = ActionBarSherlock.wrap(this, ActionBarSherlock.FLAG_DELEGATE);[0m
-[0m[[31merror[0m] [0m                                         ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:63: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onConfigurationChanged(android.content.res.Configuration)[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        super.onConfigurationChanged(newConfig);[0m
-[0m[[31merror[0m] [0m             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:61: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:69: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onPostResume()[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        super.onPostResume();[0m
-[0m[[31merror[0m] [0m             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:67: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:76: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onPause()[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        super.onPause();[0m
-[0m[[31merror[0m] [0m             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:73: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:82: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onStop()[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        super.onStop();[0m
-[0m[[31merror[0m] [0m             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:79: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:88: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onDestroy()[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        super.onDestroy();[0m
-[0m[[31merror[0m] [0m             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:85: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:94: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onPostCreate(android.os.Bundle)[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        super.onPostCreate(savedInstanceState);[0m
-[0m[[31merror[0m] [0m             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:91: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:100: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onTitleChanged(java.lang.CharSequence,int)[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        super.onTitleChanged(title, color);[0m
-[0m[[31merror[0m] [0m             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:97: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:108: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onMenuOpened(int,android.view.Menu)[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        return super.onMenuOpened(featureId, menu);[0m
-[0m[[31merror[0m] [0m                    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:103: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:114: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onPanelClosed(int,android.view.Menu)[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        super.onPanelClosed(featureId, menu);[0m
-[0m[[31merror[0m] [0m             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:111: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:122: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method dispatchKeyEvent(android.view.KeyEvent)[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        return super.dispatchKeyEvent(event);[0m
-[0m[[31merror[0m] [0m                    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:117: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:127: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onSaveInstanceState(android.os.Bundle)[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        super.onSaveInstanceState(outState);[0m
-[0m[[31merror[0m] [0m             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:125: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:133: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onRestoreInstanceState(android.os.Bundle)[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        super.onRestoreInstanceState(savedInstanceState);[0m
-[0m[[31merror[0m] [0m             ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:131: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:171: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onCreatePanelMenu(int,android.view.Menu)[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        return super.onCreatePanelMenu(featureId, menu);[0m
-[0m[[31merror[0m] [0m                    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:159: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:174: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:191: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onPreparePanel(int,android.view.View,android.view.Menu)[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        return super.onPreparePanel(featureId, view, menu);[0m
-[0m[[31merror[0m] [0m                    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:179: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:194: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:211: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method onMenuItemSelected(int,android.view.MenuItem)[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m        return super.onMenuItemSelected(featureId, item);[0m
-[0m[[31merror[0m] [0m                    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:199: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:214: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:222: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method openOptionsMenu()[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m            super.openOptionsMenu();[0m
-[0m[[31merror[0m] [0m                 ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:219: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:229: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method closeOptionsMenu()[0m
-[0m[[31merror[0m] [0mlocation: class android.support.v4.app.Watson[0m
-[0m[[31merror[0m] [0m            super.closeOptionsMenu();[0m
-[0m[[31merror[0m] [0m                 ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:226: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:255: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:260: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:265: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java:270: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java:24: inconvertible types[0m
-[0m[[31merror[0m] [0mfound   : android.app.Activity[0m
-[0m[[31merror[0m] [0mrequired: com.actionbarsherlock.app.SherlockFragmentActivity[0m
-[0m[[31merror[0m] [0m        if (!(activity instanceof SherlockFragmentActivity)) {[0m
-[0m[[31merror[0m] [0m              ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java:25: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method getClass()[0m
-[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.SherlockDialogFragment[0m
-[0m[[31merror[0m] [0m            throw new IllegalStateException(getClass().getSimpleName() + " must be attached to a SherlockFragmentActivity.");[0m
-[0m[[31merror[0m] [0m                                            ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java:27: inconvertible types[0m
-[0m[[31merror[0m] [0mfound   : android.app.Activity[0m
-[0m[[31merror[0m] [0mrequired: com.actionbarsherlock.app.SherlockFragmentActivity[0m
-[0m[[31merror[0m] [0m        mActivity = (SherlockFragmentActivity)activity;[0m
-[0m[[31merror[0m] [0m                                              ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java:29: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : variable super[0m
-[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.SherlockDialogFragment[0m
-[0m[[31merror[0m] [0m        super.onAttach(activity);[0m
-[0m[[31merror[0m] [0m        ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java:22: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java:35: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : variable super[0m
-[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.SherlockDialogFragment[0m
-[0m[[31merror[0m] [0m        super.onDetach();[0m
-[0m[[31merror[0m] [0m        ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java:32: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java:38: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java:48: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java:58: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java:24: inconvertible types[0m
-[0m[[31merror[0m] [0mfound   : android.app.Activity[0m
-[0m[[31merror[0m] [0mrequired: com.actionbarsherlock.app.SherlockFragmentActivity[0m
-[0m[[31merror[0m] [0m        if (!(activity instanceof SherlockFragmentActivity)) {[0m
-[0m[[31merror[0m] [0m              ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java:25: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : method getClass()[0m
-[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.SherlockFragment[0m
-[0m[[31merror[0m] [0m            throw new IllegalStateException(getClass().getSimpleName() + " must be attached to a SherlockFragmentActivity.");[0m
-[0m[[31merror[0m] [0m                                            ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java:27: inconvertible types[0m
-[0m[[31merror[0m] [0mfound   : android.app.Activity[0m
-[0m[[31merror[0m] [0mrequired: com.actionbarsherlock.app.SherlockFragmentActivity[0m
-[0m[[31merror[0m] [0m        mActivity = (SherlockFragmentActivity)activity;[0m
-[0m[[31merror[0m] [0m                                              ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java:29: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : variable super[0m
-[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.SherlockFragment[0m
-[0m[[31merror[0m] [0m        super.onAttach(activity);[0m
-[0m[[31merror[0m] [0m        ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java:22: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java:35: cannot find symbol[0m
-[0m[[31merror[0m] [0msymbol  : variable super[0m
-[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.SherlockFragment[0m
-[0m[[31merror[0m] [0m        super.onDetach();[0m
-[0m[[31merror[0m] [0m        ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java:32: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java:38: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
-[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/SherlockFragment.java:48: method does not override or implement a method from a supertype[0m
-[0m[[31merror[0m] [0m    @Override[0m
-[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m    public void dispatchConfigurationChanged(Configuration newConfig) {}[0m
+[0m[[31merror[0m] [0m                                             ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:397: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Bundle[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
+[0m[[31merror[0m] [0m    public void dispatchPostCreate(Bundle savedInstanceState) {}[0m
+[0m[[31merror[0m] [0m                                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:435: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class KeyEvent[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
+[0m[[31merror[0m] [0m    public boolean dispatchKeyEvent(KeyEvent event) {[0m
+[0m[[31merror[0m] [0m                                    ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:449: package android.view does not exist[0m
+[0m[[31merror[0m] [0m    public abstract boolean dispatchCreateOptionsMenu(android.view.Menu menu);[0m
+[0m[[31merror[0m] [0m                                                                  ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:467: package android.view does not exist[0m
+[0m[[31merror[0m] [0m    public abstract boolean dispatchPrepareOptionsMenu(android.view.Menu menu);[0m
+[0m[[31merror[0m] [0m                                                                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:483: package android.view does not exist[0m
+[0m[[31merror[0m] [0m    public abstract boolean dispatchOptionsItemSelected(android.view.MenuItem item);[0m
+[0m[[31merror[0m] [0m                                                                    ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:505: package android.view does not exist[0m
+[0m[[31merror[0m] [0m    public boolean dispatchMenuOpened(int featureId, android.view.Menu menu) {[0m
+[0m[[31merror[0m] [0m                                                                 ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:524: package android.view does not exist[0m
+[0m[[31merror[0m] [0m    public void dispatchPanelClosed(int featureId, android.view.Menu menu) {}[0m
+[0m[[31merror[0m] [0m                                                               ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:540: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Bundle[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
+[0m[[31merror[0m] [0m    public void dispatchSaveInstanceState(Bundle outState) {}[0m
+[0m[[31merror[0m] [0m                                          ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:542: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Bundle[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
+[0m[[31merror[0m] [0m    public void dispatchRestoreInstanceState(Bundle savedInstanceState) {}[0m
+[0m[[31merror[0m] [0m                                             ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:668: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class View[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
+[0m[[31merror[0m] [0m    public void setContentView(View view) {[0m
+[0m[[31merror[0m] [0m                               ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:680: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class View[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
+[0m[[31merror[0m] [0m    public abstract void setContentView(View view, ViewGroup.LayoutParams params);[0m
+[0m[[31merror[0m] [0m                                        ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:680: package ViewGroup does not exist[0m
+[0m[[31merror[0m] [0m    public abstract void setContentView(View view, ViewGroup.LayoutParams params);[0m
+[0m[[31merror[0m] [0m                                                            ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:690: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class View[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
+[0m[[31merror[0m] [0m    public abstract void addContentView(View view, ViewGroup.LayoutParams params);[0m
+[0m[[31merror[0m] [0m                                        ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:690: package ViewGroup does not exist[0m
+[0m[[31merror[0m] [0m    public abstract void addContentView(View view, ViewGroup.LayoutParams params);[0m
+[0m[[31merror[0m] [0m                                                            ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:783: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Context[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.ActionBarSherlock[0m
+[0m[[31merror[0m] [0m    protected abstract Context getThemedContext();[0m
+[0m[[31merror[0m] [0m                       ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionMode.java:19: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.View;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/ActionBarSherlock.java:89: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class View[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.ActionBarSherlock.OnPreparePanelListener[0m
+[0m[[31merror[0m] [0m        public boolean onPreparePanel(int featureId, View view, Menu menu);[0m
+[0m[[31merror[0m] [0m                                                     ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/SubMenu.java:19: package android.graphics.drawable does not exist[0m
+[0m[[31merror[0m] [0mimport android.graphics.drawable.Drawable;[0m
+[0m[[31merror[0m] [0m                                ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/SubMenu.java:20: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.View;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java:296: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class ComponentName[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.view.Menu[0m
+[0m[[31merror[0m] [0m                                ComponentName caller, Intent[] specifics,[0m
+[0m[[31merror[0m] [0m                                ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java:296: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Intent[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.view.Menu[0m
+[0m[[31merror[0m] [0m                                ComponentName caller, Intent[] specifics,[0m
+[0m[[31merror[0m] [0m                                                      ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java:297: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Intent[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.view.Menu[0m
+[0m[[31merror[0m] [0m                                Intent intent, int flags, MenuItem[] outSpecificItems);[0m
+[0m[[31merror[0m] [0m                                ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java:415: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class KeyEvent[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.view.Menu[0m
+[0m[[31merror[0m] [0m    public boolean performShortcut(int keyCode, KeyEvent event, int flags);[0m
+[0m[[31merror[0m] [0m                                                ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/Menu.java:422: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class KeyEvent[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.view.Menu[0m
+[0m[[31merror[0m] [0m    boolean isShortcutKey(int keyCode, KeyEvent event);[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java:203: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Drawable[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.view.MenuItem[0m
+[0m[[31merror[0m] [0m    public MenuItem setIcon(Drawable icon);[0m
+[0m[[31merror[0m] [0m                            ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java:224: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Drawable[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.view.MenuItem[0m
+[0m[[31merror[0m] [0m    public Drawable getIcon();[0m
+[0m[[31merror[0m] [0m           ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java:244: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Intent[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.view.MenuItem[0m
+[0m[[31merror[0m] [0m    public MenuItem setIntent(Intent intent);[0m
+[0m[[31merror[0m] [0m                              ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java:255: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Intent[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.view.MenuItem[0m
+[0m[[31merror[0m] [0m    public Intent getIntent();[0m
+[0m[[31merror[0m] [0m           ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java:443: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class ContextMenuInfo[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.view.MenuItem[0m
+[0m[[31merror[0m] [0m    public ContextMenuInfo getMenuInfo();[0m
+[0m[[31merror[0m] [0m           ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java:497: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class View[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.view.MenuItem[0m
+[0m[[31merror[0m] [0m    public MenuItem setActionView(View view);[0m
+[0m[[31merror[0m] [0m                                  ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuItem.java:523: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class View[0m
+[0m[[31merror[0m] [0mlocation: interface com.actionbarsherlock.view.MenuItem[0m
+[0m[[31merror[0m] [0m    public View getActionView();[0m
+[0m[[31merror[0m] [0m           ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionProvider.java:19: package android.content does not exist[0m
+[0m[[31merror[0m] [0mimport android.content.Context;[0m
+[0m[[31merror[0m] [0m                      ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/ActionProvider.java:20: package android.view does not exist[0m
+[0m[[31merror[0m] [0mimport android.view.View;[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:69: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Context[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.view.MenuInflater[0m
+[0m[[31merror[0m] [0m    private Context mContext;[0m
+[0m[[31merror[0m] [0m            ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:77: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Context[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.view.MenuInflater[0m
+[0m[[31merror[0m] [0m    public MenuInflater(Context context) {[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:90: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Context[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.view.MenuInflater[0m
+[0m[[31merror[0m] [0m    public MenuInflater(Context context, Object realOwner) {[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:126: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class XmlPullParser[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.view.MenuInflater[0m
+[0m[[31merror[0m] [0m    private void parseMenu(XmlPullParser parser, AttributeSet attrs, Menu menu)[0m
+[0m[[31merror[0m] [0m                           ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:126: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class AttributeSet[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.view.MenuInflater[0m
+[0m[[31merror[0m] [0m    private void parseMenu(XmlPullParser parser, AttributeSet attrs, Menu menu)[0m
+[0m[[31merror[0m] [0m                                                 ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/view/MenuInflater.java:127: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class XmlPullParserException[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.view.MenuInflater[0m
+[0m[[31merror[0m] [0m            throws XmlPullParserException, IOException {[0m
+[0m[[31merror[0m] [0m                   ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:146: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class View[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.ActionBar[0m
+[0m[[31merror[0m] [0m    public abstract void setCustomView(View view);[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:166: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class View[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.ActionBar[0m
+[0m[[31merror[0m] [0m    public abstract void setCustomView(View view, LayoutParams layoutParams);[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:898: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class MarginLayoutParams[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.ActionBar[0m
+[0m[[31merror[0m] [0m    public static class LayoutParams extends MarginLayoutParams {[0m
+[0m[[31merror[0m] [0m                                             ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:215: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Drawable[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.ActionBar[0m
+[0m[[31merror[0m] [0m    public abstract void setIcon(Drawable icon);[0m
+[0m[[31merror[0m] [0m                                 ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:245: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Drawable[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.ActionBar[0m
+[0m[[31merror[0m] [0m    public abstract void setLogo(Drawable logo);[0m
+[0m[[31merror[0m] [0m                                 ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:262: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class SpinnerAdapter[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.ActionBar[0m
+[0m[[31merror[0m] [0m    public abstract void setListNavigationCallbacks(SpinnerAdapter adapter,[0m
+[0m[[31merror[0m] [0m                                                    ^[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/actionbarsherlock/src/main/java/com/actionbarsherlock/app/ActionBar.java:428: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : class Drawable[0m
+[0m[[31merror[0m] [0mlocation: class com.actionbarsherlock.app.ActionBar[0m
+[0m[[31merror[0m] [0m    public abstract void setBackgroundDrawable(Drawable d);[0m
+[0m[[31merror[0m] [0m                                               ^[0m
 [0m[[31merror[0m] [0m100 errors[0m
 [0m[[0mdebug[0m] [0mjavac returned exit code: 1[0m
 [0m[[31merror[0m] [0m(actionbarsherlock/compile:[31mcompile[0m) javac returned nonzero exit code[0m

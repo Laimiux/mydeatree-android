@@ -73,3 +73,10 @@ android:start-device
 clean
 android:emulator-start Nexus_S_by_Google
 android:start-emulator
+clean
+compile
+run actionbarsherlock
+compile
+run last actionbarsherlock/android:manifest-path 
+compile
+android:start-device
