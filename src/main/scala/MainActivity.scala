@@ -71,7 +71,7 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity {
       val ideaJson = intent.getStringExtra("idea")
       if (ideaJson != null) {
         val idea = JsonWrapper.getMainObject(ideaJson, classOf[Idea])
-        AppSettings.PRIVATE_PARENT_IDEA = idea
+        AppSettings.PRIVATE_PARENT_IDEA = Some(idea)
 
         tabSelected = 1
       }

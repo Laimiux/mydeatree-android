@@ -50,6 +50,7 @@ class NewIdeaActivity extends SherlockActivity with TypedActivity {
 
       val idea = new Idea(title, text, null, parent_uri, null, null, null, isPublic)
 
+      /*
       val (isIdeaValid, message) = ResourceValidation.validate_idea(idea)
 
       if (isIdeaValid) {
@@ -58,6 +59,14 @@ class NewIdeaActivity extends SherlockActivity with TypedActivity {
         //startIdeaCreateService(idea)
       } else {
         Toast.makeText(NewIdeaActivity.this, message, Toast.LENGTH_LONG).show()
+      }
+      */
+
+
+      ResourceValidation.validate_idea(idea) match {
+        case (false, msg: String) => Toast.makeText(NewIdeaActivity.this, msg, Toast.LENGTH_LONG).show()
+        case (true, _) =>  createNewIdea(idea)
+        case _ =>
       }
     })
 

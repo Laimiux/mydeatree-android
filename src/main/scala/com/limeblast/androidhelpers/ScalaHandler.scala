@@ -9,5 +9,5 @@ class ScalaHandler extends Handler {
       def run() = f
     }
 
-  def post[F](f: => F): Boolean = super.post(toRunnable(f))
+  def post[F](f: => F) = super.post(toRunnable(f))
 }

@@ -26,10 +26,8 @@ import android.view.View.OnKeyListener
 import content.{ContentValues, DialogInterface, Intent}
 import android.preference.PreferenceManager
 
-import com.limeblast.androidhelpers.{AndroidImplicits}
-import AndroidImplicits.{toRunnable, functionToResultReceicer, functionToLongListener, functionToDialogOnClickListener}
-
-import com.limeblast.androidhelpers.AndroidHelpers
+import com.limeblast.androidhelpers.{ScalaHandler, AndroidImplicits, AndroidHelpers}
+import AndroidImplicits.{functionToResultReceicer, functionToLongListener, functionToDialogOnClickListener}
 
 
 import com.actionbarsherlock.app.{SherlockFragmentActivity, SherlockListFragment}
@@ -40,7 +38,7 @@ with OnKeyListener {
 
   var aa: ArrayAdapter[Idea] = _
 
-  private var handler: Handler = _
+  private var handler: ScalaHandler = _
 
   // Sorting status
   var sort_by = 0
@@ -82,7 +80,7 @@ with OnKeyListener {
 
     setSortStatus()
 
-    handler = new Handler()
+    handler = new ScalaHandler()
 
 
     if (aa != null) {
@@ -90,10 +88,9 @@ with OnKeyListener {
       setListAdapter(null)
     }
 
-    if (AppSettings.PRIVATE_PARENT_IDEA == null) {
-      setDefaultHeader()
-    } else {
-      setHeaderIdea(AppSettings.PRIVATE_PARENT_IDEA)
+    AppSettings.PRIVATE_PARENT_IDEA match {
+      case Some(idea) => setHeaderIdea(idea)
+      case None => setDefaultHeader()
     }
 
     val layoutID = R.layout.private_idea_entry
@@ -147,6 +144,10 @@ with OnKeyListener {
 
   }
 
+
+  /*
+   * Creates a default list header
+   */
   private def setDefaultHeader() {
     clearOldHeaders()
 
@@ -160,22 +161,20 @@ with OnKeyListener {
     setListAdapter(aa)
   }
 
-  override def onListItemClick(l: ListView, v: View, position: Int, id: Long) {
-    val idea = l.getItemAtPosition(position)
-
-    idea match {
+  override def onListItemClick(l: ListView, v: View, position: Int, id: Long) =
+    l.getItemAtPosition(position) match {
       case i: Idea => {
-        AppSettings.PRIVATE_PARENT_IDEA = i
+        AppSettings.PRIVATE_PARENT_IDEA = Some(i)
         setHeaderIdea(i)
         refresh()
       }
-      case _ => {}
+      case _ => super.onListItemClick(l, v, position, id)
     }
 
-  }
 
 
   /* Move this function eventually */
+  /*
   private def getIdea(resource_uri: String): Idea = {
     val cr = getActivity.getContentResolver
 
@@ -212,7 +211,7 @@ with OnKeyListener {
     cursor.close()
     idea
   }
-
+  */
   def removeIdeaRequest(idea: Idea) {
     // This means idea is on server
     if (idea.id != null) {
@@ -241,6 +240,7 @@ with OnKeyListener {
 
       resolver.delete(RESTfulProvider.CONTENT_URI, where, null)
     }
+
 
     handler.post(refresh)
   }
@@ -295,8 +295,9 @@ with OnKeyListener {
 
   private def startNewIdeaActivity() {
     val intent = new content.Intent(getActivity, classOf[NewIdeaActivity])
-    if (AppSettings.PRIVATE_PARENT_IDEA != null) {
-      intent.putExtra("parent_uri", AppSettings.PRIVATE_PARENT_IDEA.resource_uri)
+    AppSettings.PRIVATE_PARENT_IDEA match {
+      case Some(idea) => intent.putExtra("parent_uri", idea.resource_uri)
+      case _ =>
     }
 
     startActivity(intent)
@@ -310,7 +311,7 @@ with OnKeyListener {
     builder.setTitle(idea.title)
     builder.setItems(R.array.private_idea_options, (dialog: DialogInterface, which: Int) => {
       if (which == 0) { // NEW CHILDREN IDEA
-        AppSettings.PRIVATE_PARENT_IDEA = idea
+        AppSettings.PRIVATE_PARENT_IDEA = Some(idea)
         startNewIdeaActivity()
       }
       else if (which == 1) { //EDIT
@@ -364,23 +365,23 @@ with OnKeyListener {
   //-------------------------------------------------------\\
   //------------ FUNCTIONS TO SHOW LOADING ----------------\\
   //-------------------------------------------------------\\
-  private def showIndeterminedProgress() {
+  private def showIndeterminedProgress() =
     getActivity match {
       case sherlock: SherlockFragmentActivity => {
         sherlock.setSupportProgressBarIndeterminateVisibility(true)
       }
       case _ =>
     }
-  }
 
-  private def removeIndeterminedProgress() {
+
+  private def removeIndeterminedProgress() =
     getActivity match {
       case sherlock: SherlockFragmentActivity => {
         sherlock.setSupportProgressBarIndeterminateVisibility(false)
       }
       case _ =>
     }
-  }
+
 
   //-------------------------------------------------------\\
   //------------ FRAGMENT LIFECYCLE EVENTS ----------------\\
@@ -402,7 +403,7 @@ with OnKeyListener {
   //-------------------------------------------------------\\
   //--------- HANDLING ACTIONS FROM ACTIONBAR -------------\\
   //-------------------------------------------------------\\
-  override def onOptionsItemSelected(item: MenuItem): Boolean = {
+  override def onOptionsItemSelected(item: MenuItem): Boolean =
     item.getItemId match {
       /* Sync private ideas */
       case R.id.menu_item_sync_private_ideas => {
@@ -421,7 +422,7 @@ with OnKeyListener {
       }
       case _ => super.onOptionsItemSelected(item)
     }
-  }
+
 
   //-------------------------------------------------------\\
   //--------- LOADER MANAGER CALLBACK METHODS -------------\\
@@ -429,15 +430,13 @@ with OnKeyListener {
   def onCreateLoader(id: Int, args: Bundle): Loader[Cursor] = {
     val uri = Uri.withAppendedPath(RESTfulProvider.CONTENT_URI, "/" + USERNAME)
 
-    val parent_idea = AppSettings.PRIVATE_PARENT_IDEA
-
     var select = IdeaHelper.KEY_IS_IDEA_DELETED + "=0"
 
-    if (parent_idea != null) {
-      select += " AND " + IdeaHelper.KEY_PARENT + "='" + parent_idea.resource_uri + "'"
-    } else {
-      select += " AND " + IdeaHelper.KEY_PARENT + " IS NULL"
+    AppSettings.PRIVATE_PARENT_IDEA match {
+      case Some(idea) => select += " AND " + IdeaHelper.KEY_PARENT + "='" + idea.resource_uri + "'"
+      case None =>  select += " AND " + IdeaHelper.KEY_PARENT + " IS NULL"
     }
+
 
     new CursorLoader(getActivity.getApplicationContext, uri, null, select, null, null)
   }
@@ -460,6 +459,7 @@ with OnKeyListener {
 
 
   // Key Listener that listens for back key and moves back within the private idea hierarchy
+  /*
   override def onKey(view: View, keyCode: Int, event: KeyEvent): Boolean = {
     if (keyCode == KeyEvent.KEYCODE_BACK) {
 
@@ -487,6 +487,17 @@ with OnKeyListener {
       false
     }
   }
+  */
+
+
+  def onKey(view: View, keyCode: Int, keyEvent: KeyEvent): Boolean =
+    keyCode match {
+      case KeyEvent.KEYCODE_BACK => {
+
+        true
+      }
+      case _ => false
+    }
 
   //-------------------------------------------------------\\
   //-------------- Synchronize Functions ------------------\\

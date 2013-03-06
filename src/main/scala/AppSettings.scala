@@ -49,7 +49,7 @@ object AppSettings {
   // State of Sync If Necessary
   var IS_PERSONAL_IDEAS_SYNCING = false
   // STATE of idea tree hierarchy
-  var PRIVATE_PARENT_IDEA: Idea = null
+  var PRIVATE_PARENT_IDEA: Option[Idea] = None
 
   val LOGIN_ACTIVITY = 1
   val REGISTER_ACTIVITY = 2

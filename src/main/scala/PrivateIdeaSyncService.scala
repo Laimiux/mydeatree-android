@@ -26,9 +26,11 @@ class PrivateIdeaSyncService extends IntentService("PrivateIdeaSyncService") {
     val receiver: ResultReceiver = intent.getParcelableExtra(PRIVATE_IDEA_RESULT_RECEIVER)
     synchronizePrivateIdeas()
 
+
     if (receiver != null) {
       receiver.send(0, null)
     }
+
   }
 
   private def updateIdeas() {
