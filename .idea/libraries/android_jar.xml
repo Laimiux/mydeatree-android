@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="android.jar">
     <CLASSES>
-      <root url="jar:///Applications/adt-bundle-mac/sdk/platforms/android-10/android.jar!/" />
+      <root url="jar:///Applications/adt-bundle-mac/sdk/platforms/android-14/android.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

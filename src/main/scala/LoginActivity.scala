@@ -43,7 +43,7 @@ class LoginActivity extends SherlockActivity with TypedActivity {
 
   lazy val loginBtn = findView(TR.login_button)
 
-  lazy val mHandler: Handler = new Handler()
+  val mHandler: Handler = new Handler()
 
   override def onCreate(bundle: Bundle) {
     super.onCreate(bundle)
@@ -51,6 +51,7 @@ class LoginActivity extends SherlockActivity with TypedActivity {
     requestWindowFeature(Window.FEATURE_NO_TITLE)
 
     setContentView(R.layout.login_layout)
+
 
     if (bundle != null) {
       loggingIn = bundle.getBoolean(BUNDLE_LOGGING_IN, false)

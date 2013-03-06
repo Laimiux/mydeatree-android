@@ -1,3 +1,75 @@
 gen-idea no-classifiers
 compile
 android:start-device
+compile
+test
+compile
+update
+compile
+update
+compile
+gen-idea no-classifiers
+compile
+run last
+compile
+run last MydeaTree/android:aapt-generate
+compile
+update
+compile
+runst last update
+run last update
+compile
+run last update
+compile
+update
+compile
+update
+update last
+last update
+last update >> error.txt
+last update << error.txt
+compile
+show version
+compile
+show version
+android:emulator-start
+android:emulator-start none
+android:devices
+android:install-emulator
+compile
+gen-idea no-classifiers
+compile
+gen-idea no-classifiers
+compile
+clean-files
+clean
+inspect clean
+clean
+clean-keep-files
+clean-files
+clean
+inspect clean
+inspect clean-files
+compile
+update
+compile
+inspect clean-files
+scala-version
+actionbarsherlock/
+actionbarsherlock/run
+compile
+android:proguard
+android:proguard-opti
+android:proguard-option
+compile
+show javac-options
+compile
+compile last
+last compile
+compile
+android:start-device
+clean
+android:start-device
+clean
+android:emulator-start Nexus_S_by_Google
+android:start-emulator

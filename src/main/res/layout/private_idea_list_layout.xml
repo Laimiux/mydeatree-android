@@ -15,6 +15,7 @@
               android:layout_height="fill_parent"
               android:layout_gravity="top"
               android:divider="@android:color/transparent"
+              android:cacheColorHint="#00000000"
               android:dividerHeight="5dp"/>
 </LinearLayout>
  

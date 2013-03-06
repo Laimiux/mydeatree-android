@@ -1,27 +1,503 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidDesignerProfile">
+    <option name="fullProfile">
+      <profile>
+        <option name="device" value="2.7in QVGA" />
+        <option name="deviceConfiguration" value="Portrait" />
+        <option name="targetHashString" value="android-10" />
+        <option name="theme" value="Theme" />
+      </profile>
+    </option>
+    <option name="selection" value="[Full]" />
+  </component>
+  <component name="AndroidLayoutPreviewToolWindow">
+    <option name="state">
+      <GlobalState>
+        <option name="device" value="2.7in QVGA" />
+        <option name="dockMode" value="" />
+        <option name="nightMode" value="notnight" />
+        <option name="targetHashString" value="android-10" />
+        <option name="theme" value="Theme" />
+      </GlobalState>
+    </option>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2bc3cf6a-7f06-4297-a281-b398d8758ba7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/layout/main.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/ScalaSherlockActivity.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_library_2_9_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__org_scalatest_scalatest_2_9_2_1_8_test.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__scala_2_9_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$1$$anonfun$apply$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/color/abs__primary_text_disable_only_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/color/abs__primary_text_disable_only_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/color/abs__primary_text_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/color/abs__primary_text_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_bottom_solid_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_bottom_solid_inverse_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_bottom_solid_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_bottom_transparent_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_bottom_transparent_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_share_pack_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_share_pack_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_solid_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_solid_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_solid_shadow_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_stacked_solid_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_stacked_solid_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_stacked_transparent_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_stacked_transparent_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_transparent_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ab_transparent_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__btn_cab_done_default_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__btn_cab_done_default_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__btn_cab_done_focused_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__btn_cab_done_focused_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__btn_cab_done_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__btn_cab_done_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__cab_background_bottom_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__cab_background_bottom_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__cab_background_top_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__cab_background_top_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__dialog_full_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__dialog_full_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_ab_back_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_ab_back_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_cab_done_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_cab_done_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_clear_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_clear_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_clear_search_api_disabled_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_clear_search_api_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_go.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_go_search_api_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_menu_share_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_menu_share_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_search_api_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_voice_search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__ic_voice_search_api_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__list_activated_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__list_divider_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__list_divider_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__list_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__list_longpressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__list_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__list_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__list_selector_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__list_selector_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__menu_dropdown_panel_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__menu_dropdown_panel_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__progress_bg_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__progress_bg_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__progress_primary_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__progress_primary_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__progress_secondary_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__progress_secondary_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__spinner_48_inner_holo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__spinner_48_outer_holo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__spinner_ab_default_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__spinner_ab_default_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__spinner_ab_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__spinner_ab_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__spinner_ab_focused_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__spinner_ab_focused_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__spinner_ab_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__spinner_ab_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__tab_selected_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__tab_selected_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__tab_selected_pressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__tab_unselected_pressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__textfield_search_default_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__textfield_search_default_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__textfield_search_right_default_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__textfield_search_right_default_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__textfield_search_right_selected_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__textfield_search_right_selected_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__textfield_search_selected_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-hdpi/abs__textfield_search_selected_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_bottom_solid_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_bottom_solid_inverse_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_bottom_solid_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_bottom_transparent_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_bottom_transparent_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_share_pack_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_share_pack_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_solid_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_solid_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_solid_shadow_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_stacked_solid_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_stacked_solid_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_stacked_transparent_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_stacked_transparent_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_transparent_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ab_transparent_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__btn_cab_done_default_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__btn_cab_done_default_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__btn_cab_done_focused_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__btn_cab_done_focused_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__btn_cab_done_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__btn_cab_done_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__cab_background_bottom_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__cab_background_bottom_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__cab_background_top_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__cab_background_top_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__dialog_full_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__dialog_full_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_ab_back_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_ab_back_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_cab_done_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_cab_done_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_clear_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_clear_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_clear_search_api_disabled_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_clear_search_api_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_go.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_go_search_api_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_menu_share_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_menu_share_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_search_api_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_voice_search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__ic_voice_search_api_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__list_activated_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__list_divider_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__list_divider_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__list_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__list_longpressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__list_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__list_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__list_selector_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__list_selector_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__menu_dropdown_panel_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__menu_dropdown_panel_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__progress_bg_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__progress_bg_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__progress_primary_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__progress_primary_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__progress_secondary_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__progress_secondary_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__spinner_48_inner_holo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__spinner_48_outer_holo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__spinner_ab_default_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__spinner_ab_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__spinner_ab_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__spinner_ab_focused_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__spinner_ab_focused_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__spinner_ab_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__spinner_ab_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__tab_selected_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__tab_selected_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__tab_selected_pressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__tab_unselected_pressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__textfield_search_default_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__textfield_search_default_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__textfield_search_right_default_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__textfield_search_right_default_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__textfield_search_right_selected_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__textfield_search_right_selected_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__textfield_search_selected_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-mdpi/abs__textfield_search_selected_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-v11/abs__progress_medium_holo.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_bottom_solid_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_bottom_solid_inverse_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_bottom_solid_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_bottom_transparent_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_bottom_transparent_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_share_pack_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_share_pack_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_solid_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_solid_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_solid_shadow_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_stacked_solid_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_stacked_solid_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_stacked_transparent_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_stacked_transparent_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_transparent_dark_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ab_transparent_light_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__btn_cab_done_default_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__btn_cab_done_default_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__btn_cab_done_focused_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__btn_cab_done_focused_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__btn_cab_done_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__btn_cab_done_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__cab_background_bottom_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__cab_background_bottom_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__cab_background_top_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__cab_background_top_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__dialog_full_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__dialog_full_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_ab_back_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_ab_back_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_cab_done_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_cab_done_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_clear_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_clear_search_api_disabled_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_clear_search_api_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_go.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_go_search_api_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_menu_share_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_menu_share_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_search_api_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_voice_search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__ic_voice_search_api_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__list_activated_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__list_divider_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__list_divider_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__list_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__list_longpressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__list_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__list_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__list_selector_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__list_selector_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__menu_dropdown_panel_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__menu_dropdown_panel_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__progress_bg_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__progress_bg_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__progress_primary_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__progress_primary_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__progress_secondary_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__progress_secondary_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__spinner_48_inner_holo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__spinner_48_outer_holo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__spinner_ab_default_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__spinner_ab_default_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__spinner_ab_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__spinner_ab_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__spinner_ab_focused_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__spinner_ab_focused_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__spinner_ab_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__spinner_ab_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__tab_selected_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__tab_selected_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__tab_selected_pressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__tab_unselected_pressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__textfield_search_default_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__textfield_search_default_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__textfield_search_right_default_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__textfield_search_right_default_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__textfield_search_right_selected_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__textfield_search_right_selected_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__textfield_search_selected_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable-xhdpi/abs__textfield_search_selected_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__activated_background_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__activated_background_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__btn_cab_done_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__btn_cab_done_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__ic_clear.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__ic_clear_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__ic_menu_moreoverflow_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__ic_menu_moreoverflow_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__item_background_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__item_background_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__list_selector_background_transition_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__list_selector_background_transition_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__list_selector_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__list_selector_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__progress_horizontal_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__progress_horizontal_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__progress_medium_holo.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__search_dropdown_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__search_dropdown_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__spinner_ab_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__spinner_ab_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__tab_indicator_ab_holo.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__textfield_searchview_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__textfield_searchview_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__textfield_searchview_right_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/drawable/abs__textfield_searchview_right_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout-large/abs__action_mode_close_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout-v14/sherlock_spinner_dropdown_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout-v14/sherlock_spinner_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout-xlarge/abs__screen_action_bar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout-xlarge/abs__screen_action_bar_overlay.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__action_bar_home.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__action_bar_tab.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__action_bar_tab_bar_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__action_bar_title_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__action_menu_item_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__action_menu_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__action_mode_bar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__action_mode_close_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__activity_chooser_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__activity_chooser_view_list_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__dialog_title_holo.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__list_menu_item_checkbox.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__list_menu_item_icon.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__list_menu_item_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__list_menu_item_radio.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__popup_menu_item_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__screen_action_bar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__screen_action_bar_overlay.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__screen_simple.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__screen_simple_overlay_action_mode.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__search_dropdown_item_icons_2line.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__search_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/abs__simple_dropdown_hint.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/sherlock_spinner_dropdown_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/layout/sherlock_spinner_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-land/abs__dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-large-hdpi-1024x600/abs__dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-large-land-hdpi-1024x600/abs__dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-large-land-mdpi-1024x600/abs__dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-large-mdpi-1024x600/abs__dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-large/abs__dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-sw600dp/abs__bools.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-sw600dp/abs__dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-v11/abs__themes.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-v14/abs__styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-v14/abs__themes.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-w360dp/abs__dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-w480dp/abs__bools.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-w480dp/abs__config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-w500dp/abs__dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-w600dp/abs__dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values-xlarge/abs__dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values/abs__attrs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values/abs__bools.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values/abs__colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values/abs__config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values/abs__dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values/abs__ids.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values/abs__strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values/abs__styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/actionbarsherlock-4.2.0/res/values/abs__themes.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/android/support/v4/app/Watson.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/widget/CollapsibleActionViewWrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/widget/IcsColorDrawable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/widget/SearchView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/widget/SuggestionsAdapter.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/ActionBar$LayoutParams.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/ActionBar$LayoutParams.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/ActionBar$OnMenuVisibilityListener.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/ActionBar$OnMenuVisibilityListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/ActionBar$OnNavigationListener.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/ActionBar$OnNavigationListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/ActionBar$Tab.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/ActionBar$Tab.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/ActionBar$TabListener.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/ActionBar$TabListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/ActionBar.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/ActionBar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarImpl$1.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarImpl$2.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarImpl$ActionModeImpl.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarImpl$ActionModeImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarImpl$TabImpl.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarImpl$TabImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarImpl.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ActionBarSherlockCompat$1.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ActionBarSherlockCompat$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ActionBarSherlockCompat$ActionModeCallbackWrapper.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ActionBarSherlockCompat$ActionModeCallbackWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ActionBarSherlockCompat.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ActionBarSherlockCompat.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ActionBarSherlockNative$ActionModeCallbackWrapper.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ActionBarSherlockNative$ActionModeCallbackWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ActionBarSherlockNative$ActionModeWrapper.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ActionBarSherlockNative$ActionModeWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ActionBarSherlockNative.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ActionBarSherlockNative.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarWrapper$TabWrapper.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarWrapper$TabWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarWrapper.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/app/ActionBarWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$1.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$2.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$3.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$4.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$5.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$6.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$7.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$8.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$1.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$2.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$3.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$4.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$5.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$6.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$7.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$8.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$9.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$2.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$7.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$fullAndroidSettings$1.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$fullAndroidSettings$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$fullAndroidSettings$2.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$fullAndroidSettings$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$fullAndroidSettings$3.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$fullAndroidSettings$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ResourcesCompat.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/internal/ResourcesCompat.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockActivity.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockDialogFragment.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockDialogFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockExpandableListActivity.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockExpandableListActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockFragment.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockFragmentActivity.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockFragmentActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockListActivity.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockListActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockListFragment.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockListFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockPreferenceActivity.class" afterPath="$PROJECT_DIR$/target/scala-2.9.2/classes/com/actionbarsherlock/app/SherlockPreferenceActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes.dex" afterPath="$PROJECT_DIR$/target/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes.min.jar" afterPath="$PROJECT_DIR$/target/classes.min.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/cache/MydeaTree/compile/inc_compile" afterPath="$PROJECT_DIR$/target/scala-2.9.2/cache/MydeaTree/compile/inc_compile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/mydeatree-0.1.apk" afterPath="$PROJECT_DIR$/target/mydeatree-0.1.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resources.apk" afterPath="$PROJECT_DIR$/target/resources.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/ActionBar.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/ActionBar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/widget/ActionBarContainer.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/widget/ActionBarContainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/app/ActionBarImpl.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/app/ActionBarImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/ActionBarSherlock.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/ActionBarSherlock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/ActionBarSherlockCompat.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/ActionBarSherlockCompat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/ActionBarSherlockNative.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/ActionBarSherlockNative.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/app/ActionBarWrapper.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/app/ActionBarWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuView.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/view/menu/ActionMenuView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/widget/ActivityChooserModel.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/widget/ActivityChooserModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/widget/ActivityChooserView.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/widget/ActivityChooserView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/resource_managed/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/target/scala-2.9.2/resource_managed/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/nineoldandroids/view/animation/AnimatorProxy.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/nineoldandroids/view/animation/AnimatorProxy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/Build.scala" afterPath="$PROJECT_DIR$/project/Build.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/widget/CapitalizingTextView.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/widget/CapitalizingTextView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/widget/IcsLinearLayout.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/widget/IcsLinearLayout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/LoginActivity.scala" afterPath="$PROJECT_DIR$/src/main/scala/LoginActivity.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/MainActivity.scala" afterPath="$PROJECT_DIR$/src/main/scala/MainActivity.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/view/MenuInflater.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/view/MenuInflater.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/view/menu/MenuItemWrapper.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/view/menu/MenuItemWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/view/menu/MenuWrapper.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/view/menu/MenuWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea_modules/MydeaTree.iml" afterPath="$PROJECT_DIR$/.idea_modules/MydeaTree.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineFrameLayout.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineFrameLayout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineLinearLayout.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/nineoldandroids/widget/NineLinearLayout.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/R.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/limeblast/mydeatree/R.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/limeblast/mydeatree/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/widget/ScrollingTabContainerView.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/internal/widget/ScrollingTabContainerView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockActivity.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockDialogFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockExpandableListActivity.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockExpandableListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockFragment.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockFragmentActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockListActivity.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockListFragment.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockListFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockPreferenceActivity.java" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/actionbarsherlock/app/SherlockPreferenceActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/scala/com/limeblast/mydeatree/TR.scala" afterPath="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/scala/com/limeblast/mydeatree/TR.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/src/main/scala/Tests.scala" afterPath="$PROJECT_DIR$/tests/src/main/scala/Tests.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/android/install-device/$global/out" afterPath="$PROJECT_DIR$/target/streams/android/install-device/$global/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/android/package-debug/$global/out" afterPath="$PROJECT_DIR$/target/streams/android/package-debug/$global/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/private_idea_list_layout.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/private_idea_list_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/public_ideas_layout.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/public_ideas_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/styles_mydeatree.xml" afterPath="$PROJECT_DIR$/src/main/res/values/styles_mydeatree.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea_modules/tests.iml" afterPath="$PROJECT_DIR$/.idea_modules/tests.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mydeatree.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/MainActivity.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362084590760" ignored="false" />
     <file path="/Fragmento.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362084724876" ignored="false" />
-    <file path="/Build.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362084790348" ignored="false" />
+    <file path="/Build.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362545388876" ignored="false" />
     <file path="/ListFragmento.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362084822344" ignored="false" />
-    <file path="/Dummy.txt" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362084920291" ignored="false" />
+    <file path="/Dummy.txt" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362545046106" ignored="false" />
+    <file path="/Tests.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362437744654" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.9.2/resource_managed/main/AndroidManifest.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362467951356" ignored="false" />
+    <file path="/a.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362469428800" ignored="false" />
+    <file path="/ScalaSherlockActivity.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362476236383" ignored="false" />
+    <file path="/styles_mydeatree.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362546026424" ignored="false" />
+    <file path="/LoginActivity.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362546664299" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +505,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="USE_COMPILE_SERVER" value="false" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -36,7 +515,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any>
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -70,19 +549,21 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="mydeatree" />
+    <favorites_list name="mydeatree-android" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="Build.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/Build.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="54" selection-start="695" selection-end="695" vertical-scroll-proportion="0.0">
+            <state line="27" column="68" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -90,13 +571,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="private_idea_list_layout.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/private_idea_list_layout.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="48" selection-start="828" selection-end="828" vertical-scroll-proportion="0.28114665">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrivateIdeaListFragment.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/PrivateIdeaListFragment.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="39" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MainActivity.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/MainActivity.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#33#68#0" expanded="true" />
-              </folding>
+            <state line="21" column="2" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,16 +604,16 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="77" selection-start="3393" selection-end="3393" vertical-scroll-proportion="0.0">
+            <state line="68" column="38" selection-start="3134" selection-end="3134" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tests.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/src/main/scala/Tests.scala">
+      <file leaf-file-name="HttpRequest.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/HttpRequest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="6" selection-start="368" selection-end="368" vertical-scroll-proportion="0.20380434">
+            <state line="12" column="37" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -138,10 +638,16 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/Fragmento.scala" />
-        <option value="$PROJECT_DIR$/project/Build.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ListFragmento.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/MainActivity.scala" />
+        <option value="$PROJECT_DIR$/tests/src/main/scala/Tests.scala" />
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/main/scala/ScalaSherlockActivity.scala" />
+        <option value="$PROJECT_DIR$/project/Build.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/LoginActivity.scala" />
+        <option value="$PROJECT_DIR$/src/main/res/values/styles_mydeatree.xml" />
+        <option value="$PROJECT_DIR$/src/main/scala/MainActivity.scala" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/public_ideas_layout.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/private_idea_list_layout.xml" />
       </list>
     </option>
   </component>
@@ -164,6 +670,11 @@
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
+  <component name="ProjectStructureProblems">
+    <ignored-problems>
+      <problem id="invalid-module-dependency(module:tests,&lt; Android 2.3.3 Platform &gt;)" />
+    </ignored-problems>
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
@@ -182,35 +693,41 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
+              <option name="myItemId" value="mydeatree-android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
+              <option name="myItemId" value="mydeatree-android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
+              <option name="myItemId" value="mydeatree-android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
+              <option name="myItemId" value="mydeatree-android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
+              <option name="myItemId" value="mydeatree-android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree-android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -224,83 +741,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
+              <option name="myItemId" value="mydeatree-android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tests.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
+              <option name="myItemId" value="mydeatree-android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -314,86 +759,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="scala" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mydeatree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Build.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -403,15 +768,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.scala.compiler.ScalacConfigurable" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="last_opened_file_path" value="/usr/local/scala-2.10.0" />
+    <property name="AndroidLayoutSelectedEditor" value="text-editor" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -445,6 +817,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -470,19 +855,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -567,29 +939,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-322" y="-1080" width="1920" height="1080" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977587" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20416667" sideWeight="0.9605123" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20302014" sideWeight="0.9605123" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35758835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16435432" sideWeight="0.79583335" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14354323" sideWeight="0.64241165" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -647,32 +1022,11 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/Build.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="54" selection-start="695" selection-end="695" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/MainActivity.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#33#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="77" selection-start="3393" selection-end="3393" vertical-scroll-proportion="0.0">
@@ -682,11 +1036,186 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/src/main/scala/Tests.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="6" selection-start="368" selection-end="368" vertical-scroll-proportion="0.20380434">
+        <state line="13" column="6" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/src/main/scala/Tests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="47" selection-start="772" selection-end="772" vertical-scroll-proportion="0.5809859" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/HttpRequestUrl.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="33" selection-end="33" vertical-scroll-proportion="0.045936394" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/ScalaSherlockActivity.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="51" selection-start="556" selection-end="556" vertical-scroll-proportion="0.19710907">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/IdeaEditActivity.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="45" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.35331905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/LoginActivity.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="2" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.28907922">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="38" selection-start="3134" selection-end="3134" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles_mydeatree.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="12" selection-start="5056" selection-end="5056" vertical-scroll-proportion="0.36343613">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MainActivity.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="2" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/PrivateIdeaListFragment.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="39" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/HttpRequest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="37" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/public_ideas_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="46" selection-start="550" selection-end="550" vertical-scroll-proportion="0.19845645">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/Build.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="68" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/private_idea_list_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="48" selection-start="828" selection-end="828" vertical-scroll-proportion="0.28114665">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>MydeaTree</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Scala (MydeaTree)|Scala</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-2.10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Android 4.2.2 Platform</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Scala|MydeaTree</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>SBT: scala:2.9.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

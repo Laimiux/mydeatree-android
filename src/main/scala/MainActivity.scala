@@ -19,7 +19,7 @@ import android.net.Uri
  */
 class MainActivity extends SherlockFragmentActivity with TypedActivity {
 
-  lazy val handler: Handler = new Handler()
+  val handler: Handler = new Handler()
 
   // For tab names
   private val TAB_PRIVATE = "Personal"

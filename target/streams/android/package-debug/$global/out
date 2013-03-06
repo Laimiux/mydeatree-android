@@ -1,7 +1,7 @@
-[0m[[0minfo[0m] [0mPackaging /Users/Laimiux/mydeatree/target/mydeatree-0.1.apk[0m
+[0m[[0minfo[0m] [0mPackaging /Users/Laimiux/Dropbox/mydeatree-android/target/mydeatree-0.1.apk[0m
 [0m[[0mdebug[0m] [0mUsing keystore: /Users/Laimiux/.android/debug.keystore[0m
 [0m[[0mdebug[0m] [0mPackaging mydeatree-0.1.apk[0m
-[0m[[0mdebug[0m] [0m/Users/Laimiux/mydeatree/target/resources.apk:[0m
+[0m[[0mdebug[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/target/resources.apk:[0m
 [0m[[0mdebug[0m] [0m=> res/color/abs__primary_text_disable_only_holo_dark.xml[0m
 [0m[[0mdebug[0m] [0m=> res/color/abs__primary_text_disable_only_holo_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/color/abs__primary_text_holo_dark.xml[0m
@@ -10,8 +10,6 @@
 [0m[[0mdebug[0m] [0m=> res/drawable/abs__activated_background_holo_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/abs__btn_cab_done_holo_dark.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/abs__btn_cab_done_holo_light.xml[0m
-[0m[[0mdebug[0m] [0m=> res/drawable/abs__ic_clear.xml[0m
-[0m[[0mdebug[0m] [0m=> res/drawable/abs__ic_clear_holo_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/abs__ic_menu_moreoverflow_holo_dark.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/abs__ic_menu_moreoverflow_holo_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/abs__item_background_holo_dark.xml[0m
@@ -23,15 +21,9 @@
 [0m[[0mdebug[0m] [0m=> res/drawable/abs__progress_horizontal_holo_dark.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/abs__progress_horizontal_holo_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/abs__progress_medium_holo.xml[0m
-[0m[[0mdebug[0m] [0m=> res/drawable/abs__search_dropdown_dark.xml[0m
-[0m[[0mdebug[0m] [0m=> res/drawable/abs__search_dropdown_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/abs__spinner_ab_holo_dark.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/abs__spinner_ab_holo_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/abs__tab_indicator_ab_holo.xml[0m
-[0m[[0mdebug[0m] [0m=> res/drawable/abs__textfield_searchview_holo_dark.xml[0m
-[0m[[0mdebug[0m] [0m=> res/drawable/abs__textfield_searchview_holo_light.xml[0m
-[0m[[0mdebug[0m] [0m=> res/drawable/abs__textfield_searchview_right_holo_dark.xml[0m
-[0m[[0mdebug[0m] [0m=> res/drawable/abs__textfield_searchview_right_holo_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/activated_background_holo_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/app_main_bg.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/btn_check_holo_light.xml[0m
@@ -41,6 +33,7 @@
 [0m[[0mdebug[0m] [0m=> res/drawable/button_holder.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/edit_text_holo_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/fastscroll_thumb_holo.xml[0m
+[0m[[0mdebug[0m] [0m=> res/drawable/idea_button.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/idea_selector.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/list_selector_background_transition_holo_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/list_selector_holo_light.xml[0m
@@ -86,9 +79,6 @@
 [0m[[0mdebug[0m] [0m=> res/layout/abs__screen_action_bar_overlay.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/abs__screen_simple.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/abs__screen_simple_overlay_action_mode.xml[0m
-[0m[[0mdebug[0m] [0m=> res/layout/abs__search_dropdown_item_icons_2line.xml[0m
-[0m[[0mdebug[0m] [0m=> res/layout/abs__search_view.xml[0m
-[0m[[0mdebug[0m] [0m=> res/layout/abs__simple_dropdown_hint.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/idea_edit_layout.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/idea_new.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/login_layout.xml[0m
@@ -100,7 +90,6 @@
 [0m[[0mdebug[0m] [0m=> res/layout/private_idea_entry.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/private_idea_header.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/private_idea_list_layout.xml[0m
-[0m[[0mdebug[0m] [0m=> res/layout/private_ideas_layout.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/public_idea_entry.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/public_ideas_layout.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/register_layout.xml[0m
@@ -151,20 +140,10 @@
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_ab_back_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_cab_done_holo_dark.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_cab_done_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_clear_disabled.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_clear_normal.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_clear_search_api_disabled_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_clear_search_api_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_go.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_go_search_api_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_menu_share_holo_dark.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_menu_share_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_search.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_search_api_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_voice_search.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__ic_voice_search_api_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__list_activated_holo.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__list_divider_holo_dark.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__list_divider_holo_light.9.png[0m
@@ -196,14 +175,6 @@
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__tab_selected_holo.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__tab_selected_pressed_holo.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__tab_unselected_pressed_holo.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__textfield_search_default_holo_dark.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__textfield_search_default_holo_light.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__textfield_search_right_default_holo_dark.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__textfield_search_right_default_holo_light.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__textfield_search_right_selected_holo_dark.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__textfield_search_right_selected_holo_light.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__textfield_search_selected_holo_dark.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-hdpi/abs__textfield_search_selected_holo_light.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/btn_check_off_disabled_focused_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/btn_check_off_disabled_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-hdpi/btn_check_off_focused_holo_light.png[0m
@@ -349,20 +320,10 @@
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_ab_back_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_cab_done_holo_dark.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_cab_done_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_clear_disabled.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_clear_normal.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_clear_search_api_disabled_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_clear_search_api_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_go.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_go_search_api_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_menu_share_holo_dark.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_menu_share_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_search.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_search_api_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_voice_search.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__ic_voice_search_api_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__list_activated_holo.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__list_divider_holo_dark.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__list_divider_holo_light.9.png[0m
@@ -394,14 +355,6 @@
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__tab_selected_holo.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__tab_selected_pressed_holo.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__tab_unselected_pressed_holo.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__textfield_search_default_holo_dark.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__textfield_search_default_holo_light.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__textfield_search_right_default_holo_dark.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__textfield_search_right_default_holo_light.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__textfield_search_right_selected_holo_dark.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__textfield_search_right_selected_holo_light.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__textfield_search_selected_holo_dark.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-mdpi/abs__textfield_search_selected_holo_light.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/btn_check_off_disabled_focused_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/btn_check_off_disabled_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-mdpi/btn_check_off_focused_holo_light.png[0m
@@ -542,19 +495,10 @@
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_ab_back_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_cab_done_holo_dark.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_cab_done_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_clear_disabled.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_clear_search_api_disabled_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_clear_search_api_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_go.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_go_search_api_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_menu_share_holo_dark.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_menu_share_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_search.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_search_api_holo_light.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_voice_search.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__ic_voice_search_api_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__list_activated_holo.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__list_divider_holo_dark.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__list_divider_holo_light.9.png[0m
@@ -586,14 +530,6 @@
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__tab_selected_holo.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__tab_selected_pressed_holo.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__tab_unselected_pressed_holo.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__textfield_search_default_holo_dark.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__textfield_search_default_holo_light.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__textfield_search_right_default_holo_dark.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__textfield_search_right_default_holo_light.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__textfield_search_right_selected_holo_dark.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__textfield_search_right_selected_holo_light.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__textfield_search_selected_holo_dark.9.png[0m
-[0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/abs__textfield_search_selected_holo_light.9.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/btn_check_off_disabled_focused_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/btn_check_off_disabled_holo_light.png[0m
 [0m[[0mdebug[0m] [0m=> res/drawable-xhdpi/btn_check_off_focused_holo_light.png[0m
@@ -701,8 +637,8 @@
 [0m[[0mdebug[0m] [0m=> res/layout-large/abs__action_mode_close_item.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout-xlarge/abs__screen_action_bar.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout-xlarge/abs__screen_action_bar_overlay.xml[0m
-[0m[[0mdebug[0m] [0m/Users/Laimiux/mydeatree/target/classes.dex => classes.dex[0m
-[0m[[0mdebug[0m] [0m/Users/Laimiux/mydeatree/target/classes.min.jar:[0m
+[0m[[0mdebug[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/target/classes.dex => classes.dex[0m
+[0m[[0mdebug[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/target/classes.min.jar:[0m
 [0m[[0mdebug[0m] [0m=> help-doc.html[0m
 [0m[[0mdebug[0m] [0m=> index-all.html[0m
 [0m[[0mdebug[0m] [0m=> overview-summary.html[0m

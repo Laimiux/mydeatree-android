@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea_modules/MydeaTree.iml" filepath="$PROJECT_DIR$/.idea_modules/MydeaTree.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea_modules/MydeaTree-build.iml" filepath="$PROJECT_DIR$/.idea_modules/MydeaTree-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/actionbarsherlock.iml" filepath="$PROJECT_DIR$/.idea_modules/actionbarsherlock.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea_modules/tests.iml" filepath="$PROJECT_DIR$/.idea_modules/tests.iml" />
     </modules>
   </component>

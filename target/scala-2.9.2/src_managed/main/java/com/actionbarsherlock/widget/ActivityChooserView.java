@@ -405,11 +405,7 @@ class ActivityChooserView extends ViewGroup implements ActivityChooserModelClien
         super.onDetachedFromWindow();
         ActivityChooserModel dataModel = mAdapter.getDataModel();
         if (dataModel != null) {
-            try {
-                dataModel.unregisterObserver(mModelDataSetOberver);
-            } catch (IllegalStateException e) {
-                //Oh, well... fixes issue #557
-            }
+            dataModel.unregisterObserver(mModelDataSetOberver);
         }
         ViewTreeObserver viewTreeObserver = getViewTreeObserver();
         if (viewTreeObserver.isAlive()) {
@@ -530,7 +526,6 @@ class ActivityChooserView extends ViewGroup implements ActivityChooserModelClien
             mActivityChooserContent.setBackgroundDrawable(mActivityChooserContentBackground);
         } else {
             mActivityChooserContent.setBackgroundDrawable(null);
-            mActivityChooserContent.setPadding(0, 0, 0, 0);
         }
     }
 
@@ -653,11 +648,7 @@ class ActivityChooserView extends ViewGroup implements ActivityChooserModelClien
         public void setDataModel(ActivityChooserModel dataModel) {
             ActivityChooserModel oldDataModel = mAdapter.getDataModel();
             if (oldDataModel != null && isShown()) {
-                try {
-                    oldDataModel.unregisterObserver(mModelDataSetOberver);
-                } catch (IllegalStateException e) {
-                    //Oh, well... fixes issue #557
-                }
+                oldDataModel.unregisterObserver(mModelDataSetOberver);
             }
             mDataModel = dataModel;
             if (dataModel != null && isShown()) {

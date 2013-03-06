@@ -95,7 +95,7 @@
         <item name="android:background">@drawable/ab_transparent_mydeatree</item>
         <item name="android:progressBarStyle">@style/mydeatree_ProgressBar</item>
     </style>
-	
+
     <style name="mydeatree_PopupMenu" parent="@style/Widget.Sherlock.ListPopupWindow">	
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_mydeatree</item>	
     </style>

@@ -66,7 +66,6 @@ object TR {
  val private_idea_entry = TypedLayout(R.layout.private_idea_entry)
  val private_idea_header = TypedLayout(R.layout.private_idea_header)
  val private_idea_list_layout = TypedLayout(R.layout.private_idea_list_layout)
- val private_ideas_layout = TypedLayout(R.layout.private_ideas_layout)
  val public_idea_entry = TypedLayout(R.layout.public_idea_entry)
  val public_ideas_layout = TypedLayout(R.layout.public_ideas_layout)
  val register_layout = TypedLayout(R.layout.register_layout)
