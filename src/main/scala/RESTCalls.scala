@@ -12,56 +12,59 @@ import org.apache.http.entity.StringEntity
 object RESTCalls {
   val APP_TAG = "RESTCalls Wrapper"
 
-  def retrieveObjects[T](initialUrl: String, objectKind: Class[T]): util.ArrayList[AnyRef] = {
+  def retrieveObjects[T](initialUrl: String, objectKind: Class[T]): Option[util.ArrayList[AnyRef]] = {
     val objects: util.ArrayList[AnyRef] = new util.ArrayList()
 
-    val response = HttpRequest.getFromUrl(USERNAME, PASSWORD, initialUrl)
+    //val response = HttpRequest.getFromUrl(USERNAME, PASSWORD, initialUrl)
 
-    if (response == null) {
-      if(AppSettings.DEBUG) Log.d(APP_TAG, "Received a null response")
-      null
-    } else if (isResponseOkay(response)) {
+    HttpRequest.getFromUrl(USERNAME, PASSWORD, initialUrl) match {
+      case Some(response) => {
+        if(isResponseOkay(response)) {
+          val content: InputStream = response.getEntity.getContent
 
-        val content: InputStream = response.getEntity.getContent
+          val mainObject: DjangoRootObject[AnyRef] = JsonWrapper.getMainObject(content, objectKind).asInstanceOf[DjangoRootObject[AnyRef]]
 
-        val mainObject: DjangoRootObject[AnyRef] = JsonWrapper.getMainObject(content, objectKind).asInstanceOf[DjangoRootObject[AnyRef]]
+          val meta: Meta = mainObject.meta
 
-        val meta: Meta = mainObject.meta
+          objects.addAll(mainObject.objects)
 
-        objects.addAll(mainObject.objects)
-
-        if (meta.next != null) {
-          val moreObjects = retrieveObjects(API_URL + meta.next, objectKind)
-          if (moreObjects != null){
-            objects.addAll(moreObjects)
+          if (meta.next != null) {
+            retrieveObjects(API_URL + meta.next, objectKind) match {
+              case Some(moreObjects) => objects.addAll(moreObjects)
+              case None =>
+            }
           }
+
+          Some(objects)
+        } else {
+          None
         }
-
-        objects
-
-    } else {
-      null
+      }
+      case None => {
+        if(AppSettings.DEBUG) Log.d(APP_TAG, "Received a null response")
+        None
+      }
     }
-
   }
 
   def retrieveObject[T](url: String, objClass: Class[T]): Option[T] = {
-    val response = HttpRequest.getFromUrl(USERNAME, PASSWORD, url)
+    HttpRequest.getFromUrl(USERNAME, PASSWORD, url) match {
+      case Some(response) => {
+        val content: InputStream = response.getEntity.getContent
 
-    if (response != null && isResponseOkay(response)) {
-      val content: InputStream = response.getEntity.getContent
-
-      val obj: T = JsonWrapper.getMainObject(content, objClass)
-      Some(obj)
-    } else
-      None
+        val obj: T = JsonWrapper.getMainObject(content, objClass)
+        Some(obj)
+      }
+      case None => None
+    }
   }
 
   def deleteObject(url: String): Boolean = {
-    val response = HttpRequest.deleteFromUrl(USERNAME, PASSWORD, url)
-
-    if (response != null && isResponseDelete(response)) true
-    else false
+    //val response =
+    HttpRequest.deleteFromUrl(USERNAME, PASSWORD, url) match {
+      case Some(response) => if (isResponseDelete(response)) true  else false
+      case None => false
+    }
   }
 
   def postObject[T](url: String, originalObject: T): Option[T] = {

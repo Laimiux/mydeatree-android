@@ -16,11 +16,9 @@ import com.actionbarsherlock.app.SherlockActivity
 import concurrent.ops._
 import android.net.{Uri}
 
-import com.limeblast.androidhelpers.{AndroidImplicits}
-import AndroidImplicits.{toListener, toRunnable, functionToResultReceicer}
+import com.limeblast.androidhelpers.{ScalaHandler, AndroidImplicits, AndroidHelpers}
+import AndroidImplicits.{toListener, functionToResultReceicer}
 import com.actionbarsherlock.view.Window
-
-import com.limeblast.androidhelpers.AndroidHelpers
 
 
 class LoginActivity extends SherlockActivity with TypedActivity {
@@ -43,7 +41,7 @@ class LoginActivity extends SherlockActivity with TypedActivity {
 
   lazy val loginBtn = findView(TR.login_button)
 
-  val mHandler: Handler = new Handler()
+  val mHandler = new ScalaHandler()
 
   override def onCreate(bundle: Bundle) {
     super.onCreate(bundle)
@@ -106,7 +104,7 @@ class LoginActivity extends SherlockActivity with TypedActivity {
   }
 
   def startProgressBar(text: String) {
-    dialog = ProgressDialog.show(LoginActivity.this, "", text, true)
+    dialog = ProgressDialog.show(this, "", text, true)
   }
 
   // Function to login user.

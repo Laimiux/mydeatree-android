@@ -27,28 +27,28 @@ object HttpRequest {
     defaultClient
   }
 
-  def getFromUrl(user: String, pw: String, url: String): HttpResponse = {
+  def getFromUrl(user: String, pw: String, url: String): Option[HttpResponse] = {
     val httpclient = getHttpClientWithCredentials(user, pw)
 
     val get = new HttpGet(url)
     get.addHeader("accept", "application/json")
 
-    val response: HttpResponse = try {
-      httpclient.execute(get)
+    val response: Option[HttpResponse] = try {
+      Some(httpclient.execute(get))
     } catch {
       case e: Exception => {
         if(AppSettings.DEBUG) Log.d(APP_TAG, e.toString)
-        null
+        None
       }
       case _ => {
-        null
+        None
       }
     }
 
     response
   }
 
-  def deleteFromUrl(username: String, password: String, url: String): HttpResponse = {
+  def deleteFromUrl(username: String, password: String, url: String): Option[HttpResponse] = {
     if(AppSettings.DEBUG)
       Log.d(APP_TAG, "Attempting to delete an idea from " + url)
 
@@ -56,14 +56,14 @@ object HttpRequest {
 
     val del = new HttpDelete(url)
 
-    val response: HttpResponse = try {
-      httpClient.execute(del)
+    val response: Option[HttpResponse] = try {
+      Some(httpClient.execute(del))
     } catch {
       case e: Exception => {
         if(AppSettings.DEBUG) Log.d(APP_TAG, e.toString)
-        null
+        None
       }
-      case _ => null
+      case _ => None
     }
 
     response

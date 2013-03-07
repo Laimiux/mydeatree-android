@@ -1,10 +1,8 @@
 package com.limeblast.mydeatree
 
-import android.app.Activity
-import android.os.{Handler, Bundle}
+import android.os.Bundle
 import android.widget.{Toast, EditText, CheckBox, Button}
 import android.view.View
-import android.view.View.OnClickListener
 
 import android.content.{ContentUris, Intent}
 import com.actionbarsherlock.app.SherlockActivity
@@ -16,13 +14,11 @@ import com.limeblast.androidhelpers.AndroidImplicits.toListener
 import com.limeblast.androidhelpers.AndroidHelpers
 
 class IdeaEditActivity extends SherlockActivity with TypedActivity {
-  lazy val submitButton: Button = findView(TR.submit_button)
 
+  lazy val submitButton: Button = findView(TR.submit_button)
   lazy val publicCheckBox: CheckBox = findView(TR.idea_public_check_box)
   lazy val titleEdit: EditText = findView(TR.title_edit)
   lazy val textEdit: EditText = findView(TR.text_edit)
-  lazy val handler: Handler = new Handler()
-
   lazy val oldIdea = JsonWrapper.getMainObject(getIntent.getStringExtra("idea"), classOf[Idea])
 
   override def onCreate(savedInstanceState: Bundle) {
@@ -116,18 +112,6 @@ class IdeaEditActivity extends SherlockActivity with TypedActivity {
 
     // Start service
     startService(intent)
-  }
-
-
-  private def successfullyUpdated() {
-    Toast.makeText(IdeaEditActivity.this, "Idea successfully updated!", Toast.LENGTH_SHORT).show()
-    setResult(Activity.RESULT_OK)
-    finish()
-
-  }
-
-  private def failedToUpdate() {
-    Toast.makeText(IdeaEditActivity.this, "There was an error when updating idea.", Toast.LENGTH_SHORT).show()
   }
 
 }

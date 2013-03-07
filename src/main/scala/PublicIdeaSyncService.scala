@@ -27,7 +27,7 @@ class PublicIdeaSyncService extends IntentService("PublicIdeaSyncService") {
   override def onCreate() {
     super.onCreate()
 
-    if(AppSettings.DEBUG) Log.d(SyncServiceVars.PUBLIC_SYNC_TAG, "Creating the alarm.")
+    if (AppSettings.DEBUG) Log.d(SyncServiceVars.PUBLIC_SYNC_TAG, "Creating the alarm.")
 
     // Get Alarm Manager
     alarmManager = getSystemService(Context.ALARM_SERVICE).asInstanceOf[AlarmManager]
@@ -48,7 +48,7 @@ class PublicIdeaSyncService extends IntentService("PublicIdeaSyncService") {
     val autoUpdateChecked = prefs.getBoolean(AppSettings.PREF_AUTO_UPDATE, true)
 
     if (autoUpdateChecked) {
-      if(AppSettings.DEBUG) Log.d(APP_TAG, "Starting public idea sync alarm, alarm will be called every " + updateFreq)
+      if (AppSettings.DEBUG) Log.d(APP_TAG, "Starting public idea sync alarm, alarm will be called every " + updateFreq)
       val alarmType = AlarmManager.ELAPSED_REALTIME_WAKEUP
       val timeToRefresh = SystemClock.elapsedRealtime() + updateFreq * 60 * 1000
 
@@ -70,74 +70,79 @@ class PublicIdeaSyncService extends IntentService("PublicIdeaSyncService") {
 
 
   private def refreshPublicIdeas() {
-    if(AppSettings.DEBUG) Log.d(SyncServiceVars.PUBLIC_SYNC_TAG, "Starting to sync public ideas...")
+    if (AppSettings.DEBUG) Log.d(SyncServiceVars.PUBLIC_SYNC_TAG, "Starting to sync public ideas...")
 
     // Get ideas from the server
-    val publicIdeas: util.ArrayList[PublicIdea] = MydeaTreeResourceREST.retrievePublicIdeas(PUBLIC_IDEA_URL)
+    MydeaTreeResourceREST.retrievePublicIdeas(PUBLIC_IDEA_URL) match {
+      case Some(publicIdeas) => {
+        val objectsInDb: util.ArrayList[ObjectIdWithDate] = getSavedPublicIdeas()
 
-    val objectsInDb: util.ArrayList[ObjectIdWithDate] = getSavedPublicIdeas()
+        // Different counters
+        var ideasAdded = 0
+        var ideasUpdated = 0
+        var ideasRemoved = 0
 
-    // Different counters
-    var ideasAdded = 0
-    var ideasUpdated = 0
-    var ideasRemoved = 0
-
-    if (publicIdeas != null) {
-      /* For all ideas retrieves insert or update or do nothing if old */
-      for (idea <- publicIdeas) {
-        var isNew = true
+        if (publicIdeas != null) {
+          /* For all ideas retrieves insert or update or do nothing if old */
+          for (idea <- publicIdeas) {
+            var isNew = true
 
 
-        // Check if already in db
-        for (obj <- objectsInDb) {
-          // idea found in database
-          if (idea.id == obj.id) {
-            isNew = false
-            // check if it is updated
-            if (idea.modified_date != obj.modified_date) {
-              updateIdea(idea)
-              ideasUpdated += 1
+            // Check if already in db
+            for (obj <- objectsInDb) {
+              // idea found in database
+              if (idea.id == obj.id) {
+                isNew = false
+                // check if it is updated
+                if (idea.modified_date != obj.modified_date) {
+                  updateIdea(idea)
+                  ideasUpdated += 1
+                }
+              }
+            }
+
+            // idea is new so insert it into the database
+            if (isNew) {
+              insertIdea(idea)
+              ideasAdded += 1
             }
           }
         }
 
-        // idea is new so insert it into the database
-        if (isNew) {
-          insertIdea(idea)
-          ideasAdded += 1
+        if (AppSettings.DEBUG) Log.d(APP_TAG, "Public ideas added: " + ideasAdded + ", public ideas updated: " + ideasUpdated)
+
+        // Throw a notification if app is not running
+        if (!IS_MAIN_ACTIVITY_RUNNING && ideasAdded > 0) {
+          // Set the intent so it would go into personal ideas
+          // and set parent idea to
+          val intent = new Intent(this, classOf[MainActivity])
+          intent.putExtra(HAS_NEW_PUBLIC_IDEAS, true)
+          val pendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
+
+          // Notifaction
+          val builder: Builder = new NotificationCompat.Builder(this)
+            .setSmallIcon(R.drawable.icon)
+            .setTicker("Notification")
+            .setContentTitle("Public Ideas Updated")
+            .setContentText("There are " + ideasAdded + " new public ideas.")
+            .setWhen(System.currentTimeMillis())
+            .setLights(Color.RED, 0, 1)
+            .setContentIntent(pendingIntent)
+            .setAutoCancel(true)
+
+          val notification = builder.getNotification
+
+          val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE).asInstanceOf[NotificationManager]
+          notificationManager.notify(1, notification)
         }
+
+
       }
-    }
-
-    if(AppSettings.DEBUG) Log.d(APP_TAG, "Public ideas added: " + ideasAdded + ", public ideas updated: " + ideasUpdated )
-
-    // Throw a notification if app is not running
-    if (!IS_MAIN_ACTIVITY_RUNNING && ideasAdded > 0) {
-      // Set the intent so it would go into personal ideas
-      // and set parent idea to
-      val intent = new Intent(this, classOf[MainActivity])
-      intent.putExtra(HAS_NEW_PUBLIC_IDEAS, true)
-      val pendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
-
-      // Notifaction
-      val builder: Builder = new NotificationCompat.Builder(this)
-        .setSmallIcon(R.drawable.icon)
-        .setTicker("Notification")
-        .setContentTitle("Public Ideas Updated")
-        .setContentText("There are " + ideasAdded + " new public ideas.")
-        .setWhen(System.currentTimeMillis())
-        .setLights(Color.RED, 0, 1)
-        .setContentIntent(pendingIntent)
-        .setAutoCancel(true)
-
-      val notification = builder.getNotification
-
-      val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE).asInstanceOf[NotificationManager]
-      notificationManager.notify(1, notification)
+      case None => if (AppSettings.DEBUG) Log.d(APP_TAG, "There was an error syncing public ideas.")
     }
 
 
-    if(AppSettings.DEBUG) Log.d(SyncServiceVars.PUBLIC_SYNC_TAG, "Public Idea synchronization finished.")
+    if (AppSettings.DEBUG) Log.d(SyncServiceVars.PUBLIC_SYNC_TAG, "Public Idea synchronization finished.")
   }
 
   private def insertIdea(idea: PublicIdea) {

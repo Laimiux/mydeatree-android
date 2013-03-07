@@ -1,11 +1,16 @@
 package com.limeblast.mydeatree
 
 import com.actionbarsherlock.app.SherlockActivity
-import android.os.Bundle
-import android.content.Intent
+import com.limeblast.androidhelpers.TwoWayForwardTrait
 
-class ForwardingActivity extends SherlockActivity {
+class ForwardingActivity extends SherlockActivity with TwoWayForwardTrait {
 
+
+  def switch: Boolean = AppSettings.isLoggedIn(this)
+  def falseActivity = classOf[LoginActivity]
+  def trueActivity = classOf[MainActivity]
+
+  /*
   override def onCreate(savedInstanceState: Bundle) {
     if (AppSettings.isLoggedIn(this)) {
       val intent = new Intent()
@@ -22,4 +27,5 @@ class ForwardingActivity extends SherlockActivity {
 
     super.onCreate(savedInstanceState)
   }
+  */
 }

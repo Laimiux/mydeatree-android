@@ -1,7 +1,9 @@
 package com.limeblast.androidhelpers
 
-import android.content.Context
+import android.content.{Intent, Context}
 import android.net.ConnectivityManager
+import android.app.Activity
+import com.limeblast.mydeatree.MainActivity
 
 object AndroidHelpers {
 
@@ -13,5 +15,12 @@ object AndroidHelpers {
       true
     else
       false
+  }
+
+  def changeActivity[T <: Activity](ctx: Activity, activity: Class[T]) {
+    val intent = new Intent()
+    intent.setClass(ctx, activity)
+    ctx.startActivity(intent)
+    ctx.finish()
   }
 }

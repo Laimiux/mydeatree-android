@@ -7,7 +7,8 @@ import android.view.{ViewGroup, View, LayoutInflater}
 import android.view.View.OnClickListener
 import android.net.Uri
 
-class PublicIdeaListAdapter(c: Context, resourceId: Int, objects: util.List[PublicIdea]) extends ArrayAdapter(c, resourceId, objects) {
+class PublicIdeaListAdapter(c: Context, resourceId: Int, objects: util.List[PublicIdea])
+  extends ArrayAdapter(c, resourceId, objects) {
 
   private val inflater = LayoutInflater.from(c)
 
@@ -17,7 +18,6 @@ class PublicIdeaListAdapter(c: Context, resourceId: Int, objects: util.List[Publ
     val idea: PublicIdea = getItem(position)
 
     var favorited = false
-
 
     val txtTitle = cView.findViewById(R.id.idea_title).asInstanceOf[TextView]
     txtTitle.setText(idea.title)
