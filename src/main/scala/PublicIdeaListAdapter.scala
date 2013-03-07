@@ -70,6 +70,10 @@ class PublicIdeaListAdapter(c: Context, resourceId: Int, objects: util.List[Publ
     })
 
 
+    if(idea.children_count > 0) {
+
+    }
+
 
     return cView
   }

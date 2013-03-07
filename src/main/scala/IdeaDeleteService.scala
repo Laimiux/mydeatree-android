@@ -2,6 +2,7 @@ package com.limeblast.mydeatree
 
 import android.app.IntentService
 import android.content.Intent
+import com.limeblast.androidhelpers.ProviderHelper
 
 
 class IdeaDeleteService extends IntentService("IdeaDeleteService") {
@@ -22,12 +23,11 @@ class IdeaDeleteService extends IntentService("IdeaDeleteService") {
   /* move this function as well */
   private def removeIdea(idea: Idea): Boolean = {
     val where = IdeaHelper.KEY_ID + "=" + idea.id
-    val whereArgs = null
-
-    val cr = getContentResolver
-    val deletedRowCount = cr.delete(RESTfulProvider.CONTENT_URI, where, whereArgs)
-
-    if (deletedRowCount < 1) false
-    else true
+    ProviderHelper.deleteObjects(getContentResolver,
+      RESTfulProvider.CONTENT_URI, where, null) match {
+      case deleted: Int if (deleted > 0) => true
+      case _ => false
+    }
   }
+
 }

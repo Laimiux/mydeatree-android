@@ -13,7 +13,7 @@ import com.actionbarsherlock.app.ActionBar.Tab
 
 import scala.collection.JavaConversions._
 import android.net.Uri
-import com.limeblast.androidhelpers.ScalaHandler
+import com.limeblast.androidhelpers.{PersonalIdeaProvider, ScalaHandler}
 
 /**
  * Start activity that starts the app flow.
@@ -67,18 +67,19 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity {
 
     val intent = getIntent()
 
-    if (intent != null) {
-      val ideaJson = intent.getStringExtra("idea")
-      if (ideaJson != null) {
+    getIntent.getStringExtra("idea") match {
+      case null =>
+      case ideaJson: String => {
+
         val idea = JsonWrapper.getMainObject(ideaJson, classOf[Idea])
         AppSettings.PRIVATE_PARENT_IDEA = Some(idea)
 
         tabSelected = 1
+
+        getIntent().removeExtra("idea")
       }
-
-      val haveNewPublicIdeas = intent.getBooleanExtra(HAS_NEW_PUBLIC_IDEAS, false)
     }
-
+    //val haveNewPublicIdeas = intent.getBooleanExtra(HAS_NEW_PUBLIC_IDEAS, false)
 
     //  IdeaTableHelper.retrieveObject(this, RESTfulProvider.CONTENT_URI, classOf[Idea])
     mTabsAdapter.addTab(publicIdeaTab, classOf[PublicIdeaFragment], null)
@@ -88,6 +89,11 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity {
 
     Log.d(APP_TAG, "Setting tab to " + tabSelected)
     getSupportActionBar.setSelectedNavigationItem(tabSelected)
+
+
+    //
+    //val provider = new PersonalIdeaProvider(getContentResolver)
+    //provider.get_all()
   }
 
   override def onSaveInstanceState(outState: Bundle) {

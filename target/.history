@@ -116,3 +116,10 @@ compile
 android:start-device
 compile
 android:start-device
+compile
+android:start-device
+console
+android:start-device
+compile
+android:start-device
+test

@@ -1,7 +1,7 @@
 package com.limeblast.mydeatree
 
 import android.support.v4.app.{LoaderManager}
-import android.os.{Handler, Bundle}
+import android.os.{Bundle}
 import android.widget._
 import java.util
 import concurrent.ops._
@@ -44,7 +44,7 @@ with OnKeyListener {
   var sort_by = 0
 
   // Array list to keep all the private ideas
-  val privateIdeas: util.ArrayList[Idea] = new util.ArrayList()
+  lazy val privateIdeas: util.ArrayList[Idea] = new util.ArrayList()
   // Array to keep all the headers that are currently used
   private val headers: util.ArrayList[View] = new util.ArrayList[View]()
 
@@ -102,7 +102,6 @@ with OnKeyListener {
         case idea: Idea => showPrivateIdeaOptions(idea)
         case _ => if (AppSettings.DEBUG) Log.d(APP_TAG, "Some unknown object was selected")
       }
-
       true
     })
 
@@ -172,9 +171,8 @@ with OnKeyListener {
     }
 
 
-
   /* Move this function eventually */
-  /*
+
   private def getIdea(resource_uri: String): Idea = {
     val cr = getActivity.getContentResolver
 
@@ -211,7 +209,7 @@ with OnKeyListener {
     cursor.close()
     idea
   }
-  */
+
   def removeIdeaRequest(idea: Idea) {
     // This means idea is on server
     if (idea.id != null) {
@@ -310,17 +308,20 @@ with OnKeyListener {
     val builder = new AlertDialog.Builder(getActivity)
     builder.setTitle(idea.title)
     builder.setItems(R.array.private_idea_options, (dialog: DialogInterface, which: Int) => {
-      if (which == 0) { // NEW CHILDREN IDEA
+      if (which == 0) {
+        // NEW CHILDREN IDEA
         AppSettings.PRIVATE_PARENT_IDEA = Some(idea)
         startNewIdeaActivity()
       }
-      else if (which == 1) { //EDIT
+      else if (which == 1) {
+        //EDIT
         dialog.dismiss()
         val ideaJson = JsonWrapper.convertObjectToJson(idea)
         val intent = new Intent(getActivity, classOf[IdeaEditActivity])
         intent.putExtra("idea", ideaJson)
         startActivity(intent)
-      } else if (which == 2) { // DELETE
+      } else if (which == 2) {
+        // DELETE
         dialog.dismiss()
         showIdeaDeleteDialog(idea)
       }
@@ -354,9 +355,9 @@ with OnKeyListener {
 
     builder.setTitle(R.string.sort_by)
     builder.setSingleChoiceItems(R.array.sort_options,
-      sort_by, (dialog: DialogInterface, which: Int) =>{
-          sortPrivateIdeas(which)
-          dialog.dismiss()
+      sort_by, (dialog: DialogInterface, which: Int) => {
+        sortPrivateIdeas(which)
+        dialog.dismiss()
       })
 
     builder.create().show()
@@ -434,7 +435,7 @@ with OnKeyListener {
 
     AppSettings.PRIVATE_PARENT_IDEA match {
       case Some(idea) => select += " AND " + IdeaHelper.KEY_PARENT + "='" + idea.resource_uri + "'"
-      case None =>  select += " AND " + IdeaHelper.KEY_PARENT + " IS NULL"
+      case None => select += " AND " + IdeaHelper.KEY_PARENT + " IS NULL"
     }
 
 
@@ -459,45 +460,31 @@ with OnKeyListener {
 
 
   // Key Listener that listens for back key and moves back within the private idea hierarchy
-  /*
-  override def onKey(view: View, keyCode: Int, event: KeyEvent): Boolean = {
-    if (keyCode == KeyEvent.KEYCODE_BACK) {
-
-      if (AppSettings.PRIVATE_PARENT_IDEA == null) {
-        false
-      } else {
-        if (event.getAction == KeyEvent.ACTION_UP) {
-          if (AppSettings.DEBUG) Log.d(APP_TAG, "Back On Key Event is released.")
-
-          if (AppSettings.PRIVATE_PARENT_IDEA.parent != null) {
-            AppSettings.PRIVATE_PARENT_IDEA = getIdea(AppSettings.PRIVATE_PARENT_IDEA.parent)
-            setHeaderIdea(AppSettings.PRIVATE_PARENT_IDEA)
-          } else {
-            AppSettings.PRIVATE_PARENT_IDEA = null
-            setDefaultHeader()
-          }
-
-          refresh()
-          true
-        }
-
-        true
-      }
-    } else {
-      false
-    }
-  }
-  */
-
-
   def onKey(view: View, keyCode: Int, keyEvent: KeyEvent): Boolean =
     keyCode match {
       case KeyEvent.KEYCODE_BACK => {
+        AppSettings.PRIVATE_PARENT_IDEA match {
+          case Some(idea) => {
+            if (keyEvent.getAction == KeyEvent.ACTION_UP) {
+              if (AppSettings.DEBUG) Log.d(APP_TAG, "Back On Key Event is released.")
 
-        true
+              if (idea.parent != null) {
+                AppSettings.PRIVATE_PARENT_IDEA = Some(getIdea(idea.parent))
+                setHeaderIdea(idea)
+              } else {
+                AppSettings.PRIVATE_PARENT_IDEA = None
+                setDefaultHeader()
+              }
+              refresh()
+            }
+            true
+          }
+          case _ => false
+        }
       }
       case _ => false
     }
+
 
   //-------------------------------------------------------\\
   //-------------- Synchronize Functions ------------------\\

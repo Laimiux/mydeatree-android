@@ -62,20 +62,19 @@ object RESTCalls {
   def deleteObject(url: String): Boolean = {
     //val response =
     HttpRequest.deleteFromUrl(USERNAME, PASSWORD, url) match {
-      case Some(response) => if (isResponseDelete(response)) true  else false
-      case None => false
+      case Some(response) if(isResponseDelete(response)) => true
+      case _ => false
     }
   }
 
-  def postObject[T](url: String, originalObject: T): Option[T] = {
-    val jsonString = JsonWrapper.convertObjectToJson(originalObject)
-
-    Log.d(APP_TAG, jsonString)
-
-    val httpClient = HttpRequest.getHttpClientWithCredentials(USERNAME, PASSWORD)
-    val post = HttpRequest.HttpPostWithJson(url, new StringEntity(jsonString))
-
+  def postObject[T](url: String, originalObject: T): Option[T] =
     try {
+      val jsonString = JsonWrapper.convertObjectToJson(originalObject)
+
+      Log.d(APP_TAG, jsonString)
+
+      val httpClient = HttpRequest.getHttpClientWithCredentials(USERNAME, PASSWORD)
+      val post = HttpRequest.HttpPostWithJson(url, new StringEntity(jsonString))
       val response = httpClient.execute(post)
 
       if (response != null && isPostResponseOkay(response)) {
@@ -87,15 +86,14 @@ object RESTCalls {
     } catch {
       case _ => None
     }
-  }
 
-  def putObject[T](url: String, updatedObject: T): Option[T] = {
-    val jsonString = JsonWrapper.convertObjectToJson(updatedObject)
 
-    val httpClient = HttpRequest.getHttpClientWithCredentials(USERNAME, PASSWORD)
-    val put = HttpRequest.getPutWithJson(url, new StringEntity(jsonString))
-
+  def putObject[T](url: String, updatedObject: T): Option[T] =
     try {
+      val jsonString = JsonWrapper.convertObjectToJson(updatedObject)
+
+      val httpClient = HttpRequest.getHttpClientWithCredentials(USERNAME, PASSWORD)
+      val put = HttpRequest.getPutWithJson(url, new StringEntity(jsonString))
       val response = httpClient.execute(put)
 
       if (response != null && isPutResponseOkay(response)) {
@@ -113,7 +111,7 @@ object RESTCalls {
       case _ => None
     }
 
-  }
+
 
   private def isPutResponseOkay(response: HttpResponse): Boolean = {
     val statusCode = response.getStatusLine.getStatusCode

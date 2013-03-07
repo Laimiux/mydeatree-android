@@ -23,7 +23,7 @@ abstract class BasicIdea(val id: String, val title: String, val text: String, va
                          modified_date: String, val resource_uri: String, val public: Boolean) extends BasicIdea(id, title, text, created_date, modified_date)
 
 @BeanInfo class PublicIdea(title: String, text: String, id: String,val parent: String, created_date: String, modified_date: String,
-                           val resource_uri: String, val owner: Owner) extends BasicIdea(id, title, text, created_date, modified_date)
+                           val resource_uri: String, val owner: Owner, val children_count: Int = 0) extends BasicIdea(id, title, text, created_date, modified_date)
 
 @BeanInfo class User(val username: String, val first_name: String, val last_name: String, val resource_uri: String)
 

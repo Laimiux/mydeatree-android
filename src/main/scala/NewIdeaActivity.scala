@@ -16,7 +16,7 @@ import android.view.ViewGroup.LayoutParams
 import scala.concurrent.ops.spawn
 import android.text.TextUtils
 
-import com.limeblast.androidhelpers.{ScalaHandler, AndroidImplicits}
+import com.limeblast.androidhelpers.{Toaster, ScalaHandler, AndroidImplicits}
 import AndroidImplicits.toListener
 
 
@@ -46,26 +46,13 @@ class NewIdeaActivity extends SherlockActivity with TypedActivity {
       val title = TextUtils.htmlEncode(titleField.getText.toString)
       val text = TextUtils.htmlEncode(textField.getText.toString)
       val isPublic = publicCheckBox.isChecked
-
+      //Toast.makeText(NewIdeaActivity.this, msg, Toast.LENGTH_LONG).show()
 
       val idea = new Idea(title, text, null, parent_uri, null, null, null, isPublic)
 
-      /*
-      val (isIdeaValid, message) = ResourceValidation.validate_idea(idea)
-
-      if (isIdeaValid) {
-
-        createNewIdea(idea)
-        //startIdeaCreateService(idea)
-      } else {
-        Toast.makeText(NewIdeaActivity.this, message, Toast.LENGTH_LONG).show()
-      }
-      */
-
-
       ResourceValidation.validate_idea(idea) match {
-        case (false, msg: String) => Toast.makeText(NewIdeaActivity.this, msg, Toast.LENGTH_LONG).show()
-        case (true, _) =>  createNewIdea(idea)
+        case (false, msg: String) => Toaster.showToast(this, msg)
+        case (true, _) => createNewIdea(idea)
         case _ =>
       }
     })

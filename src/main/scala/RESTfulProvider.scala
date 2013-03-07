@@ -124,7 +124,7 @@ class IdeaContentProvider extends ContentProvider {
     cursor
   }
 
-  def getType(uri: Uri): String = {
+  def getType(uri: Uri): String =
     RESTfulProvider.uriMatcher.`match`(uri) match {
       case RESTfulProvider.ALL_ROWS => "vnd.android.cursor.dir/vnd.limeblast.ideas"
       case RESTfulProvider.SINGLE_ROW => "vnd.android.cursor.item/vnd.limeblast.ideas"
@@ -133,7 +133,7 @@ class IdeaContentProvider extends ContentProvider {
       case RESTfulProvider.SEARCH => SearchManager.SUGGEST_MIME_TYPE
       case _ => throw new IllegalArgumentException("Unsupported URI: " + uri)
     }
-  }
+
 
   def insert(uri: Uri, values: ContentValues): Uri = {
     // Open a read/write database to support the transaction

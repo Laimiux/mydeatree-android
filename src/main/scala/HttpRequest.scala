@@ -12,6 +12,8 @@ import org.apache.http.params.HttpConnectionParams
 object HttpRequest {
   val APP_TAG = "HTTP_REQUEST_WRAPPER"
 
+
+
   /**
    * Create or retrieve HttpClient with provided credentials
    * @param user Username for authentication
@@ -27,47 +29,36 @@ object HttpRequest {
     defaultClient
   }
 
-  def getFromUrl(user: String, pw: String, url: String): Option[HttpResponse] = {
-    val httpclient = getHttpClientWithCredentials(user, pw)
-
-    val get = new HttpGet(url)
-    get.addHeader("accept", "application/json")
-
-    val response: Option[HttpResponse] = try {
+  def getFromUrl(user: String, pw: String, url: String): Option[HttpResponse] =
+    try {
+      val httpclient = getHttpClientWithCredentials(user, pw)
+      val get = new HttpGet(url)
+      get.addHeader("accept", "application/json")
       Some(httpclient.execute(get))
     } catch {
       case e: Exception => {
         if(AppSettings.DEBUG) Log.d(APP_TAG, e.toString)
         None
       }
-      case _ => {
-        None
-      }
+      case _: Throwable => None
     }
 
-    response
-  }
 
-  def deleteFromUrl(username: String, password: String, url: String): Option[HttpResponse] = {
-    if(AppSettings.DEBUG)
-      Log.d(APP_TAG, "Attempting to delete an idea from " + url)
-
-    val httpClient = getHttpClientWithCredentials(username, password)
-
-    val del = new HttpDelete(url)
-
-    val response: Option[HttpResponse] = try {
+  def deleteFromUrl(username: String, password: String, url: String): Option[HttpResponse] =
+    try {
+      if(AppSettings.DEBUG)
+        Log.d(APP_TAG, "Attempting to delete an idea from " + url)
+      val httpClient = getHttpClientWithCredentials(username, password)
+      val del = new HttpDelete(url)
       Some(httpClient.execute(del))
     } catch {
       case e: Exception => {
         if(AppSettings.DEBUG) Log.d(APP_TAG, e.toString)
         None
       }
-      case _ => None
+      case _: Throwable=> None
     }
 
-    response
-  }
 
   def getPutWithJson(url: String, body: StringEntity): HttpPut = {
     val put = new HttpPut(url)
