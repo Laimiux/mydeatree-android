@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
-		date="20130306020622"/>
+		date="20130307200347"/>
 	<dependencies>
 		<module organisation="com.actionbarsherlock" name="actionbarsherlock">
 			<revision name="4.2.0" status="release" pubdate="20121007174011" resolver="Maven Search" artresolver="Maven Search" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="5">
@@ -21,12 +21,12 @@
 			</revision>
 		</module>
 		<module organisation="org.scalaz" name="scalaz_2.10">
-			<revision name="6.0.4" status="release" pubdate="20130102010508" resolver="Maven Search" artresolver="Maven Search" homepage="http://scalaz.org" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="4">
+			<revision name="6.0.4" status="release" pubdate="20130102010508" resolver="Maven Search" artresolver="Maven Search" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="4">
 				<license name="BSD-style" url="http://www.opensource.org/licenses/bsd-license.php"/>
-				<metadata-artifact status="successful" details="" size="2665" time="684" location="/Users/Laimiux/.ivy2/cache/org.scalaz/scalaz_2.10/ivy-6.0.4.xml" searched="true" original-local-location="/Users/Laimiux/.ivy2/cache/org.scalaz/scalaz_2.10/ivy-6.0.4.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scalaz/scalaz_2.10/6.0.4/scalaz_2.10-6.0.4.pom"/>
+				<metadata-artifact status="no" details="" size="2496" time="0" location="/Users/Laimiux/.ivy2/cache/org.scalaz/scalaz_2.10/ivy-6.0.4.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scalaz/scalaz_2.10/6.0.4/scalaz_2.10-6.0.4.pom"/>
 				<caller organisation="mydeatree" name="mydeatree_2.10" conf="compile" rev="6.0.4" rev-constraint-default="6.0.4" rev-constraint-dynamic="6.0.4" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="scalaz_2.10" type="jar" ext="jar" status="successful" details="" size="317" time="1130" location="/Users/Laimiux/.ivy2/cache/org.scalaz/scalaz_2.10/jars/scalaz_2.10-6.0.4.jar">
+					<artifact name="scalaz_2.10" type="jar" ext="jar" status="no" details="" size="317" time="0" location="/Users/Laimiux/.ivy2/cache/org.scalaz/scalaz_2.10/jars/scalaz_2.10-6.0.4.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scalaz/scalaz_2.10/6.0.4/scalaz_2.10-6.0.4.jar"/>
 					</artifact>
 				</artifacts>

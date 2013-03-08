@@ -20,14 +20,11 @@ class IdeaDeleteService extends IntentService("IdeaDeleteService") {
     }
   }
 
-  /* move this function as well */
-  private def removeIdea(idea: Idea): Boolean = {
-    val where = IdeaHelper.KEY_ID + "=" + idea.id
-    ProviderHelper.deleteObjects(getContentResolver,
-      RESTfulProvider.CONTENT_URI, where, null) match {
+  /* Eventually move this function out of here */
+  private def removeIdea(idea: Idea): Boolean =
+    ProviderHelper.deleteObjects(getContentResolver, RESTfulProvider.CONTENT_URI, (IdeaHelper.KEY_ID, idea.id), null) match {
       case deleted: Int if (deleted > 0) => true
       case _ => false
     }
-  }
 
 }

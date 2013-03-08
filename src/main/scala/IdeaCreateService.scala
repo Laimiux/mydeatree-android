@@ -11,6 +11,7 @@ import android.support.v4.app.NotificationCompat.Builder
 import android.support.v4.app.NotificationCompat
 import android.graphics.Color
 import android.text.TextUtils
+import com.limeblast.androidhelpers.ProviderHelper
 
 object IdeaCreateService {
   val IDEA_CREATED = 1000
@@ -29,13 +30,12 @@ class IdeaCreateService extends IntentService("IdeaCreateService") {
 
     val passedIdea = JsonWrapper.getMainObject(ideaJson, classOf[Idea])
 
-    val values = new ContentValues()
-    values.put(IdeaHelper.KEY_IS_IDEA_SYNCING, true)
+    val whereMap = Map(IdeaHelper.KEY_TITLE -> passedIdea.title,
+      IdeaHelper.KEY_TEXT -> passedIdea.text,
+      IdeaHelper.KEY_CREATED_DATE -> passedIdea.created_date)
 
-    val where = IdeaHelper.KEY_TITLE + "='" + passedIdea.title + "' AND " + IdeaHelper.KEY_TEXT +
-      "='" + passedIdea.text + "' AND " + IdeaHelper.KEY_CREATED_DATE + "='" + passedIdea.created_date + "'"
-
-    getContentResolver.update(RESTfulProvider.CONTENT_URI, values, where, null)
+    ProviderHelper.updateObjects(getContentResolver, RESTfulProvider.CONTENT_URI,
+      whereMap, null, Map(IdeaHelper.KEY_IS_IDEA_SYNCING -> true))
 
     MydeaTreeResourceREST.postIdea(IDEA_URL, passedIdea) match {
       case Some(idea) => {
@@ -49,17 +49,15 @@ class IdeaCreateService extends IntentService("IdeaCreateService") {
 
 
   private def insertIdea(passedIdea: Idea, returnedIdea: Idea) {
-    val cr = getContentResolver
     val values = IdeaTableHelper.createNewIdeaValues(returnedIdea)
     values.put(IdeaHelper.KEY_IS_IDEA_NEW, false)
     values.put(IdeaHelper.KEY_IS_IDEA_SYNCING, false)
 
-    val where = IdeaHelper.KEY_TITLE + "='" + passedIdea.title + "' AND " + IdeaHelper.KEY_TEXT +
-      "='" + passedIdea.text + "' AND " + IdeaHelper.KEY_CREATED_DATE + "='" + passedIdea.created_date + "'"
+    val whereMap = Map(IdeaHelper.KEY_TITLE -> passedIdea.title,
+      IdeaHelper.KEY_TEXT -> passedIdea.text,
+      IdeaHelper.KEY_CREATED_DATE -> passedIdea.created_date)
 
-    cr.update(RESTfulProvider.CONTENT_URI, values, where, null)
-
-
+    ProviderHelper.updateObjects(getContentResolver, RESTfulProvider.CONTENT_URI, whereMap, null, values)
   }
 
 

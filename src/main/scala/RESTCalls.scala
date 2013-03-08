@@ -84,7 +84,7 @@ object RESTCalls {
         None
       }
     } catch {
-      case _ => None
+      case _: Throwable => None
     }
 
 
@@ -108,7 +108,7 @@ object RESTCalls {
         if(AppSettings.DEBUG) Log.d(APP_TAG, e.toString)
         None
       }
-      case _ => None
+      case _: Throwable => None
     }
 
 

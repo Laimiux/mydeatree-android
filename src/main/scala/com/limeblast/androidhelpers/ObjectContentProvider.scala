@@ -1,12 +1,14 @@
 package com.limeblast.androidhelpers
 
-import android.content.ContentResolver
+import android.content.{ContentValues, ContentResolver}
 
 import com.limeblast.mydeatree.{RESTfulProvider, IdeaHelper, Idea}
 import android.net.Uri
 import android.util.Log
 
 object ProviderHelper {
+  import ContentValuesHelper.mapToValues
+
 
   def makeWhereClause(tuple: (String, Any)): String =
     tuple match {
@@ -28,7 +30,39 @@ object ProviderHelper {
         case _ => where + " AND " + makeWhereClause(tuple)
       })
 
+  implicit def mapToString(map: Map[String, Any]): String = makeWhereClause(map)
 
+  implicit def tupleToString(tuple: (String, Any)): String = makeWhereClause(tuple)
+
+
+
+
+  /**
+   * Updates objects in the database
+   * @param resolver Content Resolver
+   * @param uri Object uri
+   * @param where Where clause
+   * @param whereArgs Where arguments
+   * @param newValues New values for the objects
+   * @return Number of objects updated
+   */
+  def updateObjects(resolver: ContentResolver, uri: Uri, where: String, whereArgs: Array[String], newValues: ContentValues): Int =
+    resolver.update(uri, newValues, where, whereArgs)
+
+  def updateObjects(resolver: ContentResolver, uri: Uri, where: (String, Any), whereArgs: Array[String], newValues: ContentValues): Int =
+    resolver.update(uri, newValues, where, whereArgs)
+
+  def updateObjects(resolver: ContentResolver, uri: Uri, where: Map[String, Any], whereArgs: Array[String], newValues: ContentValues): Int =
+    resolver.update(uri, newValues, where, whereArgs)
+
+  def updateObjects(resolver: ContentResolver, uri: Uri, where: String, whereArgs: Array[String], newValues: Map[String, Any]): Int =
+    resolver.update(uri, newValues, where, whereArgs)
+
+  def updateObjects(resolver: ContentResolver, uri: Uri, where: (String, Any), whereArgs: Array[String], newValues: Map[String, Any]): Int =
+    resolver.update(uri, newValues, where, whereArgs)
+
+  def updateObjects(resolver: ContentResolver, uri: Uri, where: Map[String, Any], whereArgs: Array[String], newValues: Map[String, Any]): Int =
+    resolver.update(uri, newValues, where, whereArgs)
   /**
    * Deletes objects from content provider uri
    * @param resolver Content Resolver
@@ -41,11 +75,11 @@ object ProviderHelper {
     resolver.delete(uri, where, whereArgs)
 
   def deleteObjects(resolver: ContentResolver, uri: Uri, where: (String, Any), whereArgs: Array[String]): Int =
-    deleteObjects(resolver, uri, makeWhereClause(where), whereArgs)
+    deleteObjects(resolver, uri, where, whereArgs)
 
 
   def deleteObjects(resolver: ContentResolver, uri: Uri, where: Map[String, Any], whereArgs: Array[String]): Int =
-    deleteObjects(resolver, uri, makeWhereClause(where), whereArgs)
+    deleteObjects(resolver, uri, where, whereArgs)
 
 }
 

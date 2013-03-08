@@ -35,6 +35,7 @@ object AppSettings {
   val USER_URL = API_URL + "/api/v1/user/"
   val IDEA_URL = API_URL + "/api/v1/idea/"
   val PUBLIC_IDEA_URL = API_URL + "/api/v1/public_ideas/"
+  val FAVORITE_IDEAS_URL = API_URL + "/api/v1/favorite_ideas/"
 
   val PRIVATE_IDEA_RESULT_RECEIVER = "PRIVATE_IDEA_RESULT_RECEIVER"
   val PUBLIC_IDEA_RESULT_RECEIVER = "PUBLIC_IDEA_RESULT_RECEIVER"

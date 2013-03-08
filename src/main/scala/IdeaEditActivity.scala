@@ -77,6 +77,9 @@ class IdeaEditActivity extends SherlockActivity with TypedActivity {
         val cr = getContentResolver
         cr.update(ideaAddress, values, null, null)
       } else {
+
+
+
         // No id exists so it will be a little harder to find it
         val resolver = getContentResolver
         val where = IdeaHelper.KEY_TITLE + "='" + oldIdea.title + "' AND " + IdeaHelper.KEY_TEXT +

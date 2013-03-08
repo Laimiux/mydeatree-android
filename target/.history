@@ -123,3 +123,18 @@ android:start-device
 compile
 android:start-device
 test
+android:start-device
+compile
+android:start-device
+compile
+console
+compile
+clean
+compile
+gen-idea no-classifiers
+compile
+console
+compile
+console
+scala-version
+compile

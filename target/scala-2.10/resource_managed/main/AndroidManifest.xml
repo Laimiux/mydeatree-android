@@ -44,6 +44,8 @@
         <service android:name=".IdeaCreateService" android:enabled="true"></service>
         <service android:name=".IdeaDeleteService" android:enabled="true"></service>
 
+        <service android:name=".resources.FavoriteIdeaGetService" android:enabled="true"></service>
+
         <meta-data android:value=".SearchResultsActivity" android:name="android.app.default_searchable"></meta-data>
     </application>
 

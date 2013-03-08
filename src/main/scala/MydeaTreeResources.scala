@@ -27,12 +27,12 @@ abstract class BasicIdea(val id: String, val title: String, val text: String, va
 
 @BeanInfo class User(val username: String, val first_name: String, val last_name: String, val resource_uri: String)
 
-@BeanInfo class FavoriteItem(content_object: String, id: String, object_id: String, resource_uri: String)
-
+@DatabaseTable(tableName = "favorite_ideas")
+@BeanInfo class FavoriteIdea(val owner: String, val id: String, val idea: String, val resource_uri: String)
 
 @BeanInfo abstract class DjangoRootObject[K](val meta: Meta, val objects: List[K])
 
-@BeanInfo class FavoriteItems(meta: Meta, objects: List[FavoriteItem]) extends DjangoRootObject(meta, objects)
+@BeanInfo class FavoriteIdeas(meta: Meta, objects: List[FavoriteIdea]) extends DjangoRootObject(meta, objects)
 @BeanInfo class PublicIdeas(meta: Meta, objects: List[PublicIdea]) extends DjangoRootObject(meta, objects)
 @BeanInfo class PersonalIdeas(meta: Meta, objects: List[Idea]) extends DjangoRootObject(meta, objects)
 @BeanInfo class Users(meta: Meta, objects: List[User]) extends DjangoRootObject(meta, objects)
@@ -42,8 +42,7 @@ abstract class BasicIdea(val id: String, val title: String, val text: String, va
 /*
 
 */
-@DatabaseTable(tableName = "favorite_ideas")
-@BeanInfo class FavoriteIdea(val owner: String, val id: String, val idea: String)
+
 
 @com.limeblast.scaliteorm.DatabaseTable(tableName = "some_table")
 class SomeTable(val id: String, val description: String)

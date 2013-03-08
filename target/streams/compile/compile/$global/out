@@ -2,14 +2,29 @@
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
-[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0m	modified: Set(/Users/Laimiux/Dropbox/mydeatree-android/src/main/scala/com/limeblast/scaliteorm/Attribute.scala)[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mModified external sources: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/Laimiux/Dropbox/mydeatree-android/src/main/scala/com/limeblast/scaliteorm/Attribute.scala)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mInitially invalidated: Set()[0m
+[0m[[0mdebug[0m] [0mInitially invalidated: Set(/Users/Laimiux/Dropbox/mydeatree-android/src/main/scala/com/limeblast/scaliteorm/Attribute.scala)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /Users/Laimiux/Dropbox/mydeatree-android/target/scala-2.10/classes...[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 7a1cf0cc, interfacing (CompilerInterface) with Scala compiler version 2.10.0[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-d[0m
+[0m[[0mdebug[0m] [0m	/Users/Laimiux/Dropbox/mydeatree-android/target/scala-2.10/classes[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar:/Users/Laimiux/.sbt/boot/scala-2.10.0/lib/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	/Users/Laimiux/Dropbox/mydeatree-android/target/scala-2.10/classes:/Users/Laimiux/Dropbox/mydeatree-android/lib/android-facebook-1.5.jar:/Users/Laimiux/Dropbox/mydeatree-android/lib/gson-2.2.2-javadoc.jar:/Users/Laimiux/Dropbox/mydeatree-android/lib/gson-2.2.2-sources.jar:/Users/Laimiux/Dropbox/mydeatree-android/lib/gson-2.2.2.jar:/Applications/adt-bundle-mac/sdk/platforms/android-14/android.jar:/Users/Laimiux/.ivy2/cache/com.google.android/support-v4/jars/support-v4-r7.jar:/Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-android/jars/ormlite-android-4.43.jar:/Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-core/jars/ormlite-core-4.43.jar:/Users/Laimiux/.ivy2/cache/org.scalaz/scalaz_2.10/jars/scalaz_2.10-6.0.4.jar[0m
+[0m[[31merror[0m] [0m/Users/Laimiux/Dropbox/mydeatree-android/src/main/scala/com/limeblast/scaliteorm/Attribute.scala:3: object runtime is not a member of package reflect[0m
+[0m[[31merror[0m] [0mimport scala.reflect.runtime.universe._[0m
+[0m[[31merror[0m] [0m                     ^[0m
+[0m[[31merror[0m] [0mone error found[0m
+[0m[[0mdebug[0m] [0mCompilation failed (CompilerInterface)[0m
+[0m[[31merror[0m] [0m(MydeaTree/compile:[31mcompile[0m) Compilation failed[0m

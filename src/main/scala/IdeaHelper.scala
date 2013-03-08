@@ -5,6 +5,7 @@ import android.content.Context
 import android.util.Log
 
 import AppSettings.APP_TAG
+import com.limeblast.scaliteorm.{TableDefinition, DatabaseHelperTrait}
 
 /**
  * Singleton object that holds important
@@ -41,9 +42,16 @@ object IdeaHelper {
  * @param context Activity context
  */
 class IdeaSQLiteHelper(context: Context) extends
-SQLiteOpenHelper(context, IdeaHelper.DATABASE_NAME, null, IdeaHelper.DATABASE_VERSION) {
+SQLiteOpenHelper(context, IdeaHelper.DATABASE_NAME, null, IdeaHelper.DATABASE_VERSION) with DatabaseHelperTrait {
+
+
 
   import IdeaHelper._
+
+
+  def favorite_idea_table = new TableDefinition
+
+  def tables: Option[Map[String, TableDefinition]] = None
 
   // SQL Statement to create ideas table
   val IDEA_TABLE_CREATE = "CREATE TABLE " + IDEA_TABLE_NAME + " (" +
