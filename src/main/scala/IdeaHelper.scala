@@ -6,6 +6,7 @@ import android.util.Log
 
 import AppSettings.APP_TAG
 import com.limeblast.scaliteorm.{TableDefinition, DatabaseHelperTrait}
+import beans.BeanInfo
 
 /**
  * Singleton object that holds important
@@ -14,10 +15,10 @@ import com.limeblast.scaliteorm.{TableDefinition, DatabaseHelperTrait}
 object IdeaHelper {
   // Database specific info
   val DATABASE_NAME = "mydeatree.db"
-  val DATABASE_VERSION = 1
+  val DATABASE_VERSION = 6
 
   // For Idea Table
-  val IDEA_TABLE_NAME = "ideas"
+  val IDEA_TABLE_NAME = "personal_ideas"
 
   // KEY Values
   val KEY_ID = "IDEA_ID"
@@ -37,6 +38,14 @@ object IdeaHelper {
   val KEY_IS_IDEA_SYNCING = "IS_IDEA_SYNCING"
 }
 
+
+object FavoriteIdeaColumns {
+  val KEY_ID = "id"
+  val KEY_OWNER = "owner"
+  val KEY_IDEA = "idea"
+  val KEY_RESOURCE_URI = "resource_uri"
+}
+
 /**
  * Database Helper class for opening, creating and managing database version control
  * @param context Activity context
@@ -44,44 +53,32 @@ object IdeaHelper {
 class IdeaSQLiteHelper(context: Context) extends
 SQLiteOpenHelper(context, IdeaHelper.DATABASE_NAME, null, IdeaHelper.DATABASE_VERSION) with DatabaseHelperTrait {
 
+  var tables: List[TableDefinition] =  List()
 
+  {
+    import FavoriteIdeaColumns._
+    val favorite_idea_table = new TableDefinition("favorite_ideas")
+    favorite_idea_table insert (KEY_ID -> "TEXT PRIMARY KEY UNIQUE", KEY_OWNER -> "TEXT not null", KEY_IDEA -> "TEXT not null", KEY_RESOURCE_URI -> "TEXT")
+    tables = tables :+ favorite_idea_table
 
-  import IdeaHelper._
+  }
 
-
-  def favorite_idea_table = new TableDefinition
-
-  def tables: Option[Map[String, TableDefinition]] = None
-
-  // SQL Statement to create ideas table
-  val IDEA_TABLE_CREATE = "CREATE TABLE " + IDEA_TABLE_NAME + " (" +
-    KEY_ID + " TEXT PRIMARY KEY UNIQUE, " +
-    KEY_OWNER + " TEXT, " +
-    KEY_RESOURCE_URI + " TEXT, " +
-    KEY_CREATED_DATE + " TEXT, " +
-    KEY_MODIFIED_DATE + " TEXT, " +
-    KEY_TITLE + " TEXT not null, " +
-    KEY_TEXT + " TEXT not null, " +
-    KEY_PARENT + " TEXT, " +
-    KEY_PUBLIC + " BOOLEAN default 0, " +
-    KEY_IS_IDEA_NEW + " BOOLEAN default 0," +
-    KEY_IS_IDEA_EDITED + " BOOLEAN default 0," +
-    KEY_IS_IDEA_SYNCING + " BOOLEAN default 0," +
-    KEY_IS_IDEA_DELETED + " BOOLEAN default 0 " + ");"
+  {
+    import IdeaHelper._
+    val personal_idea_table = new TableDefinition(IDEA_TABLE_NAME)
+    personal_idea_table insert(KEY_ID -> "TEXT PRIMARY KEY UNIQUE", KEY_OWNER -> "TEXT", KEY_RESOURCE_URI -> "TEXT", KEY_CREATED_DATE -> "TEXT",
+      KEY_MODIFIED_DATE -> "TEXT", KEY_TITLE -> "TEXT not null", KEY_TEXT -> "TEXT not null",
+      KEY_PARENT -> "TEXT", KEY_PUBLIC -> "TEXT",    KEY_IS_IDEA_NEW -> "BOOLEAN default 0",
+      KEY_IS_IDEA_EDITED -> "BOOLEAN default 0", KEY_IS_IDEA_SYNCING -> "BOOLEAN default 0",
+      KEY_IS_IDEA_DELETED -> "BOOLEAN default 0" )
+    tables = tables :+ personal_idea_table
+  }
 
 
   // Called when no database exists in disk and
   override def onCreate(db: SQLiteDatabase) {
-    db.execSQL(IDEA_TABLE_CREATE)
+    //db.execSQL(IDEA_TABLE_CREATE)
+    super.onCreate(db)
   }
 
-  // Updating the database
-  override def onUpgrade(db: SQLiteDatabase, oldVer: Int, newVer: Int) {
-    Log.w(APP_TAG, "Upgrading from version " + oldVer + " to " + newVer
-    + ", which will destroy all old data.")
-    // Drop older tables if exists
-    db.execSQL("DROP TABLE IF EXISTS " + IDEA_TABLE_NAME)
-    // Create tables again
-    onCreate(db)
-  }
 }

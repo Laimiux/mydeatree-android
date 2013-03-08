@@ -1,7 +1,6 @@
 package com.limeblast.scaliteorm
 
-import scala.reflect.runtime.universe._
-
+import reflect.Manifest
 
 class Attribute(val _name: String, val _type: String, val _attributeType: AttributeType)
 

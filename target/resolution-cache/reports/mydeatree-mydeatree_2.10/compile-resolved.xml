@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
-		date="20130307200347"/>
+		date="20130307204106"/>
 	<dependencies>
 		<module organisation="com.actionbarsherlock" name="actionbarsherlock">
 			<revision name="4.2.0" status="release" pubdate="20121007174011" resolver="Maven Search" artresolver="Maven Search" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="5">

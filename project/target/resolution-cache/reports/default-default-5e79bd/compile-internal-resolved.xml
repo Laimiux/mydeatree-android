@@ -9,7 +9,7 @@
 		extra-scalaVersion="2.9.2"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
-		date="20130305012417"/>
+		date="20130307203217"/>
 	<dependencies>
 		<module organisation="org.scala-sbt" name="sbt">
 			<revision name="0.12.2" status="release" pubdate="20130116104518" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="5">
@@ -114,7 +114,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-tools.testing" name="test-interface">
-			<revision name="0.5" status="release" pubdate="20100327163658" resolver="public" artresolver="public" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="41">
+			<revision name="0.5" status="release" pubdate="20100327163658" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="41">
 				<metadata-artifact status="no" details="" size="2210" time="0" location="/Users/Laimiux/.ivy2/cache/org.scala-tools.testing/test-interface/ivy-0.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.pom"/>
 				<caller organisation="org.scala-sbt" name="testing" conf="compile" rev="0.5" rev-constraint-default="0.5" rev-constraint-dynamic="0.5" callerrev="0.12.2"/>
 				<caller organisation="org.scala-sbt" name="test-agent" conf="compile" rev="0.5" rev-constraint-default="0.5" rev-constraint-dynamic="0.5" callerrev="0.12.2"/>
@@ -207,7 +207,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-httpclient" name="commons-httpclient">
-			<revision name="3.1" status="release" pubdate="20070821064407" resolver="public" artresolver="public" homepage="http://jakarta.apache.org/httpcomponents/httpclient-3.x/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="31">
+			<revision name="3.1" status="release" pubdate="20070821064407" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jakarta.apache.org/httpcomponents/httpclient-3.x/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="31">
 				<license name="Apache License" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3153" time="0" location="/Users/Laimiux/.ivy2/cache/commons-httpclient/commons-httpclient/ivy-3.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.pom"/>
 				<caller organisation="org.scala-sbt" name="ivy" conf="compile" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="0.12.2"/>
@@ -219,7 +219,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-codec" name="commons-codec">
-			<revision name="1.2" status="release" pubdate="20051123212017" resolver="public" artresolver="public" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="33">
+			<revision name="1.2" status="release" pubdate="20051123212017" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="33">
 				<metadata-artifact status="no" details="" size="2537" time="0" location="/Users/Laimiux/.ivy2/cache/commons-codec/commons-codec/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/commons-codec/commons-codec/1.2/commons-codec-1.2.pom"/>
 				<caller organisation="commons-httpclient" name="commons-httpclient" conf="default, compile, runtime, master" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="3.1"/>
 				<artifacts>
@@ -230,7 +230,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-logging" name="commons-logging">
-			<revision name="1.0.4" status="release" pubdate="20051108141641" resolver="public" artresolver="public" homepage="http://jakarta.apache.org/commons/logging/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="32">
+			<revision name="1.0.4" status="release" pubdate="20051108141641" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jakarta.apache.org/commons/logging/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="32">
 				<license name="The Apache Software License, Version 2.0" url="/LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="2991" time="0" location="/Users/Laimiux/.ivy2/cache/commons-logging/commons-logging/ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.pom"/>
 				<caller organisation="commons-httpclient" name="commons-httpclient" conf="default, compile, runtime, master" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="3.1"/>
@@ -242,7 +242,7 @@
 			</revision>
 		</module>
 		<module organisation="com.jcraft" name="jsch">
-			<revision name="0.1.46" status="release" pubdate="20120202043927" resolver="public" artresolver="public" homepage="http://www.jcraft.com/jsch/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="30">
+			<revision name="0.1.46" status="release" pubdate="20120202043927" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jcraft.com/jsch/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="30">
 				<license name="Revised BSD" url="http://www.jcraft.com/jsch/LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="3203" time="0" location="/Users/Laimiux/.ivy2/cache/com.jcraft/jsch/ivy-0.1.46.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/jcraft/jsch/0.1.46/jsch-0.1.46.pom"/>
 				<caller organisation="org.scala-sbt" name="ivy" conf="compile" rev="0.1.46" rev-constraint-default="0.1.46" rev-constraint-dynamic="0.1.46" callerrev="0.12.2"/>
@@ -254,7 +254,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.ivy" name="ivy">
-			<revision name="2.3.0-rc1" status="release" pubdate="20120430225937" resolver="public" artresolver="public" homepage="http://ant.apache.org/ivy/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="29">
+			<revision name="2.3.0-rc1" status="release" pubdate="20120430225937" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://ant.apache.org/ivy/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="29">
 				<metadata-artifact status="no" details="" size="4778" time="0" location="/Users/Laimiux/.ivy2/cache/org.apache.ivy/ivy/ivy-2.3.0-rc1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0-rc1/ivy-2.3.0-rc1.pom"/>
 				<caller organisation="org.scala-sbt" name="ivy" conf="compile" rev="2.3.0-rc1" rev-constraint-default="2.3.0-rc1" rev-constraint-dynamic="2.3.0-rc1" callerrev="0.12.2"/>
 				<artifacts>
@@ -298,7 +298,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-tools.sbinary" name="sbinary_2.9.0">
-			<revision name="0.4.0" status="release" pubdate="20110517170638" resolver="public" artresolver="public" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="25">
+			<revision name="0.4.0" status="release" pubdate="20110517170638" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="25">
 				<metadata-artifact status="no" details="" size="2370" time="0" location="/Users/Laimiux/.ivy2/cache/org.scala-tools.sbinary/sbinary_2.9.0/ivy-0.4.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-tools/sbinary/sbinary_2.9.0/0.4.0/sbinary_2.9.0-0.4.0.pom"/>
 				<caller organisation="org.scala-sbt" name="cache" conf="compile" rev="0.4.0" rev-constraint-default="0.4.0" rev-constraint-dynamic="0.4.0" callerrev="0.12.2"/>
 				<caller organisation="org.scala-sbt" name="persist" conf="compile" rev="0.4.0" rev-constraint-default="0.4.0" rev-constraint-dynamic="0.4.0" callerrev="0.12.2"/>
@@ -395,7 +395,7 @@
 			</revision>
 		</module>
 		<module organisation="jline" name="jline">
-			<revision name="1.0" status="release" pubdate="20111027185303" resolver="public" artresolver="public" homepage="http://jline.sourceforge.net" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="17">
+			<revision name="1.0" status="release" pubdate="20111027185303" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jline.sourceforge.net" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="17">
 				<license name="BSD" url="LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="3466" time="0" location="/Users/Laimiux/.ivy2/cache/jline/jline/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/jline/jline/1.0/jline-1.0.pom"/>
 				<caller organisation="org.scala-sbt" name="precompiled-2_10_0" conf="compile" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="0.12.2"/>
@@ -465,7 +465,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-compiler">
-			<revision name="2.9.2" status="release" pubdate="20120413053159" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="14">
+			<revision name="2.9.2" status="release" pubdate="20120413053159" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="14">
 				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
 				<metadata-artifact status="no" details="" size="2665" time="0" location="/Users/Laimiux/.ivy2/cache/org.scala-lang/scala-compiler/ivy-2.9.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.9.2/scala-compiler-2.9.2.pom"/>
 				<caller organisation="org.scala-sbt" name="classpath" conf="compile" rev="2.9.2" rev-constraint-default="2.9.2" rev-constraint-dynamic="2.9.2" callerrev="0.12.2"/>
@@ -525,64 +525,64 @@
 			</revision>
 		</module>
 		<module organisation="com.github.mpeltonen" name="sbt-idea">
-			<revision name="1.3.0-SNAPSHOT" status="integration" pubdate="20130127081436" resolver="Sonatype snapshots" artresolver="Sonatype snapshots" homepage="http://your.project.url" extra-sbtVersion="0.12" extra-scalaVersion="2.9.2" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="3">
+			<revision name="1.3.0-SNAPSHOT" status="integration" pubdate="20130127081436" resolver="Sonatype snapshots" artresolver="Sonatype snapshots" homepage="http://your.project.url" extra-sbtVersion="0.12" extra-scalaVersion="2.9.2" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="3">
 				<license name="BSD-style" url="http://www.opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="successful" details="" size="2479" time="619" location="/Users/Laimiux/.ivy2/cache/scala_2.9.2/sbt_0.12/com.github.mpeltonen/sbt-idea/ivy-1.3.0-SNAPSHOT.xml" searched="true" original-local-location="/Users/Laimiux/.ivy2/cache/scala_2.9.2/sbt_0.12/com.github.mpeltonen/sbt-idea/ivy-1.3.0-SNAPSHOT.xml.original" origin-is-local="false" origin-location="http://oss.sonatype.org/content/repositories/snapshots/com/github/mpeltonen/sbt-idea_2.9.2_0.12/1.3.0-SNAPSHOT/sbt-idea-1.3.0-SNAPSHOT.pom"/>
+				<metadata-artifact status="no" details="" size="3494" time="0" location="/Users/Laimiux/.ivy2/cache/scala_2.9.2/sbt_0.12/com.github.mpeltonen/sbt-idea/ivy-1.3.0-SNAPSHOT.xml" searched="true" origin-is-local="false" origin-location="http://oss.sonatype.org/content/repositories/snapshots/com/github/mpeltonen/sbt-idea_2.9.2_0.12/1.3.0-SNAPSHOT/sbt-idea-1.3.0-SNAPSHOT.pom"/>
 				<caller organisation="default" name="default-5e79bd" conf="optional, compile, provided, compile-internal" rev="1.3.0-SNAPSHOT" rev-constraint-default="1.3.0-SNAPSHOT" rev-constraint-dynamic="1.3.0-SNAPSHOT" callerrev="0.1-SNAPSHOT" extra-sbtVersion="0.12" extra-scalaVersion="2.9.2"/>
 				<artifacts>
-					<artifact name="sbt-idea" type="jar" ext="jar" status="successful" details="" size="323322" time="2165" location="/Users/Laimiux/.ivy2/cache/scala_2.9.2/sbt_0.12/com.github.mpeltonen/sbt-idea/jars/sbt-idea-1.3.0-SNAPSHOT.jar">
+					<artifact name="sbt-idea" type="jar" ext="jar" status="no" details="" size="323322" time="0" location="/Users/Laimiux/.ivy2/cache/scala_2.9.2/sbt_0.12/com.github.mpeltonen/sbt-idea/jars/sbt-idea-1.3.0-SNAPSHOT.jar">
 						<origin-location is-local="false" location="http://oss.sonatype.org/content/repositories/snapshots/com/github/mpeltonen/sbt-idea_2.9.2_0.12/1.3.0-SNAPSHOT/sbt-idea-1.3.0-SNAPSHOT.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="commons-io" name="commons-io">
-			<revision name="2.0.1" status="release" pubdate="20101226091931" resolver="public" artresolver="public" homepage="http://commons.apache.org/io/" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="4">
-				<metadata-artifact status="successful" details="" size="9008" time="188" location="/Users/Laimiux/.ivy2/cache/commons-io/commons-io/ivy-2.0.1.xml" searched="true" original-local-location="/Users/Laimiux/.ivy2/cache/commons-io/commons-io/ivy-2.0.1.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/commons-io/commons-io/2.0.1/commons-io-2.0.1.pom"/>
+			<revision name="2.0.1" status="release" pubdate="20101226091931" resolver="public" artresolver="public" homepage="http://commons.apache.org/io/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="4">
+				<metadata-artifact status="no" details="" size="6238" time="0" location="/Users/Laimiux/.ivy2/cache/commons-io/commons-io/ivy-2.0.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/commons-io/commons-io/2.0.1/commons-io-2.0.1.pom"/>
 				<caller organisation="com.github.mpeltonen" name="sbt-idea" conf="default, compile, runtime, master" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="1.3.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="commons-io" type="jar" ext="jar" status="successful" details="" size="159509" time="264" location="/Users/Laimiux/.ivy2/cache/commons-io/commons-io/jars/commons-io-2.0.1.jar">
+					<artifact name="commons-io" type="jar" ext="jar" status="no" details="" size="159509" time="0" location="/Users/Laimiux/.ivy2/cache/commons-io/commons-io/jars/commons-io-2.0.1.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/commons-io/commons-io/2.0.1/commons-io-2.0.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.scala-sbt" name="sbt-android-plugin">
-			<revision name="0.6.2" status="release" pubdate="20120815004435" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" extra-sbtVersion="0.12" extra-scalaVersion="2.9.2" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="0">
-				<metadata-artifact status="successful" details="" size="2038" time="454" location="/Users/Laimiux/.ivy2/cache/scala_2.9.2/sbt_0.12/org.scala-sbt/sbt-android-plugin/ivy-0.6.2.xml" searched="true" original-local-location="/Users/Laimiux/.ivy2/cache/scala_2.9.2/sbt_0.12/org.scala-sbt/sbt-android-plugin/ivy-0.6.2.xml.original" origin-is-local="false" origin-location="http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/org.scala-sbt/sbt-android-plugin/scala_2.9.2/sbt_0.12/0.6.2/ivys/ivy.xml"/>
+			<revision name="0.6.2" status="release" pubdate="20120815004435" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" extra-sbtVersion="0.12" extra-scalaVersion="2.9.2" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="0">
+				<metadata-artifact status="no" details="" size="2038" time="0" location="/Users/Laimiux/.ivy2/cache/scala_2.9.2/sbt_0.12/org.scala-sbt/sbt-android-plugin/ivy-0.6.2.xml" searched="false" origin-is-local="false" origin-location="http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/org.scala-sbt/sbt-android-plugin/scala_2.9.2/sbt_0.12/0.6.2/ivys/ivy.xml"/>
 				<caller organisation="default" name="default-5e79bd" conf="optional, compile, provided, compile-internal" rev="0.6.2" rev-constraint-default="0.6.2" rev-constraint-dynamic="0.6.2" callerrev="0.1-SNAPSHOT" extra-sbtVersion="0.12" extra-scalaVersion="2.9.2"/>
 				<artifacts>
-					<artifact name="sbt-android-plugin" type="jar" ext="jar" status="successful" details="" size="532117" time="1628" location="/Users/Laimiux/.ivy2/cache/scala_2.9.2/sbt_0.12/org.scala-sbt/sbt-android-plugin/jars/sbt-android-plugin-0.6.2.jar">
+					<artifact name="sbt-android-plugin" type="jar" ext="jar" status="no" details="" size="532117" time="0" location="/Users/Laimiux/.ivy2/cache/scala_2.9.2/sbt_0.12/org.scala-sbt/sbt-android-plugin/jars/sbt-android-plugin-0.6.2.jar">
 						<origin-location is-local="false" location="http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/org.scala-sbt/sbt-android-plugin/scala_2.9.2/sbt_0.12/0.6.2/jars/sbt-android-plugin.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="net.sf.proguard" name="proguard-base">
-			<revision name="4.6" status="release" pubdate="20110913053402" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="2">
-				<metadata-artifact status="successful" details="" size="824" time="281" location="/Users/Laimiux/.ivy2/cache/net.sf.proguard/proguard-base/ivy-4.6.xml" searched="true" original-local-location="/Users/Laimiux/.ivy2/cache/net.sf.proguard/proguard-base/ivy-4.6.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/net/sf/proguard/proguard-base/4.6/proguard-base-4.6.pom"/>
+			<revision name="4.6" status="release" pubdate="20110913053402" resolver="public" artresolver="public" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="2">
+				<metadata-artifact status="no" details="" size="2777" time="0" location="/Users/Laimiux/.ivy2/cache/net.sf.proguard/proguard-base/ivy-4.6.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/net/sf/proguard/proguard-base/4.6/proguard-base-4.6.pom"/>
 				<caller organisation="org.scala-sbt" name="sbt-android-plugin" conf="compile" rev="4.6" rev-constraint-default="4.6" rev-constraint-dynamic="4.6" callerrev="0.6.2"/>
 				<artifacts>
-					<artifact name="proguard-base" type="jar" ext="jar" status="successful" details="" size="786254" time="688" location="/Users/Laimiux/.ivy2/cache/net.sf.proguard/proguard-base/jars/proguard-base-4.6.jar">
+					<artifact name="proguard-base" type="jar" ext="jar" status="no" details="" size="786254" time="0" location="/Users/Laimiux/.ivy2/cache/net.sf.proguard/proguard-base/jars/proguard-base-4.6.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/net/sf/proguard/proguard-base/4.6/proguard-base-4.6.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.google.android.tools" name="ddmlib">
-			<revision name="r10" status="release" pubdate="20110307115905" resolver="public" artresolver="public" homepage="http://tools.android.com/" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="1">
+			<revision name="r10" status="release" pubdate="20110307115905" resolver="public" artresolver="public" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="1">
 				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="2453" time="334" location="/Users/Laimiux/.ivy2/cache/com.google.android.tools/ddmlib/ivy-r10.xml" searched="true" original-local-location="/Users/Laimiux/.ivy2/cache/com.google.android.tools/ddmlib/ivy-r10.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/google/android/tools/ddmlib/r10/ddmlib-r10.pom"/>
+				<metadata-artifact status="no" details="" size="3268" time="0" location="/Users/Laimiux/.ivy2/cache/com.google.android.tools/ddmlib/ivy-r10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/google/android/tools/ddmlib/r10/ddmlib-r10.pom"/>
 				<caller organisation="org.scala-sbt" name="sbt-android-plugin" conf="compile" rev="r10" rev-constraint-default="r10" rev-constraint-dynamic="r10" callerrev="0.6.2"/>
 				<artifacts>
-					<artifact name="ddmlib" type="jar" ext="jar" status="successful" details="" size="205757" time="613" location="/Users/Laimiux/.ivy2/cache/com.google.android.tools/ddmlib/jars/ddmlib-r10.jar">
+					<artifact name="ddmlib" type="jar" ext="jar" status="no" details="" size="205757" time="0" location="/Users/Laimiux/.ivy2/cache/com.google.android.tools/ddmlib/jars/ddmlib-r10.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/google/android/tools/ddmlib/r10/ddmlib-r10.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.9.2" status="release" pubdate="20120413052921" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="10">
+			<revision name="2.9.2" status="release" pubdate="20120413052921" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="10">
 				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
 				<metadata-artifact status="no" details="" size="2391" time="0" location="/Users/Laimiux/.ivy2/cache/org.scala-lang/scala-library/ivy-2.9.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.9.2/scala-library-2.9.2.pom"/>
 				<caller organisation="org.scala-sbt" name="command" conf="compile" rev="2.9.2" rev-constraint-default="2.9.2" rev-constraint-dynamic="2.9.2" callerrev="0.12.2"/>

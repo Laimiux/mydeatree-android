@@ -12,8 +12,9 @@ import scala.concurrent.ops.spawn
 import com.limeblast.androidhelpers.AndroidImplicits.toListener
 
 import com.limeblast.androidhelpers.AndroidHelpers
+import android.app.Activity
 
-class IdeaEditActivity extends SherlockActivity with TypedActivity {
+class IdeaEditActivity extends Activity with TypedActivity {
 
   lazy val submitButton: Button = findView(TR.submit_button)
   lazy val publicCheckBox: CheckBox = findView(TR.idea_public_check_box)

@@ -27,7 +27,7 @@ abstract class BasicIdea(val id: String, val title: String, val text: String, va
 
 @BeanInfo class User(val username: String, val first_name: String, val last_name: String, val resource_uri: String)
 
-@DatabaseTable(tableName = "favorite_ideas")
+//@DatabaseTable(tableName = "favorite_ideas")
 @BeanInfo class FavoriteIdea(val owner: String, val id: String, val idea: String, val resource_uri: String)
 
 @BeanInfo abstract class DjangoRootObject[K](val meta: Meta, val objects: List[K])

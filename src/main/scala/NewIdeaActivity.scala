@@ -20,7 +20,7 @@ import com.limeblast.androidhelpers.{Toaster, ScalaHandler, AndroidImplicits}
 import AndroidImplicits.toListener
 
 
-class NewIdeaActivity extends SherlockActivity with TypedActivity {
+class NewIdeaActivity extends Activity with TypedActivity {
 
   lazy val titleField = findView(TR.idea_title_edit)
   lazy val textField = findView(TR.idea_text_edit)

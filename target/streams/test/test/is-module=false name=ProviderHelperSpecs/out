@@ -1,0 +1,7 @@
+[0m[[0minfo[0m] [0m[32mProviderHelperSpecs:[0m[0m
+[0m[[0minfo[0m] [0m[32mProvider Helper Specs [0m[0m
+[0m[[0minfo[0m] [0m[32m- makeWhereClause tests String, Int[0m[0m
+[0m[[0minfo[0m] [0m[32m- makeWhereClause tests String, String[0m[0m
+[0m[[0minfo[0m] [0m[32m- makeWhereClause tests String, Boolean[0m[0m
+[0m[[0minfo[0m] [0m[32m- makeWhereClause should produce a string from a Map[String,Any][0m[0m
+[0m[[0minfo[0m] [0m[32m- NAME3=1 AND NAME2='sample' AND NAME1=1[0m[0m

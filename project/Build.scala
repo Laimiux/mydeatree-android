@@ -53,21 +53,6 @@ object General {
 }
 
 object AndroidBuild extends Build {
-  lazy val actionbarsherlock = Project(
-    "actionbarsherlock",
-    file("actionbarsherlock"),
-    settings = General.fullAndroidSettings ++ Seq(
-      name := "ActionBarSherlock"
-    )
-    /*
-      settings = General.settings ++
-        AndroidTest.androidSettings ++
-        General.proguardSettings ++ Seq (
-        name := "ActionBarSherlock"
-      )
-      */
-  )
-
   lazy val main = Project(
     "MydeaTree",
     file("."),

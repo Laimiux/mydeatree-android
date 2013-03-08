@@ -138,3 +138,18 @@ compile
 console
 scala-version
 compile
+++ 2.10.1-RC3
+compile
+scala-version
+++ 2.10.0
+compile
+android:start-device
+android:prepare-market
+android:start-device
+compile
+android:start-device
+test
+android:start-device
+compile
+android:start-device
+compile
