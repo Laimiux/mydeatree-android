@@ -15,7 +15,7 @@ object MydeaTreeResourceREST {
 
   def retrieveIdeas(initialUrl: String): Option[util.ArrayList[Idea]] = {
     RESTCalls.retrieveObjects(initialUrl, classOf[PersonalIdeas]) match {
-      case Some(ideas) => {
+      case Some(ideas: util.ArrayList[AnyRef]) => {
         if (AppSettings.DEBUG) Log.d(APP_TAG, "Retrieved " + ideas.size() + " ideas")
         Some(ideas.asInstanceOf[util.ArrayList[Idea]])
       }

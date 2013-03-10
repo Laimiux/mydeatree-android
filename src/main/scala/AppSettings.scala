@@ -2,7 +2,6 @@ package com.limeblast.mydeatree
 
 import android.content.Context
 import android.preference.PreferenceManager
-import com.actionbarsherlock.app.SherlockFragment
 
 /**
  * A singleton object

@@ -1,15 +1,15 @@
 package com.limeblast.mydeatree
 
+import activities.MainActivity
 import android.app._
-import android.content.{ContentUris, Context, ContentValues, Intent}
-import android.os.{ResultReceiver, SystemClock, IBinder}
+import android.content.{ContentUris, Context, Intent}
+import android.os.{ResultReceiver, SystemClock}
 import AppSettings._
 import java.util
+import providers.RESTfulProvider
 import scala.collection.JavaConversions._
 import android.preference.PreferenceManager
-import android.database.Cursor
 import android.util.Log
-import android.net.Uri
 import android.support.v4.app.NotificationCompat.Builder
 import android.support.v4.app.NotificationCompat
 import android.graphics.Color

@@ -1,7 +1,7 @@
 package com.limeblast.mydeatree
 
 import android.support.v4.app.{FragmentTransaction, FragmentActivity, Fragment, FragmentPagerAdapter}
-import com.actionbarsherlock.app.{ActionBar}
+import com.actionbarsherlock.app.ActionBar
 import android.support.v4.view.ViewPager
 import android.os.Bundle
 import com.actionbarsherlock.app.ActionBar.Tab

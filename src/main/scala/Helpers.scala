@@ -1,9 +1,7 @@
 package com.limeblast.mydeatree
 
-import java.util.{GregorianCalendar, Comparator, Date}
+import java.util.{GregorianCalendar, Date}
 import java.text.SimpleDateFormat
-import java.text
-import annotation.unchecked.uncheckedVariance
 import android.content.Context
 import android.app.{Activity, ActivityManager}
 import android.util.Log

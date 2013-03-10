@@ -7,7 +7,8 @@
             android:debuggable="true"
             android:theme="@style/Theme.mydeatree">
 
-        <activity android:label="" android:name=".ForwardingActivity"
+        <!-- Activity definitions -->
+        <activity android:label="" android:name="activities.ForwardingActivity"
                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.MAIN"/>
@@ -15,18 +16,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:label="" android:name=".MainActivity"
+        <activity android:label="" android:name=".activities.MainActivity"
                   android:uiOptions="splitActionBarWhenNarrow"
                   android:configChanges="orientation">
         </activity>
 
         <activity android:label="Login"
-                  android:name=".LoginActivity"
+                  android:name=".activities.LoginActivity"
                   android:windowSoftInputMode="adjustResize" />
-        <activity android:label="MydeaTree Preferences" android:name=".PreferencesActivity"/>
+        <activity android:label="MydeaTree Preferences" android:name=".activities.PreferencesActivity"/>
 
-        <activity android:label="New Idea" android:name=".NewIdeaActivity" android:windowSoftInputMode="adjustResize" android:theme="@android:style/Theme.Dialog" />
-        <activity android:label="Editing Idea" android:name=".IdeaEditActivity"  android:windowSoftInputMode="adjustResize" android:theme="@android:style/Theme.Dialog" />
+        <activity android:label="New Idea" android:name=".activities.NewIdeaActivity" android:windowSoftInputMode="adjustResize" android:theme="@android:style/Theme.Dialog" />
+        <activity android:label="Editing Idea" android:name=".activities.IdeaEditActivity"  android:windowSoftInputMode="adjustResize" android:theme="@android:style/Theme.Dialog" />
 
 
         <activity android:name=".SearchResultsActivity"
@@ -43,17 +44,25 @@
 
         <activity android:name=".activities.SampleActivity" android:label="Sample Activity" />
 
+        <!-- Provider definitions -->
         <provider
-                android:authorities="com.limeblast.mydeatree"
-                android:name=".IdeaContentProvider"
+                android:authorities="com.limeblast.mydeatree.providers.IdeaContentProvider"
+                android:name=".providers.IdeaContentProvider"
                 android:exported="false">
         </provider>
+        <provider android:authorities="com.limeblast.mydeatree.providers.FavoriteIdeaProvider"
+                  android:name=".providers.FavoriteIdeaProvider"
+                  android:exported="false"></provider>
+
+
+        <!-- Receiver definitions -->
         <receiver android:name=".PublicSyncAlarmReceiver" android:enabled="true">
             <intent-filter>
                 <action android:name="com.limeblast.mydeatree.ACTION_REFRESH_PUBLIC_IDEAS_ALARM"/>
             </intent-filter>
         </receiver>
 
+        <!-- Service definitions -->
         <service android:enabled="true" android:name=".PublicIdeaSyncService"  />
         <service android:enabled="true" android:name=".PrivateIdeaSyncService" />
         <service android:enabled="true" android:name=".IdeaUpdateService" />

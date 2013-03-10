@@ -5,19 +5,43 @@ import java.util
 import android.widget._
 import android.view.{ViewGroup, View, LayoutInflater}
 import android.view.View.OnClickListener
-import android.net.Uri
+import providers.FavoriteIdeaProvider
+import android.database.Cursor
+
+import com.limeblast.androidhelpers.ProviderHelper._
 
 class PublicIdeaListAdapter(c: Context, resourceId: Int, objects: util.List[PublicIdea])
   extends ArrayAdapter(c, resourceId, objects) {
 
   private val inflater = LayoutInflater.from(c)
 
+
+  def getFavoriteIdea(idea: Idea): Cursor = getContext.getApplicationContext.getContentResolver.query(FavoriteIdeaProvider.CONTENT_URI,
+    null, makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> false), null, null)
+
   override def getView(position: Int, convertView: View, parent: ViewGroup): View = {
     var cView = inflater.inflate(resourceId, null).asInstanceOf[LinearLayout]
 
     val idea: PublicIdea = getItem(position)
 
-    var favorited = false
+
+    // Set this value based on db
+
+
+    val cursor: Cursor = getContext.getApplicationContext.getContentResolver.query(FavoriteIdeaProvider.CONTENT_URI,
+      null, makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> false), null, null)
+
+
+    var favorited: Boolean = if (cursor.getCount() > -1) true else false
+
+    cursor.close()
+
+
+    if (favorited) {
+      val favIcon = cView.findViewById(R.id.favorite_icon).asInstanceOf[ImageView]
+      favIcon.setBackgroundResource(R.drawable.ic_star_full)
+    }
+
 
     val txtTitle = cView.findViewById(R.id.idea_title).asInstanceOf[TextView]
     txtTitle.setText(idea.title)
@@ -46,31 +70,61 @@ class PublicIdeaListAdapter(c: Context, resourceId: Int, objects: util.List[Publ
     var favoriteLayout = cView.findViewById(R.id.public_idea_favorite_layout).asInstanceOf[LinearLayout]
     favoriteLayout.setOnClickListener(new OnClickListener {
       def onClick(view: View) {
-        if(AppSettings.getUsername(getContext).equals("")) {
+        if (AppSettings.getUsername(getContext).equals("")) {
           Toast.makeText(getContext, "You need to login to favorite ideas.", Toast.LENGTH_SHORT).show()
         }
         else if (AppSettings.USERNAME == idea.owner.username) {
           Toast.makeText(getContext, "Cannot favorite your own idea", Toast.LENGTH_SHORT).show()
         } else {
-          favorited = !favorited
 
           val favIcon = cView.findViewById(R.id.favorite_icon).asInstanceOf[ImageView]
           //val favText = cView.findViewById(R.id.favorite_txt).asInstanceOf[TextView]
 
+
           if (favorited) {
-            favIcon.setBackgroundResource(R.drawable.ic_star_full)
-            //favText.setText(R.string.unfavorite)
-          } else {
             favIcon.setBackgroundResource(R.drawable.ic_star_empty)
+
+
+            updateObjects(getContext.getContentResolver, FavoriteIdeaProvider.CONTENT_URI,
+              (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri),
+              null,
+              Map(FavoriteIdeaColumns.KEY_IS_DELETED -> true))
+
+            //getContext.getContentResolver.delete(FavoriteIdeaProvider.CONTENT_URI,
+            //makeWhereClause())
+            //favText.setText(R.string.unfavorite)
+
+            // Set favorite to deleted
+          } else {
+            favIcon.setBackgroundResource(R.drawable.ic_star_full)
+
+            val cursor: Cursor = getContext.getApplicationContext.getContentResolver.query(FavoriteIdeaProvider.CONTENT_URI,
+              null, makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> true), null, null)
             //favText.setText(R.string.favorite)
+
+            if (cursor.getCount() > -1) {
+              updateObjects(getContext.getContentResolver, FavoriteIdeaProvider.CONTENT_URI,
+                (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri),
+                null,
+                Map(FavoriteIdeaColumns.KEY_IS_DELETED -> false))
+            } else {
+              insertObject(FavoriteIdeaProvider.CONTENT_URI)(getContext.getContentResolver)(FavoriteIdeaColumns.KEY_OWNER -> AppSettings.USERNAME,
+                  FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri,
+                  FavoriteIdeaColumns.KEY_IS_NEW -> true)
+            }
+
+            cursor.close()
+            // Either create a new one or set it to not deleted
           }
 
+
+          favorited = !favorited
         }
       }
     })
 
 
-    if(idea.children_count > 0) {
+    if (idea.children_count > 0) {
 
     }
 

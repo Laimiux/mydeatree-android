@@ -1,10 +1,5 @@
 package com.limeblast.androidhelpers
 
-import android.widget.ArrayAdapter
-import android.content.Context
-import java.util
-import com.limeblast.mydeatree.PublicIdea
-import android.view.{ViewGroup, View}
 
 /**
  * Created with IntelliJ IDEA.

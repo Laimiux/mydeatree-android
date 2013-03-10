@@ -3,7 +3,6 @@ package com.limeblast.androidhelpers
 import android.content.{Intent, Context}
 import android.net.ConnectivityManager
 import android.app.Activity
-import com.limeblast.mydeatree.MainActivity
 
 object AndroidHelpers {
 

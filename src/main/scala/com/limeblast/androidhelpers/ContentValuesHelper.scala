@@ -1,7 +1,6 @@
 package com.limeblast.androidhelpers
 
 import android.content.ContentValues
-import android.content
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,29 +10,43 @@ import android.content
  * To change this template use File | Settings | File Templates.
  */
 object ContentValuesHelper {
+
+  def addToContent(values: ContentValues, key: String, value: Any) =
+    value match {
+      case value: Int => values.put(key, value.asInstanceOf[java.lang.Integer])
+      case value: String => values.put(key, value)
+      case value: Long => values.put(key, value.asInstanceOf[java.lang.Long])
+      case value: Boolean => values.put(key, value)
+      case value: Array[Byte] => values.put(key, value)
+      case value: Float => values.put(key, value.asInstanceOf[java.lang.Float])
+      case value: Byte => values.put(key, value.asInstanceOf[java.lang.Byte])
+      case value: Double => values.put(key, value)
+      case value: Short => values.put(key, value.asInstanceOf[java.lang.Short])
+      case _ =>
+    }
+
   def mapToContentValues(value_map: Map[String, Any]): ContentValues = {
      val values = new ContentValues()
 
     value_map.foreach(tuple => {
+      addToContent(values, tuple._1, tuple._2)
        val key = tuple._1
+    })
 
-       tuple._2 match {
-         case value: Int => values.put(key, value.asInstanceOf[java.lang.Integer])
-         case value: String => values.put(key, value)
-         case value: Long => values.put(key, value.asInstanceOf[java.lang.Long])
-         case value: Boolean => values.put(key, value)
-         case value: Array[Byte] => values.put(key, value)
-         case value: Float => values.put(key, value.asInstanceOf[java.lang.Float])
-         case value: Byte => values.put(key, value.asInstanceOf[java.lang.Byte])
-         case value: Double => values.put(key, value)
-         case value: Short => values.put(key, value.asInstanceOf[java.lang.Short])
-         case _ =>
-       }
+    values
+  }
+
+  def tupleToContentValues(value_tuples: Seq[(String, Any)]): ContentValues = {
+    val values = new ContentValues()
+
+    value_tuples foreach (tuple => {
+      addToContent(values, tuple._1, tuple._2)
     })
 
     values
   }
 
   implicit def mapToValues(map: Map[String, Any]): ContentValues = ContentValuesHelper.mapToContentValues(map)
+  implicit def tupleToValues(value_tuples: Seq[(String, Any)]): ContentValues = tupleToValues(value_tuples)
 
 }

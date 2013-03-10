@@ -1,8 +1,9 @@
 package com.limeblast.mydeatree
 
-import android.app.{IntentService}
+import android.app.IntentService
 import android.content.{ContentUris, Intent}
 
+import providers.RESTfulProvider
 import scala.Some
 
 

@@ -5,6 +5,7 @@ import android.content.{ContentUris, Intent}
 import AppSettings._
 import android.util.Log
 import android.text.format.Time
+import providers.RESTfulProvider
 import scala.collection.JavaConversions._
 import java.util
 import android.os.ResultReceiver

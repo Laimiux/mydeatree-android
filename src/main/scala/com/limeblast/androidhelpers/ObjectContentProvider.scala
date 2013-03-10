@@ -2,13 +2,23 @@ package com.limeblast.androidhelpers
 
 import android.content.{ContentValues, ContentResolver}
 
-import com.limeblast.mydeatree.{RESTfulProvider, IdeaHelper, Idea}
+import com.limeblast.mydeatree.{IdeaHelper, Idea}
 import android.net.Uri
-import android.util.Log
+import com.limeblast.mydeatree.providers.RESTfulProvider
 
 object ProviderHelper {
-  import ContentValuesHelper.mapToValues
 
+  import ContentValuesHelper.{mapToValues, tupleToValues}
+
+
+
+  def makeWhereClause(tuple: (String, Any)*): String =
+    (tuple :\ "")((tuple, where) => {
+      where.isEmpty match {
+        case true => makeWhereClause(tuple)
+        case false => where + " AND " + makeWhereClause(tuple)
+      }
+    })
 
   def makeWhereClause(tuple: (String, Any)): String =
     tuple match {
@@ -33,8 +43,6 @@ object ProviderHelper {
   implicit def mapToString(map: Map[String, Any]): String = makeWhereClause(map)
 
   implicit def tupleToString(tuple: (String, Any)): String = makeWhereClause(tuple)
-
-
 
 
   /**
@@ -63,6 +71,7 @@ object ProviderHelper {
 
   def updateObjects(resolver: ContentResolver, uri: Uri, where: Map[String, Any], whereArgs: Array[String], newValues: Map[String, Any]): Int =
     resolver.update(uri, newValues, where, whereArgs)
+
   /**
    * Deletes objects from content provider uri
    * @param resolver Content Resolver
@@ -81,8 +90,12 @@ object ProviderHelper {
   def deleteObjects(resolver: ContentResolver, uri: Uri, where: Map[String, Any], whereArgs: Array[String]): Int =
     deleteObjects(resolver, uri, where, whereArgs)
 
+
+  def insertObject(uri: Uri)(resolver: ContentResolver)(values: (String, Any)*) = {}
+    //resolver.insert(uri, values)
 }
 
+/*
 trait Providable[T] {
 
   def contentResolver: ContentResolver
@@ -112,6 +125,7 @@ trait Providable[T] {
   }
 
 }
+*/
 
 /* Move this function eventually */
 /*
@@ -153,6 +167,7 @@ private def getIdea(resource_uri: String): Idea = {
 }
 */
 
+/*
 
 class PersonalIdeaProvider(val contentResolver: ContentResolver) extends Providable[Idea] {
 
@@ -164,3 +179,5 @@ class PersonalIdeaProvider(val contentResolver: ContentResolver) extends Provida
 
   def column_names: Array[String] = Array(IdeaHelper.KEY_ID, IdeaHelper.KEY_TITLE)
 }
+
+*/

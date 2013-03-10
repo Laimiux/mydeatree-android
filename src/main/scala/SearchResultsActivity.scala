@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.support.v4.content.{CursorLoader, Loader}
 import android.content.Intent
 import android.app.SearchManager
+import providers.RESTfulProvider
 
 /**
  * Created with IntelliJ IDEA.

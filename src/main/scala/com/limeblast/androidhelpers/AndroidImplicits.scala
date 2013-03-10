@@ -3,7 +3,7 @@ package com.limeblast.androidhelpers
 import android.view.View
 import android.os.{Bundle, ResultReceiver}
 import android.widget.AdapterView
-import android.content.{DialogInterface}
+import android.content.DialogInterface
 
 
 object AndroidImplicits {

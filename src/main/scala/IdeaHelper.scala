@@ -2,11 +2,8 @@ package com.limeblast.mydeatree
 
 import android.database.sqlite.{SQLiteDatabase, SQLiteOpenHelper}
 import android.content.Context
-import android.util.Log
 
-import AppSettings.APP_TAG
 import com.limeblast.scaliteorm.{TableDefinition, DatabaseHelperTrait}
-import beans.BeanInfo
 
 /**
  * Singleton object that holds important
@@ -15,7 +12,7 @@ import beans.BeanInfo
 object IdeaHelper {
   // Database specific info
   val DATABASE_NAME = "mydeatree.db"
-  val DATABASE_VERSION = 6
+  val DATABASE_VERSION = 7
 
   // For Idea Table
   val IDEA_TABLE_NAME = "personal_ideas"
@@ -40,10 +37,13 @@ object IdeaHelper {
 
 
 object FavoriteIdeaColumns {
+  val TABLE_NAME = "favorite_ideas"
   val KEY_ID = "id"
   val KEY_OWNER = "owner"
   val KEY_IDEA = "idea"
   val KEY_RESOURCE_URI = "resource_uri"
+  val KEY_IS_DELETED = "is_deleted"
+  val KEY_IS_NEW = "is_new"
 }
 
 /**
@@ -57,8 +57,13 @@ SQLiteOpenHelper(context, IdeaHelper.DATABASE_NAME, null, IdeaHelper.DATABASE_VE
 
   {
     import FavoriteIdeaColumns._
-    val favorite_idea_table = new TableDefinition("favorite_ideas")
-    favorite_idea_table insert (KEY_ID -> "TEXT PRIMARY KEY UNIQUE", KEY_OWNER -> "TEXT not null", KEY_IDEA -> "TEXT not null", KEY_RESOURCE_URI -> "TEXT")
+    val favorite_idea_table = new TableDefinition(TABLE_NAME)
+    favorite_idea_table insert (KEY_ID -> "TEXT PRIMARY KEY UNIQUE",
+      KEY_OWNER -> "TEXT not null",
+      KEY_IDEA -> "TEXT not null",
+      KEY_RESOURCE_URI -> "TEXT",
+      KEY_IS_DELETED -> "boolean default 0",
+      KEY_IS_NEW -> "boolean default 0")
     tables = tables :+ favorite_idea_table
 
   }

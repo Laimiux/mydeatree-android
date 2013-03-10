@@ -3,6 +3,7 @@ package com.limeblast.mydeatree
 import android.app.IntentService
 import android.content.Intent
 import com.limeblast.androidhelpers.ProviderHelper
+import providers.RESTfulProvider
 
 
 class IdeaDeleteService extends IntentService("IdeaDeleteService") {

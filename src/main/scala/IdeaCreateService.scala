@@ -1,16 +1,14 @@
 package com.limeblast.mydeatree
 
-import android.app.{Activity, NotificationManager, PendingIntent, IntentService}
-import android.content.{Context, ContentUris, ContentValues, Intent}
-import android.os.ResultReceiver
+import activities.MainActivity
+import android.app.{NotificationManager, PendingIntent, IntentService}
+import android.content.{Context, Intent}
 import AppSettings._
+import providers.RESTfulProvider
 import scala.Some
-import android.util.Log
-import android.widget.Toast
 import android.support.v4.app.NotificationCompat.Builder
 import android.support.v4.app.NotificationCompat
 import android.graphics.Color
-import android.text.TextUtils
 import com.limeblast.androidhelpers.ProviderHelper
 
 object IdeaCreateService {

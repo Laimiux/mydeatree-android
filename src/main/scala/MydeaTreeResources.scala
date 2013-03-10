@@ -3,7 +3,6 @@ package com.limeblast.mydeatree
 import reflect.BeanInfo
 
 import java.util.List
-import com.j256.ormlite.table.DatabaseTable
 
 
 class ObjectIdWithDate(val id: String, val modified_date: String)

@@ -8,9 +8,8 @@ import android.net.Uri
 import android.database.Cursor
 import java.lang.reflect.Field
 
-import scala.collection.JavaConversions._
 
-import android.util.{Log}
+import android.util.Log
 
 object IdeaTableHelper {
 
