@@ -2,6 +2,7 @@ package com.limeblast.mydeatree
 
 import android.content.{Intent, Context, BroadcastReceiver}
 import android.util.Log
+import services.PublicIdeaSyncService
 
 object PublicSyncAlarmReceiver {
   val ACTION_REFRESH_PUBLIC_IDEAS_ALARM = "com.limeblast.mydeatree.ACTION_REFRESH_PUBLIC_IDEAS_ALARM"

@@ -1,15 +1,22 @@
-package com.limeblast.mydeatree
+package com.limeblast.mydeatree.services
 
 import android.app.IntentService
 import android.content.{ContentUris, Intent}
-import AppSettings._
 import android.util.Log
 import android.text.format.Time
-import providers.RESTfulProvider
 import scala.collection.JavaConversions._
 import java.util
 import android.os.ResultReceiver
 import android.net.Uri
+import com.limeblast.mydeatree.AppSettings._
+import scala.Some
+import com.limeblast.mydeatree._
+import com.limeblast.mydeatree.MydeaTreeResourceREST._
+import scala.Some
+import com.limeblast.mydeatree.AppSettings.APP_TAG
+import com.limeblast.mydeatree.providers.RESTfulProvider
+import scala.Some
+import scala.Some
 
 /**
  * Created with IntelliJ IDEA.

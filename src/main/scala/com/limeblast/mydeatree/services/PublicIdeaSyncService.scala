@@ -1,18 +1,23 @@
-package com.limeblast.mydeatree
+package com.limeblast.mydeatree.services
 
-import activities.MainActivity
 import android.app._
 import android.content.{ContentUris, Context, Intent}
 import android.os.{ResultReceiver, SystemClock}
-import AppSettings._
 import java.util
-import providers.RESTfulProvider
 import scala.collection.JavaConversions._
 import android.preference.PreferenceManager
 import android.util.Log
 import android.support.v4.app.NotificationCompat.Builder
 import android.support.v4.app.NotificationCompat
 import android.graphics.Color
+import com.limeblast.mydeatree._
+import com.limeblast.mydeatree.AppSettings._
+import providers.RESTfulProvider
+import scala.Some
+import com.limeblast.mydeatree.activities.MainActivity
+import scala.Some
+import scala.Some
+import scala.Some
 
 
 private object SyncServiceVars {

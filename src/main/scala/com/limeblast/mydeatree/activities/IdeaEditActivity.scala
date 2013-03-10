@@ -14,6 +14,7 @@ import com.limeblast.androidhelpers.AndroidHelpers
 import android.app.Activity
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.RESTfulProvider
+import services.IdeaUpdateService
 
 class IdeaEditActivity extends Activity with TypedActivity {
 

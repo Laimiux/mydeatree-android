@@ -1,9 +1,10 @@
-package com.limeblast.mydeatree
+package com.limeblast.mydeatree.services
 
 import android.app.IntentService
 import android.content.Intent
 import com.limeblast.androidhelpers.ProviderHelper
-import providers.RESTfulProvider
+import com.limeblast.mydeatree.{IdeaHelper, MydeaTreeResourceREST, Idea, JsonWrapper}
+import com.limeblast.mydeatree.providers.RESTfulProvider
 
 
 class IdeaDeleteService extends IntentService("IdeaDeleteService") {

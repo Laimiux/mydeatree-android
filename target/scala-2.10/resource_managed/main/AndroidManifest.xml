@@ -45,11 +45,11 @@
         </receiver>
 
         
-        <service android:name=".PublicIdeaSyncService" android:enabled="true"></service>
-        <service android:name=".PrivateIdeaSyncService" android:enabled="true"></service>
-        <service android:name=".IdeaUpdateService" android:enabled="true"></service>
-        <service android:name=".IdeaCreateService" android:enabled="true"></service>
-        <service android:name=".IdeaDeleteService" android:enabled="true"></service>
+        <service android:name=".services.PublicIdeaSyncService" android:enabled="true"></service>
+        <service android:name=".services.PrivateIdeaSyncService" android:enabled="true"></service>
+        <service android:name=".services.IdeaUpdateService" android:enabled="true"></service>
+        <service android:name=".services.IdeaCreateService" android:enabled="true"></service>
+        <service android:name=".services.IdeaDeleteService" android:enabled="true"></service>
 
         <service android:name=".resources.FavoriteIdeaGetService" android:enabled="true"></service>
 

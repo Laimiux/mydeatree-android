@@ -25,6 +25,7 @@ import com.limeblast.mydeatree.Helpers._
 import com.limeblast.mydeatree.activities.NewIdeaActivity
 import com.limeblast.mydeatree.AppSettings._
 import com.limeblast.mydeatree.providers.RESTfulProvider
+import services.PublicIdeaSyncService
 
 class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallbacks[Cursor] {
   private val APP_TAG = "PUBLIC_IDEA_FRAGMENT"

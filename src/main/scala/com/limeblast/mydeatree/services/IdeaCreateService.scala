@@ -1,15 +1,19 @@
-package com.limeblast.mydeatree
+package com.limeblast.mydeatree.services
 
-import activities.MainActivity
 import android.app.{NotificationManager, PendingIntent, IntentService}
 import android.content.{Context, Intent}
-import AppSettings._
-import providers.RESTfulProvider
 import scala.Some
 import android.support.v4.app.NotificationCompat.Builder
 import android.support.v4.app.NotificationCompat
 import android.graphics.Color
 import com.limeblast.androidhelpers.ProviderHelper
+import com.limeblast.mydeatree._
+import com.limeblast.mydeatree.activities.MainActivity
+import com.limeblast.mydeatree.providers.RESTfulProvider
+import com.limeblast.mydeatree.AppSettings._
+import scala.Some
+import scala.Some
+import scala.Some
 
 object IdeaCreateService {
   val IDEA_CREATED = 1000

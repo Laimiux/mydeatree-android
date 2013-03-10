@@ -47,6 +47,7 @@ import scala.Some
 import scala.Some
 import scala.Some
 import scala.Some
+import services.{PrivateIdeaSyncService, IdeaUpdateService, IdeaDeleteService, IdeaCreateService}
 
 class PrivateIdeaListFragment extends SherlockListFragment with LoaderManager.LoaderCallbacks[Cursor]
 with OnKeyListener {

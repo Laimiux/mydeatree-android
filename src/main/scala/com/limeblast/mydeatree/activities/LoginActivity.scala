@@ -20,6 +20,7 @@ import AndroidImplicits.{toListener, functionToResultReceicer}
 import com.actionbarsherlock.view.Window
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.AppSettings._
+import services.PrivateIdeaSyncService
 
 
 class LoginActivity extends SherlockActivity with TypedActivity {
