@@ -78,7 +78,7 @@ class PublicIdeaSyncService extends IntentService("PublicIdeaSyncService") {
     if (AppSettings.DEBUG) Log.d(SyncServiceVars.PUBLIC_SYNC_TAG, "Starting to sync public ideas...")
 
     // Get ideas from the server
-    MydeaTreeResourceREST.retrievePublicIdeas(PUBLIC_IDEA_URL) match {
+    App.PublicIdeaResource.retrievePublicIdeas(PUBLIC_IDEA_URL) match {
       case Some(publicIdeas) => {
         val objectsInDb: util.ArrayList[ObjectIdWithDate] = getSavedPublicIdeas()
 

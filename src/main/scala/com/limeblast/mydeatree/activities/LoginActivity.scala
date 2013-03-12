@@ -15,7 +15,7 @@ import com.actionbarsherlock.app.SherlockActivity
 import concurrent.ops._
 import android.net.Uri
 
-import com.limeblast.androidhelpers.{ScalaHandler, AndroidImplicits, AndroidHelpers}
+import com.limeblast.androidhelpers.{JsonModule, ScalaHandler, AndroidImplicits, AndroidHelpers}
 import AndroidImplicits.{toListener, functionToResultReceicer}
 import com.actionbarsherlock.view.Window
 import com.limeblast.mydeatree._
@@ -23,7 +23,7 @@ import com.limeblast.mydeatree.AppSettings._
 import services.PrivateIdeaSyncService
 
 
-class LoginActivity extends SherlockActivity with TypedActivity {
+class LoginActivity extends SherlockActivity with TypedActivity with JsonModule {
 
   var dialog: ProgressDialog = null
 
@@ -139,7 +139,7 @@ class LoginActivity extends SherlockActivity with TypedActivity {
 
             mHandler.post(successLogin)
 
-            val users: Users = JsonWrapper.getMainObject(response.getEntity.getContent, classOf[Users])
+            val users: Users = getMainObject(response.getEntity.getContent, classOf[Users])
             val usr = users.objects.get(0)
 
             if(AppSettings.DEBUG)
@@ -216,16 +216,16 @@ class LoginActivity extends SherlockActivity with TypedActivity {
   }
 
   private def savePreferences() {
-    USERNAME = userField.getText.toString
-    PASSWORD = passwordField.getText.toString
+    App.USERNAME = userField.getText.toString
+    App.PASSWORD = passwordField.getText.toString
 
     val context = getApplicationContext
     val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
     // Save login information to SharedPrefs
     val editor = prefs.edit()
-    editor.putString(PREF_USERNAME, USERNAME)
-    editor.putString(PREF_PASSWORD, PASSWORD)
+    editor.putString(App.PREF_USERNAME, App.USERNAME)
+    editor.putString(App.PREF_PASSWORD, App.PASSWORD)
     editor.commit()
 
   }

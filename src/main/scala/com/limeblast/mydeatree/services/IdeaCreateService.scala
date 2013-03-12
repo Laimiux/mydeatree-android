@@ -6,7 +6,7 @@ import scala.Some
 import android.support.v4.app.NotificationCompat.Builder
 import android.support.v4.app.NotificationCompat
 import android.graphics.Color
-import com.limeblast.androidhelpers.ProviderHelper
+import com.limeblast.androidhelpers.{JsonModule, ProviderHelper}
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.activities.MainActivity
 import com.limeblast.mydeatree.providers.RESTfulProvider
@@ -19,7 +19,7 @@ object IdeaCreateService {
   val IDEA_CREATED = 1000
   val IDEA_CREATION_FAILED = 1001
 }
-class IdeaCreateService extends IntentService("IdeaCreateService") {
+class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModule {
 
   def onHandleIntent(intent: Intent) {
     val ideaJson = intent.getStringExtra("idea")
@@ -30,7 +30,7 @@ class IdeaCreateService extends IntentService("IdeaCreateService") {
     }
 
 
-    val passedIdea = JsonWrapper.getMainObject(ideaJson, classOf[Idea])
+    val passedIdea = getMainObject(ideaJson, classOf[Idea])
 
     val whereMap = Map(IdeaHelper.KEY_TITLE -> passedIdea.title,
       IdeaHelper.KEY_TEXT -> passedIdea.text,
@@ -39,7 +39,7 @@ class IdeaCreateService extends IntentService("IdeaCreateService") {
     ProviderHelper.updateObjects(getContentResolver, RESTfulProvider.CONTENT_URI,
       whereMap, null, Map(IdeaHelper.KEY_IS_IDEA_SYNCING -> true))
 
-    MydeaTreeResourceREST.postIdea(IDEA_URL, passedIdea) match {
+    App.PersonalIdeaResource.postIdea(IDEA_URL, passedIdea) match {
       case Some(idea) => {
         insertIdea(passedIdea, idea)
         createNotification(idea)
@@ -68,7 +68,7 @@ class IdeaCreateService extends IntentService("IdeaCreateService") {
       // and set parent idea to
       val intent = new Intent(this, classOf[MainActivity])
 
-      val ideaJson = JsonWrapper.convertObjectToJson(idea)
+      val ideaJson = convertObjectToJson(idea)
       intent.putExtra("idea", ideaJson)
 
       val pendingIntent = PendingIntent.getActivity(this, 0, intent, 0)

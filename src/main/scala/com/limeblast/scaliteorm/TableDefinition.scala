@@ -7,7 +7,6 @@ object Implicits {
 }
 
 class TableDefinition(val tableName: String) {
-  //import Implicits.tupleToSimpleColumn
   var columns = List[DatabaseColumn]()
 
 

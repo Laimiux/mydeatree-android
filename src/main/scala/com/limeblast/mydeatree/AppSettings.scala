@@ -6,7 +6,7 @@ import android.preference.PreferenceManager
 /**
  * A singleton object
  * that holds important
- * ppplication settings
+ * application settings
  */
 object AppSettings {
   val APP_TAG = "MydeaTree"
@@ -22,8 +22,8 @@ object AppSettings {
 
   val PREF_UPDATE_FREQ_INDEX = "PREF_UPDATE_FREQ_INDEX"
   val PREF_AUTO_UPDATE = "PREF_AUTO_UPDATE"
-  val PREF_USERNAME = "PREF_USERNAME"
-  val PREF_PASSWORD = "PREF_PASSWORD"
+
+
   val PREF_LAST_PRIVATE_IDEAS_SYNCED = "PREF_LAST_PRIVATE_IDEAS_SYNCED"
   // USE this with USERNAME_ in front
   val PREF_PRIVATE_SYNC = "PREF_PRIVATE_SYNC"
@@ -42,8 +42,8 @@ object AppSettings {
   val IDEA_CREATE_RESULT_RECEIVER = "IDEA_CREATE_RESULT_RECEIVER"
 
   val AUTO_UPDATE = true
-  var USERNAME = ""
-  var PASSWORD = ""
+ // var USERNAME = ""
+ // var PASSWORD = ""
   var LAST_PRIVATE_IDEAS_SYNCED = ""
 
   // State of Sync If Necessary
@@ -65,29 +65,7 @@ object AppSettings {
 
 
   val DEBUG = true
-  /*
-   * Safe way to access username
-   */
-  def getUsername(context: Context): String = {
-    if (USERNAME.equals("")) {
-      val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-      USERNAME = prefs.getString(PREF_USERNAME, "")
-    }
-    USERNAME
-  }
 
-  def isLoggedIn(): Boolean = {
-    if (USERNAME.equals("")) {
-      false
-    } else {
-      true
-    }
-  }
-
-  def isLoggedIn(context: Context): Boolean = {
-    getUsername(context)
-    isLoggedIn()
-  }
 
 }
 

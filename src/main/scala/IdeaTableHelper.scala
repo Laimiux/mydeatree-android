@@ -29,7 +29,7 @@ object IdeaTableHelper {
   def createNewIdeaValues(idea: Idea): ContentValues = {
     // Create new values
     val newValues = createBasicIdea(idea)
-    newValues.put(IdeaHelper.KEY_OWNER, USERNAME)
+    newValues.put(IdeaHelper.KEY_OWNER, App.USERNAME)
     newValues.put(IdeaHelper.KEY_PARENT, idea.parent)
     newValues.put(IdeaHelper.KEY_RESOURCE_URI, idea.resource_uri)
     newValues.put(IdeaHelper.KEY_PUBLIC, idea.public)

@@ -15,7 +15,6 @@ object General {
     javacOptions ++= Seq("-source", "1.6"),
     resolvers += "Maven Search" at "http://repo1.maven.org/maven2/",
     resolvers += "Sonatype" at "https://oss.sonatype.org/content/groups/scala-tools/"
-
   )
 
   //
@@ -23,6 +22,8 @@ object General {
   val pgOptions = Seq("-keep class android.support.v4.app.** { *; }",
     "-keep interface android.support.v4.app.** { *; }",
     "-keep class com.actionbarsherlock.** { *; }",
+    "-keep class com.limeblast.** { *; }",
+    "-keep class com.limeblast.mydeatree.activities.** { *; }",
     "-keep interface com.actionbarsherlock.** { *; }",
     "-keepattributes *Annotation*").mkString("")
 
@@ -39,6 +40,7 @@ object General {
       AndroidManifestGenerator.settings ++
       AndroidMarketPublish.settings ++ Seq(
       keyalias in Android := "mydeatree",
+      //libraryDependencies <+= (scalaVersion)("org.scala-lang" % "scala-reflect" % _),
       libraryDependencies += "org.scalatest" %% "scalatest" % "1.9.1" % "test",
       libraryDependencies += "com.google.android" % "support-v4" % "r7",
       //libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0" artifacts(Artifact("actionbarsherlock", "apklib", "apklib")) from "https://oss.sonatype.org/content/groups/scala-tools/",
@@ -57,7 +59,7 @@ object AndroidBuild extends Build {
     "MydeaTree",
     file("."),
     settings = General.fullAndroidSettings
-  ) //dependsOn actionbarsherlock
+  )
 
   lazy val tests = Project(
     "tests",

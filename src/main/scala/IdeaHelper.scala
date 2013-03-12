@@ -53,30 +53,34 @@ object FavoriteIdeaColumns {
 class IdeaSQLiteHelper(context: Context) extends
 SQLiteOpenHelper(context, IdeaHelper.DATABASE_NAME, null, IdeaHelper.DATABASE_VERSION) with DatabaseHelperTrait {
 
-  var tables: List[TableDefinition] =  List()
+  def tables: List[TableDefinition] = {
+    var tempList: List[TableDefinition] = List()
 
-  {
-    import FavoriteIdeaColumns._
-    val favorite_idea_table = new TableDefinition(TABLE_NAME)
-    favorite_idea_table insert (KEY_ID -> "TEXT PRIMARY KEY UNIQUE",
-      KEY_OWNER -> "TEXT not null",
-      KEY_IDEA -> "TEXT not null",
-      KEY_RESOURCE_URI -> "TEXT",
-      KEY_IS_DELETED -> "boolean default 0",
-      KEY_IS_NEW -> "boolean default 0")
-    tables = tables :+ favorite_idea_table
+    {
+      import FavoriteIdeaColumns._
+      val favorite_idea_table = new TableDefinition(TABLE_NAME)
+      favorite_idea_table insert(KEY_ID -> "TEXT PRIMARY KEY UNIQUE",
+        KEY_OWNER -> "TEXT not null",
+        KEY_IDEA -> "TEXT not null",
+        KEY_RESOURCE_URI -> "TEXT",
+        KEY_IS_DELETED -> "boolean default 0",
+        KEY_IS_NEW -> "boolean default 0")
+      tempList = tempList :+ favorite_idea_table
 
-  }
+    }
 
-  {
-    import IdeaHelper._
-    val personal_idea_table = new TableDefinition(IDEA_TABLE_NAME)
-    personal_idea_table insert(KEY_ID -> "TEXT PRIMARY KEY UNIQUE", KEY_OWNER -> "TEXT", KEY_RESOURCE_URI -> "TEXT", KEY_CREATED_DATE -> "TEXT",
-      KEY_MODIFIED_DATE -> "TEXT", KEY_TITLE -> "TEXT not null", KEY_TEXT -> "TEXT not null",
-      KEY_PARENT -> "TEXT", KEY_PUBLIC -> "TEXT",    KEY_IS_IDEA_NEW -> "BOOLEAN default 0",
-      KEY_IS_IDEA_EDITED -> "BOOLEAN default 0", KEY_IS_IDEA_SYNCING -> "BOOLEAN default 0",
-      KEY_IS_IDEA_DELETED -> "BOOLEAN default 0" )
-    tables = tables :+ personal_idea_table
+    {
+      import IdeaHelper._
+      val personal_idea_table = new TableDefinition(IDEA_TABLE_NAME)
+      personal_idea_table insert(KEY_ID -> "TEXT PRIMARY KEY UNIQUE", KEY_OWNER -> "TEXT", KEY_RESOURCE_URI -> "TEXT", KEY_CREATED_DATE -> "TEXT",
+        KEY_MODIFIED_DATE -> "TEXT", KEY_TITLE -> "TEXT not null", KEY_TEXT -> "TEXT not null",
+        KEY_PARENT -> "TEXT", KEY_PUBLIC -> "TEXT", KEY_IS_IDEA_NEW -> "BOOLEAN default 0",
+        KEY_IS_IDEA_EDITED -> "BOOLEAN default 0", KEY_IS_IDEA_SYNCING -> "BOOLEAN default 0",
+        KEY_IS_IDEA_DELETED -> "BOOLEAN default 0")
+      tempList = tempList :+ personal_idea_table
+    }
+
+    tempList
   }
 
 

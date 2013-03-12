@@ -3,7 +3,7 @@
     <application android:theme="@style/Theme.mydeatree" android:debuggable="true" android:label="@string/app_name" android:icon="@drawable/icon">
 
         
-        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name="activities.ForwardingActivity" android:label="">
+        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name=".ForwardingActivity" android:label="">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.MAIN"></action>
                 <category android:name="android.intent.category.LAUNCHER"></category>
@@ -28,8 +28,6 @@
             <meta-data android:resource="@xml/searchable" android:name="android.app.searchable"></meta-data>
         </activity>
 
-
-        <activity android:label="Sample Activity" android:name=".activities.SampleActivity"></activity>
 
         
         <provider android:exported="false" android:name=".providers.IdeaContentProvider" android:authorities="com.limeblast.mydeatree.providers.IdeaContentProvider">

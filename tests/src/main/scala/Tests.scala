@@ -1,7 +1,6 @@
 package com.limeblast.mydeatree.tests
 
 import com.limeblast.mydeatree._
-import activities.ForwardingActivity
 import junit.framework.Assert._
 import _root_.android.test.AndroidTestCase
 import _root_.android.test.ActivityInstrumentationTestCase2

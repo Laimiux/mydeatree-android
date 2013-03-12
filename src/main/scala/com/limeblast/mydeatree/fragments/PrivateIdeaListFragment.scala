@@ -24,7 +24,7 @@ import android.view.View.OnKeyListener
 import content.{ContentValues, DialogInterface, Intent}
 import android.preference.PreferenceManager
 
-import com.limeblast.androidhelpers.{ScalaHandler, AndroidImplicits, AndroidHelpers}
+import com.limeblast.androidhelpers.{JsonModule, ScalaHandler, AndroidImplicits, AndroidHelpers}
 import AndroidImplicits.{functionToResultReceicer, functionToLongListener, functionToDialogOnClickListener}
 
 
@@ -50,7 +50,7 @@ import scala.Some
 import services.{PrivateIdeaSyncService, IdeaUpdateService, IdeaDeleteService, IdeaCreateService}
 
 class PrivateIdeaListFragment extends SherlockListFragment with LoaderManager.LoaderCallbacks[Cursor]
-with OnKeyListener {
+with OnKeyListener with JsonModule {
 
   var aa: ArrayAdapter[Idea] = _
 
@@ -68,7 +68,7 @@ with OnKeyListener {
     super.onCreate(savedInstanceState)
 
     // Checks if user is logged in, if not throws an exception.
-    if (getUsername(getActivity.getApplicationContext).equals("")) {
+    if (App.getUsername(getActivity.getApplicationContext).equals("")) {
       throw new IllegalStateException("This fragment shouldn't be created when there is no username.")
     }
 
@@ -243,7 +243,7 @@ with OnKeyListener {
       if (AndroidHelpers.isOnline(getActivity)) {
 
         val intent = new Intent(getActivity, classOf[IdeaDeleteService])
-        intent.putExtra("idea", JsonWrapper.convertObjectToJson(idea))
+        intent.putExtra("idea", convertObjectToJson(idea))
         getActivity.startService(intent)
       }
     } else {
@@ -332,7 +332,7 @@ with OnKeyListener {
       else if (which == 1) {
         //EDIT
         dialog.dismiss()
-        val ideaJson = JsonWrapper.convertObjectToJson(idea)
+        val ideaJson = convertObjectToJson(idea)
         val intent = new Intent(getActivity, classOf[IdeaEditActivity])
         intent.putExtra("idea", ideaJson)
         startActivity(intent)
@@ -445,7 +445,7 @@ with OnKeyListener {
   //--------- LOADER MANAGER CALLBACK METHODS -------------\\
   //-------------------------------------------------------\\
   def onCreateLoader(id: Int, args: Bundle): Loader[Cursor] = {
-    val uri = Uri.withAppendedPath(RESTfulProvider.CONTENT_URI, "/" + USERNAME)
+    val uri = Uri.withAppendedPath(RESTfulProvider.CONTENT_URI, "/" + App.USERNAME)
 
     var select = IdeaHelper.KEY_IS_IDEA_DELETED + "=0"
 
@@ -539,7 +539,7 @@ with OnKeyListener {
 
       for (idea <- ideasToUpload) {
         // New ideas have id that is null
-        val ideaJson = JsonWrapper.convertObjectToJson(idea)
+        val ideaJson = convertObjectToJson(idea)
         val intent = new Intent(getActivity, classOf[IdeaCreateService])
         intent.putExtra("idea", ideaJson)
 
@@ -547,7 +547,7 @@ with OnKeyListener {
       }
 
       for (idea <- ideasToUpdate) {
-        val ideaJson = JsonWrapper.convertObjectToJson(idea)
+        val ideaJson = convertObjectToJson(idea)
         val intent = new Intent(getActivity, classOf[IdeaUpdateService])
         intent.putExtra("idea", ideaJson)
 
@@ -555,7 +555,7 @@ with OnKeyListener {
       }
 
       for (idea <- ideasToDelete) {
-        val ideaJson = JsonWrapper.convertObjectToJson(idea)
+        val ideaJson = convertObjectToJson(idea)
         val intent = new Intent(getActivity, classOf[IdeaDeleteService])
         intent.putExtra("idea", ideaJson)
         getActivity.startService(intent)

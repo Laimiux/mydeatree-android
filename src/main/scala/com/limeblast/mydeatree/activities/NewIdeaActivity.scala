@@ -39,6 +39,7 @@ class NewIdeaActivity extends Activity with TypedActivity {
     parent_uri = getIntent.getStringExtra("parent_uri")
 
 
+
     // Set the submit button click listener
     findView(TR.idea_submit_button).setOnClickListener((view: View) => {
       val title = TextUtils.htmlEncode(titleField.getText.toString)
@@ -46,9 +47,9 @@ class NewIdeaActivity extends Activity with TypedActivity {
       val isPublic = publicCheckBox.isChecked
       //Toast.makeText(NewIdeaActivity.this, msg, Toast.LENGTH_LONG).show()
 
-      val idea = new Idea(title, text, null, parent_uri, null, null, null, isPublic)
+      val idea = new Idea(title, text, null, parent_uri, null, null, null, isPublic) with IdeaValidationModule
 
-      ResourceValidation.validate_idea(idea) match {
+      idea.validate() match {
         case (false, msg: String) => Toaster.showToast(this, msg)
         case (true, _) => createNewIdea(idea)
         case _ =>
@@ -70,7 +71,7 @@ class NewIdeaActivity extends Activity with TypedActivity {
     values.put(IdeaHelper.KEY_PARENT, idea.parent)
     values.put(IdeaHelper.KEY_CREATED_DATE, timeString)
     values.put(IdeaHelper.KEY_MODIFIED_DATE, timeString)
-    values.put(IdeaHelper.KEY_OWNER, USERNAME)
+    values.put(IdeaHelper.KEY_OWNER, App.USERNAME)
     values.put(IdeaHelper.KEY_IS_IDEA_NEW, true)
 
     val resolver = getContentResolver

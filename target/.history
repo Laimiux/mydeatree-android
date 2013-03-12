@@ -164,3 +164,34 @@ android:start-device
 compile
 android:start-device
 compile
+gen-idea no-classifiers
+compile
+compile -language:experimental.macros
+compile
+console
+android:prepare-market
+compile
+compilw
+compile
+android:start-device
+compile
+android:start-device
+android:proguard
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+android:prepare-market

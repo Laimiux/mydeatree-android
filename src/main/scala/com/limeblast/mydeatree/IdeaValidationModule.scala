@@ -1,8 +1,17 @@
 package com.limeblast.mydeatree
 
-object ResourceValidation {
+/**
+ * Created with IntelliJ IDEA.
+ * User: Laimiux
+ * Date: 3/11/13
+ * Time: 11:11 PM
+ * To change this template use File | Settings | File Templates.
+ */
+trait IdeaValidationModule extends ValidationModule {self: Idea =>
+  //type Idea
+  private val idea = self
 
-  def validate_idea(idea: Idea): (Boolean, String) =
+  def validate(): (Boolean, String) = {
     if(idea.title.length < 5)
       (false, "Title is too short; it has to be 5 or more characters")
     else if(idea.title.length > 30)
@@ -13,5 +22,6 @@ object ResourceValidation {
       (false, "Text is too long: it has to be 140 or less characters")
     else
       (true, "Validated correctly")
-
+  }
 }
+

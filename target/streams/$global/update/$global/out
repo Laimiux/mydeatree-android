@@ -902,7 +902,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalatest#scalatest_2.10;1.9.1!scalatest_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-actors;2.10.0!scala-actors.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.0!scala-reflect.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 302ms :: artifacts dl 15ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1260ms :: artifacts dl 42ms[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 6[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-lang#scala-library;2.10.0 / Number of dependencies = 0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scala-lang#scala-library;2.10.0[0m
@@ -1039,5 +1039,5 @@
 [0m[[0mdebug[0m] [0m	report for mydeatree#mydeatree_2.10;0.1 docs produced in /Users/Laimiux/Dropbox/mydeatree-android/target/resolution-cache/reports/mydeatree-mydeatree_2.10/docs-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 0[0m
 [0m[[0mdebug[0m] [0m	report for mydeatree#mydeatree_2.10;0.1 pom produced in /Users/Laimiux/Dropbox/mydeatree-android/target/resolution-cache/reports/mydeatree-mydeatree_2.10/pom-resolved.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (302ms resolve - 15ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (1260ms resolve - 42ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

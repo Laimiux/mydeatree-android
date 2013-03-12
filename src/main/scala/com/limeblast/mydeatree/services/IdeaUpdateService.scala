@@ -7,6 +7,7 @@ import scala.Some
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.RESTfulProvider
 import scala.Some
+import com.limeblast.androidhelpers.JsonModule
 
 
 object IdeaUpdateService {
@@ -14,7 +15,7 @@ object IdeaUpdateService {
   val IDEA_UPDATE_FAILED = 1002
 }
 
-class IdeaUpdateService extends IntentService("IdeaUpdateService") {
+class IdeaUpdateService extends IntentService("IdeaUpdateService") with JsonModule {
   def onHandleIntent(intent: Intent) {
     val ideaJson = intent.getStringExtra("idea")
 
@@ -22,8 +23,8 @@ class IdeaUpdateService extends IntentService("IdeaUpdateService") {
       throw new IllegalStateException("Have to pass idea to update.")
 
 
-    val idea = JsonWrapper.getMainObject(ideaJson, classOf[Idea])
-    MydeaTreeResourceREST.updateIdea(idea) match {
+    val idea = getMainObject(ideaJson, classOf[Idea])
+    App.PersonalIdeaResource.updateIdea(idea) match {
       case Some(idea) => updateIdea(idea)
       case _ =>
     }

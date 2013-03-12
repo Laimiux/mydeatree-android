@@ -3,18 +3,17 @@ package com.limeblast.mydeatree
 import android.content.{Intent, Context}
 import java.util
 import android.widget._
-import android.view.{ViewGroup, View, LayoutInflater}
+import android.view.{ViewGroup, View}
 import android.view.View.OnClickListener
 import providers.FavoriteIdeaProvider
 import android.database.Cursor
 
 import com.limeblast.androidhelpers.ProviderHelper._
 
-class PublicIdeaListAdapter(c: Context, resourceId: Int, objects: util.List[PublicIdea])
-  extends ArrayAdapter(c, resourceId, objects) {
+import com.limeblast.androidhelpers.Inflater
 
-  private val inflater = LayoutInflater.from(c)
-
+class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util.List[PublicIdea])
+  extends ArrayAdapter(context, resourceId, objects) with Inflater {
 
   def getFavoriteIdea(idea: Idea): Cursor = getContext.getApplicationContext.getContentResolver.query(FavoriteIdeaProvider.CONTENT_URI,
     null, makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> false), null, null)
@@ -70,10 +69,10 @@ class PublicIdeaListAdapter(c: Context, resourceId: Int, objects: util.List[Publ
     var favoriteLayout = cView.findViewById(R.id.public_idea_favorite_layout).asInstanceOf[LinearLayout]
     favoriteLayout.setOnClickListener(new OnClickListener {
       def onClick(view: View) {
-        if (AppSettings.getUsername(getContext).equals("")) {
+        if (App.getUsername(getContext).equals("")) {
           Toast.makeText(getContext, "You need to login to favorite ideas.", Toast.LENGTH_SHORT).show()
         }
-        else if (AppSettings.USERNAME == idea.owner.username) {
+        else if (App.USERNAME == idea.owner.username) {
           Toast.makeText(getContext, "Cannot favorite your own idea", Toast.LENGTH_SHORT).show()
         } else {
 
@@ -108,7 +107,7 @@ class PublicIdeaListAdapter(c: Context, resourceId: Int, objects: util.List[Publ
                 null,
                 Map(FavoriteIdeaColumns.KEY_IS_DELETED -> false))
             } else {
-              insertObject(FavoriteIdeaProvider.CONTENT_URI)(getContext.getContentResolver)(FavoriteIdeaColumns.KEY_OWNER -> AppSettings.USERNAME,
+              insertObject(FavoriteIdeaProvider.CONTENT_URI)(getContext.getContentResolver)(FavoriteIdeaColumns.KEY_OWNER -> App.USERNAME,
                   FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri,
                   FavoriteIdeaColumns.KEY_IS_NEW -> true)
             }

@@ -10,19 +10,19 @@ import scala.concurrent.ops.spawn
 
 import com.limeblast.androidhelpers.AndroidImplicits.toListener
 
-import com.limeblast.androidhelpers.AndroidHelpers
+import com.limeblast.androidhelpers.{JsonModule, AndroidHelpers}
 import android.app.Activity
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.RESTfulProvider
 import services.IdeaUpdateService
 
-class IdeaEditActivity extends Activity with TypedActivity {
+class IdeaEditActivity extends Activity with TypedActivity with JsonModule {
 
   lazy val submitButton: Button = findView(TR.submit_button)
   lazy val publicCheckBox: CheckBox = findView(TR.idea_public_check_box)
   lazy val titleEdit: EditText = findView(TR.title_edit)
   lazy val textEdit: EditText = findView(TR.text_edit)
-  lazy val oldIdea = JsonWrapper.getMainObject(getIntent.getStringExtra("idea"), classOf[Idea])
+  lazy val oldIdea = getMainObject(getIntent.getStringExtra("idea"), classOf[Idea])
 
   override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
@@ -50,9 +50,10 @@ class IdeaEditActivity extends Activity with TypedActivity {
         val modified_date = Helpers.getNow()
 
         val newIdea = new Idea(newTitle, newText, oldIdea.id, oldIdea.parent,
-          oldIdea.created_date, modified_date, oldIdea.resource_uri, newPublic)
+          oldIdea.created_date, modified_date, oldIdea.resource_uri, newPublic) with IdeaValidationModule
 
-        val (isIdeaValid, message) = ResourceValidation.validate_idea(newIdea)
+
+        val (isIdeaValid, message) = newIdea.validate()
         if (isIdeaValid) {
           updateIdea(newIdea)
         } else {
@@ -114,7 +115,7 @@ class IdeaEditActivity extends Activity with TypedActivity {
   private def startServiceToUpdateIdea(idea: Idea) {
     // Create the intent for the service
     val intent = new Intent(this, classOf[IdeaUpdateService])
-    intent.putExtra("idea", JsonWrapper.convertObjectToJson(idea))
+    intent.putExtra("idea", convertObjectToJson(idea))
 
     // Start service
     startService(intent)

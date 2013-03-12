@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="sources"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
-		date="20130307202107"/>
+		date="20130311155728"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

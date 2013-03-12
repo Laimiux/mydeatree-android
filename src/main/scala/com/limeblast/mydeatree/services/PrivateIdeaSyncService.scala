@@ -9,13 +9,9 @@ import java.util
 import android.os.ResultReceiver
 import android.net.Uri
 import com.limeblast.mydeatree.AppSettings._
-import scala.Some
 import com.limeblast.mydeatree._
-import com.limeblast.mydeatree.MydeaTreeResourceREST._
-import scala.Some
 import com.limeblast.mydeatree.AppSettings.APP_TAG
 import com.limeblast.mydeatree.providers.RESTfulProvider
-import scala.Some
 import scala.Some
 
 /**
@@ -74,11 +70,10 @@ editor.commit()
    * Synchronizes private ideas with the server
    */
   private def synchronizePrivateIdeas() {
-    import MydeaTreeResourceREST.retrieveIdeas
     if(AppSettings.DEBUG) Log.d(APP_TAG, "Synchronization started")
 
     // Get ideas from the server
-    retrieveIdeas(IDEA_URL) match {
+    App.PersonalIdeaResource.retrieveIdeas(IDEA_URL) match {
       case Some(ideaArray) => {
         val objectsInDb: util.ArrayList[ObjectIdWithDate] = getSavedUserIdeas()
 
@@ -156,7 +151,7 @@ editor.commit()
   }
 
   private def getSavedUserIdeas(): util.ArrayList[ObjectIdWithDate] = {
-    val uri = Uri.withAppendedPath(RESTfulProvider.CONTENT_URI, "/" + USERNAME)
+    val uri = Uri.withAppendedPath(RESTfulProvider.CONTENT_URI, "/" + App.USERNAME)
     val resolver = getContentResolver
 
     IdeaTableHelper.getSavedObjects(uri, resolver)

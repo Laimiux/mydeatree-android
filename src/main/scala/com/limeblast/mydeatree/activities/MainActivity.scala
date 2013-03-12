@@ -11,25 +11,18 @@ import com.actionbarsherlock.view.{Menu, MenuItem}
 import com.actionbarsherlock.app.ActionBar.Tab
 
 import android.net.Uri
-import com.limeblast.androidhelpers.ScalaHandler
+import com.limeblast.androidhelpers.{JsonModule, ScalaHandler}
 import com.limeblast.mydeatree._
 import fragments.{PrivateIdeaListFragment, PublicIdeaFragment}
 import providers.RESTfulProvider
-import scala.Some
-import scala.Some
-import scala.Some
-import scala.Some
-import scala.Some
 import com.limeblast.mydeatree.AppSettings._
-import scala.Some
+
 import scala.Some
 
 /**
  * Start activity that starts the app flow.
  */
-class MainActivity extends SherlockFragmentActivity with TypedActivity {
-
-  val handler: Handler = new ScalaHandler()
+class MainActivity extends SherlockFragmentActivity with TypedActivity with JsonModule {
 
   // For tab names
   private val TAB_PRIVATE = "Personal"
@@ -74,13 +67,11 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity {
     }
 
 
-    val intent = getIntent()
-
     getIntent.getStringExtra("idea") match {
       case null =>
       case ideaJson: String => {
 
-        val idea = JsonWrapper.getMainObject(ideaJson, classOf[Idea])
+        val idea = getMainObject(ideaJson, classOf[Idea])
         AppSettings.PRIVATE_PARENT_IDEA = Some(idea)
 
         tabSelected = 1
@@ -115,8 +106,8 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity {
     val context = getApplicationContext
     val prefs = PreferenceManager.getDefaultSharedPreferences(context)
 
-    USERNAME = prefs.getString(PREF_USERNAME, "")
-    PASSWORD = prefs.getString(PREF_PASSWORD, "")
+    App.USERNAME = prefs.getString(App.PREF_USERNAME, "")
+    App.PASSWORD = prefs.getString(App.PREF_PASSWORD, "")
 
     LAST_PRIVATE_IDEAS_SYNCED = prefs.getString(PREF_LAST_PRIVATE_IDEAS_SYNCED, "")
   }
@@ -137,9 +128,9 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity {
    * @param menu Menu
    * @return
    */
-  override def onPrepareOptionsMenu(menu: Menu): Boolean = {
+  @deprecated override def onPrepareOptionsMenu(menu: Menu): Boolean = {
     actionMenu = menu
-    if (!isLoggedIn) {
+    if (!App.isLoggedIn) {
       menu.setGroupVisible(R.id.menu_loggedin, false)
       menu.setGroupVisible(R.id.menu_loggedout, true)
     } else {
@@ -188,8 +179,6 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity {
     }
 
 
-
-
   //-------------------------------------------------------\\
   //---------------- LOG OUT FUNCTION ---------------------\\
   //-------------------------------------------------------\\
@@ -198,18 +187,18 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity {
     val prefs = PreferenceManager.getDefaultSharedPreferences(context)
 
     // Remove all personal ideas
-    val uri = Uri.withAppendedPath(RESTfulProvider.CONTENT_URI, "/" + USERNAME)
+    val uri = Uri.withAppendedPath(RESTfulProvider.CONTENT_URI, "/" + App.USERNAME)
     getContentResolver.delete(uri, null, null)
 
     val editor = prefs.edit()
-    editor.putString(PREF_USERNAME, "")
-    editor.putString(PREF_PASSWORD, "")
+    editor.putString(App.PREF_USERNAME, "")
+    editor.putString(App.PREF_PASSWORD, "")
     editor.commit()
 
-    Toast.makeText(MainActivity.this, "See you later, " + USERNAME, Toast.LENGTH_SHORT).show()
+    Toast.makeText(MainActivity.this, "See you later, " + App.USERNAME, Toast.LENGTH_SHORT).show()
 
-    USERNAME = ""
-    PASSWORD = ""
+    App.USERNAME = ""
+    App.PASSWORD = ""
 
     // Move back to login screen
     val intent = new Intent()
@@ -239,14 +228,8 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity {
   def setToPrivateMenu() {
     if (actionMenu != null) {
       actionMenu.setGroupEnabled(R.id.menu_private_actions, true)
-
       actionMenu.setGroupVisible(R.id.menu_public_actions, false)
-      if (!USERNAME.equals("")) {
-        actionMenu.setGroupVisible(R.id.menu_private_actions, true)
-      } else {
-        actionMenu.setGroupVisible(R.id.menu_private_actions, false)
-      }
-
+      actionMenu.setGroupVisible(R.id.menu_private_actions, true)
     }
   }
 
