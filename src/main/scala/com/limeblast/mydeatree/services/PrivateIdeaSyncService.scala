@@ -73,7 +73,7 @@ editor.commit()
     if(AppSettings.DEBUG) Log.d(APP_TAG, "Synchronization started")
 
     // Get ideas from the server
-    App.PersonalIdeaResource.retrieveIdeas(IDEA_URL) match {
+    App.PersonalIdeaResource.getObjects(IDEA_URL) match {
       case Some(ideaArray) => {
         val objectsInDb: util.ArrayList[ObjectIdWithDate] = getSavedUserIdeas()
 

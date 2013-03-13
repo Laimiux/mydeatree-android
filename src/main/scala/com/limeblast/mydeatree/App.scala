@@ -1,6 +1,6 @@
 package com.limeblast.mydeatree
 
-import android.content.Context
+import android.content.{SharedPreferences, Context}
 import android.preference.PreferenceManager
 
 object App extends MydeaRestModule {
@@ -32,20 +32,24 @@ object App extends MydeaRestModule {
     getUsername(context)
     isLoggedIn()
   }
+
+
+  def saveUser(context: Context, username: String, password: String) {
+    USERNAME = username
+    PASSWORD = password
+
+    val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+
+    // Save login information to SharedPrefs
+    val editor = prefs.edit()
+    editor.putString(PREF_USERNAME, USERNAME)
+    editor.putString(PREF_PASSWORD, PASSWORD)
+    editor.commit()
+  }
 }
 
 /*
 
-  package com.limeblast.mydeatree
-
-import android.content.Context
-import android.preference.PreferenceManager
-
-/**
- * A singleton object
- * that holds important
- * application settings
- */
 object AppSettings {
   val APP_TAG = "MydeaTree"
   val PREFS_NAME = "MydeaPrefs"

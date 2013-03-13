@@ -1,16 +1,17 @@
 package com.limeblast.mydeatree
 
-import android.content.Context
-import android.preference.PreferenceManager
-
 /**
  * A singleton object
  * that holds important
  * application settings
  */
+
+/* this will be moved to
+App objects
+ */
 object AppSettings {
   val APP_TAG = "MydeaTree"
-  val PREFS_NAME = "MydeaPrefs"
+  //val PREFS_NAME = "MydeaPrefs"
 
   val DATE_FORMAT = "%F %T"
 
@@ -42,8 +43,7 @@ object AppSettings {
   val IDEA_CREATE_RESULT_RECEIVER = "IDEA_CREATE_RESULT_RECEIVER"
 
   val AUTO_UPDATE = true
- // var USERNAME = ""
- // var PASSWORD = ""
+
   var LAST_PRIVATE_IDEAS_SYNCED = ""
 
   // State of Sync If Necessary

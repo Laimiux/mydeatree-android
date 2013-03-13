@@ -39,7 +39,7 @@ class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModu
     ProviderHelper.updateObjects(getContentResolver, RESTfulProvider.CONTENT_URI,
       whereMap, null, Map(IdeaHelper.KEY_IS_IDEA_SYNCING -> true))
 
-    App.PersonalIdeaResource.postIdea(IDEA_URL, passedIdea) match {
+    App.PersonalIdeaResource.postObject(IDEA_URL, passedIdea) match {
       case Some(idea) => {
         insertIdea(passedIdea, idea)
         createNotification(idea)

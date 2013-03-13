@@ -1,7 +1,6 @@
 package com.limeblast.androidhelpers
 
-import com.limeblast.mydeatree.{AppSettings, Meta, DjangoRootObject}
-import android.util.Log
+import com.limeblast.mydeatree.{Meta, DjangoRootObject}
 
 import java.util
 import org.apache.http.HttpResponse
@@ -9,17 +8,94 @@ import org.apache.http.HttpResponse
 import java.io.InputStream
 import org.apache.http.entity.StringEntity
 
-trait RestModule extends JsonModule with HttpRequestModule {
+trait RestModule[Obj, ObjCollection] extends JsonModule with HttpRequestModule {
+
   def api_url: String
   def username: String
   def password: String
+  def objType: Class[Obj]
+  def collectionType: Class[ObjCollection]
 
+  def getObject(url: String): Option[Obj] = {
+    getFromUrl(username, password, url) match {
+      case Some(response) => {
+        val content: InputStream = response.getEntity.getContent
+
+        val obj = getMainObject(content, objType)
+        Some(obj)
+      }
+      case None => None
+    }
+  }
+
+
+  protected def handleCollectionMeta(objects: util.ArrayList[Obj], collection: ObjCollection) = {}
+
+  def collectionToList(collection: ObjCollection): util.ArrayList[Obj]
+
+  def getObjects[T](initialUrl: String): Option[util.ArrayList[Obj]] = {
+    getFromUrl(username, password, initialUrl) match {
+      case Some(response) => {
+        if (isResponseOkay(response)) {
+          val content = response.getEntity.getContent
+
+          val mainObject = getMainObject(content, collectionType)
+
+          //  Convert Object Collection to ArrayList
+          val objects = collectionToList(mainObject)
+
+          // Handle meta
+          handleCollectionMeta(objects, mainObject)
+
+
+          Some(objects)
+        } else {
+
+          // Add a hook to handle error responses
+          None
+        }
+      }
+      case _ => None
+    }
+  }
+
+
+  def postObject(url: String, originalObject: Obj): Option[Obj] =
+    try {
+      val jsonString = convertObjectToJson(originalObject)
+
+      //Log.d(APP_TAG, jsonString)
+
+      val httpClient = getHttpClientWithCredentials(username, password)
+      val post = HttpPostWithJson(url, new StringEntity(jsonString))
+      val response = httpClient.execute(post)
+
+      if (response != null && isPostResponseOkay(response)) {
+        val finalObject = getMainObject(response.getEntity.getContent, objType)
+        Some(finalObject)
+      } else {
+        None
+      }
+    } catch {
+      case _: Throwable => None
+    }
+
+  def deleteObject(url: String): Boolean = {
+    //val response =
+    deleteFromUrl(username, password, url) match {
+      case Some(response) if (isResponseDelete(response)) => true
+      case _ => false
+    }
+  }
+
+
+  /*
   def retrieveObjects[T](initialUrl: String, objectKind: Class[T]): Option[util.ArrayList[AnyRef]] = {
     val objects: util.ArrayList[AnyRef] = new util.ArrayList()
 
     getFromUrl(username, password, initialUrl) match {
       case Some(response) => {
-        if(isResponseOkay(response)) {
+        if (isResponseOkay(response)) {
           val content: InputStream = response.getEntity.getContent
 
           val mainObject: DjangoRootObject[AnyRef] = getMainObject(content, objectKind).asInstanceOf[DjangoRootObject[AnyRef]]
@@ -47,6 +123,9 @@ trait RestModule extends JsonModule with HttpRequestModule {
     }
   }
 
+*/
+  /*
+
   def retrieveObject[T](url: String, objClass: Class[T]): Option[T] = {
     getFromUrl(username, password, url) match {
       case Some(response) => {
@@ -58,37 +137,10 @@ trait RestModule extends JsonModule with HttpRequestModule {
       case None => None
     }
   }
-
-  def deleteObject(url: String): Boolean = {
-    //val response =
-    deleteFromUrl(username, password, url) match {
-      case Some(response) if(isResponseDelete(response)) => true
-      case _ => false
-    }
-  }
-
-  def postObject[T](url: String, originalObject: T): Option[T] =
-    try {
-      val jsonString = convertObjectToJson(originalObject)
-
-      //Log.d(APP_TAG, jsonString)
-
-      val httpClient = getHttpClientWithCredentials(username, password)
-      val post = HttpPostWithJson(url, new StringEntity(jsonString))
-      val response = httpClient.execute(post)
-
-      if (response != null && isPostResponseOkay(response)) {
-        val finalObject = getMainObject(response.getEntity.getContent, originalObject.getClass)
-        Some(finalObject)
-      } else {
-        None
-      }
-    } catch {
-      case _: Throwable => None
-    }
+  */
 
 
-  def putObject[T](url: String, updatedObject: T): Option[T] =
+  def putObject[T](url: String, updatedObject: Obj): Option[Obj] =
     try {
       val jsonString = convertObjectToJson(updatedObject)
 
@@ -98,7 +150,7 @@ trait RestModule extends JsonModule with HttpRequestModule {
 
       if (response != null && isPutResponseOkay(response)) {
         // Parse response object
-        val finalObject = getMainObject(response.getEntity.getContent, updatedObject.getClass)
+        val finalObject = getMainObject(response.getEntity.getContent, objType)
         Some(finalObject)
       } else {
         None
@@ -110,7 +162,6 @@ trait RestModule extends JsonModule with HttpRequestModule {
       }
       case _: Throwable => None
     }
-
 
 
   private def isPutResponseOkay(response: HttpResponse): Boolean = {

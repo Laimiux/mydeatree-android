@@ -15,7 +15,7 @@ import com.actionbarsherlock.app.SherlockActivity
 import concurrent.ops._
 import android.net.Uri
 
-import com.limeblast.androidhelpers.{JsonModule, ScalaHandler, AndroidImplicits, AndroidHelpers}
+import com.limeblast.androidhelpers._
 import AndroidImplicits.{toListener, functionToResultReceicer}
 import com.actionbarsherlock.view.Window
 import com.limeblast.mydeatree._
@@ -23,7 +23,7 @@ import com.limeblast.mydeatree.AppSettings._
 import services.PrivateIdeaSyncService
 
 
-class LoginActivity extends SherlockActivity with TypedActivity with JsonModule {
+class LoginActivity extends SherlockActivity with TypedActivity with JsonModule with HttpRequestModule {
 
   var dialog: ProgressDialog = null
 
@@ -110,6 +110,8 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
   }
 
   // Function to login user.
+
+  // REFACTOR THIS BIATCH
   private def login_user() {
     try {
       // User and pw
@@ -121,7 +123,7 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
       } else {
 
         // Create http client and set credentials
-        val httpclient = HttpRequest.getHttpClientWithCredentials(user, pw)
+        val httpclient = getHttpClientWithCredentials(user, pw)
 
         // Set get method
         val get = new HttpGet(USER_URL)
@@ -134,7 +136,9 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
           if(AppSettings.DEBUG) Log.d("Status code", "" + statusCode)
 
           if (statusCode == 200) {
-            savePreferences()
+            App.saveUser(this, userField.getText.toString, passwordField.getText.toString)
+
+            //savePreferences()
 
 
             mHandler.post(successLogin)
@@ -215,6 +219,7 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
     removeLoader()
   }
 
+  /*
   private def savePreferences() {
     App.USERNAME = userField.getText.toString
     App.PASSWORD = passwordField.getText.toString
@@ -229,5 +234,6 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
     editor.commit()
 
   }
+  */
 
 }

@@ -7,7 +7,7 @@ import android.os.Bundle
 import com.actionbarsherlock.app.ActionBar.Tab
 import java.util
 
-final class TabInfo(val _class: Class[_], val _args: Bundle)
+class TabInfo(val _class: Class[_], val _args: Bundle)
 
 class TabsAdapter(val activity: FragmentActivity, val bar: ActionBar, val pager: ViewPager)
   extends FragmentPagerAdapter(activity.getSupportFragmentManager)

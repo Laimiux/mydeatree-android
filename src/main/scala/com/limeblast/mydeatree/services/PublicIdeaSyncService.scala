@@ -64,11 +64,14 @@ class PublicIdeaSyncService extends IntentService("PublicIdeaSyncService") {
       alarmManager.cancel(alarmIntent)
     }
 
-    val receiver: ResultReceiver = intent.getParcelableExtra(PUBLIC_IDEA_RESULT_RECEIVER)
-    refreshPublicIdeas()
+    // Check if logged in
+    if (App.isLoggedIn(getApplicationContext)) {
+      val receiver: ResultReceiver = intent.getParcelableExtra(PUBLIC_IDEA_RESULT_RECEIVER)
+      refreshPublicIdeas()
 
-    if (receiver != null) {
-      receiver.send(0, null)
+      if (receiver != null) {
+        receiver.send(0, null)
+      }
     }
 
   }
@@ -78,7 +81,7 @@ class PublicIdeaSyncService extends IntentService("PublicIdeaSyncService") {
     if (AppSettings.DEBUG) Log.d(SyncServiceVars.PUBLIC_SYNC_TAG, "Starting to sync public ideas...")
 
     // Get ideas from the server
-    App.PublicIdeaResource.retrievePublicIdeas(PUBLIC_IDEA_URL) match {
+    App.PublicIdeaResource.getObjects(PUBLIC_IDEA_URL) match {
       case Some(publicIdeas) => {
         val objectsInDb: util.ArrayList[ObjectIdWithDate] = getSavedPublicIdeas()
 
