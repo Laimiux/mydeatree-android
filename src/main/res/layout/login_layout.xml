@@ -13,13 +13,10 @@
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/header_linear"
-                android:layout_alignParentTop="true" android:paddingTop="20dp">
+                android:id="@+id/login_header"
+                android:layout_alignParentTop="true" android:paddingTop="80dp" android:longClickable="false"
+                android:focusableInTouchMode="false">
             <!-- Logo starts -->
-            <ImageView android:src="@drawable/logo"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_gravity="center_horizontal"/>
             <!-- Logo ends -->
         </LinearLayout>
         <!--  Header Ends -->
@@ -37,7 +34,8 @@
                       android:layout_height="wrap_content"
                       android:text="@string/link_to_register"
                       android:gravity="center"
-                      android:textSize="20dp" android:padding="10dp" android:layout_gravity="center_horizontal"/>
+                      android:textSize="20dp" android:padding="10dp" android:layout_gravity="center_horizontal"
+                      android:paddingTop="30dp"/>
         </LinearLayout>
         <!-- Footer Ends -->
 
@@ -45,18 +43,28 @@
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/header_linear"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/login_header"
                 android:id="@+id/login_linear"
                 android:paddingBottom="20dp" android:layout_centerVertical="true" android:padding="10dp"
-                >
+                android:layout_alignParentLeft="false" android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="false" android:layout_alignWithParentIfMissing="false"
+                android:layout_alignParentTop="false">
+            <ImageView android:src="@drawable/logo"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_horizontal" android:paddingBottom="15dp"/>
             <EditText android:layout_width="fill_parent" android:layout_height="wrap_content"
-                      android:id="@+id/username_edit" android:layout_gravity="center" android:hint="@string/username_hint"
-                      android:singleLine="true" android:layout_marginBottom="10dp" android:layout_marginTop="10dp"/>
+                      android:id="@+id/username_edit" android:layout_gravity="center"
+                      android:hint="@string/username_hint"
+                      android:singleLine="true" android:layout_marginBottom="10dp" android:layout_marginTop="10dp"
+                      style="@style/EditTextStyle"/>
             <EditText android:layout_width="fill_parent" android:layout_height="wrap_content"
-                      android:id="@+id/password_edit" android:layout_gravity="center" android:hint="@string/password_hint"
+                      android:id="@+id/password_edit" android:layout_gravity="center"
+                      android:hint="@string/password_hint"
                       android:password="true" android:singleLine="true"
-                      android:layout_marginBottom="10dp"/>
+                      android:layout_marginBottom="10dp"
+                      style="@style/EditTextStyle"/>
             <Button android:layout_width="fill_parent" android:layout_height="wrap_content"
                     android:text="@string/login_button"
                     android:id="@+id/login_button"

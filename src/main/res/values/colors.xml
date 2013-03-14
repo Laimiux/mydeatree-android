@@ -17,4 +17,6 @@
     <color name="silhouette2_color">#232222</color>
     <color name="silhouette3_color">#485157</color>
     <color name="grey_color">#333333</color>
+    <color name="text_hint_color">#A4B382</color>
+    <color name="edit_text_color">#444D31</color>
 </resources>

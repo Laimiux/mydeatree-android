@@ -6,7 +6,7 @@ import scala.Some
 import android.support.v4.app.NotificationCompat.Builder
 import android.support.v4.app.NotificationCompat
 import android.graphics.Color
-import com.limeblast.androidhelpers.{JsonModule, ProviderHelper}
+import com.limeblast.androidhelpers.{ProviderModule, JsonModule}
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.activities.MainActivity
 import com.limeblast.mydeatree.providers.RESTfulProvider
@@ -19,7 +19,7 @@ object IdeaCreateService {
   val IDEA_CREATED = 1000
   val IDEA_CREATION_FAILED = 1001
 }
-class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModule {
+class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModule with ProviderModule {
 
   def onHandleIntent(intent: Intent) {
     val ideaJson = intent.getStringExtra("idea")

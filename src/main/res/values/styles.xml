@@ -38,4 +38,9 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="EditTextStyle">
+        <item name="android:textColorHint">@color/text_hint_color</item>
+        <item name="android:textColor">@color/edit_text_color</item>
+    </style>
+
 </resources>

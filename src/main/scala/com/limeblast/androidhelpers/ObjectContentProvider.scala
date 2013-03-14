@@ -6,96 +6,101 @@ import com.limeblast.mydeatree.{IdeaHelper, Idea}
 import android.net.Uri
 import com.limeblast.mydeatree.providers.RESTfulProvider
 
-object ProviderHelper {
 
-  import ContentValuesHelper.{mapToValues, tupleToValues}
+trait ProviderModule {
+
+  object ProviderHelper {
+
+    import ContentValuesHelper.{mapToValues, tupleToValues}
 
 
-
-  def makeWhereClause(tuple: (String, Any)*): String =
-    (tuple :\ "")((tuple, where) => {
-      where.isEmpty match {
-        case true => makeWhereClause(tuple)
-        case false => where + " AND " + makeWhereClause(tuple)
-      }
-    })
-
-  def makeWhereClause(tuple: (String, Any)): String =
-    tuple match {
-      case (one: String, two: Int) => one + "=" + two
-      case (one: String, two: String) => one + "='" + two + "'"
-      case (one: String, two: Boolean) => {
-        two match {
-          case true => one + "=" + 1
-          case false => one + "=" + 0
+    def makeWhereClause(tuple: (String, Any)*): String =
+      (tuple :\ "")((tuple, where) => {
+        where.isEmpty match {
+          case true => makeWhereClause(tuple)
+          case false => where + " AND " + makeWhereClause(tuple)
         }
-
-      }
-    }
-
-  def makeWhereClause(whereArgs: Map[String, Any]): String =
-    (whereArgs :\ "")((tuple, where) =>
-      where match {
-        case empty: String if (empty.equals("")) => makeWhereClause(tuple)
-        case _ => where + " AND " + makeWhereClause(tuple)
       })
 
-  implicit def mapToString(map: Map[String, Any]): String = makeWhereClause(map)
+    def makeWhereClause(tuple: (String, Any)): String =
+      tuple match {
+        case (one: String, two: Int) => one + "=" + two
+        case (one: String, two: String) => one + "='" + two + "'"
+        case (one: String, two: Boolean) => {
+          two match {
+            case true => one + "=" + 1
+            case false => one + "=" + 0
+          }
 
-  implicit def tupleToString(tuple: (String, Any)): String = makeWhereClause(tuple)
+        }
+      }
 
+    def makeWhereClause(whereArgs: Map[String, Any]): String =
+      (whereArgs :\ "")((tuple, where) =>
+        where match {
+          case empty: String if (empty.equals("")) => makeWhereClause(tuple)
+          case _ => where + " AND " + makeWhereClause(tuple)
+        })
 
-  /**
-   * Updates objects in the database
-   * @param resolver Content Resolver
-   * @param uri Object uri
-   * @param where Where clause
-   * @param whereArgs Where arguments
-   * @param newValues New values for the objects
-   * @return Number of objects updated
-   */
-  def updateObjects(resolver: ContentResolver, uri: Uri, where: String, whereArgs: Array[String], newValues: ContentValues): Int =
-    resolver.update(uri, newValues, where, whereArgs)
+    implicit def mapToString(map: Map[String, Any]): String = makeWhereClause(map)
 
-  def updateObjects(resolver: ContentResolver, uri: Uri, where: (String, Any), whereArgs: Array[String], newValues: ContentValues): Int =
-    resolver.update(uri, newValues, where, whereArgs)
-
-  def updateObjects(resolver: ContentResolver, uri: Uri, where: Map[String, Any], whereArgs: Array[String], newValues: ContentValues): Int =
-    resolver.update(uri, newValues, where, whereArgs)
-
-  def updateObjects(resolver: ContentResolver, uri: Uri, where: String, whereArgs: Array[String], newValues: Map[String, Any]): Int =
-    resolver.update(uri, newValues, where, whereArgs)
-
-  def updateObjects(resolver: ContentResolver, uri: Uri, where: (String, Any), whereArgs: Array[String], newValues: Map[String, Any]): Int =
-    resolver.update(uri, newValues, where, whereArgs)
-
-  def updateObjects(resolver: ContentResolver, uri: Uri, where: Map[String, Any], whereArgs: Array[String], newValues: Map[String, Any]): Int =
-    resolver.update(uri, newValues, where, whereArgs)
-
-  /**
-   * Deletes objects from content provider uri
-   * @param resolver Content Resolver
-   * @param uri Content Uri
-   * @param where Where clause
-   * @param whereArgs Selection Args
-   * @return Rows deleted
-   */
-  def deleteObjects(resolver: ContentResolver, uri: Uri, where: String, whereArgs: Array[String]): Int =
-    resolver.delete(uri, where, whereArgs)
-
-  def deleteObjects(resolver: ContentResolver, uri: Uri, where: (String, Any), whereArgs: Array[String]): Int =
-    deleteObjects(resolver, uri, where, whereArgs)
+    implicit def tupleToString(tuple: (String, Any)): String = makeWhereClause(tuple)
 
 
-  def deleteObjects(resolver: ContentResolver, uri: Uri, where: Map[String, Any], whereArgs: Array[String]): Int =
-    deleteObjects(resolver, uri, where, whereArgs)
+    /**
+     * Updates objects in the database
+     * @param resolver Content Resolver
+     * @param uri Object uri
+     * @param where Where clause
+     * @param whereArgs Where arguments
+     * @param newValues New values for the objects
+     * @return Number of objects updated
+     */
+    def updateObjects(resolver: ContentResolver, uri: Uri, where: String, whereArgs: Array[String], newValues: ContentValues): Int =
+      resolver.update(uri, newValues, where, whereArgs)
+
+    def updateObjects(resolver: ContentResolver, uri: Uri, where: (String, Any), whereArgs: Array[String], newValues: ContentValues): Int =
+      resolver.update(uri, newValues, where, whereArgs)
+
+    def updateObjects(resolver: ContentResolver, uri: Uri, where: Map[String, Any], whereArgs: Array[String], newValues: ContentValues): Int =
+      resolver.update(uri, newValues, where, whereArgs)
+
+    def updateObjects(resolver: ContentResolver, uri: Uri, where: String, whereArgs: Array[String], newValues: Map[String, Any]): Int =
+      resolver.update(uri, newValues, where, whereArgs)
+
+    def updateObjects(resolver: ContentResolver, uri: Uri, where: (String, Any), whereArgs: Array[String], newValues: Map[String, Any]): Int =
+      resolver.update(uri, newValues, where, whereArgs)
+
+    def updateObjects(resolver: ContentResolver, uri: Uri, where: Map[String, Any], whereArgs: Array[String], newValues: Map[String, Any]): Int =
+      resolver.update(uri, newValues, where, whereArgs)
+
+    /**
+     * Deletes objects from content provider uri
+     * @param resolver Content Resolver
+     * @param uri Content Uri
+     * @param where Where clause
+     * @param whereArgs Selection Args
+     * @return Rows deleted
+     */
+    def deleteObjects(resolver: ContentResolver, uri: Uri, where: String, whereArgs: Array[String]): Int =
+      resolver.delete(uri, where, whereArgs)
+
+    def deleteObjects(resolver: ContentResolver, uri: Uri, where: (String, Any), whereArgs: Array[String]): Int =
+      deleteObjects(resolver, uri, where, whereArgs)
 
 
-  def insertObject(uri: Uri)(resolver: ContentResolver)(values: (String, Any)*) = {}
-    //resolver.insert(uri, values)
+    def deleteObjects(resolver: ContentResolver, uri: Uri, where: Map[String, Any], whereArgs: Array[String]): Int =
+      deleteObjects(resolver, uri, where, whereArgs)
+
+
+    def insertObject(uri: Uri)(resolver: ContentResolver)(values: (String, Any)*) =
+      resolver.insert(uri, values)
+  }
+
 }
 
 /*
+
 trait Providable[T] {
 
   def contentResolver: ContentResolver

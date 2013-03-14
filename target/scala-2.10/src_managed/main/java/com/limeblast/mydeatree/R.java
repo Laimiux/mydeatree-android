@@ -691,19 +691,20 @@ containing a value of this type.
         public static final int abs__bright_foreground_inverse_holo_dark=0x7f070006;
         public static final int abs__bright_foreground_inverse_holo_light=0x7f070007;
         public static final int abs__holo_blue_light=0x7f070008;
-        public static final int abs__primary_text_disable_only_holo_dark=0x7f07001b;
-        public static final int abs__primary_text_disable_only_holo_light=0x7f07001c;
-        public static final int abs__primary_text_holo_dark=0x7f07001d;
-        public static final int abs__primary_text_holo_light=0x7f07001e;
+        public static final int abs__primary_text_disable_only_holo_dark=0x7f07001d;
+        public static final int abs__primary_text_disable_only_holo_light=0x7f07001e;
+        public static final int abs__primary_text_holo_dark=0x7f07001f;
+        public static final int abs__primary_text_holo_light=0x7f070020;
         public static final int aurora_color=0x7f070015;
         public static final int bay_leaf_color=0x7f070014;
         public static final int dark_background_color=0x7f070010;
         public static final int darkest_background_color=0x7f07000f;
+        public static final int edit_text_color=0x7f07001b;
         public static final int grey_color=0x7f070019;
         public static final int idea_frame_color=0x7f07000a;
         public static final int light_background_color=0x7f070011;
         public static final int owner_text_color=0x7f070009;
-        public static final int pressed_mydeatree=0x7f07001a;
+        public static final int pressed_mydeatree=0x7f07001c;
         public static final int private_idea_date_color=0x7f07000b;
         public static final int private_idea_text_color=0x7f07000c;
         public static final int private_idea_title_color=0x7f07000d;
@@ -712,6 +713,7 @@ containing a value of this type.
         public static final int silhouette2_color=0x7f070017;
         public static final int silhouette3_color=0x7f070018;
         public static final int silhouette_color=0x7f070016;
+        public static final int text_hint_color=0x7f07001a;
         public static final int watermelon_color=0x7f070013;
     }
     public static final class dimen {
@@ -1138,7 +1140,6 @@ containing a value of this type.
         public static final int footer_linear=0x7f05003d;
         public static final int forgot_password_link=0x7f050043;
         public static final int forgot_password_text=0x7f05004a;
-        public static final int header_linear=0x7f05003c;
         public static final int homeAsUp=0x7f050006;
         public static final int idea_cancel_button=0x7f05003b;
         public static final int idea_date=0x7f050051;
@@ -1154,6 +1155,7 @@ containing a value of this type.
         public static final int link_to_register=0x7f05003e;
         public static final int listMode=0x7f050002;
         public static final int login_button=0x7f050042;
+        public static final int login_header=0x7f05003c;
         public static final int login_linear=0x7f05003f;
         public static final int menu_item_login=0x7f050068;
         public static final int menu_item_logout=0x7f050066;
@@ -1340,6 +1342,7 @@ containing a value of this type.
         public static final int DialogWindowTitle_Sherlock=0x7f0b0036;
         public static final int DialogWindowTitle_Sherlock_Light=0x7f0b0037;
         public static final int EditTextMydeaTree=0x7f0b0059;
+        public static final int EditTextStyle=0x7f0b0075;
         public static final int ImageButtonMydeaTree=0x7f0b005e;
         public static final int ListViewMydeaTree=0x7f0b0068;
         public static final int ListViewMydeaTree_White=0x7f0b0069;
@@ -1401,10 +1404,10 @@ containing a value of this type.
         public static final int Theme_Sherlock_Light_Dialog=0x7f0b0058;
         public static final int Theme_Sherlock_Light_NoActionBar=0x7f0b0056;
         public static final int Theme_Sherlock_NoActionBar=0x7f0b0055;
-        public static final int Theme_mydeatree=0x7f0b0075;
+        public static final int Theme_mydeatree=0x7f0b0076;
         /**  this style is only referenced in a Light.DarkActionBar based theme 
          */
-        public static final int Theme_mydeatree_widget=0x7f0b007d;
+        public static final int Theme_mydeatree_widget=0x7f0b007e;
         public static final int ToggleMydeaTree=0x7f0b0067;
         public static final int Widget=0x7f0b0000;
         public static final int Widget_Sherlock_ActionBar=0x7f0b0002;
@@ -1453,13 +1456,13 @@ containing a value of this type.
         public static final int Widget_Sherlock_SearchAutoCompleteTextView=0x7f0b0034;
         public static final int Widget_Sherlock_Spinner_DropDown_ActionBar=0x7f0b0024;
         public static final int Widget_Sherlock_TextView_SpinnerItem=0x7f0b0032;
-        public static final int mydeatree_ActionBarTabStyle=0x7f0b007a;
-        public static final int mydeatree_DropDownListView=0x7f0b0079;
-        public static final int mydeatree_DropDownNav=0x7f0b007b;
-        public static final int mydeatree_PopupMenu=0x7f0b0078;
-        public static final int mydeatree_ProgressBar=0x7f0b007c;
-        public static final int mydeatree_solid_ActionBar=0x7f0b0076;
-        public static final int mydeatree_transparent_ActionBar=0x7f0b0077;
+        public static final int mydeatree_ActionBarTabStyle=0x7f0b007b;
+        public static final int mydeatree_DropDownListView=0x7f0b007a;
+        public static final int mydeatree_DropDownNav=0x7f0b007c;
+        public static final int mydeatree_PopupMenu=0x7f0b0079;
+        public static final int mydeatree_ProgressBar=0x7f0b007d;
+        public static final int mydeatree_solid_ActionBar=0x7f0b0077;
+        public static final int mydeatree_transparent_ActionBar=0x7f0b0078;
     }
     public static final class xml {
         public static final int searchable=0x7f040000;

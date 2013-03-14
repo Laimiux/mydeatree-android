@@ -23,7 +23,7 @@
 
         <activity android:label="Login"
                   android:name=".activities.LoginActivity"
-                  android:windowSoftInputMode="adjustResize" />
+                  android:windowSoftInputMode="adjustPan" />
         <activity android:label="MydeaTree Preferences" android:name=".activities.PreferencesActivity"/>
 
         <activity android:label="New Idea" android:name=".activities.NewIdeaActivity" android:windowSoftInputMode="adjustResize" android:theme="@android:style/Theme.Dialog" />

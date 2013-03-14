@@ -2,12 +2,12 @@ package com.limeblast.mydeatree.services
 
 import android.app.IntentService
 import android.content.Intent
-import com.limeblast.androidhelpers.{JsonModule, ProviderHelper}
+import com.limeblast.androidhelpers.{ProviderModule, JsonModule}
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.RESTfulProvider
 
 
-class IdeaDeleteService extends IntentService("IdeaDeleteService") with JsonModule {
+class IdeaDeleteService extends IntentService("IdeaDeleteService") with JsonModule with ProviderModule {
   def onHandleIntent(intent: Intent) {
     val ideaJson = intent.getStringExtra("idea")
     if (ideaJson == null || ideaJson.equals("")) {

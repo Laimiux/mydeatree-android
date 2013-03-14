@@ -13,7 +13,7 @@
         <activity android:configChanges="orientation" android:uiOptions="splitActionBarWhenNarrow" android:name=".activities.MainActivity" android:label="">
         </activity>
 
-        <activity android:windowSoftInputMode="adjustResize" android:name=".activities.LoginActivity" android:label="Login"></activity>
+        <activity android:windowSoftInputMode="adjustPan" android:name=".activities.LoginActivity" android:label="Login"></activity>
         <activity android:name=".activities.PreferencesActivity" android:label="MydeaTree Preferences"></activity>
 
         <activity android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="adjustResize" android:name=".activities.NewIdeaActivity" android:label="New Idea"></activity>

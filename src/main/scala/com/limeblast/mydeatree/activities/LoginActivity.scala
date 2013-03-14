@@ -21,6 +21,7 @@ import com.actionbarsherlock.view.Window
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.AppSettings._
 import services.PrivateIdeaSyncService
+import android.content.res.Configuration
 
 
 class LoginActivity extends SherlockActivity with TypedActivity with JsonModule with HttpRequestModule {
@@ -52,6 +53,9 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
 
     setContentView(R.layout.login_layout)
 
+    if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+      findView(TR.login_header).setVisibility(View.GONE)
+
 
     if (bundle != null) {
       loggingIn = bundle.getBoolean(BUNDLE_LOGGING_IN, false)
@@ -66,17 +70,17 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
 
 
     // Get the Login Button and add listener to it.
-    loginBtn.setOnClickListener((view:View) => {
-        startProgressBar(LOGIN_MESSAGE)
-        loggingIn = true
+    loginBtn.setOnClickListener((view: View) => {
+      startProgressBar(LOGIN_MESSAGE)
+      loggingIn = true
 
-        spawn {
-          login_user()
-        }
+      spawn {
+        login_user()
+      }
     })
 
     // Set listener for forgot password link
-    findView(TR.forgot_password_link).setOnClickListener((view:View) => {
+    findView(TR.forgot_password_link).setOnClickListener((view: View) => {
       startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.forgot_password_link))))
     })
 
@@ -90,7 +94,7 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
 
   override def onResume() {
     super.onResume()
-    if (!AndroidHelpers.isOnline(this)){
+    if (!AndroidHelpers.isOnline(this)) {
       loginBtn.setClickable(false)
       loginBtn.setText(R.string.no_connection)
     } else {
@@ -133,7 +137,7 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
           val response = httpclient.execute(get)
           val statusCode = response.getStatusLine.getStatusCode
 
-          if(AppSettings.DEBUG) Log.d("Status code", "" + statusCode)
+          if (AppSettings.DEBUG) Log.d("Status code", "" + statusCode)
 
           if (statusCode == 200) {
             App.saveUser(this, userField.getText.toString, passwordField.getText.toString)
@@ -146,9 +150,9 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
             val users: Users = getMainObject(response.getEntity.getContent, classOf[Users])
             val usr = users.objects.get(0)
 
-            if(AppSettings.DEBUG)
+            if (AppSettings.DEBUG)
               Log.d("Mydea", "User firstname " + usr.first_name + " username is " +
-              usr.username + " last name " + usr.last_name + " resource url " + usr.resource_uri)
+                usr.username + " last name " + usr.last_name + " resource url " + usr.resource_uri)
 
 
           } else if (statusCode == 401) {
@@ -180,7 +184,7 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
     // Once logged in start syncing private ideas
     val intent = new Intent(LoginActivity.this, classOf[PrivateIdeaSyncService])
     intent.putExtra(PRIVATE_IDEA_RESULT_RECEIVER, (resultCode: Int, resultData: Bundle) => {
-      if(resultCode == 0) {
+      if (resultCode == 0) {
         // Forward to main activity
         val intent = new Intent()
         intent.setClass(LoginActivity.this, classOf[MainActivity])
@@ -199,17 +203,19 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
   }
 
   private def loginDenied() {
-  // Remove loader
+    // Remove loader
     removeLoader()
     Toast.makeText(LoginActivity.this, "Wrong username or password", Toast.LENGTH_LONG).show()
   }
 
   private def removeLoader() {
-    try {
-      dialog.dismiss()
-      dialog = null
+    if (dialog != null) {
+      try {
+        dialog.dismiss()
+        dialog = null
 
-      loggingIn = false
+        loggingIn = false
+      }
     }
   }
 
@@ -218,22 +224,4 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
     super.onDestroy()
     removeLoader()
   }
-
-  /*
-  private def savePreferences() {
-    App.USERNAME = userField.getText.toString
-    App.PASSWORD = passwordField.getText.toString
-
-    val context = getApplicationContext
-    val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
-
-    // Save login information to SharedPrefs
-    val editor = prefs.edit()
-    editor.putString(App.PREF_USERNAME, App.USERNAME)
-    editor.putString(App.PREF_PASSWORD, App.PASSWORD)
-    editor.commit()
-
-  }
-  */
-
 }
