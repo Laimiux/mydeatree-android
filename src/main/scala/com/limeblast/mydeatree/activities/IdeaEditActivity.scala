@@ -16,7 +16,7 @@ import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.RESTfulProvider
 import services.IdeaUpdateService
 
-class IdeaEditActivity extends Activity with TypedActivity with JsonModule {
+class IdeaEditActivity extends Activity with TypedActivity with JsonModule with BasicIdeaModule {
 
   lazy val submitButton: Button = findView(TR.submit_button)
   lazy val publicCheckBox: CheckBox = findView(TR.idea_public_check_box)
@@ -70,7 +70,9 @@ class IdeaEditActivity extends Activity with TypedActivity with JsonModule {
     spawn {
 
       // Get the values
-      val values = IdeaTableHelper.createNewIdeaValues(idea)
+      val values = getContentValues(idea)
+      // Add personal idea specific values
+      values.put(IdeaHelper.KEY_PUBLIC, idea.public)
 
       // If idea has id update it by finding it by id
       if (isIdeaOnServer) {
@@ -81,9 +83,6 @@ class IdeaEditActivity extends Activity with TypedActivity with JsonModule {
         val cr = getContentResolver
         cr.update(ideaAddress, values, null, null)
       } else {
-
-
-
         // No id exists so it will be a little harder to find it
         val resolver = getContentResolver
         val where = IdeaHelper.KEY_TITLE + "='" + oldIdea.title + "' AND " + IdeaHelper.KEY_TEXT +

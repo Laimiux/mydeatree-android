@@ -13,7 +13,7 @@ import com.actionbarsherlock.app.ActionBar.Tab
 import android.net.Uri
 import com.limeblast.androidhelpers.{JsonModule, ScalaHandler}
 import com.limeblast.mydeatree._
-import fragments.{PrivateIdeaListFragment, PublicIdeaFragment}
+import fragments.{FavoriteIdeaFragment, PrivateIdeaListFragment, PublicIdeaFragment}
 import providers.RESTfulProvider
 import com.limeblast.mydeatree.AppSettings._
 
@@ -27,6 +27,7 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
   // For tab names
   private val TAB_PRIVATE = "Personal"
   private val TAB_PUBLIC = "Public"
+  private val TAB_FAVORITE = "Favorite"
 
   private var tabSelected: Int = 0
 
@@ -34,6 +35,7 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
 
   private lazy val publicIdeaTab: Tab = actionBar.newTab().setText(TAB_PUBLIC)
   private lazy val privateIdeaTab: Tab = actionBar.newTab().setText(TAB_PRIVATE)
+  private lazy val favoriteIdeaTab: Tab = actionBar.newTab().setText(TAB_FAVORITE)
 
   private lazy val mViewPager = findView(TR.pager)
   private lazy val mTabsAdapter = new TabsAdapter(this, actionBar, mViewPager)
@@ -84,6 +86,7 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
     //  IdeaTableHelper.retrieveObject(this, RESTfulProvider.CONTENT_URI, classOf[Idea])
     mTabsAdapter.addTab(publicIdeaTab, classOf[PublicIdeaFragment], null)
     mTabsAdapter.addTab(privateIdeaTab, classOf[PrivateIdeaListFragment], null)
+    mTabsAdapter.addTab(favoriteIdeaTab, classOf[FavoriteIdeaFragment], null)
 
 
 
@@ -215,8 +218,14 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
     actionBar.getSelectedNavigationIndex match {
       case 0 => setToPublicMenu()
       case 1 => setToPrivateMenu()
+      case 2 => setToFavoriteTabMenu()
     }
 
+  def setToFavoriteTabMenu() = {
+    actionMenu.setGroupVisible(R.id.menu_public_actions, false)
+    actionMenu.setGroupVisible(R.id.menu_private_actions, false)
+
+  }
 
   def setToPublicMenu() {
     actionMenu.setGroupEnabled(R.id.menu_public_actions, true)

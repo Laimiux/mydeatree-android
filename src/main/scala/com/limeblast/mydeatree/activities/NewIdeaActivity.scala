@@ -18,7 +18,7 @@ import com.limeblast.mydeatree.AppSettings._
 import providers.RESTfulProvider
 
 
-class NewIdeaActivity extends Activity with TypedActivity {
+class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule {
 
   lazy val titleField = findView(TR.idea_title_edit)
   lazy val textField = findView(TR.idea_text_edit)
@@ -47,7 +47,8 @@ class NewIdeaActivity extends Activity with TypedActivity {
       val isPublic = publicCheckBox.isChecked
       //Toast.makeText(NewIdeaActivity.this, msg, Toast.LENGTH_LONG).show()
 
-      val idea = new Idea(title, text, null, parent_uri, null, null, null, isPublic) with IdeaValidationModule
+      val timeString = Helpers.getNow()
+      val idea = new Idea(title, text, null, parent_uri, timeString, timeString, null, isPublic) with IdeaValidationModule
 
       idea.validate() match {
         case (false, msg: String) => Toaster.showToast(this, msg)
@@ -62,16 +63,8 @@ class NewIdeaActivity extends Activity with TypedActivity {
   }
 
   private def createNewIdea(idea: Idea) {
-    val timeString = Helpers.getNow()
-
-    val values = new ContentValues()
-    values.put(IdeaHelper.KEY_TITLE, idea.title)
-    values.put(IdeaHelper.KEY_TEXT, idea.text)
+    val values = getContentValues(idea)
     values.put(IdeaHelper.KEY_PUBLIC, idea.public)
-    values.put(IdeaHelper.KEY_PARENT, idea.parent)
-    values.put(IdeaHelper.KEY_CREATED_DATE, timeString)
-    values.put(IdeaHelper.KEY_MODIFIED_DATE, timeString)
-    values.put(IdeaHelper.KEY_OWNER, App.USERNAME)
     values.put(IdeaHelper.KEY_IS_IDEA_NEW, true)
 
     val resolver = getContentResolver

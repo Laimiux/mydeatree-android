@@ -50,7 +50,7 @@ import scala.Some
 import services.{PrivateIdeaSyncService, IdeaUpdateService, IdeaDeleteService, IdeaCreateService}
 
 class PrivateIdeaListFragment extends SherlockListFragment with LoaderManager.LoaderCallbacks[Cursor]
-with OnKeyListener with JsonModule {
+with OnKeyListener with JsonModule with PersonalIdeaGetModule {
 
   var aa: ArrayAdapter[Idea] = _
 
@@ -445,8 +445,6 @@ with OnKeyListener with JsonModule {
   //--------- LOADER MANAGER CALLBACK METHODS -------------\\
   //-------------------------------------------------------\\
   def onCreateLoader(id: Int, args: Bundle): Loader[Cursor] = {
-    val uri = Uri.withAppendedPath(RESTfulProvider.CONTENT_URI, "/" + App.USERNAME)
-
     var select = IdeaHelper.KEY_IS_IDEA_DELETED + "=0"
 
     AppSettings.PRIVATE_PARENT_IDEA match {
@@ -455,14 +453,14 @@ with OnKeyListener with JsonModule {
     }
 
 
-    new CursorLoader(getActivity.getApplicationContext, uri, null, select, null, null)
+    new CursorLoader(getActivity.getApplicationContext, RESTfulProvider.CONTENT_URI, null, select, null, null)
   }
 
   def onLoadFinished(loader: Loader[Cursor], cursor: Cursor) {
 
     privateIdeas.clear()
 
-    val ideas = IdeaTableHelper.getIdeas(cursor)
+    val ideas = getIdeas(cursor)
     privateIdeas.addAll(ideas)
 
     sortIdeas()
@@ -571,7 +569,7 @@ with OnKeyListener with JsonModule {
     val select = IdeaHelper.KEY_IS_IDEA_EDITED + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
     val cursor = resolver.query(RESTfulProvider.CONTENT_URI, null, select, null, null)
 
-    IdeaTableHelper.getIdeas(cursor)
+    getIdeas(cursor)
   }
 
   private def getIdeasToDelete(): util.ArrayList[Idea] = {
@@ -579,7 +577,7 @@ with OnKeyListener with JsonModule {
     val select = IdeaHelper.KEY_IS_IDEA_DELETED + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
     val cursor = resolver.query(RESTfulProvider.CONTENT_URI, null, select, null, null)
 
-    IdeaTableHelper.getIdeas(cursor)
+    getIdeas(cursor)
   }
 
   private def getIdeasToUpload(): util.ArrayList[Idea] = {
@@ -587,6 +585,6 @@ with OnKeyListener with JsonModule {
     val select = IdeaHelper.KEY_IS_IDEA_NEW + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
     val cursor = resolver.query(RESTfulProvider.CONTENT_URI, null, select, null, null)
 
-    IdeaTableHelper.getIdeas(cursor)
+    getIdeas(cursor)
   }
 }

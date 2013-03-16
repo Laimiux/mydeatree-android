@@ -5,12 +5,12 @@ import reflect.BeanInfo
 import java.util.List
 
 
-class ObjectIdWithDate(val id: String, val modified_date: String)
+class DatedObject(val id: String, val modified_date: String)
 
 @BeanInfo class BasicUser(username: String, email: String, password: String)
 
 // This basic idea class
-abstract class BasicIdea(val id: String, val title: String, val text: String, val created_date: String, val modified_date: String)
+abstract class BasicIdea(val id: String, val title: String, val text: String, val created_date: String, val modified_date: String, val resource_uri: String, val parent: String)
 
 
 
@@ -18,11 +18,11 @@ abstract class BasicIdea(val id: String, val title: String, val text: String, va
 
 @BeanInfo class Owner(val username: String)
 
-@BeanInfo class Idea(title: String, text: String, id: String, val parent:String, created_date: String,
-                         modified_date: String, val resource_uri: String, val public: Boolean) extends BasicIdea(id, title, text, created_date, modified_date)
+@BeanInfo class Idea(title: String, text: String, id: String, parent:String, created_date: String,
+                         modified_date: String, resource_uri: String, val public: Boolean) extends BasicIdea(id, title, text, created_date, modified_date, resource_uri, parent)
 
-@BeanInfo class PublicIdea(title: String, text: String, id: String,val parent: String, created_date: String, modified_date: String,
-                           val resource_uri: String, val owner: Owner, val children_count: Int = 0) extends BasicIdea(id, title, text, created_date, modified_date)
+@BeanInfo class PublicIdea(title: String, text: String, id: String, parent: String, created_date: String, modified_date: String,
+                           resource_uri: String, val owner: Owner, val children_count: Int = 0) extends BasicIdea(id, title, text, created_date, modified_date, resource_uri, parent)
 
 @BeanInfo class User(val username: String, val first_name: String, val last_name: String, val resource_uri: String)
 

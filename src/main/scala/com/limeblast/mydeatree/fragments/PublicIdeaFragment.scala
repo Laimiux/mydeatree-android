@@ -24,10 +24,10 @@ import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.Helpers._
 import com.limeblast.mydeatree.activities.NewIdeaActivity
 import com.limeblast.mydeatree.AppSettings._
-import com.limeblast.mydeatree.providers.RESTfulProvider
+import providers.{PublicIdeaProvider, RESTfulProvider}
 import services.PublicIdeaSyncService
 
-class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallbacks[Cursor] {
+class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallbacks[Cursor] with PublicIdeaDatabaseModule {
   private val APP_TAG = "PUBLIC_IDEA_FRAGMENT"
 
   private val publicIdeas: util.ArrayList[PublicIdea] = new util.ArrayList()
@@ -206,28 +206,27 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
   //--------- LOADER MANAGER CALLBACK METHODS -------------\\
   //-------------------------------------------------------\\
   def onCreateLoader(id: Int, args: Bundle): Loader[Cursor] = {
-    val uri = RESTfulProvider.PUBLIC_URI
+    val select =
+      if (parent_idea != null)
+        PublicIdeaHelper.KEY_PARENT + "='" + parent_idea + "'"
+      else
+        PublicIdeaHelper.KEY_PARENT + " IS NULL"
 
-    var select = IdeaHelper.KEY_IS_IDEA_DELETED + "=0"
 
-    if (parent_idea != null) {
-      select += " AND " + IdeaHelper.KEY_PARENT + "='" + parent_idea + "'"
-    } else {
-      select += " AND " + IdeaHelper.KEY_PARENT + " IS NULL"
-    }
-
-    new CursorLoader(getActivity.getApplicationContext, uri, null, select, null, null)
+    new CursorLoader(getActivity.getApplicationContext, PublicIdeaProvider.CONTENT_URI, null, select, null, null)
   }
 
+
+
   def onLoadFinished(loader: Loader[Cursor], cursor: Cursor) {
-    val keyTitleIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_TITLE)
-    val keyTextIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_TEXT)
-    val keyResourceUriIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_RESOURCE_URI)
-    val keyModifiedDateIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_MODIFIED_DATE)
-    val keyCreatedDateIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_CREATED_DATE)
-    val keyIdIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_ID)
-    val keyOwnerIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_OWNER)
-    val keyParentIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_PARENT)
+    val keyTitleIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_TITLE)
+    val keyTextIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_TEXT)
+    val keyResourceUriIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_RESOURCE_URI)
+    val keyModifiedDateIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_MODIFIED_DATE)
+    val keyCreatedDateIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_CREATED_DATE)
+    val keyIdIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_ID)
+    val keyOwnerIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_OWNER)
+    val keyParentIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_PARENT)
 
 
     publicIdeas.clear()

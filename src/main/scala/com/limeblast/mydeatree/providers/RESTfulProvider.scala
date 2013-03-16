@@ -23,11 +23,7 @@ import com.limeblast.mydeatree.{IdeaHelper, AppSettings, IdeaSQLiteHelper}
 object RESTfulProvider {
   val ALL_ROWS = 1
   val SINGLE_ROW = 2
-  val PERSONAL = 3
   val SEARCH = 4
-  val PUBLIC = 5
-
-  val PUBLIC_URI: Uri = Uri.parse("content://com.limeblast.mydeatree.providers.IdeaContentProvider/public_ideas")
 
   val AUTHORITY = "content://com.limeblast.mydeatree.providers.IdeaContentProvider/ideas"
 
@@ -36,8 +32,6 @@ object RESTfulProvider {
   val uriMatcher = new UriMatcher(UriMatcher.NO_MATCH)
   uriMatcher.addURI("com.limeblast.mydeatree.providers.IdeaContentProvider", "ideas", ALL_ROWS)
   uriMatcher.addURI("com.limeblast.mydeatree.providers.IdeaContentProvider", "ideas/#", SINGLE_ROW)
-  uriMatcher.addURI("com.limeblast.mydeatree.providers.IdeaContentProvider", "public_ideas/", PUBLIC)
-  uriMatcher.addURI("com.limeblast.mydeatree.providers.IdeaContentProvider", "ideas/*", PERSONAL)
 
 
 
@@ -91,34 +85,19 @@ class IdeaContentProvider extends ContentProvider {
         val rowID = uri.getPathSegments.get(1)
         queryBuilder.appendWhere(KEY_ID + "=" + rowID)
       }
-      case RESTfulProvider.PERSONAL => {
-
-        val owner: String = uri.getPathSegments.get(1)
-        if(AppSettings.DEBUG) Log.d(APP_TAG, "Retrieving personal " + owner + " ideas")
-
-        val owner_select = KEY_OWNER + "='" + owner +   "'"
-        if (!TextUtils.isEmpty(select)) {
-          select += " AND (" + owner_select + ")"
-        } else {
-          select = owner_select
-        }
-      }
       case RESTfulProvider.SEARCH => {
         queryBuilder.appendWhere(KEY_TITLE + " LIKE \"%" +
             uri.getPathSegments.get(1) + "%\"")
         queryBuilder.setProjectionMap(RESTfulProvider.SEARCH_PROJECTION_MAP)
       }
-      case RESTfulProvider.PUBLIC => {
-        if(AppSettings.DEBUG) Log.d(APP_TAG, "Retrieving public ideas")
-        queryBuilder.appendWhere(KEY_PUBLIC + "=" + 1)
-      }
-      case _ => {}
+
+      case _ =>
 
     }
 
 
     // Specify the table on which to perform the query
-    queryBuilder.setTables(IdeaHelper.IDEA_TABLE_NAME)
+    queryBuilder.setTables(IdeaHelper.TABLE_NAME)
 
     val cursor = queryBuilder.query(db, projection, select, selectionArgs,
       groupBy, having, sortOrder)
@@ -131,8 +110,6 @@ class IdeaContentProvider extends ContentProvider {
     RESTfulProvider.uriMatcher.`match`(uri) match {
       case RESTfulProvider.ALL_ROWS => "vnd.android.cursor.dir/vnd.limeblast.ideas"
       case RESTfulProvider.SINGLE_ROW => "vnd.android.cursor.item/vnd.limeblast.ideas"
-      case RESTfulProvider.PERSONAL => "vnd.android.cursor.dir/vnd.limeblast.ideas"
-      case RESTfulProvider.PUBLIC => "vnd.android.cursor.dir/vnd.limeblast.public_ideas"
       case RESTfulProvider.SEARCH => SearchManager.SUGGEST_MIME_TYPE
       case _ => throw new IllegalArgumentException("Unsupported URI: " + uri)
     }
@@ -149,7 +126,7 @@ class IdeaContentProvider extends ContentProvider {
     val nullColumnHack: String = null
 
     // Insert the values into the table
-    val id = db.insert(IDEA_TABLE_NAME, nullColumnHack, values)
+    val id = db.insert(TABLE_NAME, nullColumnHack, values)
 
     // Construct and return the URI of the newly inserted row
     if (id > -1) {
@@ -182,7 +159,7 @@ class IdeaContentProvider extends ContentProvider {
     if (selection == null) select = "1"
 
     // Perform the deletion
-    val deleteCount = db.delete(IDEA_TABLE_NAME, select, selectionArgs)
+    val deleteCount = db.delete(TABLE_NAME, select, selectionArgs)
 
     // Notify the observers of the change in the dataset
     getContext.getContentResolver.notifyChange(uri, null)
@@ -206,7 +183,7 @@ class IdeaContentProvider extends ContentProvider {
     }
 
     // Perform the update
-    val updateCount = db.update(IDEA_TABLE_NAME, values, select, selectionArgs)
+    val updateCount = db.update(TABLE_NAME, values, select, selectionArgs)
 
     // Notify any observers of the change in the data set
     getContext.getContentResolver.notifyChange(uri, null)

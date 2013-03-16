@@ -5,34 +5,56 @@ import android.content.Context
 
 import com.limeblast.scaliteorm.{TableDefinition, DatabaseHelperTrait}
 
+
+object DatabaseInformation {
+  // Database specific info
+  val DATABASE_NAME = "mydeatree.db"
+  val DATABASE_VERSION = 8
+
+}
+
+
+trait BasicIdeaColumns {
+  val KEY_ID = "id"
+  val KEY_TITLE = "title"
+  val KEY_TEXT = "text"
+  val KEY_PARENT = "parent"
+  val KEY_RESOURCE_URI = "resource_uri"
+  val KEY_CREATED_DATE = "created_date"
+  val KEY_MODIFIED_DATE = "modified_date"
+}
+
 /**
  * Singleton object that holds important
  * variables about the database.
  */
-object IdeaHelper {
-  // Database specific info
-  val DATABASE_NAME = "mydeatree.db"
-  val DATABASE_VERSION = 7
-
+object IdeaHelper extends BasicIdeaColumns {
   // For Idea Table
-  val IDEA_TABLE_NAME = "personal_ideas"
+  val TABLE_NAME = "personal_ideas"
 
-  // KEY Values
-  val KEY_ID = "IDEA_ID"
-  val KEY_OWNER = "IDEA_OWNER"
-  val KEY_TITLE = "IDEA_TITLE"
-  val KEY_TEXT = "IDEA_TEXT"
-  val KEY_PARENT = "IDEA_PARENT"
+  // Personal Idea Specific Columns
   val KEY_PUBLIC = "IDEA_PUBLIC"
-  val KEY_RESOURCE_URI = "IDEA_RESOURCE_URI"
-  val KEY_CREATED_DATE = "IDEA_CREATED_DATE"
-  val KEY_MODIFIED_DATE = "IDEA_MODIFIED_DATE"
 
   // Booleans for syncing
   val KEY_IS_IDEA_NEW = "IS_IDEA_NEW"
   val KEY_IS_IDEA_EDITED = "IS_IDEA_EDITED"
   val KEY_IS_IDEA_DELETED = "IS_IDEA_DELETED"
   val KEY_IS_IDEA_SYNCING = "IS_IDEA_SYNCING"
+}
+
+/**
+ * Singleton object that holds important
+ * variables about the database.
+ */
+
+trait PublicIdeaDatabaseModule {
+
+  object PublicIdeaHelper extends BasicIdeaColumns {
+    // For Idea Table
+    val TABLE_NAME = "public_ideas"
+    // Public Idea Specific Columns
+    val KEY_OWNER = "owner"
+  }
 }
 
 
@@ -51,7 +73,8 @@ object FavoriteIdeaColumns {
  * @param context Activity context
  */
 class IdeaSQLiteHelper(context: Context) extends
-SQLiteOpenHelper(context, IdeaHelper.DATABASE_NAME, null, IdeaHelper.DATABASE_VERSION) with DatabaseHelperTrait {
+SQLiteOpenHelper(context, DatabaseInformation.DATABASE_NAME, null, DatabaseInformation.DATABASE_VERSION)
+with DatabaseHelperTrait with PublicIdeaDatabaseModule {
 
   def tables: List[TableDefinition] = {
     var tempList: List[TableDefinition] = List()
@@ -71,13 +94,34 @@ SQLiteOpenHelper(context, IdeaHelper.DATABASE_NAME, null, IdeaHelper.DATABASE_VE
 
     {
       import IdeaHelper._
-      val personal_idea_table = new TableDefinition(IDEA_TABLE_NAME)
-      personal_idea_table insert(KEY_ID -> "TEXT PRIMARY KEY UNIQUE", KEY_OWNER -> "TEXT", KEY_RESOURCE_URI -> "TEXT", KEY_CREATED_DATE -> "TEXT",
-        KEY_MODIFIED_DATE -> "TEXT", KEY_TITLE -> "TEXT not null", KEY_TEXT -> "TEXT not null",
-        KEY_PARENT -> "TEXT", KEY_PUBLIC -> "TEXT", KEY_IS_IDEA_NEW -> "BOOLEAN default 0",
-        KEY_IS_IDEA_EDITED -> "BOOLEAN default 0", KEY_IS_IDEA_SYNCING -> "BOOLEAN default 0",
+      val personal_idea_table = new TableDefinition(TABLE_NAME)
+      personal_idea_table insert(KEY_ID -> "TEXT PRIMARY KEY UNIQUE",
+        KEY_RESOURCE_URI -> "TEXT",
+        KEY_CREATED_DATE -> "TEXT",
+        KEY_MODIFIED_DATE -> "TEXT",
+        KEY_TITLE -> "TEXT not null",
+        KEY_TEXT -> "TEXT not null",
+        KEY_PARENT -> "TEXT",
+        KEY_PUBLIC -> "TEXT",
+        KEY_IS_IDEA_NEW -> "BOOLEAN default 0",
+        KEY_IS_IDEA_EDITED -> "BOOLEAN default 0",
+        KEY_IS_IDEA_SYNCING -> "BOOLEAN default 0",
         KEY_IS_IDEA_DELETED -> "BOOLEAN default 0")
       tempList = tempList :+ personal_idea_table
+    }
+
+    {
+      import PublicIdeaHelper._
+      val public_idea_table = new TableDefinition(TABLE_NAME)
+      public_idea_table insert(KEY_ID -> "TEXT PRIMARY KEY UNIQUE",
+        KEY_OWNER -> "TEXT",
+        KEY_RESOURCE_URI -> "TEXT",
+        KEY_CREATED_DATE -> "TEXT",
+        KEY_MODIFIED_DATE -> "TEXT",
+        KEY_TITLE -> "TEXT not null",
+        KEY_TEXT -> "TEXT not null",
+        KEY_PARENT -> "TEXT")
+      tempList = tempList :+ public_idea_table
     }
 
     tempList

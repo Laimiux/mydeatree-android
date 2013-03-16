@@ -34,6 +34,8 @@
         </provider>
         <provider android:exported="false" android:name=".providers.FavoriteIdeaProvider" android:authorities="com.limeblast.mydeatree.providers.FavoriteIdeaProvider"></provider>
 
+        <provider android:exported="false" android:name=".providers.PublicIdeaProvider" android:authorities="com.limeblast.mydeatree.providers.PublicIdeaProvider"></provider>
+
 
         
         <receiver android:enabled="true" android:name=".PublicSyncAlarmReceiver">

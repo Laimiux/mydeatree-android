@@ -15,7 +15,7 @@ object IdeaUpdateService {
   val IDEA_UPDATE_FAILED = 1002
 }
 
-class IdeaUpdateService extends IntentService("IdeaUpdateService") with JsonModule {
+class IdeaUpdateService extends IntentService("IdeaUpdateService") with JsonModule with BasicIdeaModule {
   def onHandleIntent(intent: Intent) {
     val ideaJson = intent.getStringExtra("idea")
 
@@ -33,8 +33,12 @@ class IdeaUpdateService extends IntentService("IdeaUpdateService") with JsonModu
   private def updateIdea(idea: Idea) {
     val ideaAddress = ContentUris.withAppendedId(RESTfulProvider.CONTENT_URI, idea.id.toLong)
     val cr = getContentResolver
-    val values = IdeaTableHelper.createNewIdeaValues(idea)
+
+    val values = getContentValues(idea)
+    // Add personal idea specific values
+    values.put(IdeaHelper.KEY_PUBLIC, idea.public)
     values.put(IdeaHelper.KEY_IS_IDEA_EDITED, false)
+
     cr.update(ideaAddress, values, null, null)
   }
 }

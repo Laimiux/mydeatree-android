@@ -9,7 +9,7 @@ import android.content.ContentValues
  * Time: 4:25 PM
  * To change this template use File | Settings | File Templates.
  */
-object ContentValuesHelper {
+trait ContentValuesHelper {
 
   def addToContent(values: ContentValues, key: String, value: Any) =
     value match {
@@ -46,7 +46,7 @@ object ContentValuesHelper {
     values
   }
 
-  implicit def mapToValues(map: Map[String, Any]): ContentValues = ContentValuesHelper.mapToContentValues(map)
-  implicit def tupleToValues(value_tuples: Seq[(String, Any)]): ContentValues = tupleToValues(value_tuples)
+  implicit def mapToValues(map: Map[String, Any]): ContentValues = mapToContentValues(map)
+  implicit def tupleToValues(value_tuples: Seq[(String, Any)]): ContentValues = tupleToContentValues(value_tuples)
 
 }

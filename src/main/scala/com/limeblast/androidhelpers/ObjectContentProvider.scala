@@ -9,10 +9,7 @@ import com.limeblast.mydeatree.providers.RESTfulProvider
 
 trait ProviderModule {
 
-  object ProviderHelper {
-
-    import ContentValuesHelper.{mapToValues, tupleToValues}
-
+  object ProviderHelper extends ContentValuesHelper {
 
     def makeWhereClause(tuple: (String, Any)*): String =
       (tuple :\ "")((tuple, where) => {
@@ -33,6 +30,7 @@ trait ProviderModule {
           }
 
         }
+        case (one: String, null) =>  one + " IS NULL"
       }
 
     def makeWhereClause(whereArgs: Map[String, Any]): String =

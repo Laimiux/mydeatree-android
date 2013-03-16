@@ -23,23 +23,6 @@ trait MydeaRestModule {
     val collectionType: Class[PersonalIdeas] = classOf[PersonalIdeas]
 
 
-
-
-    /*
-    def retrieveIdeas(initialUrl: String): Option[util.ArrayList[Idea]] = {
-      retrieveObjects(initialUrl, classOf[PersonalIdeas]) match {
-        case Some(ideas: util.ArrayList[AnyRef]) => {
-          if (AppSettings.DEBUG) Log.d(APP_TAG, "Retrieved " + ideas.size() + " ideas")
-          Some(ideas.asInstanceOf[util.ArrayList[Idea]])
-        }
-        case None => None
-      }
-    }
-    */
-    //def getIdea(url: String): Option[Idea] = retrieveObject(url, classOf[Idea])
-
-    //def postIdea(url: String, idea: Idea): Option[Idea] = postObject(url, idea)
-
     override protected def handleCollectionMeta(objects: util.ArrayList[Idea], collection: PersonalIdeas) {
       val meta = collection.meta
       if (meta.next != null) {

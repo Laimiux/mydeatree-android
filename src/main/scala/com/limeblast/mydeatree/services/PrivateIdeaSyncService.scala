@@ -21,7 +21,7 @@ import scala.Some
  * Time: 11:16 PM
  * To change this template use File | Settings | File Templates.
  */
-class PrivateIdeaSyncService extends IntentService("PrivateIdeaSyncService") {
+class PrivateIdeaSyncService extends IntentService("PrivateIdeaSyncService") with DatedObjectModule with BasicIdeaModule {
 
   override def onHandleIntent(intent: Intent) {
 
@@ -75,7 +75,7 @@ editor.commit()
     // Get ideas from the server
     App.PersonalIdeaResource.getObjects(IDEA_URL) match {
       case Some(ideaArray) => {
-        val objectsInDb: util.ArrayList[ObjectIdWithDate] = getSavedUserIdeas()
+        val objectsInDb= getSavedUserIdeas()
 
         // Counter to see how many new ideas there are
         var newIdeas = 0
@@ -150,12 +150,8 @@ editor.commit()
     else true
   }
 
-  private def getSavedUserIdeas(): util.ArrayList[ObjectIdWithDate] = {
-    val uri = Uri.withAppendedPath(RESTfulProvider.CONTENT_URI, "/" + App.USERNAME)
-    val resolver = getContentResolver
+  private def getSavedUserIdeas(): util.ArrayList[DatedObject] = getDatedObjects(RESTfulProvider.CONTENT_URI, getContentResolver)
 
-    IdeaTableHelper.getSavedObjects(uri, resolver)
-  }
 
   /*
    * Not protected method to insert new ideas
@@ -163,14 +159,23 @@ editor.commit()
    */
   private def insertIdea(idea: Idea) {
     val cr = getContentResolver
-    val values = IdeaTableHelper.createNewIdeaValues(idea)
+
+    //val values = IdeaTableHelper.createNewIdeaValues(idea)
+    val values = getContentValues(idea)
+    // Add personal idea specific values
+    values.put(IdeaHelper.KEY_PUBLIC, idea.public)
+
     cr.insert(RESTfulProvider.CONTENT_URI, values)
   }
 
   private def updateIdea(idea: Idea) {
     val ideaAddress = ContentUris.withAppendedId(RESTfulProvider.CONTENT_URI, idea.id.toLong)
     val cr = getContentResolver
-    val values = IdeaTableHelper.createNewIdeaValues(idea)
+
+    val values = getContentValues(idea)
+    // Add personal idea specific values
+    values.put(IdeaHelper.KEY_PUBLIC, idea.public)
+
     cr.update(ideaAddress, values, null, null)
   }
 

@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
     package="com.limeblast.mydeatree">
 
     <application
@@ -50,6 +51,10 @@
         </provider>
         <provider android:authorities="com.limeblast.mydeatree.providers.FavoriteIdeaProvider"
                   android:name=".providers.FavoriteIdeaProvider"
+                  android:exported="false"></provider>
+
+        <provider android:authorities="com.limeblast.mydeatree.providers.PublicIdeaProvider"
+                  android:name=".providers.PublicIdeaProvider"
                   android:exported="false"></provider>
 
 

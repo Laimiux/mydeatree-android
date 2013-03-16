@@ -19,7 +19,7 @@ object IdeaCreateService {
   val IDEA_CREATED = 1000
   val IDEA_CREATION_FAILED = 1001
 }
-class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModule with ProviderModule {
+class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModule with ProviderModule with BasicIdeaModule {
 
   def onHandleIntent(intent: Intent) {
     val ideaJson = intent.getStringExtra("idea")
@@ -51,7 +51,9 @@ class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModu
 
 
   private def insertIdea(passedIdea: Idea, returnedIdea: Idea) {
-    val values = IdeaTableHelper.createNewIdeaValues(returnedIdea)
+    val values = getContentValues(returnedIdea)
+    // Add personal idea specific values
+    values.put(IdeaHelper.KEY_PUBLIC, returnedIdea.public)
     values.put(IdeaHelper.KEY_IS_IDEA_NEW, false)
     values.put(IdeaHelper.KEY_IS_IDEA_SYNCING, false)
 

@@ -1,7 +1,7 @@
 package com.limeblast.mydeatree.services
 
 import android.app._
-import android.content.{ContentUris, Context, Intent}
+import android.content.{ContentValues, ContentUris, Context, Intent}
 import android.os.{ResultReceiver, SystemClock}
 import java.util
 import scala.collection.JavaConversions._
@@ -12,11 +12,8 @@ import android.support.v4.app.NotificationCompat
 import android.graphics.Color
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.AppSettings._
-import providers.RESTfulProvider
-import scala.Some
+import providers.{PublicIdeaProvider}
 import com.limeblast.mydeatree.activities.MainActivity
-import scala.Some
-import scala.Some
 import scala.Some
 
 
@@ -24,7 +21,7 @@ private object SyncServiceVars {
   val PUBLIC_SYNC_TAG = "PUBLIC_IDEA_SYNC_SERVICE"
 }
 
-class PublicIdeaSyncService extends IntentService("PublicIdeaSyncService") {
+class PublicIdeaSyncService extends IntentService("PublicIdeaSyncService") with PublicIdeaDatabaseModule with BasicIdeaModule with DatedObjectModule {
 
   private var alarmManager: AlarmManager = _
   private var alarmIntent: PendingIntent = _
@@ -83,7 +80,7 @@ class PublicIdeaSyncService extends IntentService("PublicIdeaSyncService") {
     // Get ideas from the server
     App.PublicIdeaResource.getObjects(PUBLIC_IDEA_URL) match {
       case Some(publicIdeas) => {
-        val objectsInDb: util.ArrayList[ObjectIdWithDate] = getSavedPublicIdeas()
+        val objectsInDb = getSavedPublicIdeas()
 
         // Different counters
         var ideasAdded = 0
@@ -154,26 +151,33 @@ class PublicIdeaSyncService extends IntentService("PublicIdeaSyncService") {
   }
 
   private def insertIdea(idea: PublicIdea) {
-
     val cr = getContentResolver
-    val values = IdeaTableHelper.createNewIdeaValues(idea)
-    cr.insert(RESTfulProvider.CONTENT_URI, values)
+
+    val values = getContentValues(idea)
+    // Add more specific content values
+    values.put(PublicIdeaHelper.KEY_OWNER, idea.owner.username)
+
+    cr.insert(PublicIdeaProvider.CONTENT_URI, values)
 
   }
 
-  private def getSavedPublicIdeas(): util.ArrayList[ObjectIdWithDate] = {
-    val uri = RESTfulProvider.PUBLIC_URI
+  private def getSavedPublicIdeas(): util.ArrayList[DatedObject] = {
 
     val resolver = getContentResolver
 
-    IdeaTableHelper.getSavedObjects(uri, resolver)
+    getDatedObjects(PublicIdeaProvider.CONTENT_URI, resolver)
   }
 
 
   private def updateIdea(idea: PublicIdea) {
-    val ideaAddress = ContentUris.withAppendedId(RESTfulProvider.CONTENT_URI, idea.id.toLong)
+    val ideaAddress = ContentUris.withAppendedId(PublicIdeaProvider.CONTENT_URI, idea.id.toLong)
     val cr = getContentResolver
-    val values = IdeaTableHelper.createNewIdeaValues(idea)
+
+    val values = getContentValues(idea)
+    // Add more specific content values
+    values.put(PublicIdeaHelper.KEY_OWNER, idea.owner.username)
+
+
     cr.update(ideaAddress, values, null, null)
   }
 }

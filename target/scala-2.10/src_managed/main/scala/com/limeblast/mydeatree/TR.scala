@@ -55,7 +55,8 @@ object TR {
   val text_edit = TypedResource[android.widget.EditText](R.id.text_edit)
   val pager = TypedResource[android.support.v4.view.ViewPager](R.id.pager)
  object layout {
-  val idea_edit_layout = TypedLayout(R.layout.idea_edit_layout)
+  val favorite_idea_layout = TypedLayout(R.layout.favorite_idea_layout)
+ val idea_edit_layout = TypedLayout(R.layout.idea_edit_layout)
  val idea_new = TypedLayout(R.layout.idea_new)
  val login_layout = TypedLayout(R.layout.login_layout)
  val main_controls = TypedLayout(R.layout.main_controls)

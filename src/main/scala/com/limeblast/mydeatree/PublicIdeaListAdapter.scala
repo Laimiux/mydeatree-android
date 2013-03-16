@@ -16,7 +16,6 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 import com.limeblast.androidhelpers.{ProviderModule, Inflater}
 import android.util.Log
-import android.net.Uri
 
 class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util.List[PublicIdea])
   extends ArrayAdapter(context, resourceId, objects) with Inflater with ProviderModule {
@@ -86,11 +85,13 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
           //val favText = cView.findViewById(R.id.favorite_txt).asInstanceOf[TextView]
 
 
+          val resolver = getContext.getContentResolver
+
           if (favorited) {
             favIcon.setBackgroundResource(R.drawable.ic_star_empty)
 
 
-            ProviderHelper.updateObjects(getContext.getContentResolver, FavoriteIdeaProvider.CONTENT_URI,
+            ProviderHelper.updateObjects(resolver, FavoriteIdeaProvider.CONTENT_URI,
               (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri),
               null,
               Map(FavoriteIdeaColumns.KEY_IS_DELETED -> true))
@@ -103,7 +104,7 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
           } else {
             favIcon.setBackgroundResource(R.drawable.ic_star_full)
 
-            val cursor: Cursor = getContext.getApplicationContext.getContentResolver.query(FavoriteIdeaProvider.CONTENT_URI,
+            val cursor: Cursor = resolver.query(FavoriteIdeaProvider.CONTENT_URI,
               null, ProviderHelper.makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> true), null, null)
             //favText.setText(R.string.favorite)
 
@@ -113,28 +114,21 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
 
             if (count > 0) {
 
-              val f: Future[Int] = future {
-                ProviderHelper.updateObjects(getContext.getContentResolver, FavoriteIdeaProvider.CONTENT_URI,
-                  (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri),
-                  null,
-                  Map(FavoriteIdeaColumns.KEY_IS_DELETED -> false))
-              }
 
-              f onSuccess {
-                case number => Log.d("PublicIdeaListAdapter", number + " idea favorited")
-              }
+              ProviderHelper.updateObjects(resolver, FavoriteIdeaProvider.CONTENT_URI,
+                (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri),
+                null,
+                Map(FavoriteIdeaColumns.KEY_IS_DELETED -> false))
+
+
             } else {
 
-              val f: Future[Unit] = future {
-                ProviderHelper.insertObject(FavoriteIdeaProvider.CONTENT_URI)(getContext.getContentResolver)(FavoriteIdeaColumns.KEY_OWNER -> App.USERNAME,
-                  FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri,
-                  FavoriteIdeaColumns.KEY_IS_NEW -> true)
-              }
+
+              ProviderHelper.insertObject(FavoriteIdeaProvider.CONTENT_URI)(resolver)(FavoriteIdeaColumns.KEY_OWNER -> App.USERNAME,
+                FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri,
+                FavoriteIdeaColumns.KEY_IS_NEW -> true)
 
 
-              f onSuccess {
-                case _ => Log.d("PublicIdeaListAdapter", "Idea favorited")
-              }
 
             }
             // Either create a new one or set it to not deleted
