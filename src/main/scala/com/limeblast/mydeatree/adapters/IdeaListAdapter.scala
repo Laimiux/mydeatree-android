@@ -1,10 +1,11 @@
-package com.limeblast.mydeatree
+package com.limeblast.mydeatree.adapters
 
 import android.content.Context
 import android.view.{View, ViewGroup}
 import android.widget._
 import java.util
 import com.limeblast.androidhelpers.Inflater
+import com.limeblast.mydeatree.{Helpers, R, Idea}
 
 /**
  * Created with IntelliJ IDEA.

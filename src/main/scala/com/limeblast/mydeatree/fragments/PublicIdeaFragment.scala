@@ -21,6 +21,7 @@ import android.preference.PreferenceManager
 import com.limeblast.androidhelpers.AndroidImplicits
 import AndroidImplicits.{toRunnable, functionToResultReceicer}
 import com.limeblast.mydeatree._
+import adapters.PublicIdeaListAdapter
 import com.limeblast.mydeatree.Helpers._
 import com.limeblast.mydeatree.activities.NewIdeaActivity
 import com.limeblast.mydeatree.AppSettings._

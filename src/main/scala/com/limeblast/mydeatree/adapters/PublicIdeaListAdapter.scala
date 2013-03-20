@@ -1,14 +1,16 @@
-package com.limeblast.mydeatree
+package com.limeblast.mydeatree.adapters
 
 import android.content.{Intent, Context}
 import java.util
 import android.widget._
 import android.view.{ViewGroup, View}
 import android.view.View.OnClickListener
-import providers.FavoriteIdeaProvider
 import android.database.Cursor
 
 import com.limeblast.androidhelpers.{ProviderAccessModule, Inflater}
+import com.limeblast.mydeatree._
+import com.limeblast.mydeatree.providers.FavoriteIdeaProvider
+import scala.App
 
 
 class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util.List[PublicIdea])

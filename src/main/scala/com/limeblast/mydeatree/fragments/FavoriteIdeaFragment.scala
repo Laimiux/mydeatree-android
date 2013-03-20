@@ -1,9 +1,10 @@
 package com.limeblast.mydeatree.fragments
 
-import com.actionbarsherlock.app.{SherlockListFragment, SherlockFragment}
+import com.actionbarsherlock.app.{SherlockListFragment}
 import android.view.{View, ViewGroup, LayoutInflater}
 import android.os.{Handler, Bundle}
 import com.limeblast.mydeatree._
+import adapters.{FavoriteIdeaListAdapter}
 import android.util.Log
 import com.limeblast.mydeatree.AppSettings._
 import android.support.v4.app.LoaderManager
@@ -14,6 +15,7 @@ import providers.{FavoriteIdeaProvider, PublicIdeaProvider}
 
 import java.util
 import com.limeblast.androidhelpers.{ScalaHandler, WhereClauseModule}
+import android.widget.TextView
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,11 +27,10 @@ import com.limeblast.androidhelpers.{ScalaHandler, WhereClauseModule}
 class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.LoaderCallbacks[Cursor] with PublicIdeaDatabaseModule with WhereClauseModule {
 
   private var favoriteIdeas = new util.ArrayList[PublicIdea]()
-  private lazy val arrayAdapter = new PublicIdeaListAdapter(getActivity(), R.layout.public_idea_entry, favoriteIdeas)
+  private lazy val arrayAdapter = new FavoriteIdeaListAdapter(getActivity(), R.layout.public_idea_entry, favoriteIdeas)
   private var handler: ScalaHandler = _
 
-
-
+  private var noIdeasTextView: TextView = _
 
 
   //-------------------------------------------------------\\
@@ -41,6 +42,8 @@ class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.Loade
 
     fragmentView.setFocusableInTouchMode(true)
     fragmentView.requestFocus()
+
+    noIdeasTextView = fragmentView.findViewById(R.id.no_ideas_text_view).asInstanceOf[TextView]
 
     fragmentView
   }
@@ -139,6 +142,15 @@ class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.Loade
 
 
     handler.post(arrayAdapter.notifyDataSetChanged())
+
+
+    //
+    if (favoriteIdeas.size() > 0) {
+      handler.post(noIdeasTextView.setVisibility(View.INVISIBLE))
+      Log.d("blllah", "Invisible")
+    } else {
+      handler.post(noIdeasTextView.setVisibility(View.VISIBLE))
+    }
 
 
     Log.d(APP_TAG, "There are " + favoriteIdeas.size() + " favorite ideas.")

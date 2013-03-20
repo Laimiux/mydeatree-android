@@ -8,6 +8,7 @@ case class TypedLayout(id: Int)
 object TR {
   val idea_public = TypedResource[android.widget.ImageView](R.id.idea_public)
   val private_header_idea_public = TypedResource[android.widget.ImageView](R.id.private_header_idea_public)
+  val no_ideas_text_view = TypedResource[android.widget.TextView](R.id.no_ideas_text_view)
   val new_idea_button = TypedResource[android.widget.Button](R.id.new_idea_button)
   val idea_text = TypedResource[android.widget.TextView](R.id.idea_text)
   val idea_submit_button = TypedResource[android.widget.Button](R.id.idea_submit_button)

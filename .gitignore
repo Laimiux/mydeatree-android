@@ -1,3 +1,4 @@
 # Ignore certain folders #
 target
 project/target
+project/project

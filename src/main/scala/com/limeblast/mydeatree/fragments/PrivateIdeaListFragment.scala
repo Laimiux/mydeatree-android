@@ -31,6 +31,7 @@ import AndroidImplicits.{functionToResultReceicer, functionToLongListener, funct
 import com.actionbarsherlock.app.{SherlockFragmentActivity, SherlockListFragment}
 import com.actionbarsherlock.view.MenuItem
 import com.limeblast.mydeatree._
+import adapters.IdeaListAdapter
 import com.limeblast.mydeatree.activities.{IdeaEditActivity, NewIdeaActivity}
 import com.limeblast.mydeatree.AppSettings._
 import com.limeblast.mydeatree.providers.RESTfulProvider
