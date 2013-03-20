@@ -2,6 +2,7 @@ package com.limeblast.mydeatree
 
 import java.util.Comparator
 
+/*
 trait Sortable {
   private var sort_by = 0
  // private var SORT_PREF_NAME: String
@@ -17,7 +18,7 @@ trait Sortable {
 
   def getSortMode(): Int = sort_by
 }
-
+*/
 
 class IdeaComparatorByModifiedDate[A <: BasicIdea] extends Comparator[A] {
 

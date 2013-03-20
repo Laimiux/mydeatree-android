@@ -66,11 +66,11 @@
         </receiver>
 
         <!-- Service definitions -->
-        <service android:enabled="true" android:name=".services.PublicIdeaSyncService"  />
-        <service android:enabled="true" android:name=".services.PrivateIdeaSyncService" />
-        <service android:enabled="true" android:name=".services.IdeaUpdateService" />
-        <service android:enabled="true" android:name=".services.IdeaCreateService" />
-        <service android:enabled="true" android:name=".services.IdeaDeleteService" />
+        <service android:name=".services.PublicIdeaSyncService"  />
+        <service android:name=".services.PrivateIdeaSyncService" />
+        <service android:name=".services.IdeaUpdateService" />
+        <service android:name=".services.IdeaCreateService" />
+        <service android:name=".services.IdeaDeleteService" />
 
         <service android:enabled="true" android:name=".resources.FavoriteIdeaGetService" />
 

@@ -2,24 +2,23 @@ package com.limeblast.mydeatree.services
 
 import android.app.{NotificationManager, PendingIntent, IntentService}
 import android.content.{Context, Intent}
-import scala.Some
 import android.support.v4.app.NotificationCompat.Builder
 import android.support.v4.app.NotificationCompat
 import android.graphics.Color
-import com.limeblast.androidhelpers.{ProviderModule, JsonModule}
+import com.limeblast.androidhelpers.{ProviderAccessModule, JsonModule}
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.activities.MainActivity
 import com.limeblast.mydeatree.providers.RESTfulProvider
-import com.limeblast.mydeatree.AppSettings._
-import scala.Some
-import scala.Some
 import scala.Some
 
+/*
 object IdeaCreateService {
   val IDEA_CREATED = 1000
   val IDEA_CREATION_FAILED = 1001
 }
-class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModule with ProviderModule with BasicIdeaModule {
+*/
+
+class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModule with ProviderAccessModule with BasicIdeaModule {
 
   def onHandleIntent(intent: Intent) {
     val ideaJson = intent.getStringExtra("idea")
@@ -39,7 +38,7 @@ class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModu
     ProviderHelper.updateObjects(getContentResolver, RESTfulProvider.CONTENT_URI,
       whereMap, null, Map(IdeaHelper.KEY_IS_IDEA_SYNCING -> true))
 
-    App.PersonalIdeaResource.postObject(IDEA_URL, passedIdea) match {
+    App.PersonalIdeaResource.postObject(passedIdea) match {
       case Some(idea) => {
         insertIdea(passedIdea, idea)
         createNotification(idea)

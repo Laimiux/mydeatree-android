@@ -2,12 +2,19 @@ package com.limeblast.mydeatree
 
 import android.content.{SharedPreferences, Context}
 import android.preference.PreferenceManager
+import com.limeblast.androidhelpers.ProviderAccessModule
+import providers.RESTfulProvider
 
-object App extends MydeaRestModule {
-
+object App extends MydeaRestModule with ProviderAccessModule {
+  val DEBUG = true
 
   val PREF_USERNAME = "PREF_USERNAME"
   val PREF_PASSWORD = "PREF_PASSWORD"
+
+
+  // Add accessors for content providers
+  val IdeaProvider = new ProviderAccessor(RESTfulProvider.CONTENT_URI)
+
 
   /*
    * Safe way to access username

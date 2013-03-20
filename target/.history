@@ -217,3 +217,17 @@ compile
 android:start-device
 compile
 android:start-device
+compile
+android:start-device
+compile
+android:test-emulator
+compile
+android:emulator-start Nexus_S_by_Google
+android:start-emulator
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device

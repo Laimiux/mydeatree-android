@@ -15,6 +15,7 @@ import android.app.Activity
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.RESTfulProvider
 import services.IdeaUpdateService
+import android.util.Log
 
 class IdeaEditActivity extends Activity with TypedActivity with JsonModule with BasicIdeaModule {
 
@@ -67,8 +68,8 @@ class IdeaEditActivity extends Activity with TypedActivity with JsonModule with 
 
   private def updateIdea(idea: Idea) {
     val isIdeaOnServer: Boolean = idea.id != null
-    spawn {
 
+    spawn {
       // Get the values
       val values = getContentValues(idea)
       // Add personal idea specific values
@@ -78,46 +79,24 @@ class IdeaEditActivity extends Activity with TypedActivity with JsonModule with 
       if (isIdeaOnServer) {
         values.put(IdeaHelper.KEY_IS_IDEA_EDITED, true)
         // Get the address
-        val ideaAddress = ContentUris.withAppendedId(RESTfulProvider.CONTENT_URI, idea.id.toLong)
+        // Causes a crash
+        //val ideaAddress = ContentUris.withAppendedId(RESTfulProvider.CONTENT_URI, idea.id.toLong)
+
+        val select = IdeaHelper.KEY_ID + "=" + idea.id
         // Update the idea
-        val cr = getContentResolver
-        cr.update(ideaAddress, values, null, null)
+
+        getContentResolver.update(RESTfulProvider.CONTENT_URI, values, select, null)
       } else {
         // No id exists so it will be a little harder to find it
-        val resolver = getContentResolver
         val where = IdeaHelper.KEY_TITLE + "='" + oldIdea.title + "' AND " + IdeaHelper.KEY_TEXT +
           "='" + oldIdea.text + "' AND " + IdeaHelper.KEY_CREATED_DATE + "='" + oldIdea.created_date + "'"
 
-        resolver.update(RESTfulProvider.CONTENT_URI, values, where, null)
+        getContentResolver.update(RESTfulProvider.CONTENT_URI, values, where, null)
       }
-
-
     }
 
-    // Only start update service if there is network connection
-    if (AndroidHelpers.isOnline(this)) {
-      // If idea is on server, update it
-      if (isIdeaOnServer)
-        startServiceToUpdateIdea(idea)
-      // otherwise upload a new one
-      else
-        startServiceToCreateIdea(idea)
-    }
+
 
     finish()
   }
-
-  private def startServiceToCreateIdea(idea: Idea) {
-
-  }
-
-  private def startServiceToUpdateIdea(idea: Idea) {
-    // Create the intent for the service
-    val intent = new Intent(this, classOf[IdeaUpdateService])
-    intent.putExtra("idea", convertObjectToJson(idea))
-
-    // Start service
-    startService(intent)
-  }
-
 }

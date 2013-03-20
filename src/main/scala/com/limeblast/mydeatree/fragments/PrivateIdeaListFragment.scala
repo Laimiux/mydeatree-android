@@ -460,7 +460,7 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
 
     privateIdeas.clear()
 
-    val ideas = getIdeas(cursor)
+    val ideas = getIdeasFromCursor(cursor)
     privateIdeas.addAll(ideas)
 
     sortIdeas()
@@ -521,6 +521,30 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
     }
   }
 
+
+  private def startIdeaCreateService(idea: Idea) {
+    // New ideas have id that is null
+    val ideaJson = convertObjectToJson(idea)
+    val intent = new Intent(getActivity, classOf[IdeaCreateService])
+    intent.putExtra("idea", ideaJson)
+
+    getActivity.startService(intent)
+  }
+
+  private def startIdeaUpdateService(idea: Idea) {
+    val ideaJson = convertObjectToJson(idea)
+    val intent = new Intent(getActivity, classOf[IdeaUpdateService])
+    intent.putExtra("idea", ideaJson)
+    getActivity.startService(intent)
+  }
+
+  private def startIdeaDeleteService(idea: Idea) {
+    val ideaJson = convertObjectToJson(idea)
+    val intent = new Intent(getActivity, classOf[IdeaDeleteService])
+    intent.putExtra("idea", ideaJson)
+    getActivity.startService(intent)
+  }
+
   private def syncIfNecessary() {
     Log.d(APP_TAG, "syncIfNecessary called")
     // Do this only if there is network connection
@@ -536,29 +560,19 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
       Log.d(APP_TAG, "There are " + ideasToDelete.size() + " ideas to delete")
 
       for (idea <- ideasToUpload) {
-        // New ideas have id that is null
-        val ideaJson = convertObjectToJson(idea)
-        val intent = new Intent(getActivity, classOf[IdeaCreateService])
-        intent.putExtra("idea", ideaJson)
-
-        getActivity.startService(intent)
+        startIdeaCreateService(idea)
       }
 
       for (idea <- ideasToUpdate) {
-        val ideaJson = convertObjectToJson(idea)
-        val intent = new Intent(getActivity, classOf[IdeaUpdateService])
-        intent.putExtra("idea", ideaJson)
-
-        getActivity.startService(intent)
+        startIdeaUpdateService(idea)
       }
 
       for (idea <- ideasToDelete) {
-        val ideaJson = convertObjectToJson(idea)
-        val intent = new Intent(getActivity, classOf[IdeaDeleteService])
-        intent.putExtra("idea", ideaJson)
-        getActivity.startService(intent)
+        startIdeaDeleteService(idea)
       }
 
+
+      Log.d(APP_TAG, "End of syncIfNecessary method")
       handler.post(refresh)
     }
   }
@@ -569,7 +583,7 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
     val select = IdeaHelper.KEY_IS_IDEA_EDITED + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
     val cursor = resolver.query(RESTfulProvider.CONTENT_URI, null, select, null, null)
 
-    getIdeas(cursor)
+    getIdeasFromCursor(cursor)
   }
 
   private def getIdeasToDelete(): util.ArrayList[Idea] = {
@@ -577,7 +591,7 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
     val select = IdeaHelper.KEY_IS_IDEA_DELETED + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
     val cursor = resolver.query(RESTfulProvider.CONTENT_URI, null, select, null, null)
 
-    getIdeas(cursor)
+    getIdeasFromCursor(cursor)
   }
 
   private def getIdeasToUpload(): util.ArrayList[Idea] = {
@@ -585,6 +599,6 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
     val select = IdeaHelper.KEY_IS_IDEA_NEW + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
     val cursor = resolver.query(RESTfulProvider.CONTENT_URI, null, select, null, null)
 
-    getIdeas(cursor)
+    getIdeasFromCursor(cursor)
   }
 }

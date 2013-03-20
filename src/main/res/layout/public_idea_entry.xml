@@ -56,49 +56,26 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="2dp"
-                android:paddingBottom="2dp"
-                android:background="@drawable/button_holder"
-                android:orientation="horizontal">
-            <LinearLayout
-                    android:orientation="horizontal"
+                android:layout_height="fill_parent">
+            <Button
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/public_idea_share_layout" android:layout_weight="1"
-                    android:layout_gravity="center_horizontal" android:gravity="center_horizontal">
-
-                <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/share_icon" android:background="@drawable/ic_share"
-                        android:layout_gravity="center_horizontal"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/share_button"
-                        android:id="@+id/share_txt"
-                        android:gravity="bottom" android:layout_gravity="bottom"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:orientation="horizontal"
+                    android:text="@string/share_button"
+                    android:drawableLeft="@drawable/ic_share"
+                    android:background="@drawable/list_button_thin"
+                    android:textColor="@drawable/main_button_text_color"
+                    android:id="@+id/share_button"
+                    android:layout_weight="1"/>
+            <Button
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" android:id="@+id/public_idea_favorite_layout"
-                    android:focusable="true" android:layout_weight="1" android:layout_gravity="center_horizontal"
-                    android:gravity="center_horizontal">
-                <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/favorite_icon" android:longClickable="false"
-                        android:layout_gravity="center_horizontal" android:background="@drawable/ic_star_empty"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/favorite"
-                        android:id="@+id/favorite_txt"
-                        android:gravity="bottom" android:layout_gravity="bottom"/>
-            </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:text="@string/favorite"
+                    android:drawableLeft="@drawable/ic_star_empty"
+                    android:background="@drawable/list_button_thin"
+                    android:textColor="@drawable/main_button_text_color"
+                    android:id="@+id/favorite_button" android:layout_weight="1" android:singleLine="false"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -5,7 +5,7 @@ import android.database.Cursor
 import java.util
 
 trait PersonalIdeaGetModule {
-  def getIdeas(cursor: Cursor): util.ArrayList[Idea] = {
+  def getIdeasFromCursor(cursor: Cursor): util.ArrayList[Idea] = {
     val ideas = new util.ArrayList[Idea]()
 
     val keyTitleIndex: Int = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_TITLE)

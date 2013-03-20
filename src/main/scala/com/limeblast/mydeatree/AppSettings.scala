@@ -11,7 +11,6 @@ App objects
  */
 object AppSettings {
   val APP_TAG = "MydeaTree"
-  //val PREFS_NAME = "MydeaPrefs"
 
   val DATE_FORMAT = "%F %T"
 
@@ -31,11 +30,12 @@ object AppSettings {
   val PREF_PUBLIC_SORT = "PREF_PUBLIC_SORT"
   val PREF_PRIVATE_SORT = "PREF_PRIVATE_SORT"
 
-  val API_URL = "https://mydeatree.appspot.com"
+/* val API_URL = "https://mydeatree.appspot.com"
   val USER_URL = API_URL + "/api/v1/user/"
   val IDEA_URL = API_URL + "/api/v1/idea/"
   val PUBLIC_IDEA_URL = API_URL + "/api/v1/public_ideas/"
   val FAVORITE_IDEAS_URL = API_URL + "/api/v1/favorite_ideas/"
+  */
 
   val PRIVATE_IDEA_RESULT_RECEIVER = "PRIVATE_IDEA_RESULT_RECEIVER"
   val PUBLIC_IDEA_RESULT_RECEIVER = "PUBLIC_IDEA_RESULT_RECEIVER"
@@ -62,10 +62,6 @@ object AppSettings {
   // Notification variables
   val HAS_NEW_PUBLIC_IDEAS = "HAS_NEW_PUBLIC_IDEAS"
 
-
-
   val DEBUG = true
-
-
 }
 

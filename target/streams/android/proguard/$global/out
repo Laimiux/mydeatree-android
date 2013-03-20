@@ -28,4 +28,4 @@
 [0m[[0mdebug[0m] [0m                    java.lang.Object readResolve();[0m
 [0m[[0mdebug[0m] [0m                   }[0m
 [0m[[0mdebug[0m] [0m                   [0m
-[0m[[0mdebug[0m] [0m-keep class android.support.v4.app.** { *; }-keep interface android.support.v4.app.** { *; }-keep class com.actionbarsherlock.** { *; }-keep class com.limeblast.** { *; }-keep class com.limeblast.mydeatree.activities.** { *; }-keep interface com.actionbarsherlock.** { *; }-keepattributes *Annotation*[0m
+[0m[[0mdebug[0m] [0m-keep class android.support.v4.app.** { *; }-keep interface android.support.v4.app.** { *; }-keep class com.actionbarsherlock.** { *; }-keep class com.limeblast.** { *; }-keep class com.limeblast.mydeatree.activities.** { *; }-keep interface com.actionbarsherlock.** { *; }-keep class scala.collection.SeqLike { public protected *; }-keepattributes *Annotation*[0m

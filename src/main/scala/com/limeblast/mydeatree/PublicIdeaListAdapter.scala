@@ -8,20 +8,14 @@ import android.view.View.OnClickListener
 import providers.FavoriteIdeaProvider
 import android.database.Cursor
 
-import scala.concurrent.Future
-import scala.concurrent.future
+import com.limeblast.androidhelpers.{ProviderAccessModule, Inflater}
 
-import scala.concurrent.ExecutionContext.Implicits.global
-
-
-import com.limeblast.androidhelpers.{ProviderModule, Inflater}
-import android.util.Log
 
 class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util.List[PublicIdea])
-  extends ArrayAdapter(context, resourceId, objects) with Inflater with ProviderModule {
+  extends ArrayAdapter(context, resourceId, objects) with Inflater with ProviderAccessModule {
 
   def getFavoriteIdea(idea: Idea): Cursor = getContext.getApplicationContext.getContentResolver.query(FavoriteIdeaProvider.CONTENT_URI,
-    null, ProviderHelper.makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> false), null, null)
+    null, makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> false), null, null)
 
   override def getView(position: Int, convertView: View, parent: ViewGroup): View = {
     var cView = inflater.inflate(resourceId, null).asInstanceOf[LinearLayout]
@@ -33,7 +27,7 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
 
 
     val cursor: Cursor = getContext.getApplicationContext.getContentResolver.query(FavoriteIdeaProvider.CONTENT_URI,
-      null, ProviderHelper.makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> false), null, null)
+      null, makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> false), null, null)
 
 
     var favorited: Boolean = if (cursor.getCount() > 0) true else false
@@ -41,10 +35,7 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
     cursor.close()
 
 
-    if (favorited) {
-      val favIcon = cView.findViewById(R.id.favorite_icon).asInstanceOf[ImageView]
-      favIcon.setBackgroundResource(R.drawable.ic_star_full)
-    }
+
 
 
     val txtTitle = cView.findViewById(R.id.idea_title).asInstanceOf[TextView]
@@ -60,10 +51,9 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
     val date = Helpers.stringToDate(idea.modified_date)
     dateText.setText(Helpers.formatDate(date))
 
-
-    var shareLayout = cView.findViewById(R.id.public_idea_share_layout).asInstanceOf[LinearLayout]
-    shareLayout.setOnClickListener(new OnClickListener {
-      def onClick(view: View) {
+    val shareButton = cView.findViewById(R.id.share_button).asInstanceOf[Button]
+    shareButton.setOnClickListener(new OnClickListener {
+      def onClick(v: View) {
         val sharingIntent = new Intent(Intent.ACTION_SEND)
         sharingIntent.setType("text/plain")
         sharingIntent.putExtra(Intent.EXTRA_TEXT, "https://mydeatree.appspot.com/idea/" + idea.id + "/")
@@ -71,9 +61,16 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
       }
     })
 
-    var favoriteLayout = cView.findViewById(R.id.public_idea_favorite_layout).asInstanceOf[LinearLayout]
-    favoriteLayout.setOnClickListener(new OnClickListener {
-      def onClick(view: View) {
+
+    val favoriteButton = cView.findViewById(R.id.favorite_button).asInstanceOf[Button]
+
+    // Set to full star if idea is favorited
+    if (favorited)
+      favoriteButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_star_full, 0, 0, 0)
+
+
+    favoriteButton.setOnClickListener(new OnClickListener {
+      def onClick(v: View) {
         if (App.getUsername(getContext).equals("")) {
           Toast.makeText(getContext, "You need to login to favorite ideas.", Toast.LENGTH_SHORT).show()
         }
@@ -81,31 +78,28 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
           Toast.makeText(getContext, "Cannot favorite your own idea", Toast.LENGTH_SHORT).show()
         } else {
 
-          val favIcon = cView.findViewById(R.id.favorite_icon).asInstanceOf[ImageView]
+         // val favIcon = cView.findViewById(R.id.favorite_icon).asInstanceOf[ImageView]
           //val favText = cView.findViewById(R.id.favorite_txt).asInstanceOf[TextView]
 
 
           val resolver = getContext.getContentResolver
 
           if (favorited) {
-            favIcon.setBackgroundResource(R.drawable.ic_star_empty)
+            favoriteButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_star_empty, 0, 0, 0)
 
-
+            // Set favorite to deleted
             ProviderHelper.updateObjects(resolver, FavoriteIdeaProvider.CONTENT_URI,
               (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri),
               null,
               Map(FavoriteIdeaColumns.KEY_IS_DELETED -> true))
 
-            //getContext.getContentResolver.delete(FavoriteIdeaProvider.CONTENT_URI,
-            //makeWhereClause())
-            //favText.setText(R.string.unfavorite)
 
-            // Set favorite to deleted
+
           } else {
-            favIcon.setBackgroundResource(R.drawable.ic_star_full)
+            favoriteButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_star_full, 0, 0, 0)
 
             val cursor: Cursor = resolver.query(FavoriteIdeaProvider.CONTENT_URI,
-              null, ProviderHelper.makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> true), null, null)
+              null, makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> true), null, null)
             //favText.setText(R.string.favorite)
 
             val count = cursor.getCount
@@ -137,9 +131,9 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
 
           favorited = !favorited
         }
+
       }
     })
-
 
     if (idea.children_count > 0) {
 

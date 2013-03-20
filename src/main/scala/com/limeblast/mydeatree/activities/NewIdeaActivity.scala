@@ -30,7 +30,7 @@ class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.idea_new)
 
-    getWindow().setLayout(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT)
+    getWindow().setLayout(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
 
     // Set the check box
     val isPublic = getIntent.getBooleanExtra("public", false)

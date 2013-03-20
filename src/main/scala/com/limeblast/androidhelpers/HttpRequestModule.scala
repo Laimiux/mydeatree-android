@@ -5,7 +5,6 @@ import org.apache.http.params.HttpConnectionParams
 import org.apache.http.auth.{AuthScope, UsernamePasswordCredentials}
 import org.apache.http.HttpResponse
 import org.apache.http.client.methods.{HttpPost, HttpPut, HttpDelete, HttpGet}
-import com.limeblast.mydeatree.AppSettings
 import android.util.Log
 import org.apache.http.entity.StringEntity
 
@@ -17,6 +16,7 @@ import org.apache.http.entity.StringEntity
  * To change this template use File | Settings | File Templates.
  */
 trait HttpRequestModule {
+  var HttpRequestModule_DEBUG = true
   /**
    * Create or retrieve HttpClient with provided credentials
    * @param user Username for authentication
@@ -25,7 +25,16 @@ trait HttpRequestModule {
    */
   def getHttpClientWithCredentials(user: String, pw: String): DefaultHttpClient = {
     val defaultClient = new DefaultHttpClient()
-    HttpConnectionParams.setSoTimeout(defaultClient.getParams(), 25000);
+    HttpConnectionParams.setSoTimeout(defaultClient.getParams(), 25000)
+    val creds = new UsernamePasswordCredentials(user, pw)
+    defaultClient.getCredentialsProvider.setCredentials(AuthScope.ANY, creds)
+
+    defaultClient
+  }
+
+  private def createHttpClient(user: String, pw: String, timeout: Int): DefaultHttpClient = {
+    val defaultClient = new DefaultHttpClient()
+    HttpConnectionParams.setSoTimeout(defaultClient.getParams(), timeout)
     val creds = new UsernamePasswordCredentials(user, pw)
     defaultClient.getCredentialsProvider.setCredentials(AuthScope.ANY, creds)
 
@@ -51,17 +60,16 @@ trait HttpRequestModule {
 
   def deleteFromUrl(username: String, password: String, url: String): Option[HttpResponse] =
     try {
-      //if(AppSettings.DEBUG)
-        //Log.d(APP_TAG, "Attempting to delete an idea from " + url)
-      val httpClient = getHttpClientWithCredentials(username, password)
+      if(HttpRequestModule_DEBUG)
+        Log.d("HttpRequestModule", "Attempting to delete resource at " + url)
+      val httpClient = createHttpClient(username, password, 3000)
       val del = new HttpDelete(url)
       Some(httpClient.execute(del))
     } catch {
       case e: Exception => {
-        //if(AppSettings.DEBUG) Log.d(APP_TAG, e.toString)
+        if(HttpRequestModule_DEBUG) Log.d("HttpRequestModule", "Delete error : " + e.toString)
         None
       }
-      case _: Throwable=> None
     }
 
 

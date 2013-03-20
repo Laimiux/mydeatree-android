@@ -25,6 +25,7 @@ object General {
     "-keep class com.limeblast.** { *; }",
     "-keep class com.limeblast.mydeatree.activities.** { *; }",
     "-keep interface com.actionbarsherlock.** { *; }",
+    "-keep class scala.collection.SeqLike { public protected *; }",
     "-keepattributes *Annotation*").mkString("")
 
   val proguardSettings = Seq(

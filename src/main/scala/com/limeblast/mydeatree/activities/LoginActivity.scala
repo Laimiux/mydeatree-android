@@ -130,7 +130,7 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
         val httpclient = getHttpClientWithCredentials(user, pw)
 
         // Set get method
-        val get = new HttpGet(USER_URL)
+        val get = new HttpGet(App.getApi() + "api/v1/user/")
         get.addHeader("accept", "application/json")
 
         try {

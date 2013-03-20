@@ -8,7 +8,7 @@ import java.util
 trait MydeaRestModule {
   private val APP_TAG = "MydeaRestModule"
 
-  def getApi(): String = "https://mydeatree.appspot.com"
+  def getApi(): String = "https://mydeatree.appspot.com/"
 
   var USERNAME = ""
   var PASSWORD = ""
@@ -17,6 +17,8 @@ trait MydeaRestModule {
     def api_url: String = getApi()
     def username: String = USERNAME
     def password: String = PASSWORD
+
+    val resource_name = "api/v1/idea/"
 
 
     val objType: Class[Idea] = classOf[Idea]
@@ -36,17 +38,14 @@ trait MydeaRestModule {
     def collectionToList(collection: PersonalIdeas): util.ArrayList[Idea] = new util.ArrayList(collection.objects)
 
 
-    def updateIdea(newIdea: Idea): Option[Idea] = putObject(AppSettings.API_URL + newIdea.resource_uri, newIdea)
+    def updateIdea(newIdea: Idea): Option[Idea] = putObject(api_url + newIdea.resource_uri, newIdea)
 
-    def deleteIdea(idea: Idea): Boolean = {
-      if (AppSettings.DEBUG) Log.d(APP_TAG, "Deleting an idea")
-      deleteObject(AppSettings.API_URL + idea.resource_uri)
-    }
   }
 
 
   object PublicIdeaResource extends RestModule[PublicIdea, PublicIdeas] {
     def api_url: String = getApi()
+    val resource_name = "api/v1/public_ideas/"
     def username: String = USERNAME
     def password: String = PASSWORD
 
@@ -70,6 +69,7 @@ trait MydeaRestModule {
 
   object FavoriteIdeaResource extends RestModule[FavoriteIdea, FavoriteIdeas] {
     def api_url: String = getApi()
+    val resource_name = "api/v1/favorite_ideas/"
     def username: String = USERNAME
     def password: String = PASSWORD
 
@@ -78,8 +78,6 @@ trait MydeaRestModule {
     val collectionType: Class[FavoriteIdeas] = classOf[FavoriteIdeas]
 
     def collectionToList(collection: FavoriteIdeas): util.ArrayList[FavoriteIdea] = new util.ArrayList(collection.objects)
-
-    def deleteObject(obj: FavoriteIdea): Boolean = super.deleteObject(api_url + obj.resource_uri)
 
   }
 }
