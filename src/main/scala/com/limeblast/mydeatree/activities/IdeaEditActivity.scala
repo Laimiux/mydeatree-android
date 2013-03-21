@@ -68,7 +68,7 @@ class IdeaEditActivity extends Activity with TypedActivity with JsonModule with 
   }
 
   private def updateIdea(idea: Idea) {
-    val isIdeaOnServer: Boolean = idea.id != null
+    val isIdeaOnServer: Boolean = idea.id != null || idea.id != ""
 
     spawn {
       // Get the values

@@ -95,18 +95,10 @@ trait RestModule[Obj, ObjCollection] extends JsonModule with HttpRequestModule {
 
 
 
-  private def constructObjectUrl(obj: Obj): String = {
-    type R = AnyRef { def id: String }
-    type K = AnyRef { def resource_uri: String }
-    obj match {
-      case obj: R => api_url + resource_name + obj.id
-      case obj: K => api_url + obj.resource_uri
-      case _ => throw new IllegalAccessException("An object that you passed needs to have an id or a resource_uri. Construct a url and use a method which accepts the url instead")
-    }
-  }
 
 
-  def deleteObject(obj: Obj): Boolean = deleteObject(constructObjectUrl(obj))
+
+
 
   /**
    * Delete an object at specific url
@@ -121,11 +113,7 @@ trait RestModule[Obj, ObjCollection] extends JsonModule with HttpRequestModule {
     }
   }
 
-  def updateObject(objectToUpdate: Obj): Option[Obj] = {
-    val url = constructObjectUrl(objectToUpdate)
-    if(RestModule_DEBUG) Log.d(MODULE_TAG, "Updating object at " + url)
-    updateObject(url, objectToUpdate)
-  }
+
 
   def updateObject(url: String, updatedObject: Obj): Option[Obj] =
     try {
@@ -152,7 +140,7 @@ trait RestModule[Obj, ObjCollection] extends JsonModule with HttpRequestModule {
 
   private def isPutResponseOkay(response: HttpResponse): Boolean = {
     val statusCode = response.getStatusLine.getStatusCode
-    if (statusCode == 204 || statusCode == 202 || statusCode == 200) {
+    if (statusCode == 204 || statusCode == 202) {
       true
     } else {
       if(RestModule_DEBUG) Log.d(MODULE_TAG, "Put request failed, status " + statusCode)
@@ -183,7 +171,7 @@ trait RestModule[Obj, ObjCollection] extends JsonModule with HttpRequestModule {
 
   private def isResponseDelete(response: HttpResponse): Boolean = {
     val statusCode = response.getStatusLine.getStatusCode
-    if (statusCode == 204 || statusCode == 404 || statusCode == 200 || statusCode == 410) {
+    if (statusCode == 204 || statusCode == 404 || statusCode == 410) {
       true
     } else {
       if(RestModule_DEBUG) Log.d("RestModule", "Delete request failed, status " + statusCode)
