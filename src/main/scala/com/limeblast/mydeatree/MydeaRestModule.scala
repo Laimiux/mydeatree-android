@@ -1,9 +1,9 @@
 package com.limeblast.mydeatree
 
-import com.limeblast.androidhelpers.RestModule
 import android.util.Log
 
 import java.util
+import com.limeblast.rest.RestModule
 
 trait MydeaRestModule {
   private val APP_TAG = "MydeaRestModule"
@@ -13,7 +13,7 @@ trait MydeaRestModule {
   var USERNAME = ""
   var PASSWORD = ""
 
-  object PersonalIdeaResource extends RestModule[Idea, PersonalIdeas] {
+  object PersonalIdeaResource extends TastypieRestModule[Idea, PersonalIdeas] {
     def api_url: String = getApi()
     def username: String = USERNAME
     def password: String = PASSWORD
@@ -23,22 +23,6 @@ trait MydeaRestModule {
 
     val objType: Class[Idea] = classOf[Idea]
     val collectionType: Class[PersonalIdeas] = classOf[PersonalIdeas]
-
-
-    override protected def handleCollectionMeta(objects: util.ArrayList[Idea], collection: PersonalIdeas) {
-      val meta = collection.meta
-      if (meta.next != null) {
-        getObjects(api_url + meta.next) match {
-          case Some(moreObjects) => objects.addAll(moreObjects)
-          case None =>
-        }
-      }
-    }
-
-    def collectionToList(collection: PersonalIdeas): util.ArrayList[Idea] = new util.ArrayList(collection.objects)
-
-
-    def updateIdea(newIdea: Idea): Option[Idea] = putObject(api_url + newIdea.resource_uri, newIdea)
 
   }
 

@@ -11,13 +11,14 @@ import com.actionbarsherlock.view.{Menu, MenuItem}
 import com.actionbarsherlock.app.ActionBar.Tab
 
 import android.net.Uri
-import com.limeblast.androidhelpers.{JsonModule, ScalaHandler}
+import com.limeblast.androidhelpers.{ScalaHandler}
 import com.limeblast.mydeatree._
 import fragments.{FavoriteIdeaFragment, PrivateIdeaListFragment, PublicIdeaFragment}
 import providers.RESTfulProvider
 import com.limeblast.mydeatree.AppSettings._
 
 import scala.Some
+import com.limeblast.rest.JsonModule
 
 /**
  * Start activity that starts the app flow.

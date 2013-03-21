@@ -5,11 +5,12 @@ import android.content.{Context, Intent}
 import android.support.v4.app.NotificationCompat.Builder
 import android.support.v4.app.NotificationCompat
 import android.graphics.Color
-import com.limeblast.androidhelpers.{ProviderAccessModule, JsonModule}
+import com.limeblast.androidhelpers.{ProviderAccessModule}
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.activities.MainActivity
 import com.limeblast.mydeatree.providers.RESTfulProvider
 import scala.Some
+import com.limeblast.rest.JsonModule
 
 /*
 object IdeaCreateService {

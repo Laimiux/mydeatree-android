@@ -10,12 +10,13 @@ import scala.concurrent.ops.spawn
 
 import com.limeblast.androidhelpers.AndroidImplicits.toListener
 
-import com.limeblast.androidhelpers.{JsonModule, AndroidHelpers}
+import com.limeblast.androidhelpers.{AndroidHelpers}
 import android.app.Activity
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.RESTfulProvider
 import services.IdeaUpdateService
 import android.util.Log
+import com.limeblast.rest.JsonModule
 
 class IdeaEditActivity extends Activity with TypedActivity with JsonModule with BasicIdeaModule {
 

@@ -2,7 +2,7 @@ package com.limeblast.mydeatree.fragments
 
 import com.actionbarsherlock.app.{SherlockListFragment}
 import android.view.{View, ViewGroup, LayoutInflater}
-import android.os.{Handler, Bundle}
+import android.os.{Bundle}
 import com.limeblast.mydeatree._
 import adapters.{FavoriteIdeaListAdapter}
 import android.util.Log
@@ -144,10 +144,8 @@ class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.Loade
     handler.post(arrayAdapter.notifyDataSetChanged())
 
 
-    //
     if (favoriteIdeas.size() > 0) {
       handler.post(noIdeasTextView.setVisibility(View.INVISIBLE))
-      Log.d("blllah", "Invisible")
     } else {
       handler.post(noIdeasTextView.setVisibility(View.VISIBLE))
     }

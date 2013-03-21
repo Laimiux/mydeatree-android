@@ -9,7 +9,7 @@ import com.limeblast.scaliteorm.{TableDefinition, DatabaseHelperTrait}
 object DatabaseInformation {
   // Database specific info
   val DATABASE_NAME = "mydeatree.db"
-  val DATABASE_VERSION = 8
+  val DATABASE_VERSION = 9
 
 }
 
@@ -72,9 +72,9 @@ object FavoriteIdeaColumns {
  * Database Helper class for opening, creating and managing database version control
  * @param context Activity context
  */
-class IdeaSQLiteHelper(context: Context) extends
+class IdeaSQLiteHelper(val context: Context) extends
 SQLiteOpenHelper(context, DatabaseInformation.DATABASE_NAME, null, DatabaseInformation.DATABASE_VERSION)
-with DatabaseHelperTrait with PublicIdeaDatabaseModule {
+with DatabaseHelperTrait with PublicIdeaDatabaseModule with PersonalResourceSync {
 
   def tables: List[TableDefinition] = {
     var tempList: List[TableDefinition] = List()
@@ -134,4 +134,9 @@ with DatabaseHelperTrait with PublicIdeaDatabaseModule {
     super.onCreate(db)
   }
 
+  override def onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+    super.onUpgrade(db, oldVersion, newVersion)
+
+    startSyncingAllPersonalResources()
+  }
 }

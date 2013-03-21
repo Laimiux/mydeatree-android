@@ -1,4 +1,4 @@
-package com.limeblast.androidhelpers
+package com.limeblast.rest
 
 import com.google.gson.Gson
 import java.io.{InputStreamReader, InputStream}

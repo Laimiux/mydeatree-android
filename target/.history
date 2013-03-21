@@ -231,3 +231,12 @@ compile
 android:start-device
 compile
 android:start-device
+compile
+compile -feature
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile

@@ -1,4 +1,4 @@
-package com.limeblast.androidhelpers
+package com.limeblast.rest
 
 import org.apache.http.impl.client.DefaultHttpClient
 import org.apache.http.params.HttpConnectionParams
@@ -17,6 +17,7 @@ import org.apache.http.entity.StringEntity
  */
 trait HttpRequestModule {
   var HttpRequestModule_DEBUG = true
+  private val MODULE_TAG = "HttpRequestModule"
   /**
    * Create or retrieve HttpClient with provided credentials
    * @param user Username for authentication
@@ -50,7 +51,7 @@ trait HttpRequestModule {
       Some(httpclient.execute(get))
     } catch {
       case e: Exception => {
-        //if(AppSettings.DEBUG) Log.d(APP_TAG, e.toString)
+        if(HttpRequestModule_DEBUG) Log.d(MODULE_TAG, e.toString)
         None
       }
       case _: Throwable => None
@@ -61,13 +62,13 @@ trait HttpRequestModule {
   def deleteFromUrl(username: String, password: String, url: String): Option[HttpResponse] =
     try {
       if(HttpRequestModule_DEBUG)
-        Log.d("HttpRequestModule", "Attempting to delete resource at " + url)
+        Log.d(MODULE_TAG, "Attempting to delete resource at " + url)
       val httpClient = createHttpClient(username, password, 3000)
       val del = new HttpDelete(url)
       Some(httpClient.execute(del))
     } catch {
       case e: Exception => {
-        if(HttpRequestModule_DEBUG) Log.d("HttpRequestModule", "Delete error : " + e.toString)
+        if(HttpRequestModule_DEBUG) Log.d(MODULE_TAG, "Delete error : " + e.toString)
         None
       }
     }

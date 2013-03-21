@@ -24,7 +24,7 @@ import android.view.View.OnKeyListener
 import content.{ContentValues, DialogInterface, Intent}
 import android.preference.PreferenceManager
 
-import com.limeblast.androidhelpers.{JsonModule, ScalaHandler, AndroidImplicits, AndroidHelpers}
+import com.limeblast.androidhelpers.{ScalaHandler, AndroidImplicits, AndroidHelpers}
 import AndroidImplicits.{functionToResultReceicer, functionToLongListener, functionToDialogOnClickListener}
 
 
@@ -49,6 +49,7 @@ import scala.Some
 import scala.Some
 import scala.Some
 import services.{PrivateIdeaSyncService, IdeaUpdateService, IdeaDeleteService, IdeaCreateService}
+import com.limeblast.rest.JsonModule
 
 class PrivateIdeaListFragment extends SherlockListFragment with LoaderManager.LoaderCallbacks[Cursor]
 with OnKeyListener with JsonModule with PersonalIdeaGetModule {

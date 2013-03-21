@@ -1,6 +1,6 @@
-package com.limeblast.androidhelpers
+package com.limeblast.rest
 
-import com.limeblast.mydeatree.{Meta, DjangoRootObject}
+import com.limeblast.mydeatree.{App, Meta, DjangoRootObject}
 
 import java.util
 import org.apache.http.HttpResponse
@@ -12,6 +12,8 @@ import android.util.Log
 trait RestModule[Obj, ObjCollection] extends JsonModule with HttpRequestModule {
   var RestModule_DEBUG = true
 
+
+  private val MODULE_TAG = "RestModule"
 
   def api_url: String
   def resource_name: String
@@ -84,6 +86,7 @@ trait RestModule[Obj, ObjCollection] extends JsonModule with HttpRequestModule {
         val finalObject = getMainObject(response.getEntity.getContent, objType)
         Some(finalObject)
       } else {
+        if (RestModule_DEBUG) Log.d(MODULE_TAG, "postObject was unsuccessful.")
         None
       }
     } catch {
@@ -91,24 +94,40 @@ trait RestModule[Obj, ObjCollection] extends JsonModule with HttpRequestModule {
     }
 
 
-  def deleteObject(obj: Obj): Boolean = {
-    type r = AnyRef { def id: String }
-    obj match {
-      case obj: r => deleteObject(api_url + resource_name + obj.id)
-      case obj: { def resource_uri: String } => deleteObject(api_url + obj.resource_uri)
-      case _ => throw new IllegalAccessException("An object you are deleting needs to have id or resource_url. Use deleteObject(url: String) instead")
-    }
-   }
 
+  private def constructObjectUrl(obj: Obj): String = {
+    type R = AnyRef { def id: String }
+    type K = AnyRef { def resource_uri: String }
+    obj match {
+      case obj: R => api_url + resource_name + obj.id
+      case obj: K => api_url + obj.resource_uri
+      case _ => throw new IllegalAccessException("An object that you passed needs to have an id or a resource_uri. Construct a url and use a method which accepts the url instead")
+    }
+  }
+
+
+  def deleteObject(obj: Obj): Boolean = deleteObject(constructObjectUrl(obj))
+
+  /**
+   * Delete an object at specific url
+   * @param url Internet address
+   * @return True if object was successfully deleted
+   */
   def deleteObject(url: String): Boolean = {
-    Log.d("RestModule", "Deleting an object at " + url)
+    Log.d(MODULE_TAG, "Deleting an object at " + url)
     deleteFromUrl(username, password, url) match {
       case Some(response) if (isResponseDelete(response)) => true
       case _ => false
     }
   }
 
-  def putObject[T](url: String, updatedObject: Obj): Option[Obj] =
+  def updateObject(objectToUpdate: Obj): Option[Obj] = {
+    val url = constructObjectUrl(objectToUpdate)
+    if(RestModule_DEBUG) Log.d(MODULE_TAG, "Updating object at " + url)
+    updateObject(url, objectToUpdate)
+  }
+
+  def updateObject(url: String, updatedObject: Obj): Option[Obj] =
     try {
       val jsonString = convertObjectToJson(updatedObject)
 
@@ -125,37 +144,39 @@ trait RestModule[Obj, ObjCollection] extends JsonModule with HttpRequestModule {
       }
     } catch {
       case e: Exception => {
-        //if(AppSettings.DEBUG) Log.d(APP_TAG, e.toString)
+        if(RestModule_DEBUG) Log.d(MODULE_TAG, e.toString)
         None
       }
-      case _: Throwable => None
     }
 
 
   private def isPutResponseOkay(response: HttpResponse): Boolean = {
     val statusCode = response.getStatusLine.getStatusCode
-    if (statusCode == 204 || statusCode == 202) {
+    if (statusCode == 204 || statusCode == 202 || statusCode == 200) {
       true
     } else {
-      //if(AppSettings.DEBUG) Log.d(APP_TAG, "Request failed, status " + response.getStatusLine.getStatusCode)
+      if(RestModule_DEBUG) Log.d(MODULE_TAG, "Put request failed, status " + statusCode)
       return false
     }
   }
 
   private def isPostResponseOkay(response: HttpResponse): Boolean = {
-    if (response.getStatusLine.getStatusCode == 201) {
+    val statusCode = response.getStatusLine.getStatusCode
+    if (statusCode == 201) {
       true
     } else {
-      //if(AppSettings.DEBUG) Log.d(APP_TAG, "POST Request failed")
+      if(RestModule_DEBUG) Log.d(MODULE_TAG, "Post request failed, status " + statusCode)
       false
     }
   }
 
   private def isResponseOkay(response: HttpResponse): Boolean = {
-    if (response.getStatusLine.getStatusCode == 200) {
+    val statusCode = response.getStatusLine.getStatusCode
+    if (statusCode == 200) {
       true
     } else {
-      //if(AppSettings.DEBUG) Log.d(APP_TAG, "Request failed, status " + response.getStatusLine.getStatusCode)
+
+      if(RestModule_DEBUG) Log.d(MODULE_TAG, "Request failed, status " + statusCode)
       return false
     }
   }
@@ -171,55 +192,3 @@ trait RestModule[Obj, ObjCollection] extends JsonModule with HttpRequestModule {
   }
 }
 
-
-
-
-/*
-def retrieveObjects[T](initialUrl: String, objectKind: Class[T]): Option[util.ArrayList[AnyRef]] = {
-  val objects: util.ArrayList[AnyRef] = new util.ArrayList()
-
-  getFromUrl(username, password, initialUrl) match {
-    case Some(response) => {
-      if (isResponseOkay(response)) {
-        val content: InputStream = response.getEntity.getContent
-
-        val mainObject: DjangoRootObject[AnyRef] = getMainObject(content, objectKind).asInstanceOf[DjangoRootObject[AnyRef]]
-
-        val meta: Meta = mainObject.meta
-
-        objects.addAll(mainObject.objects)
-
-        if (meta.next != null) {
-          retrieveObjects(api_url + meta.next, objectKind) match {
-            case Some(moreObjects) => objects.addAll(moreObjects)
-            case None =>
-          }
-        }
-
-        Some(objects)
-      } else {
-        None
-      }
-    }
-    case None => {
-      //if(AppSettings.DEBUG) Log.d(APP_TAG, "Received a null response")
-      None
-    }
-  }
-}
-
-*/
-/*
-
-def retrieveObject[T](url: String, objClass: Class[T]): Option[T] = {
-  getFromUrl(username, password, url) match {
-    case Some(response) => {
-      val content: InputStream = response.getEntity.getContent
-
-      val obj: T = getMainObject(content, objClass)
-      Some(obj)
-    }
-    case None => None
-  }
-}
-*/

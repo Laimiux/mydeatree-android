@@ -22,6 +22,7 @@ import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.AppSettings._
 import services.PrivateIdeaSyncService
 import android.content.res.Configuration
+import com.limeblast.rest.{JsonModule, HttpRequestModule}
 
 
 class LoginActivity extends SherlockActivity with TypedActivity with JsonModule with HttpRequestModule {

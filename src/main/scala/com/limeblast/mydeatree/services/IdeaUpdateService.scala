@@ -6,8 +6,8 @@ import android.content.{ContentUris, Intent}
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.RESTfulProvider
 import scala.Some
-import com.limeblast.androidhelpers.JsonModule
 import android.util.Log
+import com.limeblast.rest.JsonModule
 
 
 /*
@@ -30,15 +30,16 @@ class IdeaUpdateService extends IntentService("IdeaUpdateService") with JsonModu
     val idea = getMainObject(ideaJson, classOf[Idea])
 
     if(App.DEBUG) Log.d("IdeaUpdateService", "Updating idea " + idea)
-    if(App.DEBUG) Log.d("IdeaUpdateService", "Updating idea at " + idea.resource_uri)
 
-    App.PersonalIdeaResource.updateIdea(idea) match {
+    App.PersonalIdeaResource.updateObject(idea) match {
       case Some(idea) => updateIdea(idea)
       case _ =>
     }
   }
 
   private def updateIdea(idea: Idea) {
+    if(App.DEBUG) Log.d("IdeaUpdateService", "Idea was successfully updated, reflecting the change onto the database.")
+
     val ideaAddress = ContentUris.withAppendedId(RESTfulProvider.CONTENT_URI, idea.id.toLong)
     val cr = getContentResolver
 
