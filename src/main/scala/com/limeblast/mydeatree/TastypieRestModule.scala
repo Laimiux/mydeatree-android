@@ -17,16 +17,32 @@ trait TastypieRestModule[Obj <: { def resource_uri: String }, ObjCollection <: {
   private def constructObjectUrl(obj: Obj): String = api_url + obj.resource_uri
 
 
+  /**
+   * Deletes the object
+   * @param obj Object to be deleted
+   * @return
+   */
   def deleteObject(obj: Obj): Boolean = deleteObject(constructObjectUrl(obj))
 
+  /**
+   * Updates the object
+   * @param objectToUpdate Updated object that should be sent to the server
+   * @return
+   */
   def updateObject(objectToUpdate: Obj): Option[Obj] = {
     val url = constructObjectUrl(objectToUpdate)
     if(RestModule_DEBUG) Log.d(MODULE_TAG, "Updating object at " + url)
     updateObject(url, objectToUpdate)
   }
 
+
   def collectionToList(collection: ObjCollection): util.ArrayList[Obj] = new util.ArrayList(collection.objects)
 
+  /**
+   * Method for handling Meta information
+   * @param objects Current objects retrieved so far
+   * @param collection Collection object
+   */
   override protected def handleCollectionMeta(objects: util.ArrayList[Obj], collection: ObjCollection) {
     val meta = collection.meta
     if (meta.next != null) {

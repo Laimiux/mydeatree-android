@@ -18,7 +18,7 @@ import providers.RESTfulProvider
 import com.limeblast.mydeatree.AppSettings._
 
 import scala.Some
-import com.limeblast.rest.JsonModule
+import com.limeblast.rest.{JsonModule}
 
 /**
  * Start activity that starts the app flow.
@@ -93,7 +93,6 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
 
     Log.d(APP_TAG, "Setting tab to " + tabSelected)
     getSupportActionBar.setSelectedNavigationItem(tabSelected)
-
 
     //
     //val provider = new PersonalIdeaProvider(getContentResolver)

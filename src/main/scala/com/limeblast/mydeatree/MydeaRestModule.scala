@@ -4,6 +4,9 @@ import android.util.Log
 
 import java.util
 import com.limeblast.rest.RestModule
+import com.limeblast.androidhelpers.{HasProvider, ProviderAccessModule}
+import android.net.Uri
+import providers.FavoriteIdeaProvider
 
 trait MydeaRestModule {
   private val APP_TAG = "MydeaRestModule"
@@ -27,7 +30,7 @@ trait MydeaRestModule {
   }
 
 
-  object PublicIdeaResource extends RestModule[PublicIdea, PublicIdeas] {
+  object PublicIdeaResource extends TastypieRestModule[PublicIdea, PublicIdeas] {
     def api_url: String = getApi()
     val resource_name = "api/v1/public_ideas/"
     def username: String = USERNAME
@@ -47,11 +50,10 @@ trait MydeaRestModule {
       }
     }
 
-    def collectionToList(collection: PublicIdeas): util.ArrayList[PublicIdea] = new util.ArrayList(collection.objects)
   }
 
 
-  object FavoriteIdeaResource extends RestModule[FavoriteIdea, FavoriteIdeas] {
+  object FavoriteIdeaResource extends TastypieRestModule[FavoriteIdea, FavoriteIdeas]{
     def api_url: String = getApi()
     val resource_name = "api/v1/favorite_ideas/"
     def username: String = USERNAME
@@ -61,7 +63,9 @@ trait MydeaRestModule {
     val objType: Class[FavoriteIdea] = classOf[FavoriteIdea]
     val collectionType: Class[FavoriteIdeas] = classOf[FavoriteIdeas]
 
-    def collectionToList(collection: FavoriteIdeas): util.ArrayList[FavoriteIdea] = new util.ArrayList(collection.objects)
+    object Provider extends HasProvider {
+      implicit def provider_uri: Uri = FavoriteIdeaProvider.CONTENT_URI
+    }
 
   }
 }

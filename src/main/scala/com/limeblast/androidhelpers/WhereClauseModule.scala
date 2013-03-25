@@ -30,3 +30,9 @@ trait WhereClauseModule {
         case _ => where + " AND " + makeWhereClause(tuple)
       })
 }
+
+trait WhereClauseImplicitModule extends WhereClauseModule {
+  implicit def mapToString(map: Map[String, Any]): String = makeWhereClause(map)
+
+  implicit def tupleToString(tuple: (String, Any)): String = makeWhereClause(tuple)
+}

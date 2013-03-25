@@ -11,11 +11,6 @@ object App extends MydeaRestModule with ProviderAccessModule {
   val PREF_USERNAME = "PREF_USERNAME"
   val PREF_PASSWORD = "PREF_PASSWORD"
 
-
-  // Add accessors for content providers
-  val IdeaProvider = new ProviderAccessor(RESTfulProvider.CONTENT_URI)
-
-
   /*
    * Safe way to access username
    */

@@ -7,55 +7,7 @@ import android.net.Uri
 import com.limeblast.mydeatree.providers.RESTfulProvider
 
 
-trait ProviderAccessModule extends WhereClauseModule {
-  implicit def mapToString(map: Map[String, Any]): String = makeWhereClause(map)
-
-  implicit def tupleToString(tuple: (String, Any)): String = makeWhereClause(tuple)
-
-
-
-  class ProviderAccessor(uri: Uri) extends ContentValuesHelper {
-    def updateObjects(resolver: ContentResolver, where: String, whereArgs: Array[String], newValues: ContentValues)(implicit uri: Uri): Int =
-      resolver.update(uri, newValues, where, whereArgs)
-
-    def updateObjects(implicit uri: Uri, resolver: ContentResolver, where: (String, Any), whereArgs: Array[String], newValues: ContentValues): Int =
-      resolver.update(uri, newValues, where, whereArgs)
-
-    def updateObjects(implicit uri: Uri, resolver: ContentResolver, where: Map[String, Any], whereArgs: Array[String], newValues: ContentValues): Int =
-      resolver.update(uri, newValues, where, whereArgs)
-
-    def updateObjects(implicit uri: Uri, resolver: ContentResolver, where: String, whereArgs: Array[String], newValues: Map[String, Any]): Int =
-      resolver.update(uri, newValues, where, whereArgs)
-
-    def updateObjects(implicit uri: Uri, resolver: ContentResolver, where: (String, Any), whereArgs: Array[String], newValues: Map[String, Any]): Int =
-      resolver.update(uri, newValues, where, whereArgs)
-
-    def updateObjects(implicit uri: Uri, resolver: ContentResolver, where: Map[String, Any], whereArgs: Array[String], newValues: Map[String, Any]): Int =
-      resolver.update(uri, newValues, where, whereArgs)
-
-    /**
-     * Deletes objects from content provider uri
-     * @param resolver Content Resolver
-     * @param uri Content Uri
-     * @param where Where clause
-     * @param whereArgs Selection Args
-     * @return Rows deleted
-     */
-    def deleteObjects(resolver: ContentResolver, where: String, whereArgs: Array[String]): Int =
-      resolver.delete(uri, where, whereArgs)
-
-    def deleteObjects(resolver: ContentResolver, where: (String, Any), whereArgs: Array[String]): Int =
-      resolver.delete(uri, where, whereArgs)
-      //deleteObjects(uri)(resolver, where, whereArgs)
-
-
-    def deleteObjects(resolver: ContentResolver, where: Map[String, Any], whereArgs: Array[String]): Int =
-      resolver.delete(uri, where, whereArgs)
-      //deleteObjects(uri)(resolver, where, whereArgs)
-
-
-    def insertObject(uri: Uri = uri)(resolver: ContentResolver)(values: (String, Any)*) = resolver.insert(uri, values)
-  }
+trait ProviderAccessModule extends WhereClauseImplicitModule {
 
   @deprecated object ProviderHelper extends ContentValuesHelper {
     /**

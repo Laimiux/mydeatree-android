@@ -35,47 +35,17 @@ class PrivateIdeaSyncService extends IntentService("PrivateIdeaSyncService") wit
 
   }
 
-  private def updateIdeas() {
-    /*
-   val privateSyncPrefString = USERNAME + "_" + PREF_PRIVATE_SYNC
-// GET LAST TIME PRIVATE IDEAS SYNCED
-val context = getActivity.getApplicationContext
-val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-
-
-LAST_PRIVATE_IDEAS_SYNCED = prefs.getString(privateSyncPrefString, null)
-
-var url = IDEA_URL
-
-if (LAST_PRIVATE_IDEAS_SYNCED != null) {
- // url += "?modified_date__gt=" + LAST_PRIVATE_IDEAS_SYNCED
-}
-
-/*  BAD PLACE TO SAVE
-// SAVE DATE TIME WHEN LAST SYNCHRONIZED
-val editor = prefs.edit()
-// EVERY USER HAS HIS OWN LAST SYNC DATE
-editor.putString(privateSyncPrefString, "")
-
-val now = new Time()
-now.setToNow()
-editor.putString(privateSyncPrefString, now.format(DATE_FORMAT))
-editor.commit()
-
-*/
-*/
-  }
 
   /**
    * Synchronizes private ideas with the server
    */
   private def synchronizePrivateIdeas() {
-    if(AppSettings.DEBUG) Log.d(APP_TAG, "Synchronization started")
+    if (AppSettings.DEBUG) Log.d(APP_TAG, "Synchronization started")
 
     // Get ideas from the server
     App.PersonalIdeaResource.getObjects match {
       case Some(ideaArray) => {
-        val objectsInDb= getSavedUserIdeas()
+        val objectsInDb = getSavedUserIdeas()
 
         // Counter to see how many new ideas there are
         var newIdeas = 0
@@ -127,13 +97,13 @@ editor.commit()
           }
         }
 
-        if(AppSettings.DEBUG) Log.d(APP_TAG, "New private ideas added: " + newIdeas + ", privated ideas updated: " + ideasUpdated + ", and ideas removed " + ideasDeleted)
+        if (AppSettings.DEBUG) Log.d(APP_TAG, "New private ideas added: " + newIdeas + ", privated ideas updated: " + ideasUpdated + ", and ideas removed " + ideasDeleted)
 
         val now = new Time()
         now.setToNow()
-        if(AppSettings.DEBUG) Log.d(APP_TAG, "Synchronization finished at " + now.format(DATE_FORMAT))
+        if (AppSettings.DEBUG) Log.d(APP_TAG, "Synchronization finished at " + now.format(DATE_FORMAT))
       }
-      case None => if(AppSettings.DEBUG) Log.d(APP_TAG, "There was an error syncing ideas")
+      case None => if (AppSettings.DEBUG) Log.d(APP_TAG, "There was an error syncing ideas")
     }
 
 
@@ -180,3 +150,36 @@ editor.commit()
   }
 
 }
+
+/*
+    private def updateIdeas() {
+
+   val privateSyncPrefString = USERNAME + "_" + PREF_PRIVATE_SYNC
+// GET LAST TIME PRIVATE IDEAS SYNCED
+val context = getActivity.getApplicationContext
+val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+
+
+LAST_PRIVATE_IDEAS_SYNCED = prefs.getString(privateSyncPrefString, null)
+
+var url = IDEA_URL
+
+if (LAST_PRIVATE_IDEAS_SYNCED != null) {
+ // url += "?modified_date__gt=" + LAST_PRIVATE_IDEAS_SYNCED
+}
+
+/*  BAD PLACE TO SAVE
+// SAVE DATE TIME WHEN LAST SYNCHRONIZED
+val editor = prefs.edit()
+// EVERY USER HAS HIS OWN LAST SYNC DATE
+editor.putString(privateSyncPrefString, "")
+
+val now = new Time()
+now.setToNow()
+editor.putString(privateSyncPrefString, now.format(DATE_FORMAT))
+editor.commit()
+
+*/
+
+  }
+*/

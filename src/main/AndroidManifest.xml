@@ -72,7 +72,11 @@
         <service android:name=".services.IdeaCreateService" />
         <service android:name=".services.IdeaDeleteService" />
 
-        <service android:enabled="true" android:name=".resources.FavoriteIdeaGetService" />
+        <service android:name=".services.FavoriteIdeaPostService" />
+
+        <service android:name="com.limeblast.rest.GetCollectionServiceModule.GetObjectsService" />
+
+        <service android:enabled="true" android:name=".services.FavoriteIdeaGetService" />
 
         <meta-data
                 android:name="android.app.default_searchable"
