@@ -87,11 +87,12 @@ class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.Loade
    * @return True if idea is a favorite
    */
   private def isIdeaInFavorites(uri: String): Boolean = {
+    val resolver = getActivity.getContentResolver
     val select = makeWhereClause((FavoriteIdeaColumns.KEY_IDEA, uri), (FavoriteIdeaColumns.KEY_IS_DELETED, false))
 
-    val cursor = getActivity.getContentResolver.query(FavoriteIdeaProvider.CONTENT_URI, null, select, null, null)
+    val cursor = App.FavoriteIdeaResource.Provider.getObjects(resolver, Array(), select, null, null)
 
-    val doesIdeaExist = if (cursor.getCount() > 0) true else false
+    val doesIdeaExist = cursor.getCount() > 0
 
     cursor.close()
 

@@ -7,12 +7,13 @@ import android.util.Log
 
 import java.util
 import scala.collection.JavaConversions._
+import com.limeblast.androidhelpers.WhereClauseModule
 
 
 sealed class ObjectWithUri(val uri: String)
 
 
-class FavoriteIdeaGetService extends IntentService("FavoriteIdeaGetService") {
+class FavoriteIdeaGetService extends IntentService("FavoriteIdeaGetService") with WhereClauseModule {
   lazy val provider = App.FavoriteIdeaResource.Provider
 
   def onHandleIntent(intent: Intent) {
@@ -45,11 +46,10 @@ class FavoriteIdeaGetService extends IntentService("FavoriteIdeaGetService") {
     for(favInDb <- favoritesInDb) {
       var found = false
 
-      for (fav <- favorites)
-        if (fav.idea.equals(favInDb.uri))
+      for (fav <- favorites if fav.idea.equals(favInDb.uri))
           found = true
 
-      if(found)
+      if(!found)
         removeFromDB(favInDb)
     }
 
@@ -58,7 +58,8 @@ class FavoriteIdeaGetService extends IntentService("FavoriteIdeaGetService") {
   private def getFromDB(): List[ObjectWithUri] = {
     var objectList = List[ObjectWithUri]()
 
-    val cursor = provider.getObjects(getContentResolver, Array(FavoriteIdeaColumns.KEY_IDEA), null, null, null)
+    val select = makeWhereClause(FavoriteIdeaColumns.KEY_IS_NEW -> false)
+    val cursor = provider.getObjects(getContentResolver, Array(FavoriteIdeaColumns.KEY_IDEA), select, null, null)
 
     val keyIdeaIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_IDEA)
 

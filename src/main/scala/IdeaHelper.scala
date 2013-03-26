@@ -9,7 +9,7 @@ import com.limeblast.scaliteorm.{TableDefinition, DatabaseHelperTrait}
 object DatabaseInformation {
   // Database specific info
   val DATABASE_NAME = "mydeatree.db"
-  val DATABASE_VERSION = 11
+  val DATABASE_VERSION = 12
 
 }
 
@@ -83,7 +83,7 @@ with DatabaseHelperTrait with PublicIdeaDatabaseModule with PersonalResourceSync
       import FavoriteIdeaColumns._
       val favorite_idea_table = new TableDefinition(TABLE_NAME)
       favorite_idea_table insert(KEY_ID -> "TEXT PRIMARY KEY UNIQUE",
-        KEY_IDEA -> "TEXT not null",
+        KEY_IDEA -> "TEXT not null unique",
         KEY_RESOURCE_URI -> "TEXT",
         KEY_IS_DELETED -> "boolean default 0",
         KEY_IS_NEW -> "boolean default 0",
