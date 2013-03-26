@@ -95,8 +95,6 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
               null,
               Map(FavoriteIdeaColumns.KEY_IS_DELETED -> true))
 
-
-
           } else {
             favoriteButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_star_full, 0, 0, 0)
 
@@ -120,8 +118,7 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
             } else {
 
 
-              ProviderHelper.insertObject(FavoriteIdeaProvider.CONTENT_URI)(resolver)(FavoriteIdeaColumns.KEY_OWNER -> App.USERNAME,
-                FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri,
+              ProviderHelper.insertObject(FavoriteIdeaProvider.CONTENT_URI)(resolver)(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri,
                 FavoriteIdeaColumns.KEY_IS_NEW -> true)
 
 

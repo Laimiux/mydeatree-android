@@ -4,7 +4,7 @@
 		module="mydeatree_2.10"
 		revision="0.1"
 		status="integration"
-		publication="20130312001920"
+		publication="20130325142031"
 	>
 		<description>
 		MydeaTree
@@ -35,7 +35,7 @@
 		<dependency org="org.scalatest" name="scalatest_2.10" rev="1.9.1" conf="test->default(compile)"/>
 		<dependency org="com.google.android" name="support-v4" rev="r7" conf="compile->default(compile)"/>
 		<dependency org="com.j256.ormlite" name="ormlite-android" rev="4.43" conf="compile->default(compile)"/>
-		<dependency org="org.scalaz" name="scalaz_2.10" rev="6.0.4" conf="compile->default(compile)"/>
+		<dependency org="org.scalaz" name="scalaz-core_2.10" rev="6.0.4" conf="compile->default(compile)"/>
 		<dependency org="com.actionbarsherlock" name="actionbarsherlock" rev="4.2.0" conf="compile->default(compile)">
 			<artifact name="actionbarsherlock" type="apklib" ext="apklib" conf=""/>
 		</dependency>

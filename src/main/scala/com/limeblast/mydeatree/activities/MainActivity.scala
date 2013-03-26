@@ -11,7 +11,7 @@ import com.actionbarsherlock.view.{Menu, MenuItem}
 import com.actionbarsherlock.app.ActionBar.Tab
 
 import android.net.Uri
-import com.limeblast.androidhelpers.{ScalaHandler}
+import com.limeblast.androidhelpers.{WhereClauseModule, AndroidHelpers, ScalaHandler}
 import com.limeblast.mydeatree._
 import fragments.{FavoriteIdeaFragment, PrivateIdeaListFragment, PublicIdeaFragment}
 import providers.RESTfulProvider
@@ -20,10 +20,14 @@ import com.limeblast.mydeatree.AppSettings._
 import scala.Some
 import com.limeblast.rest.{JsonModule}
 
+import scala.concurrent.ops.spawn
+import services.{FavoriteIdeaPostService, FavoriteIdeaDeleteService}
+import android.database.Cursor
+
 /**
  * Start activity that starts the app flow.
  */
-class MainActivity extends SherlockFragmentActivity with TypedActivity with JsonModule {
+class MainActivity extends SherlockFragmentActivity with TypedActivity with JsonModule with WhereClauseModule {
 
   // For tab names
   private val TAB_PRIVATE = "Personal"
@@ -94,6 +98,11 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
     Log.d(APP_TAG, "Setting tab to " + tabSelected)
     getSupportActionBar.setSelectedNavigationItem(tabSelected)
 
+    // Refresh resources
+    spawn {
+      refreshResources()
+    }
+
     //
     //val provider = new PersonalIdeaProvider(getContentResolver)
     //provider.get_all()
@@ -131,16 +140,8 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
    * @param menu Menu
    * @return
    */
-  @deprecated override def onPrepareOptionsMenu(menu: Menu): Boolean = {
+  override def onPrepareOptionsMenu(menu: Menu): Boolean = {
     actionMenu = menu
-    if (!App.isLoggedIn) {
-      menu.setGroupVisible(R.id.menu_loggedin, false)
-      menu.setGroupVisible(R.id.menu_loggedout, true)
-    } else {
-      menu.setGroupVisible(R.id.menu_loggedout, false)
-      menu.setGroupVisible(R.id.menu_loggedin, true)
-    }
-
     updateMenu()
 
     super.onPrepareOptionsMenu(menu)
@@ -156,6 +157,76 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
   protected override def onPause() {
     super.onPause()
     IS_MAIN_ACTIVITY_RUNNING = false
+  }
+
+  //-------------------------------------------------------\\
+  //------------------ SYNC FUNCTIONS ---------------------\\
+  //-------------------------------------------------------\\
+  private def refreshResources() {
+    if (App.DEBUG) Log.d("MainActivity", "---------- STARTING REFRESH RESOURCES ------------")
+
+    if (AndroidHelpers.isOnline(this)) {
+      // Refresh favorite objects
+      val favoritesToUpload = getFavoritesToUpload()
+      val favoritesToDelete = getFavoritesToDelete()
+
+      if (App.DEBUG) {
+        Log.d("MainActivity", "There is " + favoritesToUpload.size + " favorites to upload")
+        Log.d("MainActivity", "There is " + favoritesToDelete.size + " favorites to delete")
+      }
+
+      for (fav <- favoritesToUpload) {
+        val intent = new Intent(this, classOf[FavoriteIdeaPostService])
+        intent.putExtra("favorite_idea", convertObjectToJson(fav))
+
+        startService(intent)
+      }
+
+      for (fav <- favoritesToDelete) {
+        val intent = new Intent(this, classOf[FavoriteIdeaDeleteService])
+        intent.putExtra("favorite_idea", convertObjectToJson(fav))
+
+        startService(intent)
+      }
+
+      if (App.DEBUG) Log.d("MainActivity", "---------- REFRESH RESOURCES FINISHED ------------")
+    }
+
+
+  }
+
+  private def getFavoritesToUpload(): List[FavoriteIdea] = {
+    // Create select clause
+    val select: String = makeWhereClause((FavoriteIdeaColumns.KEY_IS_NEW, true), (FavoriteIdeaColumns.KEY_IS_SYNCING, false), (FavoriteIdeaColumns.KEY_IS_DELETED, false))
+
+    getFavoriteIdeas(select)
+  }
+
+  private def getFavoritesToDelete(): List[FavoriteIdea] = {
+    // Create select clause
+    val select = makeWhereClause((FavoriteIdeaColumns.KEY_IS_DELETED, true))
+
+    getFavoriteIdeas(select)
+  }
+
+  private def getFavoriteIdeas(select: String): List[FavoriteIdea] = {
+    var ideas = List[FavoriteIdea]()
+
+    // Get cursor
+    val cursor = App.FavoriteIdeaResource.Provider.getObjects(getContentResolver,
+      null, select, null, null)
+
+    val keyIdIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_ID)
+    val keyIdeaIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_IDEA)
+    val keyUriIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_RESOURCE_URI)
+
+    while(cursor.moveToNext()) {
+      ideas = ideas :+ new FavoriteIdea(cursor.getString(keyIdIndex), cursor.getString(keyIdeaIndex), cursor.getString(keyUriIndex))
+    }
+
+    cursor.close()
+
+    ideas
   }
 
   //-------------------------------------------------------\\

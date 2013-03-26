@@ -78,6 +78,9 @@ trait RestModule[Obj, ObjCollection] extends JsonModule with HttpRequestModule {
 
       //Log.d(APP_TAG, jsonString)
 
+      if(RestModule_DEBUG)
+        Log.d(MODULE_TAG, "Object being posted " + jsonString + " at \n " + url)
+
       val httpClient = getHttpClientWithCredentials(username, password)
       val post = HttpPostWithJson(url, new StringEntity(jsonString))
       val response = httpClient.execute(post)

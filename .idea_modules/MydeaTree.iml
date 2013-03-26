@@ -62,13 +62,13 @@
     <orderEntry type="jdk" jdkName="Android 4.0 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.10.0" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang:scala-reflect:2.10.0" level="project" />
     <orderEntry type="library" name="SBT: com.google.android:support-v4:r7" level="project" />
     <orderEntry type="library" name="SBT: com.j256.ormlite:ormlite-android:4.43" level="project" />
     <orderEntry type="library" name="SBT: com.j256.ormlite:ormlite-core:4.43" level="project" />
-    <orderEntry type="library" name="SBT: org.scalaz:scalaz_2.10:6.0.4" level="project" />
+    <orderEntry type="library" name="SBT: org.scalaz:scalaz-core_2.10:6.0.4" level="project" />
     <orderEntry type="library" scope="TEST" name="SBT: org.scalatest:scalatest_2.10:1.9.1:test" level="project" />
     <orderEntry type="library" scope="TEST" name="SBT: org.scala-lang:scala-actors:2.10.0:test" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.scala-lang:scala-reflect:2.10.0:test" level="project" />
     <orderEntry type="library" name="android-facebook-1.5.jar" level="project" />
     <orderEntry type="library" name="gson-2.2.2.jar" level="project" />
     <orderEntry type="library" name="android.jar" level="project" />

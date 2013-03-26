@@ -59,7 +59,7 @@ trait HttpRequestModule {
 
 
 
-  def deleteFromUrl(username: String, password: String, url: String): Option[HttpResponse] =
+  protected def deleteFromUrl(username: String, password: String, url: String): Option[HttpResponse] =
     try {
       if(HttpRequestModule_DEBUG)
         Log.d(MODULE_TAG, "Attempting to delete resource at " + url)

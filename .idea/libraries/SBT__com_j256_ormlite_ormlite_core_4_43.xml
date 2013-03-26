@@ -3,7 +3,11 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/com.j256.ormlite/ormlite-core/jars/ormlite-core-4.43.jar!/" />
     </CLASSES>
-    <JAVADOC />
-    <SOURCES />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.j256.ormlite/ormlite-core/docs/ormlite-core-4.43-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.j256.ormlite/ormlite-core/srcs/ormlite-core-4.43-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

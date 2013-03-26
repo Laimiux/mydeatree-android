@@ -66,11 +66,9 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
 
     getLoaderManager.initLoader(0, null, this)
 
-    if (isServiceRunning(classOf[PublicIdeaFragment].getName, getActivity)) {
-
-    } else {
+    if (!isServiceRunning(classOf[PublicIdeaSyncService].getName, getActivity))
       refreshPublicIdeas()
-    }
+
   }
 
 

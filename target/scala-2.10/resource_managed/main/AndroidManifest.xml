@@ -51,9 +51,13 @@
         <service android:name=".services.IdeaCreateService"></service>
         <service android:name=".services.IdeaDeleteService"></service>
 
+        <service android:name=".services.FavoriteIdeaPostService"></service>
+        <service android:name=".services.FavoriteIdeaDeleteService"></service>
+        <service android:name=".services.FavoriteIdeaGetService"></service>
+
         <service android:name="com.limeblast.rest.GetCollectionServiceModule.GetObjectsService"></service>
 
-        <service android:name=".resources.FavoriteIdeaGetService" android:enabled="true"></service>
+        <service android:name=".services.FavoriteIdeaGetService" android:enabled="true"></service>
 
         <meta-data android:value=".SearchResultsActivity" android:name="android.app.default_searchable"></meta-data>
     </application>

@@ -16,6 +16,8 @@ import providers.{FavoriteIdeaProvider, PublicIdeaProvider}
 import java.util
 import com.limeblast.androidhelpers.{ScalaHandler, WhereClauseModule}
 import android.widget.TextView
+import services.FavoriteIdeaGetService
+import android.content.Intent
 
 /**
  * Created with IntelliJ IDEA.
@@ -55,6 +57,9 @@ class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.Loade
     handler = new ScalaHandler()
 
     setListAdapter(arrayAdapter)
+
+    if (!Helpers.isServiceRunning(classOf[FavoriteIdeaGetService].getName, getActivity))
+      refreshIdeas()
   }
 
   override def onResume() {
@@ -68,6 +73,13 @@ class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.Loade
     }
   }
 
+  def refreshIdeas() {
+
+    val intent = new Intent(getActivity.getApplicationContext, classOf[FavoriteIdeaGetService])
+    // Start service
+    getActivity.startService(intent)
+  }
+
 
   /**
    * Checks if public idea is in favorite ideas
@@ -77,12 +89,9 @@ class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.Loade
   private def isIdeaInFavorites(uri: String): Boolean = {
     val select = makeWhereClause((FavoriteIdeaColumns.KEY_IDEA, uri), (FavoriteIdeaColumns.KEY_IS_DELETED, false))
 
-    val cursor = getActivity.getContentResolver.query(FavoriteIdeaProvider.CONTENT_URI, Array(), select, null, null)
+    val cursor = getActivity.getContentResolver.query(FavoriteIdeaProvider.CONTENT_URI, null, select, null, null)
 
-    val doesIdeaExist = cursor  match {
-      case cursor:Cursor if (cursor.getCount > 0) => true
-      case _ => false
-    }
+    val doesIdeaExist = if (cursor.getCount() > 0) true else false
 
     cursor.close()
 

@@ -55,47 +55,47 @@ class PrivateIdeaSyncService extends IntentService("PrivateIdeaSyncService") wit
 
 
         /* Retrieve all private ideas from the database */
-        if (ideaArray != null) {
 
-          /* For all ideas retrieves insert or update or do nothing if old */
-          for (idea <- ideaArray) {
-            var isNew = true
-            // Check if already in db
-            for (obj <- objectsInDb) {
-              // idea found in database
-              if (idea.id == obj.id) {
-                isNew = false
-                // check if it is updated
-                if (idea.modified_date != obj.modified_date) {
-                  updateIdea(idea)
-                  ideasUpdated += 1
-                }
+
+        /* For all ideas retrieves insert or update or do nothing if old */
+        for (idea <- ideaArray) {
+          var isNew = true
+          // Check if already in db
+          for (obj <- objectsInDb) {
+            // idea found in database
+            if (idea.id == obj.id) {
+              isNew = false
+              // check if it is updated
+              if (idea.modified_date != obj.modified_date) {
+                updateIdea(idea)
+                ideasUpdated += 1
               }
             }
-
-            // idea is new so insert it into the database
-            if (isNew) {
-              insertIdea(idea)
-              newIdeas += 1
-            }
-
           }
 
-          // Remove ideas that don't exist on server no more
-          for (obj <- objectsInDb) {
-            var found = false
-            for (idea <- ideaArray) {
-              if (idea.id == obj.id) {
-                found = true
-              }
-            }
+          // idea is new so insert it into the database
+          if (isNew) {
+            insertIdea(idea)
+            newIdeas += 1
+          }
 
-            // If idea not found, remove it from db
-            if (!found) {
-              if (removeIdea(obj.id)) ideasDeleted += 1
+        }
+
+        // Remove ideas that don't exist on server no more
+        for (obj <- objectsInDb) {
+          var found = false
+          for (idea <- ideaArray) {
+            if (idea.id == obj.id) {
+              found = true
             }
+          }
+
+          // If idea not found, remove it from db
+          if (!found) {
+            if (removeIdea(obj.id)) ideasDeleted += 1
           }
         }
+
 
         if (AppSettings.DEBUG) Log.d(APP_TAG, "New private ideas added: " + newIdeas + ", privated ideas updated: " + ideasUpdated + ", and ideas removed " + ideasDeleted)
 

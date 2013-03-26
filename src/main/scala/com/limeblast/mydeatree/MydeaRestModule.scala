@@ -11,7 +11,7 @@ import providers.FavoriteIdeaProvider
 trait MydeaRestModule {
   private val APP_TAG = "MydeaRestModule"
 
-  def getApi(): String = "https://mydeatree.appspot.com/"
+  def getApi(): String = "https://mydeatree.appspot.com"
 
   var USERNAME = ""
   var PASSWORD = ""
@@ -21,7 +21,7 @@ trait MydeaRestModule {
     def username: String = USERNAME
     def password: String = PASSWORD
 
-    val resource_name = "api/v1/idea/"
+    val resource_name = "/api/v1/idea/"
 
 
     val objType: Class[Idea] = classOf[Idea]
@@ -32,7 +32,7 @@ trait MydeaRestModule {
 
   object PublicIdeaResource extends TastypieRestModule[PublicIdea, PublicIdeas] {
     def api_url: String = getApi()
-    val resource_name = "api/v1/public_ideas/"
+    val resource_name = "/api/v1/public_ideas/"
     def username: String = USERNAME
     def password: String = PASSWORD
 
@@ -55,7 +55,7 @@ trait MydeaRestModule {
 
   object FavoriteIdeaResource extends TastypieRestModule[FavoriteIdea, FavoriteIdeas]{
     def api_url: String = getApi()
-    val resource_name = "api/v1/favorite_ideas/"
+    val resource_name = "/api/v1/favorite_ideas/"
     def username: String = USERNAME
     def password: String = PASSWORD
 
@@ -64,7 +64,7 @@ trait MydeaRestModule {
     val collectionType: Class[FavoriteIdeas] = classOf[FavoriteIdeas]
 
     object Provider extends HasProvider {
-      implicit def provider_uri: Uri = FavoriteIdeaProvider.CONTENT_URI
+      val provider_uri: Uri = FavoriteIdeaProvider.CONTENT_URI
     }
 
   }

@@ -73,6 +73,8 @@
         <service android:name=".services.IdeaDeleteService" />
 
         <service android:name=".services.FavoriteIdeaPostService" />
+        <service android:name=".services.FavoriteIdeaDeleteService" />
+        <service android:name=".services.FavoriteIdeaGetService" />
 
         <service android:name="com.limeblast.rest.GetCollectionServiceModule.GetObjectsService" />
 

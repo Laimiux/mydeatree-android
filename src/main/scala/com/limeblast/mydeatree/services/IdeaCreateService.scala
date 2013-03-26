@@ -12,13 +12,6 @@ import com.limeblast.mydeatree.providers.RESTfulProvider
 import scala.Some
 import com.limeblast.rest.JsonModule
 
-/*
-object IdeaCreateService {
-  val IDEA_CREATED = 1000
-  val IDEA_CREATION_FAILED = 1001
-}
-*/
-
 class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModule with ProviderAccessModule with BasicIdeaModule {
 
   def onHandleIntent(intent: Intent) {
