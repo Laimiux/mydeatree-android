@@ -42,6 +42,27 @@ class FavoriteIdeaGetService extends IntentService("FavoriteIdeaGetService") wit
   private def synchronizeFavoritesWithDB(favorites: util.List[FavoriteIdea]) {
     val favoritesInDb = getFromDB()
 
+    insertNewFavorites(favorites, favoritesInDb)
+
+    removeFromDbOldFavorites(favorites, favoritesInDb)
+    // Remove the favorites that don't exist on server no more
+
+
+  }
+
+  private def removeFromDbOldFavorites(favorites: util.List[FavoriteIdea], favoritesInDb: List[ObjectWithUri]) {
+    for(favInDb <- favoritesInDb) {
+      var found = false
+
+      for (fav <- favorites if fav.idea.equals(favInDb.uri))
+        found = true
+
+      if(!found)
+        removeFromDB(favInDb)
+    }
+  }
+
+  private def insertNewFavorites(favorites: util.List[FavoriteIdea], favoritesInDb: List[ObjectWithUri]) {
     for (fav <- favorites) {
       var isNew = true
       for (obj <- favoritesInDb) {
@@ -52,18 +73,6 @@ class FavoriteIdeaGetService extends IntentService("FavoriteIdeaGetService") wit
       if (isNew)
         insertToDB(fav)
     }
-
-    // Remove the favorites that don't exist on server no more
-    for(favInDb <- favoritesInDb) {
-      var found = false
-
-      for (fav <- favorites if fav.idea.equals(favInDb.uri))
-          found = true
-
-      if(!found)
-        removeFromDB(favInDb)
-    }
-
   }
 
   private def getFromDB(): List[ObjectWithUri] = {
@@ -93,14 +102,22 @@ class FavoriteIdeaGetService extends IntentService("FavoriteIdeaGetService") wit
     } catch {
       case sql: SQLiteConstraintException => {
         if(App.DEBUG) Log.d("FavoriteIdeaGetService", "Failed to insert, so updating instead")
-         updateObjects(getContentResolver,
-           (FavoriteIdeaColumns.KEY_IDEA -> fav.idea),
-           null,
-           Map(FavoriteIdeaColumns.KEY_ID -> fav.id, FavoriteIdeaColumns.KEY_IS_NEW -> false, FavoriteIdeaColumns.KEY_IS_SYNCING -> false, FavoriteIdeaColumns.KEY_RESOURCE_URI -> fav.resource_uri))
+        updateDatabaseEntry(fav)
       }
       case e: Exception => if(App.DEBUG) Log.d("FavoriteIdeaGetService", "There was an error " + e.fillInStackTrace())
 
     }
+  }
+
+  private def updateDatabaseEntry(fav: FavoriteIdea) {
+    val newValues = Map(FavoriteIdeaColumns.KEY_ID -> fav.id,
+      FavoriteIdeaColumns.KEY_IS_NEW -> false,
+      FavoriteIdeaColumns.KEY_IS_SYNCING -> false,
+      FavoriteIdeaColumns.KEY_RESOURCE_URI -> fav.resource_uri)
+
+    val where = (FavoriteIdeaColumns.KEY_IDEA -> fav.idea)
+
+    updateObjects(getContentResolver, where, null, newValues)
   }
 
 

@@ -23,6 +23,7 @@ import concurrent.ops._
 import com.limeblast.rest.JsonModule
 
 import com.limeblast.androidhelpers.AndroidImplicits._
+import android.app.Activity
 
 /**
  * Created with IntelliJ IDEA.
@@ -89,7 +90,7 @@ with PublicIdeaDatabaseModule with WhereClauseModule with JsonModule with Favori
 
     intent.putExtra(App.FAVORITE_IDEA_GET_RESULT_RECEIVER, (resultCode: Int, resultData: Bundle) => {
       if (resultCode == 0) {
-        if(App.DEBUG) Log.d("FavoriteIdeaFragment", "Favorite Idea Get Service was successful.")
+        if (App.DEBUG) Log.d("FavoriteIdeaFragment", "Favorite Idea Get Service was successful.")
         success
       }
     })
@@ -175,19 +176,27 @@ with PublicIdeaDatabaseModule with WhereClauseModule with JsonModule with Favori
   private def getFavoriteIdeas(select: String): List[FavoriteIdea] = {
     var ideas = List[FavoriteIdea]()
 
-    // Get cursor
-    val cursor = getObjects(getActivity.getContentResolver,
-      null, select, null, null)
 
-    val keyIdIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_ID)
-    val keyIdeaIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_IDEA)
-    val keyUriIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_RESOURCE_URI)
+    getActivity match {
+      case a: Activity => {
+        // Get cursor
+        val cursor = getObjects(a.getContentResolver,
+          null, select, null, null)
 
-    while (cursor.moveToNext()) {
-      ideas = ideas :+ new FavoriteIdea(cursor.getString(keyIdIndex), cursor.getString(keyIdeaIndex), cursor.getString(keyUriIndex))
+        val keyIdIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_ID)
+        val keyIdeaIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_IDEA)
+        val keyUriIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_RESOURCE_URI)
+
+        while (cursor.moveToNext()) {
+          ideas = ideas :+ new FavoriteIdea(cursor.getString(keyIdIndex), cursor.getString(keyIdeaIndex), cursor.getString(keyUriIndex))
+        }
+
+        cursor.close()
+      }
+      case null => if (App.DEBUG) Log.d("FavoriteIdeaFragment", "No activity was found!")
     }
 
-    cursor.close()
+
 
     ideas
   }

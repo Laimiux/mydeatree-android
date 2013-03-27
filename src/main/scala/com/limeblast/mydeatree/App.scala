@@ -5,7 +5,7 @@ import android.preference.PreferenceManager
 import com.limeblast.androidhelpers.ProviderAccessModule
 import providers.RESTfulProvider
 
-object App extends MydeaRestModule  {
+object App extends MydeaRestModule {
   val DEBUG = true
 
   val PREF_USERNAME = "PREF_USERNAME"
