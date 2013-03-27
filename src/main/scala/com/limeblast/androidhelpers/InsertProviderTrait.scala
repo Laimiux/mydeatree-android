@@ -18,7 +18,7 @@ trait InsertProviderTrait extends ContentProvider with BasicContentProviderTrait
     val nullColumnHack: String = null
 
     // Insert the values into the table
-    val id: Long = db.insert(table_name, nullColumnHack, values)
+    val id: Long = db.insertOrThrow(table_name, nullColumnHack, values)
 
     // Construct and return the URI of the newly inserted row
     if(id > -1) {

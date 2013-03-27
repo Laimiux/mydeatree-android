@@ -4,6 +4,7 @@ import com.actionbarsherlock.app.{SherlockListFragment}
 import android.view.{View, ViewGroup, LayoutInflater}
 import android.os.{Bundle}
 import com.limeblast.mydeatree._
+import activities.MainActivity
 import adapters.{FavoriteIdeaListAdapter}
 import android.util.Log
 import com.limeblast.mydeatree.AppSettings._
@@ -14,10 +15,14 @@ import android.support.v4.content.{CursorLoader, Loader}
 import providers.{FavoriteIdeaProvider, PublicIdeaProvider}
 
 import java.util
-import com.limeblast.androidhelpers.{ScalaHandler, WhereClauseModule}
+import com.limeblast.androidhelpers.{AndroidHelpers, ScalaHandler, WhereClauseModule}
 import android.widget.TextView
-import services.FavoriteIdeaGetService
+import services.{FavoriteIdeaDeleteService, FavoriteIdeaPostService, FavoriteIdeaGetService}
 import android.content.Intent
+import concurrent.ops._
+import com.limeblast.rest.JsonModule
+
+import com.limeblast.androidhelpers.AndroidImplicits._
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,7 +31,8 @@ import android.content.Intent
  * Time: 12:32 PM
  * To change this template use File | Settings | File Templates.
  */
-class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.LoaderCallbacks[Cursor] with PublicIdeaDatabaseModule with WhereClauseModule {
+class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.LoaderCallbacks[Cursor]
+with PublicIdeaDatabaseModule with WhereClauseModule with JsonModule with FavoriteIdeaProviderModule {
 
   private var favoriteIdeas = new util.ArrayList[PublicIdea]()
   private lazy val arrayAdapter = new FavoriteIdeaListAdapter(getActivity(), R.layout.public_idea_entry, favoriteIdeas)
@@ -39,7 +45,6 @@ class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.Loade
   //------------ FRAGMENT LIFECYCLE EVENTS ----------------\\
   //-------------------------------------------------------\\
   override def onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View = {
-    //if (AppSettings.DEBUG) Log.d(APP_TAG, "Creating PrivateIdeaListFragment view")
     val fragmentView = inflater.inflate(R.layout.favorite_idea_layout, container, false)
 
     fragmentView.setFocusableInTouchMode(true)
@@ -58,8 +63,13 @@ class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.Loade
 
     setListAdapter(arrayAdapter)
 
-    if (!Helpers.isServiceRunning(classOf[FavoriteIdeaGetService].getName, getActivity))
-      refreshIdeas()
+
+    // Refresh resources
+    spawn {
+      refreshResources()
+    }
+
+
   }
 
   override def onResume() {
@@ -73,9 +83,16 @@ class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.Loade
     }
   }
 
-  def refreshIdeas() {
+  def getLatestFavorites[F](success: => F) {
 
     val intent = new Intent(getActivity.getApplicationContext, classOf[FavoriteIdeaGetService])
+
+    intent.putExtra(App.FAVORITE_IDEA_GET_RESULT_RECEIVER, (resultCode: Int, resultData: Bundle) => {
+      if (resultCode == 0) {
+        if(App.DEBUG) Log.d("FavoriteIdeaFragment", "Favorite Idea Get Service was successful.")
+        success
+      }
+    })
     // Start service
     getActivity.startService(intent)
   }
@@ -90,13 +107,89 @@ class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.Loade
     val resolver = getActivity.getContentResolver
     val select = makeWhereClause((FavoriteIdeaColumns.KEY_IDEA, uri), (FavoriteIdeaColumns.KEY_IS_DELETED, false))
 
-    val cursor = App.FavoriteIdeaResource.Provider.getObjects(resolver, Array(), select, null, null)
+    val cursor = getObjects(resolver, Array(), select, null, null)
 
     val doesIdeaExist = cursor.getCount() > 0
 
     cursor.close()
 
     doesIdeaExist
+  }
+
+
+  //-------------------------------------------------------\\
+  //------------------ SYNC FUNCTIONS ---------------------\\
+  //-------------------------------------------------------\\
+  private def refreshResources() {
+    if (App.DEBUG) Log.d("MainActivity", "---------- STARTING REFRESH RESOURCES ------------")
+
+    if (AndroidHelpers.isOnline(getActivity) && (!Helpers.isServiceRunning(classOf[FavoriteIdeaGetService].getName, getActivity))) {
+
+      getLatestFavorites({
+        // Refresh favorite objects
+        val favoritesToUpload = getFavoritesToUpload()
+        val favoritesToDelete = getFavoritesToDelete()
+
+        if (App.DEBUG) {
+          Log.d("MainActivity", "There is " + favoritesToUpload.size + " favorites to upload")
+          Log.d("MainActivity", "There is " + favoritesToDelete.size + " favorites to delete")
+        }
+
+        for (fav <- favoritesToUpload) {
+          val intent = new Intent(getActivity, classOf[FavoriteIdeaPostService])
+          intent.putExtra("favorite_idea", convertObjectToJson(fav))
+
+          getActivity.startService(intent)
+        }
+
+        for (fav <- favoritesToDelete) {
+          val intent = new Intent(getActivity, classOf[FavoriteIdeaDeleteService])
+          intent.putExtra("favorite_idea", convertObjectToJson(fav))
+
+          getActivity.startService(intent)
+        }
+      })
+
+
+
+      if (App.DEBUG) Log.d("MainActivity", "---------- REFRESH RESOURCES FINISHED ------------")
+    }
+
+
+  }
+
+  private def getFavoritesToUpload(): List[FavoriteIdea] = {
+    // Create select clause
+    val select: String = makeWhereClause((FavoriteIdeaColumns.KEY_IS_NEW, true), (FavoriteIdeaColumns.KEY_IS_SYNCING, false), (FavoriteIdeaColumns.KEY_IS_DELETED, false))
+
+    getFavoriteIdeas(select)
+  }
+
+  private def getFavoritesToDelete(): List[FavoriteIdea] = {
+    // Create select clause
+    val select = makeWhereClause((FavoriteIdeaColumns.KEY_IS_DELETED, true))
+
+    getFavoriteIdeas(select)
+  }
+
+  private def getFavoriteIdeas(select: String): List[FavoriteIdea] = {
+    var ideas = List[FavoriteIdea]()
+
+    // Get cursor
+    val cursor = getObjects(getActivity.getContentResolver,
+      null, select, null, null)
+
+    val keyIdIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_ID)
+    val keyIdeaIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_IDEA)
+    val keyUriIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_RESOURCE_URI)
+
+    while (cursor.moveToNext()) {
+      ideas = ideas :+ new FavoriteIdea(cursor.getString(keyIdIndex), cursor.getString(keyIdeaIndex), cursor.getString(keyUriIndex))
+    }
+
+    cursor.close()
+
+    ideas
   }
 
   //-------------------------------------------------------\\

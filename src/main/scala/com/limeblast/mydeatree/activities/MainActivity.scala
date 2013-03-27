@@ -98,11 +98,6 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
     Log.d(APP_TAG, "Setting tab to " + tabSelected)
     getSupportActionBar.setSelectedNavigationItem(tabSelected)
 
-    // Refresh resources
-    spawn {
-      refreshResources()
-    }
-
     //
     //val provider = new PersonalIdeaProvider(getContentResolver)
     //provider.get_all()
@@ -159,75 +154,7 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
     IS_MAIN_ACTIVITY_RUNNING = false
   }
 
-  //-------------------------------------------------------\\
-  //------------------ SYNC FUNCTIONS ---------------------\\
-  //-------------------------------------------------------\\
-  private def refreshResources() {
-    if (App.DEBUG) Log.d("MainActivity", "---------- STARTING REFRESH RESOURCES ------------")
 
-    if (AndroidHelpers.isOnline(this)) {
-      // Refresh favorite objects
-      val favoritesToUpload = getFavoritesToUpload()
-      val favoritesToDelete = getFavoritesToDelete()
-
-      if (App.DEBUG) {
-        Log.d("MainActivity", "There is " + favoritesToUpload.size + " favorites to upload")
-        Log.d("MainActivity", "There is " + favoritesToDelete.size + " favorites to delete")
-      }
-
-      for (fav <- favoritesToUpload) {
-        val intent = new Intent(this, classOf[FavoriteIdeaPostService])
-        intent.putExtra("favorite_idea", convertObjectToJson(fav))
-
-        startService(intent)
-      }
-
-      for (fav <- favoritesToDelete) {
-        val intent = new Intent(this, classOf[FavoriteIdeaDeleteService])
-        intent.putExtra("favorite_idea", convertObjectToJson(fav))
-
-        startService(intent)
-      }
-
-      if (App.DEBUG) Log.d("MainActivity", "---------- REFRESH RESOURCES FINISHED ------------")
-    }
-
-
-  }
-
-  private def getFavoritesToUpload(): List[FavoriteIdea] = {
-    // Create select clause
-    val select: String = makeWhereClause((FavoriteIdeaColumns.KEY_IS_NEW, true), (FavoriteIdeaColumns.KEY_IS_SYNCING, false), (FavoriteIdeaColumns.KEY_IS_DELETED, false))
-
-    getFavoriteIdeas(select)
-  }
-
-  private def getFavoritesToDelete(): List[FavoriteIdea] = {
-    // Create select clause
-    val select = makeWhereClause((FavoriteIdeaColumns.KEY_IS_DELETED, true))
-
-    getFavoriteIdeas(select)
-  }
-
-  private def getFavoriteIdeas(select: String): List[FavoriteIdea] = {
-    var ideas = List[FavoriteIdea]()
-
-    // Get cursor
-    val cursor = App.FavoriteIdeaResource.Provider.getObjects(getContentResolver,
-      null, select, null, null)
-
-    val keyIdIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_ID)
-    val keyIdeaIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_IDEA)
-    val keyUriIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_RESOURCE_URI)
-
-    while(cursor.moveToNext()) {
-      ideas = ideas :+ new FavoriteIdea(cursor.getString(keyIdIndex), cursor.getString(keyIdeaIndex), cursor.getString(keyUriIndex))
-    }
-
-    cursor.close()
-
-    ideas
-  }
 
   //-------------------------------------------------------\\
   //------------ VARIOUS ACTIVITY HANDLERS ----------------\\
@@ -256,29 +183,47 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
   //-------------------------------------------------------\\
   //---------------- LOG OUT FUNCTION ---------------------\\
   //-------------------------------------------------------\\
-  def logout() {
+  private def clearUserInfoFromPreferences() {
     val context = getApplicationContext
     val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-
-    // Remove all personal ideas
-    val uri = Uri.withAppendedPath(RESTfulProvider.CONTENT_URI, "/" + App.USERNAME)
-    getContentResolver.delete(uri, null, null)
 
     val editor = prefs.edit()
     editor.putString(App.PREF_USERNAME, "")
     editor.putString(App.PREF_PASSWORD, "")
     editor.commit()
+  }
 
-    Toast.makeText(MainActivity.this, "See you later, " + App.USERNAME, Toast.LENGTH_SHORT).show()
+  private def removeUserDatabaseInfo() {
+    // Remove all personal ideas
+    val uri = Uri.withAppendedPath(RESTfulProvider.CONTENT_URI, "/" + App.USERNAME)
+    getContentResolver.delete(uri, null, null)
+  }
 
+  private def clearUserLoginVariables() {
     App.USERNAME = ""
     App.PASSWORD = ""
+  }
 
+  private def moveBackToLogin() {
     // Move back to login screen
     val intent = new Intent()
     intent.setClass(MainActivity.this, classOf[LoginActivity])
     startActivity(intent)
     finish()
+  }
+
+  /**
+   * Logs the current user out.
+   */
+  def logout() {
+    removeUserDatabaseInfo()
+    clearUserInfoFromPreferences()
+
+    Toast.makeText(MainActivity.this, "See you later, " + App.USERNAME, Toast.LENGTH_SHORT).show()
+
+    clearUserLoginVariables()
+
+    moveBackToLogin()
   }
 
 
@@ -292,20 +237,20 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
       case 2 => setToFavoriteTabMenu()
     }
 
-  def setToFavoriteTabMenu() = {
+  private def setToFavoriteTabMenu() = {
     actionMenu.setGroupVisible(R.id.menu_public_actions, false)
     actionMenu.setGroupVisible(R.id.menu_private_actions, false)
 
   }
 
-  def setToPublicMenu() {
+  private def setToPublicMenu() {
     actionMenu.setGroupEnabled(R.id.menu_public_actions, true)
 
     actionMenu.setGroupVisible(R.id.menu_public_actions, true)
     actionMenu.setGroupVisible(R.id.menu_private_actions, false)
   }
 
-  def setToPrivateMenu() {
+  private def setToPrivateMenu() {
     if (actionMenu != null) {
       actionMenu.setGroupEnabled(R.id.menu_private_actions, true)
       actionMenu.setGroupVisible(R.id.menu_public_actions, false)

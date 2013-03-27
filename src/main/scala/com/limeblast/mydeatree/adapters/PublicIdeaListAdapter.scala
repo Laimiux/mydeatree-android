@@ -7,15 +7,13 @@ import android.view.{ViewGroup, View}
 import android.view.View.OnClickListener
 import android.database.Cursor
 
-import com.limeblast.androidhelpers.{ProviderAccessModule, Inflater}
+import com.limeblast.androidhelpers.{Inflater}
 import com.limeblast.mydeatree._
-import com.limeblast.mydeatree.providers.FavoriteIdeaProvider
 
-import com.limeblast.mydeatree.App.FavoriteIdeaResource.Provider
 
 
 class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util.List[PublicIdea])
-  extends ArrayAdapter(context, resourceId, objects) with Inflater with ProviderAccessModule {
+  extends ArrayAdapter(context, resourceId, objects) with Inflater with FavoriteIdeaProviderModule {
 
   /*
   def getFavoriteIdea(idea: Idea): Cursor = getContext.getApplicationContext.getContentResolver.query(FavoriteIdeaProvider.CONTENT_URI,
@@ -53,21 +51,8 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
       }
     })
 
-
-
-
     // Checks if idea is favorited
-    var favorited: Boolean = {
-      val resolver = context.getContentResolver
-      val select = makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> false)
-
-      val cursor: Cursor = Provider.getObjects(resolver, null, select, null, null)
-
-      val isIdeaFavorited = cursor.getCount() > 0
-      cursor.close()
-
-      isIdeaFavorited
-    }
+    var favorited: Boolean = isFavorite(idea)
 
 
     val favoriteButton = cView.findViewById(R.id.favorite_button).asInstanceOf[Button]
@@ -113,6 +98,19 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
     return cView
   }
 
+  private def isFavorite(idea: PublicIdea): Boolean = {
+
+      val resolver = context.getContentResolver
+      val select = makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> false)
+
+      val cursor: Cursor = getObjects(resolver, null, select, null, null)
+
+      val isIdeaFavorited = cursor.getCount() > 0
+      cursor.close()
+
+      isIdeaFavorited
+
+  }
 
   /**
    * Save to database a favorite idea
@@ -121,7 +119,7 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
   private def setToFavorite(idea: PublicIdea) {
     val resolver = context.getContentResolver
     val select = makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> true)
-    val cursor = Provider.getObjects(resolver, null, select, null, null)
+    val cursor = getObjects(resolver, null, select, null, null)
 
 
     val isNew = cursor.getCount > 0
@@ -129,9 +127,9 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
     cursor.close()
 
     if (isNew)  // Update the favorite
-      Provider.updateObjects(resolver, (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri), null, Map(FavoriteIdeaColumns.KEY_IS_DELETED -> false))
+      updateObjects(resolver, (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri), null, Map(FavoriteIdeaColumns.KEY_IS_DELETED -> false))
     else  // Insert a new favorite
-      Provider.insertObject(resolver)(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_NEW -> true)
+      insertObject(resolver)(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_NEW -> true)
   }
 
 
@@ -143,16 +141,16 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
   private def removeFavorite(idea: PublicIdea) {
     val resolver = context.getContentResolver
     val select = makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_NEW -> true)
-    val cursor = Provider.getObjects(resolver, null, select, null, null)
+    val cursor = getObjects(resolver, null, select, null, null)
 
     val isOnServer = cursor.getCount == 0
 
     cursor.close()
 
     if (isOnServer) {
-      Provider.updateObjects(resolver, (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri), null, Map(FavoriteIdeaColumns.KEY_IS_DELETED -> true))
+      updateObjects(resolver, (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri), null, Map(FavoriteIdeaColumns.KEY_IS_DELETED -> true))
     } else {
-      Provider.deleteObjects(resolver, (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri), null)
+      deleteObjects(resolver, (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri), null)
     }
   }
 }

@@ -3,11 +3,11 @@ package com.limeblast.mydeatree.services
 import android.app.IntentService
 import android.content.{ContentValues, Intent}
 import com.limeblast.rest.JsonModule
-import com.limeblast.mydeatree.{FavoriteIdeaColumns, App, FavoriteIdea}
+import com.limeblast.mydeatree.{FavoriteIdeaProviderModule, FavoriteIdeaColumns, App, FavoriteIdea}
 import android.util.Log
 
 
-class FavoriteIdeaPostService extends IntentService("FavoriteIdeaPostService") with JsonModule {
+class FavoriteIdeaPostService extends IntentService("FavoriteIdeaPostService") with JsonModule with FavoriteIdeaProviderModule {
   def onHandleIntent(intent: Intent) {
     val favoriteIdeaJson = intent.getStringExtra("favorite_idea")
 
@@ -22,7 +22,7 @@ class FavoriteIdeaPostService extends IntentService("FavoriteIdeaPostService") w
       Log.d("FavoriteIdeaPostService", "Favorite idea being posted is " + favoriteIdeaJson)
     // Update the database to mark the object as syncing
     val whereMap = Map(FavoriteIdeaColumns.KEY_IDEA -> favoriteIdea.idea)
-    App.FavoriteIdeaResource.Provider.updateObjects(getContentResolver, whereMap, null, Map(FavoriteIdeaColumns.KEY_IS_SYNCING -> true))
+    updateObjects(getContentResolver, whereMap, null, Map(FavoriteIdeaColumns.KEY_IS_SYNCING -> true))
 
     // Post the object to the server
     App.FavoriteIdeaResource.postObject(favoriteIdea) match {
@@ -34,7 +34,7 @@ class FavoriteIdeaPostService extends IntentService("FavoriteIdeaPostService") w
         // Remove syncing part
         // Update the database to mark the object as syncing
         val whereMap = Map(FavoriteIdeaColumns.KEY_IDEA -> favoriteIdea.idea)
-        App.FavoriteIdeaResource.Provider.updateObjects(getContentResolver, whereMap, null, Map(FavoriteIdeaColumns.KEY_IS_SYNCING -> false))
+        updateObjects(getContentResolver, whereMap, null, Map(FavoriteIdeaColumns.KEY_IS_SYNCING -> false))
       }
     }
   }
@@ -44,7 +44,7 @@ class FavoriteIdeaPostService extends IntentService("FavoriteIdeaPostService") w
    * @param obj Object sent back
    */
   private def updateDatabaseEntry(obj: FavoriteIdea) {
-    App.FavoriteIdeaResource.Provider.updateObjects(getContentResolver, (FavoriteIdeaColumns.KEY_IDEA -> obj.idea),
+    updateObjects(getContentResolver, (FavoriteIdeaColumns.KEY_IDEA -> obj.idea),
       null, Map(FavoriteIdeaColumns.KEY_ID -> obj.id,
         FavoriteIdeaColumns.KEY_IDEA -> obj.idea,
         FavoriteIdeaColumns.KEY_RESOURCE_URI -> obj.resource_uri,

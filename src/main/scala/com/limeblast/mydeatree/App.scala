@@ -5,11 +5,14 @@ import android.preference.PreferenceManager
 import com.limeblast.androidhelpers.ProviderAccessModule
 import providers.RESTfulProvider
 
-object App extends MydeaRestModule with ProviderAccessModule {
+object App extends MydeaRestModule  {
   val DEBUG = true
 
   val PREF_USERNAME = "PREF_USERNAME"
   val PREF_PASSWORD = "PREF_PASSWORD"
+
+  // Constant result receiver info
+  val FAVORITE_IDEA_GET_RESULT_RECEIVER = "favorite_idea_get_receiver"
 
   /*
    * Safe way to access username

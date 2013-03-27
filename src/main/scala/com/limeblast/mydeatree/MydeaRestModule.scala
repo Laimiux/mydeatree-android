@@ -62,10 +62,5 @@ trait MydeaRestModule {
 
     val objType: Class[FavoriteIdea] = classOf[FavoriteIdea]
     val collectionType: Class[FavoriteIdeas] = classOf[FavoriteIdeas]
-
-    object Provider extends HasProvider {
-      val provider_uri: Uri = FavoriteIdeaProvider.CONTENT_URI
-    }
-
   }
 }

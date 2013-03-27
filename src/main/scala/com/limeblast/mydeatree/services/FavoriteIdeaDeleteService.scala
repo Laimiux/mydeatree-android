@@ -3,10 +3,10 @@ package com.limeblast.mydeatree.services
 import android.app.IntentService
 import android.content.Intent
 import com.limeblast.rest.JsonModule
-import com.limeblast.mydeatree.{FavoriteIdeaColumns, App, FavoriteIdea}
+import com.limeblast.mydeatree.{FavoriteIdeaProviderModule, FavoriteIdeaColumns, App, FavoriteIdea}
 import android.util.Log
 
-class FavoriteIdeaDeleteService extends IntentService("FavoriteIdeaDeleteService") with JsonModule {
+class FavoriteIdeaDeleteService extends IntentService("FavoriteIdeaDeleteService") with JsonModule with FavoriteIdeaProviderModule{
   def onHandleIntent(intent: Intent) {
     val favoriteIdeaJson = intent.getStringExtra("favorite_idea")
 
@@ -25,6 +25,6 @@ class FavoriteIdeaDeleteService extends IntentService("FavoriteIdeaDeleteService
   }
 
   private def removeFromDB(fav: FavoriteIdea) =
-    App.FavoriteIdeaResource.Provider.deleteObjects(getContentResolver, (FavoriteIdeaColumns.KEY_IDEA -> fav.idea), null)
+    deleteObjects(getContentResolver, (FavoriteIdeaColumns.KEY_IDEA -> fav.idea), null)
 
 }
