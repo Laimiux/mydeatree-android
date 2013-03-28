@@ -60,7 +60,7 @@ sealed trait IntentFunctionToResultReceiver extends FunctionToResultReceiver{
  * Lots of implicit object conversions to give more
  * functionality to certain android classes.
  */
-object ScalifiedAndroid {
+object ScalifiedAndroid extends AdapterViewConversions with AlertDialogBuilderConversions {
   implicit def textViewToHasOnClick[T <: TextView](tv: T): HasOnClick[T] = new HasOnClick[T] {
     val self = tv
   }

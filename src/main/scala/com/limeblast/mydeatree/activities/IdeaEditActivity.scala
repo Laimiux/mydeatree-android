@@ -32,9 +32,9 @@ class IdeaEditActivity extends Activity with TypedActivity with JsonModule with 
     titleEdit.setText(oldIdea.title)
     textEdit.setText(oldIdea.text)
 
-    if (oldIdea.public) {
-      publicCheckBox.setChecked(true)
-    }
+
+    publicCheckBox.setChecked(oldIdea.public)
+
 
     submitButton.onClick((view: View) => {
       val newTitle = titleEdit.getText.toString

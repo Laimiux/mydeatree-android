@@ -14,7 +14,6 @@ import util.Collections
 import android.database.Cursor
 import android.support.v4.content.{CursorLoader, Loader}
 
-import android.net.Uri
 
 import android.app.AlertDialog
 
@@ -24,8 +23,7 @@ import android.view.View.OnKeyListener
 import content.{ContentValues, DialogInterface, Intent}
 import android.preference.PreferenceManager
 
-import com.limeblast.androidhelpers.{ScalifiedAndroid, AndroidImplicits, AndroidHelpers}
-import AndroidImplicits.{functionToLongListener, functionToDialogOnClickListener}
+import com.limeblast.androidhelpers.{ScalifiedAndroid, AndroidHelpers}
 import ScalifiedAndroid._
 
 
@@ -43,6 +41,7 @@ import com.limeblast.mydeatree.Helpers._
 import scala.Some
 import services.{PrivateIdeaSyncService, IdeaUpdateService, IdeaDeleteService, IdeaCreateService}
 import com.limeblast.rest.JsonModule
+import android.app.AlertDialog.Builder
 
 class PrivateIdeaListFragment extends SherlockListFragment with LoaderManager.LoaderCallbacks[Cursor]
 with OnKeyListener with JsonModule with PersonalIdeaGetModule {
@@ -108,7 +107,7 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
     aa = new IdeaListAdapter(getActivity(), layoutID, privateIdeas)
     setListAdapter(aa)
 
-    getListView.setOnItemLongClickListener((parent: AdapterView[_], view: View, position: Int, id: Long) => {
+    getListView.onItemLongClick((parent: AdapterView[_], view: View, position: Int, id: Long) => {
       getListView.getItemAtPosition(position) match {
         case idea: Idea => showPrivateIdeaOptions(idea)
         case _ => if (AppSettings.DEBUG) Log.d(APP_TAG, "Some unknown object was selected")
@@ -222,34 +221,39 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
   }
 
   def removeIdeaRequest(idea: Idea) {
-    // This means idea is on server
-    if (idea.id != null) {
-      // Mark idea for deletion
-      val resolver = getActivity.getContentResolver
-      val where = IdeaHelper.KEY_ID + "=" + idea.id
+    // Check if idea is on server
+    idea.id match {
+      // Idea isn't on server
+      case null => {
+        // This means we just need to get rid of this idea from the database
+        val resolver = getActivity.getContentResolver
+        val where = IdeaHelper.KEY_TITLE + "='" + idea.title + "' AND " + IdeaHelper.KEY_TEXT +
+          "='" + idea.text + "' AND " + IdeaHelper.KEY_CREATED_DATE + "='" + idea.created_date + "'"
 
-      val values = new ContentValues()
-      values.put(IdeaHelper.KEY_IS_IDEA_DELETED, true)
-
-      resolver.update(RESTfulProvider.CONTENT_URI, values, where, null)
-
-      // If there is internet connection
-      // start service to delete the idea
-      if (AndroidHelpers.isOnline(getActivity)) {
-
-        val intent = new Intent(getActivity, classOf[IdeaDeleteService])
-        intent.putExtra("idea", convertObjectToJson(idea))
-        getActivity.startService(intent)
+        resolver.delete(RESTfulProvider.CONTENT_URI, where, null)
       }
-    } else {
-      // This means we just need to get rid of this idea from the database
-      val resolver = getActivity.getContentResolver
-      val where = IdeaHelper.KEY_TITLE + "='" + idea.title + "' AND " + IdeaHelper.KEY_TEXT +
-        "='" + idea.text + "' AND " + IdeaHelper.KEY_CREATED_DATE + "='" + idea.created_date + "'"
+      case _ => {
 
-      resolver.delete(RESTfulProvider.CONTENT_URI, where, null)
+          // Mark idea for deletion
+          val resolver = getActivity.getContentResolver
+          val where = IdeaHelper.KEY_ID + "=" + idea.id
+
+          val values = new ContentValues()
+          values.put(IdeaHelper.KEY_IS_IDEA_DELETED, true)
+
+          resolver.update(RESTfulProvider.CONTENT_URI, values, where, null)
+
+          // If there is internet connection
+          // start service to delete the idea
+          if (AndroidHelpers.isOnline(getActivity)) {
+
+            val intent = new Intent(getActivity, classOf[IdeaDeleteService])
+            intent.putExtra("idea", convertObjectToJson(idea))
+            getActivity.startService(intent)
+          }
+
+      }
     }
-
 
     handler.post(refresh)
   }
@@ -316,7 +320,7 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
   //------------BUILDERS FOR VARIOUS DIALOG ---------------\\
   //-------------------------------------------------------\\
   private def showPrivateIdeaOptions(idea: Idea) {
-    val builder = new AlertDialog.Builder(getActivity)
+    val builder: Builder = new AlertDialog.Builder(getActivity)
     builder.setTitle(idea.title)
     builder.setItems(R.array.private_idea_options, (dialog: DialogInterface, which: Int) => {
       if (which == 0) {

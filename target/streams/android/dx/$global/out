@@ -1,1 +1,2 @@
-[0m[[0mdebug[0m] [0mdex file /Users/Laimiux/Dropbox/mydeatree-android/target/classes.dex uptodate, skipping[0m
+[0m[[0mdebug[0m] [0m/Applications/adt-bundle-mac/sdk/platform-tools/dx -JXmx512m --dex --num-threads=4 --output=/Users/Laimiux/Dropbox/mydeatree-android/target/classes.dex /Users/Laimiux/Dropbox/mydeatree-android/target/classes.min.jar[0m
+[0m[[0minfo[0m] [0mDexing /Users/Laimiux/Dropbox/mydeatree-android/target/classes.dex[0m
