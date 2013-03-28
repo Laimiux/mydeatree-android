@@ -11,7 +11,7 @@ import com.actionbarsherlock.view.{Menu, MenuItem}
 import com.actionbarsherlock.app.ActionBar.Tab
 
 import android.net.Uri
-import com.limeblast.androidhelpers.{WhereClauseModule, AndroidHelpers, ScalaHandler}
+import com.limeblast.androidhelpers.{WhereClauseModule, AndroidHelpers}
 import com.limeblast.mydeatree._
 import fragments.{FavoriteIdeaFragment, PrivateIdeaListFragment, PublicIdeaFragment}
 import providers.RESTfulProvider

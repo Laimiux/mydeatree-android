@@ -4,19 +4,16 @@ import android.os.Bundle
 import android.widget.{Toast, EditText, CheckBox, Button}
 import android.view.View
 
-import android.content.{ContentUris, Intent}
 import android.view.ViewGroup.LayoutParams
 import scala.concurrent.ops.spawn
 
-import com.limeblast.androidhelpers.AndroidImplicits.toListener
 
-import com.limeblast.androidhelpers.{AndroidHelpers}
 import android.app.Activity
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.RESTfulProvider
-import services.IdeaUpdateService
-import android.util.Log
 import com.limeblast.rest.JsonModule
+
+import com.limeblast.androidhelpers.ScalifiedAndroid._
 
 class IdeaEditActivity extends Activity with TypedActivity with JsonModule with BasicIdeaModule {
 
@@ -39,7 +36,7 @@ class IdeaEditActivity extends Activity with TypedActivity with JsonModule with 
       publicCheckBox.setChecked(true)
     }
 
-    submitButton.setOnClickListener((view: View) => {
+    submitButton.onClick((view: View) => {
       val newTitle = titleEdit.getText.toString
       val newText = textEdit.getText.toString
       val newPublic = publicCheckBox.isChecked
@@ -64,7 +61,7 @@ class IdeaEditActivity extends Activity with TypedActivity with JsonModule with 
       }
     })
 
-    findView(TR.cancel_button).setOnClickListener((view: View) => finish())
+    findView(TR.cancel_button).onClick((view: View) => finish())
   }
 
   private def updateIdea(idea: Idea) {

@@ -8,6 +8,7 @@ import android.content.DialogInterface
 
 object AndroidImplicits {
 
+  /*
 
   implicit def toListener[F](f: View => F) =
     new View.OnClickListener {
@@ -15,6 +16,7 @@ object AndroidImplicits {
         f(view)
       }
     }
+    */
 
   implicit def functionToLongListener[F](f: (AdapterView[_],View, Int, Long) => Boolean): AdapterView.OnItemLongClickListener =
     new AdapterView.OnItemLongClickListener {
@@ -22,6 +24,8 @@ object AndroidImplicits {
         f(parent, view, position, id)
       }
     }
+
+  /*
 
   implicit def toRunnable[F](f: => F): Runnable =
     new Runnable() {
@@ -33,6 +37,7 @@ object AndroidImplicits {
       f(resultCode, resultData)
     }
   }
+  */
 
 
   implicit def functionToDialogOnClickListener[F](f:(DialogInterface, Int) => F): DialogInterface.OnClickListener =

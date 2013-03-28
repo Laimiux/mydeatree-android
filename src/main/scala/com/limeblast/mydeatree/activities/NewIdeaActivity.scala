@@ -5,17 +5,17 @@ import android.view.View
 
 
 import android.app._
-import android.content.ContentValues
 import android.view.ViewGroup.LayoutParams
 
 
 import android.text.TextUtils
 
-import com.limeblast.androidhelpers.{Toaster, AndroidImplicits}
-import AndroidImplicits.toListener
+import com.limeblast.androidhelpers.Toaster
+
 import com.limeblast.mydeatree._
-import com.limeblast.mydeatree.AppSettings._
 import providers.RESTfulProvider
+
+import com.limeblast.androidhelpers.ScalifiedAndroid._
 
 
 class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule {
@@ -41,7 +41,7 @@ class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule {
 
 
     // Set the submit button click listener
-    findView(TR.idea_submit_button).setOnClickListener((view: View) => {
+    findView(TR.idea_submit_button).onClick((view: View) => {
       val title = TextUtils.htmlEncode(titleField.getText.toString)
       val text = TextUtils.htmlEncode(textField.getText.toString)
       val isPublic = publicCheckBox.isChecked
@@ -58,7 +58,7 @@ class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule {
     })
 
     // Set cancel button click listener
-    findView(TR.idea_cancel_button).setOnClickListener((view: View) => finish())
+    findView(TR.idea_cancel_button).onClick((view: View) => finish())
 
   }
 

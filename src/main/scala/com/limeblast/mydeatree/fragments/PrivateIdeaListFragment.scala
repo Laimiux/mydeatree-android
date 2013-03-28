@@ -1,7 +1,7 @@
 package com.limeblast.mydeatree.fragments
 
 import android.support.v4.app.LoaderManager
-import android.os.Bundle
+import android.os.{Handler, Bundle}
 import android.widget._
 import java.util
 import concurrent.ops._
@@ -24,8 +24,11 @@ import android.view.View.OnKeyListener
 import content.{ContentValues, DialogInterface, Intent}
 import android.preference.PreferenceManager
 
-import com.limeblast.androidhelpers.{ScalaHandler, AndroidImplicits, AndroidHelpers}
-import AndroidImplicits.{functionToResultReceicer, functionToLongListener, functionToDialogOnClickListener}
+import com.limeblast.androidhelpers.{ScalifiedAndroid, AndroidImplicits, AndroidHelpers}
+import AndroidImplicits.{functionToLongListener, functionToDialogOnClickListener}
+import ScalifiedAndroid._
+
+
 
 
 import com.actionbarsherlock.app.{SherlockFragmentActivity, SherlockListFragment}
@@ -35,18 +38,8 @@ import adapters.IdeaListAdapter
 import com.limeblast.mydeatree.activities.{IdeaEditActivity, NewIdeaActivity}
 import com.limeblast.mydeatree.AppSettings._
 import com.limeblast.mydeatree.providers.RESTfulProvider
-import scala.Some
-import scala.Some
-import scala.Some
-import scala.Some
-import scala.Some
-import scala.Some
-import scala.Some
-import scala.Some
+
 import com.limeblast.mydeatree.Helpers._
-import scala.Some
-import scala.Some
-import scala.Some
 import scala.Some
 import services.{PrivateIdeaSyncService, IdeaUpdateService, IdeaDeleteService, IdeaCreateService}
 import com.limeblast.rest.JsonModule
@@ -56,7 +49,7 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
 
   var aa: ArrayAdapter[Idea] = _
 
-  private var handler: ScalaHandler = _
+  private var handler: Handler = _
 
   // Sorting status
   var sort_by = 0
@@ -98,7 +91,7 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
 
     setSortStatus()
 
-    handler = new ScalaHandler()
+    handler = new Handler()
 
 
     if (aa != null) {

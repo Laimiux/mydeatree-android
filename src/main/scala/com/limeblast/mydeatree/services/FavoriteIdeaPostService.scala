@@ -21,19 +21,19 @@ class FavoriteIdeaPostService extends IntentService("FavoriteIdeaPostService") w
     if(App.DEBUG)
       Log.d("FavoriteIdeaPostService", "Favorite idea being posted is " + favoriteIdeaJson)
     // Update the database to mark the object as syncing
-    val whereMap = Map(FavoriteIdeaColumns.KEY_IDEA -> favoriteIdea.idea)
+    val whereMap = Map(FavoriteIdeaColumns.KEY_IDEA -> favoriteIdea.favorite_idea)
     updateObjects(getContentResolver, whereMap, null, Map(FavoriteIdeaColumns.KEY_IS_SYNCING -> true))
 
     // Post the object to the server
     App.FavoriteIdeaResource.postObject(favoriteIdea) match {
       case Some(fav) => updateDatabaseEntry(fav)
-      case _ => {
+      case None => {
         if(App.DEBUG)
           Log.d("FavoriteIdeaPostService", "There was an error when posting.")
 
         // Remove syncing part
         // Update the database to mark the object as syncing
-        val whereMap = Map(FavoriteIdeaColumns.KEY_IDEA -> favoriteIdea.idea)
+        val whereMap = Map(FavoriteIdeaColumns.KEY_IDEA -> favoriteIdea.favorite_idea)
         updateObjects(getContentResolver, whereMap, null, Map(FavoriteIdeaColumns.KEY_IS_SYNCING -> false))
       }
     }
@@ -44,9 +44,10 @@ class FavoriteIdeaPostService extends IntentService("FavoriteIdeaPostService") w
    * @param obj Object sent back
    */
   private def updateDatabaseEntry(obj: FavoriteIdea) {
-    updateObjects(getContentResolver, (FavoriteIdeaColumns.KEY_IDEA -> obj.idea),
+    if(App.DEBUG) Log.d("FavoriteIdeaPostService", "Updating the database with " + obj.favorite_idea + " ")
+    updateObjects(getContentResolver, (FavoriteIdeaColumns.KEY_IDEA -> obj.favorite_idea),
       null, Map(FavoriteIdeaColumns.KEY_ID -> obj.id,
-        FavoriteIdeaColumns.KEY_IDEA -> obj.idea,
+        FavoriteIdeaColumns.KEY_IDEA -> obj.favorite_idea,
         FavoriteIdeaColumns.KEY_RESOURCE_URI -> obj.resource_uri,
         FavoriteIdeaColumns.KEY_IS_NEW -> false,
         FavoriteIdeaColumns.KEY_IS_SYNCING -> false))

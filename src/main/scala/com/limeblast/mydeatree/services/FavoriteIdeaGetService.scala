@@ -42,6 +42,9 @@ class FavoriteIdeaGetService extends IntentService("FavoriteIdeaGetService") wit
   private def synchronizeFavoritesWithDB(favorites: util.List[FavoriteIdea]) {
     val favoritesInDb = getFromDB()
 
+    if(App.DEBUG)
+      for(fav <- favorites) Log.d("FavoriteIdeaGet", "Favorite idea " + fav.favorite_idea)
+
     insertNewFavorites(favorites, favoritesInDb)
 
     removeFromDbOldFavorites(favorites, favoritesInDb)
@@ -54,7 +57,7 @@ class FavoriteIdeaGetService extends IntentService("FavoriteIdeaGetService") wit
     for(favInDb <- favoritesInDb) {
       var found = false
 
-      for (fav <- favorites if fav.idea.equals(favInDb.uri))
+      for (fav <- favorites if favInDb.uri.equals(fav.favorite_idea))
         found = true
 
       if(!found)
@@ -66,7 +69,7 @@ class FavoriteIdeaGetService extends IntentService("FavoriteIdeaGetService") wit
     for (fav <- favorites) {
       var isNew = true
       for (obj <- favoritesInDb) {
-        if (obj.uri.equals(fav.idea))
+        if (obj.uri.equals(fav.favorite_idea))
           isNew = false
       }
 
@@ -97,7 +100,7 @@ class FavoriteIdeaGetService extends IntentService("FavoriteIdeaGetService") wit
   private def insertToDB(fav: FavoriteIdea) = {
     try {
     insertObject(getContentResolver)((FavoriteIdeaColumns.KEY_ID -> fav.id),
-      (FavoriteIdeaColumns.KEY_IDEA -> fav.idea),
+      (FavoriteIdeaColumns.KEY_IDEA -> fav.favorite_idea),
       (FavoriteIdeaColumns.KEY_RESOURCE_URI -> fav.resource_uri))
     } catch {
       case sql: SQLiteConstraintException => {
@@ -115,7 +118,7 @@ class FavoriteIdeaGetService extends IntentService("FavoriteIdeaGetService") wit
       FavoriteIdeaColumns.KEY_IS_SYNCING -> false,
       FavoriteIdeaColumns.KEY_RESOURCE_URI -> fav.resource_uri)
 
-    val where = (FavoriteIdeaColumns.KEY_IDEA -> fav.idea)
+    val where = (FavoriteIdeaColumns.KEY_IDEA -> fav.favorite_idea)
 
     updateObjects(getContentResolver, where, null, newValues)
   }

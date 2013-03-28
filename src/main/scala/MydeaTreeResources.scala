@@ -3,6 +3,7 @@ package com.limeblast.mydeatree
 import reflect.BeanInfo
 
 import java.util.List
+import com.google.gson.annotations.SerializedName
 
 
 class DatedObject(val id: String, val modified_date: String)
@@ -27,7 +28,7 @@ abstract class BasicIdea(val id: String, val title: String, val text: String, va
 @BeanInfo class User(val username: String, val first_name: String, val last_name: String, val resource_uri: String)
 
 //@DatabaseTable(tableName = "favorite_ideas")
-@BeanInfo class FavoriteIdea(val id: String, val idea: String, val resource_uri: String)
+@BeanInfo class FavoriteIdea(val id: String, val favorite_idea: String, val resource_uri: String)
 
 @BeanInfo abstract class DjangoRootObject[K](val meta: Meta, val objects: List[K])
 

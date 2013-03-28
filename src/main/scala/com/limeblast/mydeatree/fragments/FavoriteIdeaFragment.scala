@@ -2,7 +2,7 @@ package com.limeblast.mydeatree.fragments
 
 import com.actionbarsherlock.app.{SherlockListFragment}
 import android.view.{View, ViewGroup, LayoutInflater}
-import android.os.{Bundle}
+import android.os.{Handler, Bundle}
 import com.limeblast.mydeatree._
 import activities.MainActivity
 import adapters.{FavoriteIdeaListAdapter}
@@ -15,14 +15,14 @@ import android.support.v4.content.{CursorLoader, Loader}
 import providers.{FavoriteIdeaProvider, PublicIdeaProvider}
 
 import java.util
-import com.limeblast.androidhelpers.{AndroidHelpers, ScalaHandler, WhereClauseModule}
+import com.limeblast.androidhelpers.{AndroidHelpers, WhereClauseModule}
 import android.widget.TextView
 import services.{FavoriteIdeaDeleteService, FavoriteIdeaPostService, FavoriteIdeaGetService}
 import android.content.Intent
 import concurrent.ops._
 import com.limeblast.rest.JsonModule
 
-import com.limeblast.androidhelpers.AndroidImplicits._
+import com.limeblast.androidhelpers.ScalifiedAndroid._
 import android.app.Activity
 
 /**
@@ -37,7 +37,7 @@ with PublicIdeaDatabaseModule with WhereClauseModule with JsonModule with Favori
 
   private var favoriteIdeas = new util.ArrayList[PublicIdea]()
   private lazy val arrayAdapter = new FavoriteIdeaListAdapter(getActivity(), R.layout.public_idea_entry, favoriteIdeas)
-  private var handler: ScalaHandler = _
+  private var handler: Handler = _
 
   private var noIdeasTextView: TextView = _
 
@@ -60,7 +60,7 @@ with PublicIdeaDatabaseModule with WhereClauseModule with JsonModule with Favori
   override def onActivityCreated(savedInstanceState: Bundle) {
     super.onActivityCreated(savedInstanceState)
 
-    handler = new ScalaHandler()
+    handler = new Handler()
 
     setListAdapter(arrayAdapter)
 

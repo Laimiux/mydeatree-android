@@ -25,6 +25,6 @@ class FavoriteIdeaDeleteService extends IntentService("FavoriteIdeaDeleteService
   }
 
   private def removeFromDB(fav: FavoriteIdea) =
-    deleteObjects(getContentResolver, (FavoriteIdeaColumns.KEY_IDEA -> fav.idea), null)
+    deleteObjects(getContentResolver, (FavoriteIdeaColumns.KEY_IDEA -> fav.favorite_idea), null)
 
 }

@@ -1,7 +1,7 @@
 package com.limeblast.mydeatree.activities
 
 import android.app.ProgressDialog
-import android.os.Bundle
+import android.os.{Handler, Bundle}
 import android.view.View
 import android.content.{Intent, SharedPreferences}
 import org.apache.http.client.methods.HttpGet
@@ -16,13 +16,16 @@ import concurrent.ops._
 import android.net.Uri
 
 import com.limeblast.androidhelpers._
-import AndroidImplicits.{toListener, functionToResultReceicer}
+//import AndroidImplicits.{toListener, functionToResultReceicer}
 import com.actionbarsherlock.view.Window
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.AppSettings._
 import services.PrivateIdeaSyncService
 import android.content.res.Configuration
 import com.limeblast.rest.{JsonModule, HttpRequestModule}
+
+
+import com.limeblast.androidhelpers.ScalifiedAndroid._
 
 
 class LoginActivity extends SherlockActivity with TypedActivity with JsonModule with HttpRequestModule {
@@ -45,7 +48,7 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
 
   lazy val loginBtn = findView(TR.login_button)
 
-  val mHandler = new ScalaHandler()
+  var mHandler:Handler = _
 
   override def onCreate(bundle: Bundle) {
     super.onCreate(bundle)
@@ -53,6 +56,8 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
     requestWindowFeature(Window.FEATURE_NO_TITLE)
 
     setContentView(R.layout.login_layout)
+
+    mHandler = new Handler()
 
     if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
       findView(TR.login_header).setVisibility(View.GONE)
@@ -69,9 +74,8 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
       startProgressBar(SYNC_MESSAGE)
     }
 
-
     // Get the Login Button and add listener to it.
-    loginBtn.setOnClickListener((view: View) => {
+    loginBtn.onClick((view: View) => {
       startProgressBar(LOGIN_MESSAGE)
       loggingIn = true
 
@@ -80,13 +84,14 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
       }
     })
 
+
     // Set listener for forgot password link
-    findView(TR.forgot_password_link).setOnClickListener((view: View) => {
+    findView(TR.forgot_password_link).onClick((view: View) => {
       startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.forgot_password_link))))
     })
 
     // Set listener for register link
-    findView(TR.link_to_register).setOnClickListener((view: View) => {
+    findView(TR.link_to_register).onClick((view: View) => {
       startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.registration_link))))
     })
 

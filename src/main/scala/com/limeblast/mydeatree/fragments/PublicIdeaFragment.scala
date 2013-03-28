@@ -18,8 +18,8 @@ import android.app.AlertDialog
 import content.{Intent, DialogInterface}
 import android.preference.PreferenceManager
 
-import com.limeblast.androidhelpers.AndroidImplicits
-import AndroidImplicits.{toRunnable, functionToResultReceicer}
+import com.limeblast.androidhelpers.ScalifiedAndroid._
+
 import com.limeblast.mydeatree._
 import adapters.PublicIdeaListAdapter
 import com.limeblast.mydeatree.Helpers._
