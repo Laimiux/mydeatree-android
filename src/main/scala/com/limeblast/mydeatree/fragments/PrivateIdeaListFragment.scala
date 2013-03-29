@@ -18,15 +18,11 @@ import android.support.v4.content.{CursorLoader, Loader}
 import android.app.AlertDialog
 
 import android.content
-import android.view.View.OnKeyListener
 
-import content.{ContentValues, DialogInterface, Intent}
-import android.preference.PreferenceManager
+import content._
 
-import com.limeblast.androidhelpers.{ScalifiedAndroid, AndroidHelpers}
+import com.limeblast.androidhelpers.{ScalifiedTraitModule, ScalifiedAndroid}
 import ScalifiedAndroid._
-
-
 
 
 import com.actionbarsherlock.app.{SherlockFragmentActivity, SherlockListFragment}
@@ -38,20 +34,21 @@ import com.limeblast.mydeatree.AppSettings._
 import com.limeblast.mydeatree.providers.RESTfulProvider
 
 import com.limeblast.mydeatree.Helpers._
-import scala.Some
 import services.{PrivateIdeaSyncService, IdeaUpdateService, IdeaDeleteService, IdeaCreateService}
 import com.limeblast.rest.JsonModule
 import android.app.AlertDialog.Builder
+import scala.Some
 
-class PrivateIdeaListFragment extends SherlockListFragment with LoaderManager.LoaderCallbacks[Cursor]
-with OnKeyListener with JsonModule with PersonalIdeaGetModule {
+class PrivateIdeaListFragment extends SherlockListFragment
+with LoaderManager.LoaderCallbacks[Cursor] with JsonModule with PersonalIdeaGetModule
+with ScalifiedTraitModule {
 
   var aa: ArrayAdapter[Idea] = _
 
   private var handler: Handler = _
 
   // Sorting status
-  var sort_by = 0
+ // var sort_by = 0
 
   // Array list to keep all the private ideas
   lazy val privateIdeas: util.ArrayList[Idea] = new util.ArrayList()
@@ -62,23 +59,24 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
     super.onCreate(savedInstanceState)
 
     // Checks if user is logged in, if not throws an exception.
-    if (App.getUsername(getActivity.getApplicationContext).equals("")) {
+    if (App.getUsername(getActivity.getApplicationContext).equals(""))
       throw new IllegalStateException("This fragment shouldn't be created when there is no username.")
-    }
+
 
   }
 
 
   override def onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View = {
     if (AppSettings.DEBUG) Log.d(APP_TAG, "Creating PrivateIdeaListFragment view")
-    val fragmentView = inflater.inflate(R.layout.private_idea_list_layout, container, false)
+
+    val fragmentView: View = inflater.inflate(R.layout.private_idea_list_layout, container, false)
 
     fragmentView.setFocusableInTouchMode(true)
     fragmentView.requestFocus()
 
     // This listener controls the idea exploration,
     // where back key goes back to the previous parent idea
-    fragmentView.setOnKeyListener(this)
+    fragmentView.setOnKeyListener((keyCode: Int, event: KeyEvent) => onKey(keyCode, event))
 
     fragmentView
   }
@@ -87,8 +85,6 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
     super.onActivityCreated(savedInstanceState)
 
     setHasOptionsMenu(true)
-
-    setSortStatus()
 
     handler = new Handler()
 
@@ -197,7 +193,6 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
     val keyCreatedDateIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_CREATED_DATE)
     val keyParentIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_PARENT)
     val keyIdIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_ID)
-    //val keyOwnerIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_OWNER)
     val keyPublicIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_PUBLIC)
 
 
@@ -220,13 +215,12 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
     idea
   }
 
-  def removeIdeaRequest(idea: Idea) {
+  private def removeIdea(implicit resolver: ContentResolver, idea: Idea) {
     // Check if idea is on server
     idea.id match {
       // Idea isn't on server
       case null => {
         // This means we just need to get rid of this idea from the database
-        val resolver = getActivity.getContentResolver
         val where = IdeaHelper.KEY_TITLE + "='" + idea.title + "' AND " + IdeaHelper.KEY_TEXT +
           "='" + idea.text + "' AND " + IdeaHelper.KEY_CREATED_DATE + "='" + idea.created_date + "'"
 
@@ -234,28 +228,35 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
       }
       case _ => {
 
-          // Mark idea for deletion
-          val resolver = getActivity.getContentResolver
-          val where = IdeaHelper.KEY_ID + "=" + idea.id
+        // Mark idea for deletion
+        val where = IdeaHelper.KEY_ID + "=" + idea.id
 
-          val values = new ContentValues()
-          values.put(IdeaHelper.KEY_IS_IDEA_DELETED, true)
+        val values = new ContentValues()
+        values.put(IdeaHelper.KEY_IS_IDEA_DELETED, true)
 
-          resolver.update(RESTfulProvider.CONTENT_URI, values, where, null)
+        resolver.update(RESTfulProvider.CONTENT_URI, values, where, null)
 
-          // If there is internet connection
-          // start service to delete the idea
-          if (AndroidHelpers.isOnline(getActivity)) {
+        // If there is internet connection
+        // start service to delete the idea
+        if (isOnline(getActivity)) {
 
-            val intent = new Intent(getActivity, classOf[IdeaDeleteService])
-            intent.putExtra("idea", convertObjectToJson(idea))
-            getActivity.startService(intent)
-          }
+          val intent = new Intent(getActivity, classOf[IdeaDeleteService])
+          intent.putExtra("idea", convertObjectToJson(idea))
+          getActivity.startService(intent)
+        }
 
       }
     }
+  }
 
-    handler.post(refresh)
+  def removeIdeaRequest(idea: Idea) {
+    getResolver() match {
+      case None => if (App.DEBUG) Log.d(APP_TAG, "removeIdeaRequest couldn't get a resolver")
+      case Some(resolver) => {
+        removeIdea(resolver, idea)
+        handler.post(refresh)
+      }
+    }
   }
 
 
@@ -264,12 +265,11 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
   //-------------------------------------------------------\\
 
   def sortPrivateIdeas(sort: Int) {
-    sort_by = sort
-    updateSortStatus()
-    sortIdeas()
+    updateSortStatus(sort)
+    sortIdeas(sort)
   }
 
-  def sortIdeas() {
+  def sortIdeas(sort_by: Int) {
     privateIdeas.synchronized {
       if (sort_by == 0) {
         Collections.sort(privateIdeas, new IdeaComparatorByModifiedDate[Idea]())
@@ -283,19 +283,24 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
     handler.post(aa.notifyDataSetChanged())
   }
 
-  def setSortStatus() {
-    val context = getActivity.getApplicationContext
-    val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+  def getSavedSortStatus() =
+    getActivity.getDefaultPreferences() match {
+      case Some(preferences) => preferences.getInt(PREF_PRIVATE_SORT, 0)
+      case None => {
+        if(App.DEBUG) Log.d(APP_TAG, "getSavedSortStatus couldn't get preferences ")
+        0
+      }
+    }
 
-    sort_by = prefs.getInt(PREF_PRIVATE_SORT, 0)
-  }
 
-  def updateSortStatus() {
-    val context = getActivity.getApplicationContext
-    val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+  def updateSortStatus(sortValue: Int) =
+    getActivity().getDefaultPreferences() match {
+      case Some(preferences) => preferences.edit().putInt(PREF_PRIVATE_SORT, sortValue).commit()
+      case None => if(App.DEBUG) Log.d(APP_TAG, "updateSortStatus function couldn't find activity")
+    }
 
-    prefs.edit().putInt(PREF_PRIVATE_SORT, sort_by).commit()
-  }
+
+
 
 
   def refresh() {
@@ -307,7 +312,7 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
 
 
   private def startNewIdeaActivity() {
-    val intent = new content.Intent(getActivity, classOf[NewIdeaActivity])
+    val intent = new Intent(getActivity, classOf[NewIdeaActivity])
     AppSettings.PRIVATE_PARENT_IDEA match {
       case Some(idea) => intent.putExtra("parent_uri", idea.resource_uri)
       case _ =>
@@ -370,7 +375,7 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
 
     builder.setTitle(R.string.sort_by)
     builder.setSingleChoiceItems(R.array.sort_options,
-      sort_by, (dialog: DialogInterface, which: Int) => {
+      getSavedSortStatus(), (dialog: DialogInterface, which: Int) => {
         sortPrivateIdeas(which)
         dialog.dismiss()
       })
@@ -462,7 +467,7 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
     val ideas = getIdeasFromCursor(cursor)
     privateIdeas.addAll(ideas)
 
-    sortIdeas()
+    sortIdeas(getSavedSortStatus())
   }
 
   def onLoaderReset(loader: Loader[Cursor]) {}
@@ -473,30 +478,34 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
 
 
   // Key Listener that listens for back key and moves back within the private idea hierarchy
-  def onKey(view: View, keyCode: Int, keyEvent: KeyEvent): Boolean =
+  def onKey(keyCode: Int, keyEvent: KeyEvent): Boolean =
     keyCode match {
       case KeyEvent.KEYCODE_BACK => {
-        AppSettings.PRIVATE_PARENT_IDEA match {
-          case Some(idea) => {
-            if (keyEvent.getAction == KeyEvent.ACTION_UP) {
-              if (AppSettings.DEBUG) Log.d(APP_TAG, "Back On Key Event is released.")
-
-              if (idea.parent != null) {
-                AppSettings.PRIVATE_PARENT_IDEA = Some(getIdea(idea.parent))
-                setHeaderIdea(idea)
-              } else {
-                AppSettings.PRIVATE_PARENT_IDEA = None
-                setDefaultHeader()
-              }
-              refresh()
-            }
-            true
-          }
-          case _ => false
-        }
+        handleBackKey(keyEvent.getAction)
       }
       case _ => false
     }
+
+  private def handleBackKey(keyAction: Int): Boolean = {
+    AppSettings.PRIVATE_PARENT_IDEA match {
+      case Some(idea) => {
+        if (keyAction == KeyEvent.ACTION_UP) {
+          if (AppSettings.DEBUG) Log.d(APP_TAG, "Back On Key Event is released.")
+
+          if (idea.parent != null) {
+            AppSettings.PRIVATE_PARENT_IDEA = Some(getIdea(idea.parent))
+            setHeaderIdea(idea)
+          } else {
+            AppSettings.PRIVATE_PARENT_IDEA = None
+            setDefaultHeader()
+          }
+          refresh()
+        }
+        true
+      }
+      case _ => false
+    }
+  }
 
 
   //-------------------------------------------------------\\
@@ -547,7 +556,7 @@ with OnKeyListener with JsonModule with PersonalIdeaGetModule {
   private def syncIfNecessary() {
     Log.d(APP_TAG, "syncIfNecessary called")
     // Do this only if there is network connection
-    if (AndroidHelpers.isOnline(getActivity)) {
+    if (isOnline(getActivity)) {
       // Get all ideas
       val ideasToUpload = getIdeasToUpload()
       val ideasToUpdate = getIdeasToUpdate()

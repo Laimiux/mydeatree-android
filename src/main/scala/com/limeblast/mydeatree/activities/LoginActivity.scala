@@ -3,20 +3,18 @@ package com.limeblast.mydeatree.activities
 import android.app.ProgressDialog
 import android.os.{Handler, Bundle}
 import android.view.View
-import android.content.{Intent, SharedPreferences}
+import android.content.{Intent}
 import org.apache.http.client.methods.HttpGet
 import android.util.Log
 
 import android.widget.{EditText, Toast}
 
-import android.preference.PreferenceManager
 import com.actionbarsherlock.app.SherlockActivity
 
 import concurrent.ops._
 import android.net.Uri
 
 import com.limeblast.androidhelpers._
-//import AndroidImplicits.{toListener, functionToResultReceicer}
 import com.actionbarsherlock.view.Window
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.AppSettings._
@@ -28,7 +26,8 @@ import com.limeblast.rest.{JsonModule, HttpRequestModule}
 import com.limeblast.androidhelpers.ScalifiedAndroid._
 
 
-class LoginActivity extends SherlockActivity with TypedActivity with JsonModule with HttpRequestModule {
+class LoginActivity extends SherlockActivity with TypedActivity
+with JsonModule with HttpRequestModule with ScalifiedActivity {
 
   var dialog: ProgressDialog = null
 
@@ -100,7 +99,7 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
 
   override def onResume() {
     super.onResume()
-    if (!AndroidHelpers.isOnline(this)) {
+    if (!isOnline(this)) {
       loginBtn.setClickable(false)
       loginBtn.setText(R.string.no_connection)
     } else {
@@ -156,7 +155,7 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
             val users: Users = getMainObject(response.getEntity.getContent, classOf[Users])
             val usr = users.objects.get(0)
 
-            if (AppSettings.DEBUG)
+            if (App.DEBUG)
               Log.d("Mydea", "User firstname " + usr.first_name + " username is " +
                 usr.username + " last name " + usr.last_name + " resource url " + usr.resource_uri)
 
@@ -180,7 +179,8 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
     loggingIn = false
     isSyncing = true
 
-    Toast.makeText(LoginActivity.this, "Successfully logged in", Toast.LENGTH_LONG).show()
+    longToast("Successfully logged in")
+
 
     // Create a dialog that private ideas are syncing
     startProgressBar(SYNC_MESSAGE)
@@ -192,9 +192,7 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
     intent.putExtra(PRIVATE_IDEA_RESULT_RECEIVER, (resultCode: Int, resultData: Bundle) => {
       if (resultCode == 0) {
         // Forward to main activity
-        val intent = new Intent()
-        intent.setClass(LoginActivity.this, classOf[MainActivity])
-        startActivity(intent)
+        startActivity(classOf[MainActivity])
         finish()
       }
     })
@@ -205,13 +203,13 @@ class LoginActivity extends SherlockActivity with TypedActivity with JsonModule 
   private def loginInfo() {
     // Remove loader
     removeLoader()
-    Toast.makeText(LoginActivity.this, "Enter username and password!", Toast.LENGTH_LONG).show()
+    longToast("Enter username and password!")
   }
 
   private def loginDenied() {
     // Remove loader
     removeLoader()
-    Toast.makeText(LoginActivity.this, "Wrong username or password", Toast.LENGTH_LONG).show()
+    longToast("Wrong username or password")
   }
 
   private def removeLoader() {

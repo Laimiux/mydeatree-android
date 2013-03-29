@@ -3,13 +3,14 @@ package com.limeblast.androidhelpers
 import android.app.Activity
 import android.os.Bundle
 
-trait ForwardActivityTrait extends Activity {
+trait ForwardActivityTrait extends Activity with ScalifiedActivity {
 
 
   def getForwardActivityClass(): Class[_ <: Activity]
 
   override def onCreate(savedInstanceState: Bundle) {
-    AndroidHelpers.changeActivity(this, getForwardActivityClass())
+    startActivity(getForwardActivityClass())
+    finish()
 
     super.onCreate(savedInstanceState)
   }

@@ -28,27 +28,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bc3cf6a-7f06-4297-a281-b398d8758ba7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AdapterViewConversions.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AlertDialogBuilderConversions.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/TextViewConversions.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AndroidImplicits.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/SimpleObjArrayAdapter.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/mydeatree-0.1.apk" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ActivityConversions.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/IntentConversions.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/IsOnlineModule.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/PreferenceConversions.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedActivity.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedTraitModule.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ViewConversions.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AndroidHelpers.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ObjectArrayAdapter.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/QuickIntentService.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/Toaster.scala" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes.dex" afterPath="$PROJECT_DIR$/target/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes.min.jar" afterPath="$PROJECT_DIR$/target/classes.min.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resources.apk" afterPath="$PROJECT_DIR$/target/resources.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/IdeaEditActivity.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/IdeaEditActivity.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/FavoriteIdeaFragment.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/FavoriteIdeaFragment.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ForwardActivityTrait.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ForwardActivityTrait.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/LoginActivity.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/LoginActivity.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/MainActivity.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/MainActivity.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/NewIdeaActivity.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/NewIdeaActivity.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PrivateIdeaListFragment.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PrivateIdeaListFragment.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/java/com/actionbarsherlock/R.java" afterPath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/java/com/actionbarsherlock/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/java/com/limeblast/mydeatree/R.java" afterPath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/java/com/limeblast/mydeatree/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PublicIdeaFragment.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PublicIdeaFragment.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedAndroid.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedAndroid.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/menu/main_menu.xml" afterPath="$PROJECT_DIR$/src/main/res/menu/main_menu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/TextViewConversions.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/TextViewConversions.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mydeatree.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/MainActivity.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364412736402" ignored="false" />
+    <file path="/MainActivity.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364523565452" ignored="false" />
     <file path="/Fragmento.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362084724876" ignored="false" />
     <file path="/Build.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364246263553" ignored="false" />
     <file path="/ListFragmento.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362084822344" ignored="false" />
@@ -58,7 +66,7 @@
     <file path="/a.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362469428800" ignored="false" />
     <file path="/ScalaSherlockActivity.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362476236383" ignored="false" />
     <file path="/styles_mydeatree.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362546026424" ignored="false" />
-    <file path="/LoginActivity.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364506049628" ignored="false" />
+    <file path="/LoginActivity.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364526996511" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364250868335" ignored="false" />
     <file path="/strings.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362552513067" ignored="false" />
     <file path="/Specs.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362553341599" ignored="false" />
@@ -69,8 +77,8 @@
     <file path="/DatabaseTable.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362560521458" ignored="false" />
     <file path="/ScalaHandler.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362597977595" ignored="false" />
     <file path="/JsonWrapper.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362597596920" ignored="false" />
-    <file path="/NewIdeaActivity.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364506537886" ignored="false" />
-    <file path="/PrivateIdeaListFragment.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364511447198" ignored="false" />
+    <file path="/NewIdeaActivity.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364520909114" ignored="false" />
+    <file path="/PrivateIdeaListFragment.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364528207424" ignored="false" />
     <file path="/AppSettings.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363077011804" ignored="false" />
     <file path="/PrivateIdeaSyncService.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363391259182" ignored="false" />
     <file path="/QuickIntentService.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362609746119" ignored="false" />
@@ -79,13 +87,13 @@
     <file path="/SimpleObjArrayAdapter.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362612093155" ignored="false" />
     <file path="/ForwardingTrait.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362614447449" ignored="false" />
     <file path="/ForwardingActivity.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363236718408" ignored="false" />
-    <file path="/AndroidHelpers.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362614100662" ignored="false" />
+    <file path="/AndroidHelpers.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364524802329" ignored="false" />
     <file path="/HttpRequest.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362624848237" ignored="false" />
     <file path="/RESTCalls.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363074138799" ignored="false" />
     <file path="/MydeaTreeResourceREST.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362801157672" ignored="false" />
     <file path="/PublicIdeaSyncService.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363390896251" ignored="false" />
     <file path="/ObjectContentProvider.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363656066427" ignored="false" />
-    <file path="/Toaster.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362683782323" ignored="false" />
+    <file path="/Toaster.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364516661905" ignored="false" />
     <file path="/PublicIdeaListAdapter.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364415804099" ignored="false" />
     <file path="$PROJECT_DIR$/src/main/scala/activities/package.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362688120881" ignored="false" />
     <file path="/Resource.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1362688412206" ignored="false" />
@@ -129,11 +137,11 @@
     <file path="/colors.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363143540114" ignored="false" />
     <file path="/login_layout.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363142763623" ignored="false" />
     <file path="/TwoWayForwardTrait.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363236660200" ignored="false" />
-    <file path="/FavoriteIdeaFragment.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364505815187" ignored="false" />
+    <file path="/FavoriteIdeaFragment.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364525360175" ignored="false" />
     <file path="/PublicIdeaProvider.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363388788670" ignored="false" />
     <file path="/BasicIdeaModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363390262628" ignored="false" />
     <file path="/DatedObjectModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363391061085" ignored="false" />
-    <file path="/PublicIdeaFragment.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364506402978" ignored="false" />
+    <file path="/PublicIdeaFragment.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364514999907" ignored="false" />
     <file path="/PersonalIdeaGetModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363802692481" ignored="false" />
     <file path="/public_idea_entry.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363645862798" ignored="false" />
     <file path="/list_button_thin.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363650435453" ignored="false" />
@@ -153,10 +161,21 @@
     <file path="/a.dummy" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364319303295" ignored="false" />
     <file path="/FavoriteIdeaProviderModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364415322972" ignored="false" />
     <file path="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/package.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364499789500" ignored="false" />
-    <file path="/ScalifiedAndroid.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364511035788" ignored="false" />
-    <file path="/TextViewConversions.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364509185291" ignored="false" />
+    <file path="/ScalifiedAndroid.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364526677565" ignored="false" />
+    <file path="/TextViewConversions.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364528610070" ignored="false" />
     <file path="/ViewGroupConversions.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364509875208" ignored="false" />
     <file path="/BuilderConversions.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364511498698" ignored="false" />
+    <file path="/PreferenceConversions.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364522454714" ignored="false" />
+    <file path="/ActivityConversions.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364520015334" ignored="false" />
+    <file path="/ViewConversions.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364519760112" ignored="false" />
+    <file path="/ContextHelpers.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364520462219" ignored="false" />
+    <file path="/ScalifiedActivity.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364524840553" ignored="false" />
+    <file path="/IntentConversions.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364523026186" ignored="false" />
+    <file path="/ForwardActivityTrait.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364524629224" ignored="false" />
+    <file path="/ScalifiedTraitModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364527991017" ignored="false" />
+    <file path="/IsOnlineModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364525223081" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/java/com/limeblast/mydeatree/R.java" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364525530781" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/scala/com/limeblast/mydeatree/TR.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364528700496" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,12 +238,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LoginActivity.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/LoginActivity.scala">
+      <file leaf-file-name="PrivateIdeaListFragment.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PrivateIdeaListFragment.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="0" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.0">
+            <state line="36" column="0" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewIdeaActivity.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/NewIdeaActivity.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="41" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.73477405">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/MainActivity.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="213" column="33" selection-start="6357" selection-end="6357" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#44#77#0" expanded="true" />
+                <element signature="e#44#79#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextViewConversions.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/TextViewConversions.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="9" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#38#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ForwardingActivity.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/ForwardingActivity.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="6" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScalifiedAndroid.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedAndroid.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="70" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScalifiedTraitModule.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedTraitModule.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="41" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#38#76#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScalifiedActivity.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedActivity.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="22" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#38#65#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -233,7 +321,7 @@
       <file leaf-file-name="FavoriteIdeaFragment.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/FavoriteIdeaFragment.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="0" selection-start="2406" selection-end="2406" vertical-scroll-proportion="0.0">
+            <state line="127" column="8" selection-start="3954" selection-end="3954" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#43#98#0" expanded="true" />
               </folding>
@@ -241,63 +329,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrivateIdeaListFragment.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PrivateIdeaListFragment.scala">
+      <file leaf-file-name="ActivityConversions.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ActivityConversions.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="369" column="0" selection-start="11332" selection-end="11332" vertical-scroll-proportion="0.34906697">
+            <state line="14" column="0" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#43#86#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlertDialogBuilderConversions.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AlertDialogBuilderConversions.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="143" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#38#76#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PublicIdeaFragment.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PublicIdeaFragment.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Toaster.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/Toaster.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="3" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TextViewConversions.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/TextViewConversions.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="79" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#38#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScalifiedAndroid.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedAndroid.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="141" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#38#68#0" expanded="true" />
+                <element signature="e#38#65#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -321,30 +358,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/FavoriteIdeaDeleteService.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/FavoriteIdeaPostService.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/LoginActivity.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ContextHelpers.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/PreferenceConversions.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/IntentConversions.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/MainActivity.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ForwardActivityTrait.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AndroidHelpers.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedActivity.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/IsOnlineTrait.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/IsOnlineModule.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/FavoriteIdeaFragment.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PublicIdeaFragment.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/NewIdeaActivity.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/IdeaEditActivity.scala" />
-        <option value="$PROJECT_DIR$/src/main/res/menu/main_menu.xml" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/TextViewConversions.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ViewGroupConversions.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AdapterViewConversions.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/BuilderConversions.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AndroidImplicits.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedAndroid.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AlertDialogBuilderConversions.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/LoginActivity.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedTraitModule.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PrivateIdeaListFragment.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/TextViewConversions.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/NewIdeaActivity.scala" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-322" />
-    <option name="y" value="-1080" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="714" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -497,6 +533,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="IdeaHelper.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="limeblast" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -557,6 +619,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PublicIdeaSyncService.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="limeblast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="limeblast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="androidhelpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -591,7 +725,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AlertDialogBuilderConversions.scala" />
+              <option name="myItemId" value="TextViewConversions.scala" />
               <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -625,7 +759,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdapterViewConversions.scala" />
+              <option name="myItemId" value="ScalifiedAndroid.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="limeblast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="androidhelpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScalifiedActivity.scala" />
               <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -820,6 +988,21 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
       <module name="" />
       <setting name="path" value="" />
@@ -868,10 +1051,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-322" y="-1080" width="1920" height="1080" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1280" height="714" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32828283" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24116424" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -881,12 +1064,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4625" sideWeight="0.40275526" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3024948" sideWeight="0.9330092" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24664429" sideWeight="0.9330092" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21611527" sideWeight="0.6975052" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29254457" sideWeight="0.7533557" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271078" sideWeight="0.58731806" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -957,126 +1140,131 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/InsertProviderTrait.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/PublicIdeaSyncService.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="36" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+        <state line="19" column="15" selection-start="649" selection-end="649" vertical-scroll-proportion="-0.9919355">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/providers/FavoriteIdeaProvider.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/IdeaHelper.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="54" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0">
+        <state line="8" column="7" selection-start="211" selection-end="211" vertical-scroll-proportion="-1.8266667">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/App.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/IsOnlineModule.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="35" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
+        <state line="7" column="24" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#38#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/QueryProviderTrait.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="6" selection-start="207" selection-end="207" vertical-scroll-proportion="0.11278196">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ForwardActivityTrait.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="72" selection-start="161" selection-end="161" vertical-scroll-proportion="0.14367816">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/LoginActivity.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.0">
+        <state line="193" column="35" selection-start="5380" selection-end="5380" vertical-scroll-proportion="2.494253">
           <folding>
             <element signature="e#44#77#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PublicIdeaFragment.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ActivityConversions.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/NewIdeaActivity.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="89" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.5554336">
+        <state line="14" column="0" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#44#68#0" expanded="true" />
+            <element signature="e#38#65#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/IdeaEditActivity.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="4" selection-start="1172" selection-end="1172" vertical-scroll-proportion="-0.13172337">
-          <folding>
-            <element signature="e#44#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/menu/main_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="12" selection-start="339" selection-end="339" vertical-scroll-proportion="0.096359745">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedAndroid.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="141" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#38#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AdapterViewConversions.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="913" selection-end="913" vertical-scroll-proportion="0.42810097">
-          <folding>
-            <element signature="e#38#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/TextViewConversions.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="79" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#38#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/Toaster.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="3" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
+        <state line="63" column="70" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/FavoriteIdeaFragment.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedTraitModule.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="2406" selection-end="2406" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#43#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AlertDialogBuilderConversions.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="143" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0">
+        <state line="16" column="41" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#38#76#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/FavoriteIdeaFragment.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="8" selection-start="3954" selection-end="3954" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#43#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/ForwardingActivity.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ScalifiedActivity.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="22" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#38#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/TextViewConversions.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="9" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#38#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/MainActivity.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="33" selection-start="6357" selection-end="6357" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#44#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PrivateIdeaListFragment.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="369" column="0" selection-start="11332" selection-end="11332" vertical-scroll-proportion="0.34906697">
-          <folding>
-            <element signature="e#43#86#0" expanded="true" />
-          </folding>
+        <state line="36" column="0" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/NewIdeaActivity.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="41" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.73477405">
+          <folding />
         </state>
       </provider>
     </entry>

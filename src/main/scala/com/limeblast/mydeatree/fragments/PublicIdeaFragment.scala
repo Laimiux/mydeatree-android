@@ -15,7 +15,7 @@ import util.Collections
 import com.actionbarsherlock.view.MenuItem
 import android.content
 import android.app.AlertDialog
-import content.{Intent, DialogInterface}
+import content.{SharedPreferences, Intent, DialogInterface}
 import android.preference.PreferenceManager
 
 import com.limeblast.androidhelpers.ScalifiedAndroid._
@@ -25,7 +25,7 @@ import adapters.PublicIdeaListAdapter
 import com.limeblast.mydeatree.Helpers._
 import com.limeblast.mydeatree.activities.NewIdeaActivity
 import com.limeblast.mydeatree.AppSettings._
-import providers.{PublicIdeaProvider, RESTfulProvider}
+import providers.{PublicIdeaProvider}
 import services.PublicIdeaSyncService
 
 class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallbacks[Cursor] with PublicIdeaDatabaseModule {
@@ -57,7 +57,7 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
 
     setHasOptionsMenu(true)
 
-    setSortStatus()
+    sort_by = getSavedSortStatus()
 
     val layoutID = R.layout.public_idea_entry
     aa = new PublicIdeaListAdapter(getActivity(), layoutID, publicIdeas)
@@ -126,19 +126,23 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
     handler.post(aa.notifyDataSetChanged())
   }
 
-  def setSortStatus() {
-    val context = getActivity.getApplicationContext
-    val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+  def getSavedSortStatus(): Int = getActivity.getDefaultPreferences() match {
+      case Some(preferences) => preferences.getInt(PREF_PUBLIC_SORT, 0)
+      case None => {
+        if (App.DEBUG) Log.d(APP_TAG, "getSavedSortStatus could not retrieve preferences.")
+        0
+      }
+    }
 
-    sort_by = prefs.getInt(PREF_PUBLIC_SORT, 0)
-  }
 
-  def updateSortStatus() {
-    val context = getActivity.getApplicationContext
-    val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+  def updateSortStatus(): Boolean = getActivity.getDefaultPreferences() match {
+      case Some(preferences) => preferences.edit().putInt(PREF_PUBLIC_SORT, sort_by).commit()
+      case None => {
+        if (App.DEBUG) Log.d(APP_TAG, "updateSortStatus failed to retrieve preferences.")
+        false
+      }
+    }
 
-    prefs.edit().putInt(PREF_PUBLIC_SORT, sort_by).commit()
-  }
 
 
   //-------------------------------------------------------\\
@@ -146,7 +150,6 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
   //-------------------------------------------------------\\
 
   def openSortOptions() {
-
     val builder = new AlertDialog.Builder(getActivity)
     builder.setTitle(R.string.sort_by)
     builder.setSingleChoiceItems(R.array.sort_options,
@@ -156,8 +159,7 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
           dialog.dismiss()
         }
       })
-
-    builder.create().show()
+    builder.show()
   }
 
 
@@ -165,16 +167,10 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
   //--------- HANDLING ACTIONS FROM ACTIONBAR -------------\\
   //-------------------------------------------------------\\
 
-  override def onOptionsItemSelected(item: MenuItem): Boolean = {
-    item.getItemId match {
+  override def onOptionsItemSelected(item: MenuItem): Boolean = item.getItemId match {
       /* Sync public ideas */
       case R.id.menu_item_sync_public_ideas => {
-        if (isServiceRunning(classOf[PublicIdeaSyncService].getName, getActivity)) {
-          Toast.makeText(getActivity, "Already syncing public ideas...", Toast.LENGTH_SHORT).show()
-        } else {
-          Toast.makeText(getActivity, "Starting public idea sync...", Toast.LENGTH_SHORT).show()
-          refreshPublicIdeas()
-        }
+        syncPublicIdeas()
         true
       }
       /* new public idea */
@@ -189,7 +185,16 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
       }
       case _ => super.onOptionsItemSelected(item)
     }
+
+  private def syncPublicIdeas() {
+    if (isServiceRunning(classOf[PublicIdeaSyncService].getName, getActivity)) {
+      Toast.makeText(getActivity, "Already syncing public ideas...", Toast.LENGTH_SHORT).show()
+    } else {
+      Toast.makeText(getActivity, "Starting public idea sync...", Toast.LENGTH_SHORT).show()
+      refreshPublicIdeas()
+    }
   }
+
 
   //-------------------------------------------------------\\
   //------------ FRAGMENT LIFECYCLE EVENTS ----------------\\

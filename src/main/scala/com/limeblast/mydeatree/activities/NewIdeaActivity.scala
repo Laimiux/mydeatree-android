@@ -10,15 +10,15 @@ import android.view.ViewGroup.LayoutParams
 
 import android.text.TextUtils
 
-import com.limeblast.androidhelpers.Toaster
 
 import com.limeblast.mydeatree._
 import providers.RESTfulProvider
 
 import com.limeblast.androidhelpers.ScalifiedAndroid._
+import com.limeblast.androidhelpers.ScalifiedActivity
 
 
-class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule {
+class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule with ScalifiedActivity {
 
   lazy val titleField = findView(TR.idea_title_edit)
   lazy val textField = findView(TR.idea_text_edit)
@@ -41,7 +41,7 @@ class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule {
 
 
     // Set the submit button click listener
-    findView(TR.idea_submit_button).onClick((view: View) => {
+    findView(TR.idea_submit_button).onClick({
       val title = TextUtils.htmlEncode(titleField.getText.toString)
       val text = TextUtils.htmlEncode(textField.getText.toString)
       val isPublic = publicCheckBox.isChecked
@@ -51,14 +51,15 @@ class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule {
       val idea = new Idea(title, text, null, parent_uri, timeString, timeString, null, isPublic) with IdeaValidationModule
 
       idea.validate() match {
-        case (false, msg: String) => Toaster.showToast(this, msg)
+        case (false, msg: String) => shortToast(msg)
         case (true, _) => createNewIdea(idea)
         case _ =>
       }
     })
 
+
     // Set cancel button click listener
-    findView(TR.idea_cancel_button).onClick((view: View) => finish())
+    findView(TR.idea_cancel_button).onClick(finish())
 
   }
 

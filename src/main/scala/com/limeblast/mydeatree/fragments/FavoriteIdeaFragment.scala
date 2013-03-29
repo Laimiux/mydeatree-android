@@ -15,7 +15,7 @@ import android.support.v4.content.{CursorLoader, Loader}
 import providers.{FavoriteIdeaProvider, PublicIdeaProvider}
 
 import java.util
-import com.limeblast.androidhelpers.{AndroidHelpers, WhereClauseModule}
+import com.limeblast.androidhelpers.{ScalifiedTraitModule, WhereClauseModule}
 import android.widget.TextView
 import services.{FavoriteIdeaDeleteService, FavoriteIdeaPostService, FavoriteIdeaGetService}
 import android.content.Intent
@@ -33,7 +33,8 @@ import android.app.Activity
  * To change this template use File | Settings | File Templates.
  */
 class FavoriteIdeaFragment extends SherlockListFragment with LoaderManager.LoaderCallbacks[Cursor]
-with PublicIdeaDatabaseModule with WhereClauseModule with JsonModule with FavoriteIdeaProviderModule {
+with PublicIdeaDatabaseModule with WhereClauseModule with JsonModule
+with FavoriteIdeaProviderModule with ScalifiedTraitModule {
 
   private var favoriteIdeas = new util.ArrayList[PublicIdea]()
   private lazy val arrayAdapter = new FavoriteIdeaListAdapter(getActivity(), R.layout.public_idea_entry, favoriteIdeas)
@@ -124,7 +125,7 @@ with PublicIdeaDatabaseModule with WhereClauseModule with JsonModule with Favori
   private def refreshResources() {
     if (App.DEBUG) Log.d("MainActivity", "---------- STARTING REFRESH RESOURCES ------------")
 
-    if (AndroidHelpers.isOnline(getActivity) && (!Helpers.isServiceRunning(classOf[FavoriteIdeaGetService].getName, getActivity))) {
+    if (isOnline(getActivity) && (!Helpers.isServiceRunning(classOf[FavoriteIdeaGetService].getName, getActivity))) {
 
       getLatestFavorites({
         // Refresh favorite objects

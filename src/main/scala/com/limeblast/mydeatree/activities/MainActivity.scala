@@ -11,7 +11,7 @@ import com.actionbarsherlock.view.{Menu, MenuItem}
 import com.actionbarsherlock.app.ActionBar.Tab
 
 import android.net.Uri
-import com.limeblast.androidhelpers.{WhereClauseModule, AndroidHelpers}
+import com.limeblast.androidhelpers.{ScalifiedActivity, WhereClauseModule}
 import com.limeblast.mydeatree._
 import fragments.{FavoriteIdeaFragment, PrivateIdeaListFragment, PublicIdeaFragment}
 import providers.RESTfulProvider
@@ -20,14 +20,13 @@ import com.limeblast.mydeatree.AppSettings._
 import scala.Some
 import com.limeblast.rest.{JsonModule}
 
-import scala.concurrent.ops.spawn
-import services.{FavoriteIdeaPostService, FavoriteIdeaDeleteService}
-import android.database.Cursor
+import com.limeblast.androidhelpers.ScalifiedAndroid._
+
 
 /**
  * Start activity that starts the app flow.
  */
-class MainActivity extends SherlockFragmentActivity with TypedActivity with JsonModule with WhereClauseModule {
+class MainActivity extends SherlockFragmentActivity with ScalifiedActivity with TypedActivity with JsonModule with WhereClauseModule {
 
   // For tab names
   private val TAB_PRIVATE = "Personal"
@@ -47,7 +46,7 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
 
 
   // Variables for MENUS
-  private var actionMenu: Menu = _
+  //private var actionMenu: Menu = _
 
   //-------------------------------------------------------\\
   //------------ ACTIVITY LIFECYCLE EVENTS ----------------\\
@@ -109,19 +108,28 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
     super.onSaveInstanceState(outState)
   }
 
-  def updateFromPreferences() {
-    val context = getApplicationContext
-    val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+  def updateFromPreferences() = {
+    val preferences = getDefaultPreferences()
+    App.USERNAME = preferences.getString(App.PREF_USERNAME, "")
+    App.PASSWORD = preferences.getString(App.PREF_PASSWORD, "")
 
-    App.USERNAME = prefs.getString(App.PREF_USERNAME, "")
-    App.PASSWORD = prefs.getString(App.PREF_PASSWORD, "")
-
-    LAST_PRIVATE_IDEAS_SYNCED = prefs.getString(PREF_LAST_PRIVATE_IDEAS_SYNCED, "")
+    LAST_PRIVATE_IDEAS_SYNCED = preferences.getString(PREF_LAST_PRIVATE_IDEAS_SYNCED, "")
   }
+
+  /*
+    getDefaultPreferences() match {
+      case Some(preferences) => {
+
+      }
+      case None => if (App.DEBUG) Log.d(APP_TAG, "updateFromPreferences didn't get preferences. We are in tons of pain now!")
+    }
+    */
+
+
 
 
   override def onCreateOptionsMenu(menu: Menu): Boolean = {
-    actionMenu = menu
+    //actionMenu = menu
 
     val inflater = getSupportMenuInflater
     inflater.inflate(R.menu.main_menu, menu)
@@ -136,9 +144,8 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
    * @return
    */
   override def onPrepareOptionsMenu(menu: Menu): Boolean = {
-    actionMenu = menu
-    updateMenu()
-
+   // actionMenu = menu
+    updateMenu(menu)
     super.onPrepareOptionsMenu(menu)
   }
 
@@ -155,7 +162,6 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
   }
 
 
-
   //-------------------------------------------------------\\
   //------------ VARIOUS ACTIVITY HANDLERS ----------------\\
   //-------------------------------------------------------\\
@@ -166,8 +172,7 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
         true
       }
       case R.id.menu_item_preferences => {
-        val intent = new Intent(MainActivity.this, classOf[PreferencesActivity])
-        startActivityForResult(intent, SHOW_PREFERENCES)
+        openPreferenceActivity()
         true
       }
       case _ => super.onOptionsItemSelected(item)
@@ -180,14 +185,16 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
     }
 
 
-  //-------------------------------------------------------\\
+  private def openPreferenceActivity() {
+    startActivityForResult(classOf[PreferencesActivity], SHOW_PREFERENCES)
+  }
+
+
+  //---------------------------------   ----------------------\\
   //---------------- LOG OUT FUNCTION ---------------------\\
   //-------------------------------------------------------\\
   private def clearUserInfoFromPreferences() {
-    val context = getApplicationContext
-    val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-
-    val editor = prefs.edit()
+    val editor = getDefaultPreferences().edit()
     editor.putString(App.PREF_USERNAME, "")
     editor.putString(App.PREF_PASSWORD, "")
     editor.commit()
@@ -205,10 +212,7 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
   }
 
   private def moveBackToLogin() {
-    // Move back to login screen
-    val intent = new Intent()
-    intent.setClass(MainActivity.this, classOf[LoginActivity])
-    startActivity(intent)
+    startActivity(classOf[LoginActivity])
     finish()
   }
 
@@ -230,31 +234,31 @@ class MainActivity extends SherlockFragmentActivity with TypedActivity with Json
   //-------------------------------------------------------\\
   //---------- HANDLE ACTIONBAR MENU PHASES ---------------\\
   //-------------------------------------------------------\\
-  def updateMenu() =
+  def updateMenu(menu: Menu) =
     actionBar.getSelectedNavigationIndex match {
-      case 0 => setToPublicMenu()
-      case 1 => setToPrivateMenu()
-      case 2 => setToFavoriteTabMenu()
+      case 0 => setToPublicMenu(menu)
+      case 1 => setToPrivateMenu(menu)
+      case 2 => setToFavoriteTabMenu(menu)
     }
 
-  private def setToFavoriteTabMenu() = {
-    actionMenu.setGroupVisible(R.id.menu_public_actions, false)
-    actionMenu.setGroupVisible(R.id.menu_private_actions, false)
+  private def setToFavoriteTabMenu(menu: Menu) = {
+    menu.setGroupVisible(R.id.menu_public_actions, false)
+    menu.setGroupVisible(R.id.menu_private_actions, false)
 
   }
 
-  private def setToPublicMenu() {
-    actionMenu.setGroupEnabled(R.id.menu_public_actions, true)
+  private def setToPublicMenu(menu: Menu) {
+    menu.setGroupEnabled(R.id.menu_public_actions, true)
 
-    actionMenu.setGroupVisible(R.id.menu_public_actions, true)
-    actionMenu.setGroupVisible(R.id.menu_private_actions, false)
+    menu.setGroupVisible(R.id.menu_public_actions, true)
+    menu.setGroupVisible(R.id.menu_private_actions, false)
   }
 
-  private def setToPrivateMenu() {
-    if (actionMenu != null) {
-      actionMenu.setGroupEnabled(R.id.menu_private_actions, true)
-      actionMenu.setGroupVisible(R.id.menu_public_actions, false)
-      actionMenu.setGroupVisible(R.id.menu_private_actions, true)
+  private def setToPrivateMenu(menu: Menu) {
+    if (menu != null) {
+      menu.setGroupEnabled(R.id.menu_private_actions, true)
+      menu.setGroupVisible(R.id.menu_public_actions, false)
+      menu.setGroupVisible(R.id.menu_private_actions, true)
     }
   }
 
