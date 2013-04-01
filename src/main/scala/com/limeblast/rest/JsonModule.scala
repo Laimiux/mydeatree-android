@@ -22,4 +22,14 @@ trait JsonModule {
 
   def convertObjectToJson[T](obj: T): String = gson.toJson(obj)
 
+  sealed trait ToJson {
+    def obj: AnyRef
+
+    def toJson(): String = convertObjectToJson(obj)
+
+  }
+
+
+  implicit def anyRefToJson(anyref: AnyRef): ToJson = new ToJson { val obj = anyref }
+
 }

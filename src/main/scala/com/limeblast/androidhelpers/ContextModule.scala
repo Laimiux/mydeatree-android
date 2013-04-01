@@ -2,34 +2,14 @@ package com.limeblast.androidhelpers
 
 import android.app.{ActivityManager, Activity}
 import android.content.Context
-import android.widget.Toast
-import com.limeblast.mydeatree.AppSettings
+import android.support.v4.app.Fragment
 import android.util.Log
 import com.limeblast.mydeatree.AppSettings._
 
 import scala.collection.JavaConversions._
 
 
-sealed trait ShowToastModuleWithImplicitContext{
-  def shortToast[T <: Context](msg: String)(implicit context: T) =
-    Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-
-  def longToast[T <: Context](msg: String)(implicit context: T) =
-    Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-}
-
-
-
-
-
-trait ScalifiedActivity extends Activity with ShowToastModuleWithImplicitContext
-with ContextModule with GetDefaultPreferencesModule with IsOnlineModule
-with ScalifiedAndroid {
-  self: Activity =>
-  implicit val context = self
-
-
- /*
+trait BaseContextModule {
   def isServiceRunning(name: String)(implicit context: Context): Boolean = {
     context.getSystemService(Context.ACTIVITY_SERVICE) match {
       case manager: ActivityManager => {
@@ -43,8 +23,20 @@ with ScalifiedAndroid {
 
     return false
   }
-  */
+}
 
+trait ContextModule extends IntentConversions with BaseContextModule {
+
+ def startActivity[T <: Activity](activityClass: Class[T])(implicit context: Context) =
+   context.startActivity(activityClass)
+
+ def startActivityForResult[T <: Activity](implicit context: Activity, activityClass: Class[T], requestCode: Int): Unit =
+   context.startActivityForResult(activityClass, requestCode)
 
 }
 
+
+trait ContextTraitModule extends Fragment with IntentConversions with BaseContextModule {
+
+  def startActivity[T <: Activity](activityClass: Class[T]): Unit = startActivity(activityClass)
+}

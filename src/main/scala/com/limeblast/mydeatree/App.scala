@@ -13,6 +13,7 @@ object App extends MydeaRestModule {
 
   // Constant result receiver info
   val FAVORITE_IDEA_GET_RESULT_RECEIVER = "favorite_idea_get_receiver"
+  val LOGIN_RESULT_RECEIVER = "login_result_receiver"
 
   /*
    * Safe way to access username
@@ -39,18 +40,7 @@ object App extends MydeaRestModule {
   }
 
 
-  def saveUser(context: Context, username: String, password: String) {
-    USERNAME = username
-    PASSWORD = password
 
-    val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
-
-    // Save login information to SharedPrefs
-    val editor = prefs.edit()
-    editor.putString(PREF_USERNAME, USERNAME)
-    editor.putString(PREF_PASSWORD, PASSWORD)
-    editor.commit()
-  }
 }
 
 /*

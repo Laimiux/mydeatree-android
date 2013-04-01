@@ -3,27 +3,22 @@ package com.limeblast.mydeatree.activities
 import android.app.ProgressDialog
 import android.os.{Handler, Bundle}
 import android.view.View
-import android.content.{Intent}
-import org.apache.http.client.methods.HttpGet
-import android.util.Log
+import android.content.Intent
 
-import android.widget.{EditText, Toast}
+import android.widget.EditText
 
 import com.actionbarsherlock.app.SherlockActivity
 
-import concurrent.ops._
 import android.net.Uri
 
 import com.limeblast.androidhelpers._
 import com.actionbarsherlock.view.Window
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.AppSettings._
-import services.PrivateIdeaSyncService
+import services.{LoginService, PrivateIdeaSyncService}
 import android.content.res.Configuration
 import com.limeblast.rest.{JsonModule, HttpRequestModule}
-
-
-import com.limeblast.androidhelpers.ScalifiedAndroid._
+import android.util.Log
 
 
 class LoginActivity extends SherlockActivity with TypedActivity
@@ -47,8 +42,11 @@ with JsonModule with HttpRequestModule with ScalifiedActivity {
 
   lazy val loginBtn = findView(TR.login_button)
 
-  var mHandler:Handler = _
+  var handler: Handler = _
 
+  //-------------------------------------------------------\\
+  //------------ ACTIVITY LIFECYCLE EVENTS ----------------\\
+  //-------------------------------------------------------\\
   override def onCreate(bundle: Bundle) {
     super.onCreate(bundle)
 
@@ -56,9 +54,10 @@ with JsonModule with HttpRequestModule with ScalifiedActivity {
 
     setContentView(R.layout.login_layout)
 
-    mHandler = new Handler()
+    handler = new Handler()
 
-    if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+
+    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
       findView(TR.login_header).setVisibility(View.GONE)
 
 
@@ -69,28 +68,28 @@ with JsonModule with HttpRequestModule with ScalifiedActivity {
 
     if (loggingIn) {
       startProgressBar(LOGIN_MESSAGE)
+      startObservationalThread()
     } else if (isSyncing) {
       startProgressBar(SYNC_MESSAGE)
+      startObservationalThread()
     }
 
     // Get the Login Button and add listener to it.
-    loginBtn.onClick((view: View) => {
-      startProgressBar(LOGIN_MESSAGE)
-      loggingIn = true
+    loginBtn.onClick({
+      val username = userField.getText.toString
+      val password = passwordField.getText.toString
 
-      spawn {
-        login_user()
-      }
+      loginButtonClick(username, password)
     })
 
 
     // Set listener for forgot password link
-    findView(TR.forgot_password_link).onClick((view: View) => {
+    findView(TR.forgot_password_link).onClick({
       startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.forgot_password_link))))
     })
 
     // Set listener for register link
-    findView(TR.link_to_register).onClick((view: View) => {
+    findView(TR.link_to_register).onClick({
       startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.registration_link))))
     })
 
@@ -99,6 +98,8 @@ with JsonModule with HttpRequestModule with ScalifiedActivity {
 
   override def onResume() {
     super.onResume()
+
+
     if (!isOnline(this)) {
       loginBtn.setClickable(false)
       loginBtn.setText(R.string.no_connection)
@@ -108,76 +109,104 @@ with JsonModule with HttpRequestModule with ScalifiedActivity {
     }
   }
 
+  protected override def onDestroy() {
+    super.onDestroy()
+    removeLoader()
+
+  }
+
   protected override def onSaveInstanceState(outState: Bundle) {
     super.onSaveInstanceState(outState)
     outState.putBoolean(BUNDLE_LOGGING_IN, loggingIn)
     outState.putBoolean(BUNDLE_SYNCING, isSyncing)
   }
 
-  def startProgressBar(text: String) {
-    dialog = ProgressDialog.show(this, "", text, true)
-  }
 
-  // Function to login user.
+  //-------------------------------------------------------\\
+  //----------- STATE CHECKING FUNCTIONS ------------------\\
+  //-------------------------------------------------------\\
+  private def startObservationalThread() = {
+    new Thread(new Runnable() {
+      def run() {
+        while(true){
+          if (loggingIn && !isLoginServiceRunning) {
+            loggingIn = false
+            if (!isSyncServiceRunning()) {
+              removeLoader()
+            } else {
+              isSyncing = true
+            }
 
-  // REFACTOR THIS BIATCH
-  private def login_user() {
-    try {
-      // User and pw
-      val user = userField.getText.toString
-      val pw = passwordField.getText.toString
-
-      if (user.equals("") || pw.equals("")) {
-        mHandler.post(loginInfo)
-      } else {
-
-        // Create http client and set credentials
-        val httpclient = getHttpClientWithCredentials(user, pw)
-
-        // Set get method
-        val get = new HttpGet(App.getApi() + "/api/v1/user/")
-        get.addHeader("accept", "application/json")
-
-        try {
-          val response = httpclient.execute(get)
-          val statusCode = response.getStatusLine.getStatusCode
-
-          if (AppSettings.DEBUG) Log.d("Status code", "" + statusCode)
-
-          if (statusCode == 200) {
-            App.saveUser(this, userField.getText.toString, passwordField.getText.toString)
-
-            //savePreferences()
-
-
-            mHandler.post(successLogin)
-
-            val users: Users = getMainObject(response.getEntity.getContent, classOf[Users])
-            val usr = users.objects.get(0)
-
-            if (App.DEBUG)
-              Log.d("Mydea", "User firstname " + usr.first_name + " username is " +
-                usr.username + " last name " + usr.last_name + " resource url " + usr.resource_uri)
-
-
-          } else if (statusCode == 401) {
-            mHandler.post(loginDenied)
+            return
+          }
+          else if (isSyncing && !isSyncServiceRunning()) {
+            isSyncing = false
+            removeLoader()
+            return
           }
 
 
-        } catch {
-          case e: Exception => e.printStackTrace()
+
+          if (App.DEBUG) Log.d("LoginActivity", "observational thread is running")
+
+          Thread.sleep(2000)
         }
       }
+    }).start()
+  }
+
+
+  private def isLoginServiceRunning(): Boolean = isServiceRunning(classOf[LoginService].getName)
+
+  private def isSyncServiceRunning(): Boolean = isServiceRunning(classOf[PrivateIdeaSyncService].getName)
+
+  //-------------------------------------------------------\\
+  //---------------- LOGIN FUNCTIONS ----------------------\\
+  //-------------------------------------------------------\\
+  private def loginButtonClick(username: String, password: String) {
+    if (username == "" || password == "")
+      loginParametersMissing()
+    else {
+      startProgressBar(LOGIN_MESSAGE)
+      setLoginState(logging_in = true, syncing = false)
+      loginUser(username, password)
     }
   }
 
-  private def successLogin() {
-    // Remove old loader
+  private def loginUser(username: String, password: String) {
+    val intent = new Intent(this, classOf[LoginService])
+    intent.putExtra("username", username)
+    intent.putExtra("password", password)
+    intent.putExtra(App.LOGIN_RESULT_RECEIVER, (resultCode: Int, resultData: Bundle) => {
+      resultCode match {
+        case LoginService.SUCCESS_LOGIN => handler.post(successLogin(username, password))
+        case LoginService.FAILED_LOGIN => handler.post(loginDenied)
+      }
+    })
+
+    startService(intent)
+
+  }
+
+
+  private def setLoginState(logging_in: Boolean, syncing: Boolean) {
+    loggingIn = logging_in
+    isSyncing = syncing
+  }
+
+
+  //-------------------------------------------------------\\
+  //------------ LOGIN EVENT HANDLERS ---------------------\\
+  //-------------------------------------------------------\\
+
+
+  private def successLogin(username: String, password: String) {
+
+    saveUser(username, password)
+
     removeLoader()
 
-    loggingIn = false
-    isSyncing = true
+    setLoginState(logging_in = false, syncing = true)
 
     longToast("Successfully logged in")
 
@@ -200,16 +229,24 @@ with JsonModule with HttpRequestModule with ScalifiedActivity {
     startService(intent)
   }
 
-  private def loginInfo() {
-    // Remove loader
-    removeLoader()
+  private def loginParametersMissing() {
+    setLoginState(logging_in = false, syncing = false)
     longToast("Enter username and password!")
   }
 
   private def loginDenied() {
+    setLoginState(logging_in = false, syncing = false)
     // Remove loader
     removeLoader()
     longToast("Wrong username or password")
+  }
+
+
+  //-------------------------------------------------------\\
+  //---------- PROGRESS BAR CONTROL FUNCTIONS -------------\\
+  //-------------------------------------------------------\\
+  def startProgressBar(text: String) {
+    dialog = ProgressDialog.show(this, "", text, true)
   }
 
   private def removeLoader() {
@@ -224,8 +261,17 @@ with JsonModule with HttpRequestModule with ScalifiedActivity {
   }
 
 
-  protected override def onDestroy() {
-    super.onDestroy()
-    removeLoader()
+  //-------------------------------------------------------\\
+  //---------- Save User To SharedPreferences -------------\\
+  //-------------------------------------------------------\\
+  def saveUser(username: String, password: String) {
+    App.USERNAME = username
+    App.PASSWORD = password
+
+    // Save login information to SharedPrefs
+    val editor = getDefaultPreferences().edit()
+    editor.putString(App.PREF_USERNAME, App.USERNAME)
+    editor.putString(App.PREF_PASSWORD, App.PASSWORD)
+    editor.commit()
   }
 }

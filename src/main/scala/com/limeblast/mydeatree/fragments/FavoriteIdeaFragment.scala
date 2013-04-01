@@ -22,7 +22,6 @@ import android.content.Intent
 import concurrent.ops._
 import com.limeblast.rest.JsonModule
 
-import com.limeblast.androidhelpers.ScalifiedAndroid._
 import android.app.Activity
 
 /**
@@ -105,18 +104,27 @@ with FavoriteIdeaProviderModule with ScalifiedTraitModule {
    * @param uri Idea resource_uri
    * @return True if idea is a favorite
    */
-  private def isIdeaInFavorites(uri: String): Boolean = {
-    val resolver = getActivity.getContentResolver
-    val select = makeWhereClause((FavoriteIdeaColumns.KEY_IDEA, uri), (FavoriteIdeaColumns.KEY_IS_DELETED, false))
+  private def isIdeaInFavorites(uri: String): Boolean = getResolver() match {
+      case None => {
+        if (App.DEBUG) Log.d("FavoriteIdeaFragment", "isIdeaInFavorites method couldn't retrieve ContentResolver")
+        false
+      }
+      case Some(resolver) => {
+        val select = makeWhereClause((FavoriteIdeaColumns.KEY_IDEA, uri), (FavoriteIdeaColumns.KEY_IS_DELETED, false))
 
-    val cursor = getObjects(resolver, Array(), select, null, null)
+        val cursor = getObjects(resolver, Array(), select, null, null)
 
-    val doesIdeaExist = cursor.getCount() > 0
+        val doesIdeaExist = cursor.getCount() > 0
 
-    cursor.close()
+        cursor.close()
 
-    doesIdeaExist
-  }
+        doesIdeaExist
+      }
+    }
+
+
+
+
 
 
   //-------------------------------------------------------\\
@@ -125,7 +133,7 @@ with FavoriteIdeaProviderModule with ScalifiedTraitModule {
   private def refreshResources() {
     if (App.DEBUG) Log.d("MainActivity", "---------- STARTING REFRESH RESOURCES ------------")
 
-    if (isOnline(getActivity) && (!Helpers.isServiceRunning(classOf[FavoriteIdeaGetService].getName, getActivity))) {
+    if (isOnline(getActivity) && !isServiceRunning(classOf[FavoriteIdeaGetService].getName)(getActivity)) {
 
       getLatestFavorites({
         // Refresh favorite objects
@@ -141,14 +149,14 @@ with FavoriteIdeaProviderModule with ScalifiedTraitModule {
           val intent = new Intent(getActivity, classOf[FavoriteIdeaPostService])
           intent.putExtra("favorite_idea", convertObjectToJson(fav))
 
-          getActivity.startService(intent)
+          startService(intent)
         }
 
         for (fav <- favoritesToDelete) {
           val intent = new Intent(getActivity, classOf[FavoriteIdeaDeleteService])
           intent.putExtra("favorite_idea", convertObjectToJson(fav))
 
-          getActivity.startService(intent)
+          startService(intent)
         }
       })
 
@@ -178,10 +186,11 @@ with FavoriteIdeaProviderModule with ScalifiedTraitModule {
     var ideas = List[FavoriteIdea]()
 
 
-    getActivity match {
-      case a: Activity => {
+    getResolver() match {
+      case None => if (App.DEBUG) Log.d("FavoriteIdeaFragment", "No activity was found!")
+      case Some(resolver) => {
         // Get cursor
-        val cursor = getObjects(a.getContentResolver,
+        val cursor = getObjects(resolver,
           null, select, null, null)
 
         val keyIdIndex = cursor.getColumnIndexOrThrow(FavoriteIdeaColumns.KEY_ID)
@@ -194,10 +203,7 @@ with FavoriteIdeaProviderModule with ScalifiedTraitModule {
 
         cursor.close()
       }
-      case null => if (App.DEBUG) Log.d("FavoriteIdeaFragment", "No activity was found!")
     }
-
-
 
     ideas
   }

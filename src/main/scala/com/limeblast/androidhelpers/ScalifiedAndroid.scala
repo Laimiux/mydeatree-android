@@ -1,28 +1,8 @@
 package com.limeblast.androidhelpers
 
-import android.widget.TextView
-import android.view.View
-import android.view.View.OnClickListener
 import android.os.{ResultReceiver, Bundle, Handler}
 import android.content.Intent
 
-/**
- * Created with IntelliJ IDEA.
- * User: Laimiux
- * Date: 3/28/13
- * Time: 12:43 PM
- * To change this template use File | Settings | File Templates.
- */
-sealed trait HasOnClick[T <: TextView] {
-  def self: T
-
-  def onClick(f: (View) => Unit) {
-    self.setOnClickListener(new OnClickListener {
-      def onClick(v: View) = f(v)
-
-    })
-  }
-}
 
 sealed trait FunctionToRunnable {
   implicit def toRunnable[F](f: => F): Runnable =
@@ -55,12 +35,7 @@ sealed trait IntentFunctionToResultReceiver extends FunctionToResultReceiver{
   }
 }
 
-
-/**
- * Lots of implicit object conversions to give more
- * functionality to certain android classes.
- */
-object ScalifiedAndroid extends AdapterViewConversions with AlertDialogBuilderConversions with PreferenceConversions
+trait ScalifiedAndroid extends AdapterViewConversions with AlertDialogBuilderConversions with PreferenceConversions
 with ActivityConversions with ViewConversions with TextViewConversions {
 
 

@@ -13,9 +13,10 @@ import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.RESTfulProvider
 import com.limeblast.rest.JsonModule
 
-import com.limeblast.androidhelpers.ScalifiedAndroid._
+import com.limeblast.androidhelpers.ScalifiedActivity
 
-class IdeaEditActivity extends Activity with TypedActivity with JsonModule with BasicIdeaModule {
+class IdeaEditActivity extends Activity with TypedActivity
+with JsonModule with BasicIdeaModule with ScalifiedActivity{
 
   lazy val submitButton: Button = findView(TR.submit_button)
   lazy val publicCheckBox: CheckBox = findView(TR.idea_public_check_box)

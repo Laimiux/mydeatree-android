@@ -15,14 +15,13 @@ import android.database.Cursor
 import android.support.v4.content.{CursorLoader, Loader}
 
 
-import android.app.AlertDialog
+import android.app.{Activity, AlertDialog}
 
 import android.content
 
 import content._
 
-import com.limeblast.androidhelpers.{ScalifiedTraitModule, ScalifiedAndroid}
-import ScalifiedAndroid._
+import com.limeblast.androidhelpers.{WhereClauseModule, ScalifiedTraitModule}
 
 
 import com.actionbarsherlock.app.{SherlockFragmentActivity, SherlockListFragment}
@@ -33,27 +32,32 @@ import com.limeblast.mydeatree.activities.{IdeaEditActivity, NewIdeaActivity}
 import com.limeblast.mydeatree.AppSettings._
 import com.limeblast.mydeatree.providers.RESTfulProvider
 
-import com.limeblast.mydeatree.Helpers._
 import services.{PrivateIdeaSyncService, IdeaUpdateService, IdeaDeleteService, IdeaCreateService}
 import com.limeblast.rest.JsonModule
 import android.app.AlertDialog.Builder
 import scala.Some
+import annotation.switch
 
 class PrivateIdeaListFragment extends SherlockListFragment
 with LoaderManager.LoaderCallbacks[Cursor] with JsonModule with PersonalIdeaGetModule
-with ScalifiedTraitModule {
+with ScalifiedTraitModule with WhereClauseModule {
 
   var aa: ArrayAdapter[Idea] = _
 
   private var handler: Handler = _
 
   // Sorting status
- // var sort_by = 0
+  // var sort_by = 0
 
   // Array list to keep all the private ideas
   lazy val privateIdeas: util.ArrayList[Idea] = new util.ArrayList()
   // Array to keep all the headers that are currently used
   private val headers: util.ArrayList[View] = new util.ArrayList[View]()
+
+
+  //-------------------------------------------------------\\
+  //----------- FRAGMENT LIFECYCLE FUNCTIONS --------------\\
+  //-------------------------------------------------------\\
 
   override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
@@ -67,7 +71,7 @@ with ScalifiedTraitModule {
 
 
   override def onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View = {
-    if (AppSettings.DEBUG) Log.d(APP_TAG, "Creating PrivateIdeaListFragment view")
+    if (App.DEBUG) Log.d(APP_TAG, "Creating PrivateIdeaListFragment view")
 
     val fragmentView: View = inflater.inflate(R.layout.private_idea_list_layout, container, false)
 
@@ -106,7 +110,7 @@ with ScalifiedTraitModule {
     getListView.onItemLongClick((parent: AdapterView[_], view: View, position: Int, id: Long) => {
       getListView.getItemAtPosition(position) match {
         case idea: Idea => showPrivateIdeaOptions(idea)
-        case _ => if (AppSettings.DEBUG) Log.d(APP_TAG, "Some unknown object was selected")
+        case _ => if (App.DEBUG) Log.d(APP_TAG, "Some unknown object was selected")
       }
       true
     })
@@ -119,6 +123,36 @@ with ScalifiedTraitModule {
   }
 
 
+
+  override def onListItemClick(l: ListView, v: View, position: Int, id: Long) =
+    l.getItemAtPosition(position) match {
+      case i: Idea => {
+        AppSettings.PRIVATE_PARENT_IDEA = Some(i)
+        setHeaderIdea(i)
+        refresh()
+      }
+      case _ => super.onListItemClick(l, v, position, id)
+    }
+
+
+
+
+  //-------------------------------------------------------\\
+  //--------------- LIST HEADER FUNCTIONS -----------------\\
+  //-------------------------------------------------------\\
+
+  override def onActivityResult(requestCode: Int, resultCode: Int, data: Intent) =
+    requestCode match {
+      case NewIdeaActivity.NEW_IDEA_RESULT if(resultCode == Activity.RESULT_CANCELED) => {
+        moveToPreviousParent()
+      }
+      case _ => super.onActivityResult(requestCode, resultCode, data)
+    }
+
+  /*{
+
+  }*/
+
   private def clearOldHeaders() {
     for (view <- headers) {
       getListView.removeHeaderView(view)
@@ -126,9 +160,15 @@ with ScalifiedTraitModule {
     headers.clear()
   }
 
+  /**
+   * Sets the list header to parent idea. NOTE: this function needs to be simplified.
+   * @param idea Parent idea
+   */
   private def setHeaderIdea(idea: Idea) {
     val headerView = getActivity.getLayoutInflater.inflate(R.layout.private_idea_header, null)
 
+
+    // Set layout values to that of idea
     headerView.findViewById(R.id.private_header_idea_title) match {
       case tv: TextView => tv.setText(idea.title)
     }
@@ -136,6 +176,16 @@ with ScalifiedTraitModule {
     headerView.findViewById(R.id.private_header_idea_text) match {
       case tv: TextView => tv.setText(idea.text)
     }
+
+
+    if (!idea.public)
+      headerView.findViewById(R.id.private_header_idea_public).setVisibility(View.GONE)
+
+
+    // Set the modified date
+    val dateText = headerView.findViewById(R.id.private_header_idea_date).asInstanceOf[TextView]
+    val date = Helpers.stringToDate(idea.modified_date)
+    dateText.setText(Helpers.formatDate(date))
 
     clearOldHeaders()
 
@@ -166,15 +216,26 @@ with ScalifiedTraitModule {
     setListAdapter(aa)
   }
 
-  override def onListItemClick(l: ListView, v: View, position: Int, id: Long) =
-    l.getItemAtPosition(position) match {
-      case i: Idea => {
-        AppSettings.PRIVATE_PARENT_IDEA = Some(i)
-        setHeaderIdea(i)
-        refresh()
-      }
-      case _ => super.onListItemClick(l, v, position, id)
+
+
+  private def moveToPreviousParent() {
+    AppSettings.PRIVATE_PARENT_IDEA match {
+      case Some(idea) => moveToPreviousParent(idea)
+      case _ =>
     }
+  }
+
+
+  private def moveToPreviousParent(currentParent: Idea) {
+    if (currentParent.parent != null) {
+      AppSettings.PRIVATE_PARENT_IDEA = Some(getIdea(currentParent.parent))
+      setHeaderIdea(currentParent)
+    } else {
+      AppSettings.PRIVATE_PARENT_IDEA = None
+      setDefaultHeader()
+    }
+    refresh()
+  }
 
 
   /* Move this function eventually */
@@ -196,7 +257,7 @@ with ScalifiedTraitModule {
     val keyPublicIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_PUBLIC)
 
 
-    if (AppSettings.DEBUG) Log.d(APP_TAG, cursor.getColumnNames.toString)
+    if (App.DEBUG) Log.d(APP_TAG, cursor.getColumnNames.toString)
     var idea: Idea = null
 
     // Should loop only once
@@ -215,21 +276,23 @@ with ScalifiedTraitModule {
     idea
   }
 
-  private def removeIdea(implicit resolver: ContentResolver, idea: Idea) {
+  private def removeIdea(resolver: ContentResolver, idea: Idea) {
     // Check if idea is on server
     idea.id match {
       // Idea isn't on server
       case null => {
         // This means we just need to get rid of this idea from the database
-        val where = IdeaHelper.KEY_TITLE + "='" + idea.title + "' AND " + IdeaHelper.KEY_TEXT +
-          "='" + idea.text + "' AND " + IdeaHelper.KEY_CREATED_DATE + "='" + idea.created_date + "'"
+        val where = makeWhereClause(IdeaHelper.KEY_TITLE -> idea.title, IdeaHelper.KEY_TEXT -> idea.text,
+          IdeaHelper.KEY_CREATED_DATE -> idea.created_date)
+        //val where = IdeaHelper.KEY_TITLE + "='" + idea.title + "' AND " + IdeaHelper.KEY_TEXT +
+          //"='" + idea.text + "' AND " + IdeaHelper.KEY_CREATED_DATE + "='" + idea.created_date + "'"
 
         resolver.delete(RESTfulProvider.CONTENT_URI, where, null)
       }
       case _ => {
 
         // Mark idea for deletion
-        val where = IdeaHelper.KEY_ID + "=" + idea.id
+        val where = makeWhereClause(IdeaHelper.KEY_ID -> idea.id)
 
         val values = new ContentValues()
         values.put(IdeaHelper.KEY_IS_IDEA_DELETED, true)
@@ -241,7 +304,7 @@ with ScalifiedTraitModule {
         if (isOnline(getActivity)) {
 
           val intent = new Intent(getActivity, classOf[IdeaDeleteService])
-          intent.putExtra("idea", convertObjectToJson(idea))
+          intent.putExtra("idea", idea.toJson())
           getActivity.startService(intent)
         }
 
@@ -287,7 +350,7 @@ with ScalifiedTraitModule {
     getActivity.getDefaultPreferences() match {
       case Some(preferences) => preferences.getInt(PREF_PRIVATE_SORT, 0)
       case None => {
-        if(App.DEBUG) Log.d(APP_TAG, "getSavedSortStatus couldn't get preferences ")
+        if (App.DEBUG) Log.d(APP_TAG, "getSavedSortStatus couldn't get preferences ")
         0
       }
     }
@@ -296,18 +359,15 @@ with ScalifiedTraitModule {
   def updateSortStatus(sortValue: Int) =
     getActivity().getDefaultPreferences() match {
       case Some(preferences) => preferences.edit().putInt(PREF_PRIVATE_SORT, sortValue).commit()
-      case None => if(App.DEBUG) Log.d(APP_TAG, "updateSortStatus function couldn't find activity")
+      case None => if (App.DEBUG) Log.d(APP_TAG, "updateSortStatus function couldn't find activity")
     }
-
-
-
 
 
   def refresh() {
     if (getActivity != null) {
       getLoaderManager().restartLoader(0, null, this)
     }
-    if (AppSettings.DEBUG) Log.d(APP_TAG, "PrivateIdeaListFragment refresh is finished.")
+    if (App.DEBUG) Log.d(APP_TAG, "PrivateIdeaListFragment refresh is finished.")
   }
 
 
@@ -318,7 +378,7 @@ with ScalifiedTraitModule {
       case _ =>
     }
 
-    startActivity(intent)
+    startActivityForResult(intent, NewIdeaActivity.NEW_IDEA_RESULT)
   }
 
   //-------------------------------------------------------\\
@@ -327,25 +387,29 @@ with ScalifiedTraitModule {
   private def showPrivateIdeaOptions(idea: Idea) {
     val builder: Builder = new AlertDialog.Builder(getActivity)
     builder.setTitle(idea.title)
-    builder.setItems(R.array.private_idea_options, (dialog: DialogInterface, which: Int) => {
-      if (which == 0) {
-        // NEW CHILDREN IDEA
+    builder.setItems(R.array.private_idea_options, (dialog: DialogInterface, which: Int) => (which: Int @switch) match {
+      case 0 => {
+        // New children idea
         AppSettings.PRIVATE_PARENT_IDEA = Some(idea)
         startNewIdeaActivity()
       }
-      else if (which == 1) {
+      case 1 => {
         //EDIT
         dialog.dismiss()
-        val ideaJson = convertObjectToJson(idea)
+
         val intent = new Intent(getActivity, classOf[IdeaEditActivity])
-        intent.putExtra("idea", ideaJson)
+        intent.putExtra("idea", idea.toJson())
         startActivity(intent)
-      } else if (which == 2) {
+      }
+      case 2 => {
         // DELETE
         dialog.dismiss()
         showIdeaDeleteDialog(idea)
       }
+
+      case z => Log.d(APP_TAG, "showPrivateIdeaOptions builder didn't handle a click. Should never happen!")
     })
+
 
 
     builder.create().show()
@@ -490,16 +554,9 @@ with ScalifiedTraitModule {
     AppSettings.PRIVATE_PARENT_IDEA match {
       case Some(idea) => {
         if (keyAction == KeyEvent.ACTION_UP) {
-          if (AppSettings.DEBUG) Log.d(APP_TAG, "Back On Key Event is released.")
+          if (App.DEBUG) Log.d(APP_TAG, "Back On Key Event is released.")
 
-          if (idea.parent != null) {
-            AppSettings.PRIVATE_PARENT_IDEA = Some(getIdea(idea.parent))
-            setHeaderIdea(idea)
-          } else {
-            AppSettings.PRIVATE_PARENT_IDEA = None
-            setDefaultHeader()
-          }
-          refresh()
+          moveToPreviousParent(idea)
         }
         true
       }
@@ -512,9 +569,10 @@ with ScalifiedTraitModule {
   //-------------- Synchronize Functions ------------------\\
   //-------------------------------------------------------\\
   private def startPrivateIdeaSync() {
-    if (isServiceRunning(classOf[PrivateIdeaSyncService].getName, getActivity)) {
+    if (isServiceRunning(classOf[PrivateIdeaSyncService].getName)(getActivity)) {
       Toast.makeText(getActivity, "Already syncing personal ideas", Toast.LENGTH_SHORT).show()
     } else {
+
       Toast.makeText(getActivity, "Starting syncing of personal ideas...", Toast.LENGTH_SHORT).show()
       // Create the intent for the service
       val intent = new Intent(getActivity, classOf[PrivateIdeaSyncService])
@@ -522,8 +580,15 @@ with ScalifiedTraitModule {
       intent.putExtra(PRIVATE_IDEA_RESULT_RECEIVER, (resultCode: Int, resultData: Bundle) => {
         handler.post(refresh())
       })
+
+
+      startService(intent) match {
+        case None => if (App.DEBUG) Log.d(APP_TAG, "Couldn't start service in startPrivateIdeaSync because activity wasn't found")
+        case Some(componentName) =>
+      }
+
       // Start service
-      getActivity.startService(intent)
+      //getActivity.startService(intent)
 
       //showIndeterminedProgress()
     }
@@ -532,29 +597,26 @@ with ScalifiedTraitModule {
 
   private def startIdeaCreateService(idea: Idea) {
     // New ideas have id that is null
-    val ideaJson = convertObjectToJson(idea)
     val intent = new Intent(getActivity, classOf[IdeaCreateService])
-    intent.putExtra("idea", ideaJson)
+    intent.putExtra("idea", idea.toJson)
 
-    getActivity.startService(intent)
+    startService(intent)
   }
 
   private def startIdeaUpdateService(idea: Idea) {
-    val ideaJson = convertObjectToJson(idea)
     val intent = new Intent(getActivity, classOf[IdeaUpdateService])
-    intent.putExtra("idea", ideaJson)
-    getActivity.startService(intent)
+    intent.putExtra("idea", idea.toJson)
+    startService(intent)
   }
 
   private def startIdeaDeleteService(idea: Idea) {
-    val ideaJson = convertObjectToJson(idea)
     val intent = new Intent(getActivity, classOf[IdeaDeleteService])
-    intent.putExtra("idea", ideaJson)
-    getActivity.startService(intent)
+    intent.putExtra("idea", idea.toJson)
+    startService(intent)
   }
 
   private def syncIfNecessary() {
-    Log.d(APP_TAG, "syncIfNecessary called")
+    if (App.DEBUG) Log.d(APP_TAG, "syncIfNecessary called")
     // Do this only if there is network connection
     if (isOnline(getActivity)) {
       // Get all ideas
@@ -562,10 +624,11 @@ with ScalifiedTraitModule {
       val ideasToUpdate = getIdeasToUpdate()
       val ideasToDelete = getIdeasToDelete()
 
-
-      Log.d(APP_TAG, "There are " + ideasToUpdate.size() + " ideas to update")
-      Log.d(APP_TAG, "There are " + ideasToUpload.size() + " ideas to upload")
-      Log.d(APP_TAG, "There are " + ideasToDelete.size() + " ideas to delete")
+      if (App.DEBUG) {
+        Log.d(APP_TAG, "There are " + ideasToUpdate.size() + " ideas to update")
+        Log.d(APP_TAG, "There are " + ideasToUpload.size() + " ideas to upload")
+        Log.d(APP_TAG, "There are " + ideasToDelete.size() + " ideas to delete")
+      }
 
       for (idea <- ideasToUpload) {
         startIdeaCreateService(idea)
@@ -580,7 +643,7 @@ with ScalifiedTraitModule {
       }
 
 
-      Log.d(APP_TAG, "End of syncIfNecessary method")
+      if (App.DEBUG) Log.d(APP_TAG, "End of syncIfNecessary method")
       handler.post(refresh)
     }
   }
@@ -588,7 +651,8 @@ with ScalifiedTraitModule {
   private def getIdeasToUpdate(): util.ArrayList[Idea] = {
     val resolver = getActivity.getContentResolver
 
-    val select = IdeaHelper.KEY_IS_IDEA_EDITED + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
+    val select = makeWhereClause(IdeaHelper.KEY_IS_IDEA_EDITED -> true, IdeaHelper.KEY_IS_IDEA_SYNCING -> false)
+    //val select = IdeaHelper.KEY_IS_IDEA_EDITED + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
     val cursor = resolver.query(RESTfulProvider.CONTENT_URI, null, select, null, null)
 
     getIdeasFromCursor(cursor)
@@ -596,7 +660,10 @@ with ScalifiedTraitModule {
 
   private def getIdeasToDelete(): util.ArrayList[Idea] = {
     val resolver = getActivity.getContentResolver
-    val select = IdeaHelper.KEY_IS_IDEA_DELETED + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
+
+    val select = makeWhereClause(IdeaHelper.KEY_IS_IDEA_DELETED -> true, IdeaHelper.KEY_IS_IDEA_SYNCING -> false)
+
+    //val select = IdeaHelper.KEY_IS_IDEA_DELETED + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
     val cursor = resolver.query(RESTfulProvider.CONTENT_URI, null, select, null, null)
 
     getIdeasFromCursor(cursor)
@@ -604,7 +671,9 @@ with ScalifiedTraitModule {
 
   private def getIdeasToUpload(): util.ArrayList[Idea] = {
     val resolver = getActivity.getContentResolver
-    val select = IdeaHelper.KEY_IS_IDEA_NEW + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
+
+    val select = makeWhereClause(IdeaHelper.KEY_IS_IDEA_NEW -> true, IdeaHelper.KEY_IS_IDEA_SYNCING -> false)
+    //val select = IdeaHelper.KEY_IS_IDEA_NEW + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
     val cursor = resolver.query(RESTfulProvider.CONTENT_URI, null, select, null, null)
 
     getIdeasFromCursor(cursor)

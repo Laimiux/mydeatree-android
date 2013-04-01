@@ -55,6 +55,8 @@
         <service android:name=".services.FavoriteIdeaDeleteService"></service>
         <service android:name=".services.FavoriteIdeaGetService"></service>
 
+        <service android:name=".services.LoginService"></service>
+
         <service android:name="com.limeblast.rest.GetCollectionServiceModule.GetObjectsService"></service>
 
         <service android:name=".services.FavoriteIdeaGetService" android:enabled="true"></service>

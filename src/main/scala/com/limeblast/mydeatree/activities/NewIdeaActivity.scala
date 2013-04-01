@@ -1,7 +1,6 @@
 package com.limeblast.mydeatree.activities
 
 import android.os.Bundle
-import android.view.View
 
 
 import android.app._
@@ -14,8 +13,11 @@ import android.text.TextUtils
 import com.limeblast.mydeatree._
 import providers.RESTfulProvider
 
-import com.limeblast.androidhelpers.ScalifiedAndroid._
 import com.limeblast.androidhelpers.ScalifiedActivity
+
+object NewIdeaActivity {
+  val NEW_IDEA_RESULT = 99
+}
 
 
 class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule with ScalifiedActivity {
@@ -71,6 +73,8 @@ class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule w
     val resolver = getContentResolver
     resolver.insert(RESTfulProvider.CONTENT_URI, values)
 
+
+    setResult(Activity.RESULT_OK)
     finish()
   }
 }

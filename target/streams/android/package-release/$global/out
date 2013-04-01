@@ -42,6 +42,7 @@
 [0m[[0mdebug[0m] [0m=> res/drawable/fastscroll_thumb_holo.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/idea_button.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/idea_selector.xml[0m
+[0m[[0mdebug[0m] [0m=> res/drawable/list_button_thin.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/list_selector_background_transition_holo_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/list_selector_holo_light.xml[0m
 [0m[[0mdebug[0m] [0m=> res/drawable/login_gradient.xml[0m
@@ -89,6 +90,7 @@
 [0m[[0mdebug[0m] [0m=> res/layout/abs__search_dropdown_item_icons_2line.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/abs__search_view.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/abs__simple_dropdown_hint.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/favorite_idea_layout.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/idea_edit_layout.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/idea_new.xml[0m
 [0m[[0mdebug[0m] [0m=> res/layout/login_layout.xml[0m

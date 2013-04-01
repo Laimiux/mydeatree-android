@@ -15,20 +15,19 @@ import util.Collections
 import com.actionbarsherlock.view.MenuItem
 import android.content
 import android.app.AlertDialog
-import content.{SharedPreferences, Intent, DialogInterface}
-import android.preference.PreferenceManager
-
-import com.limeblast.androidhelpers.ScalifiedAndroid._
+import content.{Intent, DialogInterface}
 
 import com.limeblast.mydeatree._
 import adapters.PublicIdeaListAdapter
 import com.limeblast.mydeatree.Helpers._
 import com.limeblast.mydeatree.activities.NewIdeaActivity
 import com.limeblast.mydeatree.AppSettings._
-import providers.{PublicIdeaProvider}
+import providers.PublicIdeaProvider
 import services.PublicIdeaSyncService
+import com.limeblast.androidhelpers.ScalifiedTraitModule
 
-class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallbacks[Cursor] with PublicIdeaDatabaseModule {
+class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallbacks[Cursor]
+with PublicIdeaDatabaseModule with ScalifiedTraitModule {
   private val APP_TAG = "PUBLIC_IDEA_FRAGMENT"
 
   private val publicIdeas: util.ArrayList[PublicIdea] = new util.ArrayList()
@@ -36,6 +35,7 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
 
   private var publicIdeaListView: ListView = _
   var aa: ArrayAdapter[PublicIdea] = _
+
 
   // Defines how to sort ideas
   private var sort_by = 0
@@ -45,6 +45,7 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
 
   override def onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View = {
     val view = inflater.inflate(R.layout.public_ideas_layout, container, false)
+
 
     publicIdeaListView = view.findViewById(R.id.public_idea_list).asInstanceOf[ListView]
 
@@ -66,7 +67,7 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
 
     getLoaderManager.initLoader(0, null, this)
 
-    if (!isServiceRunning(classOf[PublicIdeaSyncService].getName, getActivity))
+    if (!isServiceRunning(classOf[PublicIdeaSyncService].getName)(getActivity))
       refreshPublicIdeas()
 
   }
@@ -76,6 +77,8 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
     val intent = new content.Intent(getActivity, classOf[NewIdeaActivity])
     intent.putExtra("public", true)
     startActivity(intent)
+    // startActivity(classOf[NewIdeaActivity].putExtra("public", true))
+
   }
 
   //-------------------------------------------------------\\
@@ -83,7 +86,7 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
   //-------------------------------------------------------\\
   private def refreshPublicIdeas() {
 
-    val intent = new Intent(getActivity.getApplicationContext, classOf[PublicIdeaSyncService])
+    val intent = new Intent(getActivity, classOf[PublicIdeaSyncService])
 
     // Implicitly adding a ResultReceiver to the intent
     intent.putExtra(PUBLIC_IDEA_RESULT_RECEIVER, (resultCode: Int, resultData: Bundle) => {
@@ -93,7 +96,7 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
     })
 
     // Start service
-    getActivity.startService(intent)
+    startService(intent)
   }
 
   def refresh() {
@@ -127,22 +130,21 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
   }
 
   def getSavedSortStatus(): Int = getActivity.getDefaultPreferences() match {
-      case Some(preferences) => preferences.getInt(PREF_PUBLIC_SORT, 0)
-      case None => {
-        if (App.DEBUG) Log.d(APP_TAG, "getSavedSortStatus could not retrieve preferences.")
-        0
-      }
+    case Some(preferences) => preferences.getInt(PREF_PUBLIC_SORT, 0)
+    case None => {
+      if (App.DEBUG) Log.d(APP_TAG, "getSavedSortStatus could not retrieve preferences.")
+      0
     }
+  }
 
 
   def updateSortStatus(): Boolean = getActivity.getDefaultPreferences() match {
-      case Some(preferences) => preferences.edit().putInt(PREF_PUBLIC_SORT, sort_by).commit()
-      case None => {
-        if (App.DEBUG) Log.d(APP_TAG, "updateSortStatus failed to retrieve preferences.")
-        false
-      }
+    case Some(preferences) => preferences.edit().putInt(PREF_PUBLIC_SORT, sort_by).commit()
+    case None => {
+      if (App.DEBUG) Log.d(APP_TAG, "updateSortStatus failed to retrieve preferences.")
+      false
     }
-
+  }
 
 
   //-------------------------------------------------------\\
@@ -153,12 +155,12 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
     val builder = new AlertDialog.Builder(getActivity)
     builder.setTitle(R.string.sort_by)
     builder.setSingleChoiceItems(R.array.sort_options,
-      sort_by, new DialogInterface.OnClickListener() {
-        def onClick(dialog: DialogInterface, which: Int) {
-          sortIdeas(which)
-          dialog.dismiss()
-        }
+      sort_by, (dialog: DialogInterface, which: Int) => {
+        sortIdeas(which)
+        dialog.dismiss()
       })
+
+
     builder.show()
   }
 
@@ -168,26 +170,26 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
   //-------------------------------------------------------\\
 
   override def onOptionsItemSelected(item: MenuItem): Boolean = item.getItemId match {
-      /* Sync public ideas */
-      case R.id.menu_item_sync_public_ideas => {
-        syncPublicIdeas()
-        true
-      }
-      /* new public idea */
-      case R.id.menu_item_new_public_idea => {
-        startNewIdeaActivity()
-        true
-      }
-      /* sort public ideas */
-      case R.id.menu_item_sort_public_ideas => {
-        openSortOptions()
-        true
-      }
-      case _ => super.onOptionsItemSelected(item)
+    /* Sync public ideas */
+    case R.id.menu_item_sync_public_ideas => {
+      syncPublicIdeas()
+      true
     }
+    /* new public idea */
+    case R.id.menu_item_new_public_idea => {
+      startNewIdeaActivity()
+      true
+    }
+    /* sort public ideas */
+    case R.id.menu_item_sort_public_ideas => {
+      openSortOptions()
+      true
+    }
+    case _ => super.onOptionsItemSelected(item)
+  }
 
   private def syncPublicIdeas() {
-    if (isServiceRunning(classOf[PublicIdeaSyncService].getName, getActivity)) {
+    if (isServiceRunning(classOf[PublicIdeaSyncService].getName)(getActivity)) {
       Toast.makeText(getActivity, "Already syncing public ideas...", Toast.LENGTH_SHORT).show()
     } else {
       Toast.makeText(getActivity, "Starting public idea sync...", Toast.LENGTH_SHORT).show()
@@ -217,9 +219,8 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
         PublicIdeaHelper.KEY_PARENT + " IS NULL"
 
 
-    new CursorLoader(getActivity.getApplicationContext, PublicIdeaProvider.CONTENT_URI, null, select, null, null)
+    new CursorLoader(getActivity, PublicIdeaProvider.CONTENT_URI, null, select, null, null)
   }
-
 
 
   def onLoadFinished(loader: Loader[Cursor], cursor: Cursor) {
@@ -249,7 +250,7 @@ class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallb
       publicIdeas.add(0, idea)
     }
 
-    if (AppSettings.DEBUG) Log.d(APP_TAG, "Retrieved " + publicIdeas.size() + " public ideas")
+    if (App.DEBUG) Log.d(APP_TAG, "Retrieved " + publicIdeas.size() + " public ideas")
 
     sortIdeas()
   }

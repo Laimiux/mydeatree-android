@@ -12,7 +12,7 @@ object PublicSyncAlarmReceiver {
 class PublicSyncAlarmReceiver extends BroadcastReceiver {
 
   override def onReceive(context: Context, intent: Intent) {
-    if(AppSettings.DEBUG) Log.d(PublicSyncAlarmReceiver.APP_TAG, "Broadcast received")
+    if(App.DEBUG) Log.d(PublicSyncAlarmReceiver.APP_TAG, "Broadcast received")
     val startIntent = new Intent(context, classOf[PublicIdeaSyncService])
     context.startService(startIntent)
   }

@@ -40,7 +40,7 @@ class PrivateIdeaSyncService extends IntentService("PrivateIdeaSyncService") wit
    * Synchronizes private ideas with the server
    */
   private def synchronizePrivateIdeas() {
-    if (AppSettings.DEBUG) Log.d(APP_TAG, "Synchronization started")
+    if (App.DEBUG) Log.d(APP_TAG, "Synchronization started")
 
     // Get ideas from the server
     App.PersonalIdeaResource.getObjects match {
@@ -97,13 +97,13 @@ class PrivateIdeaSyncService extends IntentService("PrivateIdeaSyncService") wit
         }
 
 
-        if (AppSettings.DEBUG) Log.d(APP_TAG, "New private ideas added: " + newIdeas + ", privated ideas updated: " + ideasUpdated + ", and ideas removed " + ideasDeleted)
+        if (App.DEBUG) Log.d(APP_TAG, "New private ideas added: " + newIdeas + ", privated ideas updated: " + ideasUpdated + ", and ideas removed " + ideasDeleted)
 
         val now = new Time()
         now.setToNow()
-        if (AppSettings.DEBUG) Log.d(APP_TAG, "Synchronization finished at " + now.format(DATE_FORMAT))
+        if (App.DEBUG) Log.d(APP_TAG, "Synchronization finished at " + now.format(DATE_FORMAT))
       }
-      case None => if (AppSettings.DEBUG) Log.d(APP_TAG, "There was an error syncing ideas")
+      case None => if (App.DEBUG) Log.d(APP_TAG, "There was an error syncing ideas")
     }
 
 

@@ -20,8 +20,6 @@ import com.limeblast.mydeatree.AppSettings._
 import scala.Some
 import com.limeblast.rest.{JsonModule}
 
-import com.limeblast.androidhelpers.ScalifiedAndroid._
-
 
 /**
  * Start activity that starts the app flow.
