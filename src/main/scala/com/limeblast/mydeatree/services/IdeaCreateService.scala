@@ -8,9 +8,10 @@ import android.graphics.Color
 import com.limeblast.androidhelpers.{ProviderAccessModule}
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.activities.MainActivity
-import com.limeblast.mydeatree.providers.RESTfulProvider
+import com.limeblast.mydeatree.providers.PrivateIdeaProvider
 import scala.Some
 import com.limeblast.rest.JsonModule
+import storage.PrivateIdeaTableInfo
 
 class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModule with ProviderAccessModule with BasicIdeaModule {
 
@@ -25,12 +26,12 @@ class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModu
 
     val passedIdea = getMainObject(ideaJson, classOf[Idea])
 
-    val whereMap = Map(IdeaHelper.KEY_TITLE -> passedIdea.title,
-      IdeaHelper.KEY_TEXT -> passedIdea.text,
-      IdeaHelper.KEY_CREATED_DATE -> passedIdea.created_date)
+    val whereMap = Map(PrivateIdeaTableInfo.KEY_TITLE -> passedIdea.title,
+      PrivateIdeaTableInfo.KEY_TEXT -> passedIdea.text,
+      PrivateIdeaTableInfo.KEY_CREATED_DATE -> passedIdea.created_date)
 
-    ProviderHelper.updateObjects(getContentResolver, RESTfulProvider.CONTENT_URI,
-      whereMap, null, Map(IdeaHelper.KEY_IS_IDEA_SYNCING -> true))
+    ProviderHelper.updateObjects(getContentResolver, PrivateIdeaProvider.CONTENT_URI,
+      whereMap, null, Map(PrivateIdeaTableInfo.KEY_IS_IDEA_SYNCING -> true))
 
     App.PersonalIdeaResource.postObject(passedIdea) match {
       case Some(idea) => {
@@ -46,15 +47,15 @@ class IdeaCreateService extends IntentService("IdeaCreateService") with JsonModu
   private def insertIdea(passedIdea: Idea, returnedIdea: Idea) {
     val values = getContentValues(returnedIdea)
     // Add personal idea specific values
-    values.put(IdeaHelper.KEY_PUBLIC, returnedIdea.public)
-    values.put(IdeaHelper.KEY_IS_IDEA_NEW, false)
-    values.put(IdeaHelper.KEY_IS_IDEA_SYNCING, false)
+    values.put(PrivateIdeaTableInfo.KEY_PUBLIC, returnedIdea.public)
+    values.put(PrivateIdeaTableInfo.KEY_IS_IDEA_NEW, false)
+    values.put(PrivateIdeaTableInfo.KEY_IS_IDEA_SYNCING, false)
 
-    val whereMap = Map(IdeaHelper.KEY_TITLE -> passedIdea.title,
-      IdeaHelper.KEY_TEXT -> passedIdea.text,
-      IdeaHelper.KEY_CREATED_DATE -> passedIdea.created_date)
+    val whereMap = Map(PrivateIdeaTableInfo.KEY_TITLE -> passedIdea.title,
+      PrivateIdeaTableInfo.KEY_TEXT -> passedIdea.text,
+      PrivateIdeaTableInfo.KEY_CREATED_DATE -> passedIdea.created_date)
 
-    ProviderHelper.updateObjects(getContentResolver, RESTfulProvider.CONTENT_URI, whereMap, null, values)
+    ProviderHelper.updateObjects(getContentResolver, PrivateIdeaProvider.CONTENT_URI, whereMap, null, values)
   }
 
 

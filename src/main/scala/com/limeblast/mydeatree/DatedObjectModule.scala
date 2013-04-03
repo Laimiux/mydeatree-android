@@ -3,6 +3,7 @@ package com.limeblast.mydeatree
 import android.net.Uri
 import android.content.ContentResolver
 import java.util
+import storage.BasicIdeaColumns
 
 /**
  * Created with IntelliJ IDEA.

@@ -10,8 +10,10 @@ import android.app.SearchManager
 import android.util.Log
 
 import java.util.HashMap
-import com.limeblast.mydeatree.IdeaHelper._
-import com.limeblast.mydeatree.{IdeaHelper, AppSettings, IdeaSQLiteHelper}
+import com.limeblast.mydeatree.storage.{PrivateIdeaTableInfo, DatabaseHelper}
+import PrivateIdeaTableInfo._
+import com.limeblast.mydeatree.{AppSettings}
+import com.limeblast.mydeatree.storage.DatabaseHelper
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,7 +22,7 @@ import com.limeblast.mydeatree.{IdeaHelper, AppSettings, IdeaSQLiteHelper}
  * Time: 12:13 PM
  * To change this template use File | Settings | File Templates.
  */
-object RESTfulProvider {
+object PrivateIdeaProvider {
   val ALL_ROWS = 1
   val SINGLE_ROW = 2
   val SEARCH = 4
@@ -50,10 +52,10 @@ object RESTfulProvider {
 class IdeaContentProvider extends ContentProvider {
   private val APP_TAG = "IDEA_CONTENT_PROVIDER"
 
-  private var myDbHelper: IdeaSQLiteHelper = _
+  private var myDbHelper: DatabaseHelper = _
 
   def onCreate(): Boolean = {
-    myDbHelper = new IdeaSQLiteHelper(getContext())
+    myDbHelper = new DatabaseHelper(getContext())
     true
   }
 
@@ -80,15 +82,15 @@ class IdeaContentProvider extends ContentProvider {
     val queryBuilder = new SQLiteQueryBuilder()
 
     // If this is a row query, limit the result set to the passed in row
-    RESTfulProvider.uriMatcher.`match`(uri) match {
-      case RESTfulProvider.SINGLE_ROW => {
+    PrivateIdeaProvider.uriMatcher.`match`(uri) match {
+      case PrivateIdeaProvider.SINGLE_ROW => {
         val rowID = uri.getPathSegments.get(1)
         queryBuilder.appendWhere(KEY_ID + "=" + rowID)
       }
-      case RESTfulProvider.SEARCH => {
+      case PrivateIdeaProvider.SEARCH => {
         queryBuilder.appendWhere(KEY_TITLE + " LIKE \"%" +
             uri.getPathSegments.get(1) + "%\"")
-        queryBuilder.setProjectionMap(RESTfulProvider.SEARCH_PROJECTION_MAP)
+        queryBuilder.setProjectionMap(PrivateIdeaProvider.SEARCH_PROJECTION_MAP)
       }
 
       case _ =>
@@ -97,7 +99,7 @@ class IdeaContentProvider extends ContentProvider {
 
 
     // Specify the table on which to perform the query
-    queryBuilder.setTables(IdeaHelper.TABLE_NAME)
+    queryBuilder.setTables(PrivateIdeaTableInfo.TABLE_NAME)
 
     val cursor = queryBuilder.query(db, projection, select, selectionArgs,
       groupBy, having, sortOrder)
@@ -107,10 +109,10 @@ class IdeaContentProvider extends ContentProvider {
   }
 
   def getType(uri: Uri): String =
-    RESTfulProvider.uriMatcher.`match`(uri) match {
-      case RESTfulProvider.ALL_ROWS => "vnd.android.cursor.dir/vnd.limeblast.ideas"
-      case RESTfulProvider.SINGLE_ROW => "vnd.android.cursor.item/vnd.limeblast.ideas"
-      case RESTfulProvider.SEARCH => SearchManager.SUGGEST_MIME_TYPE
+    PrivateIdeaProvider.uriMatcher.`match`(uri) match {
+      case PrivateIdeaProvider.ALL_ROWS => "vnd.android.cursor.dir/vnd.limeblast.ideas"
+      case PrivateIdeaProvider.SINGLE_ROW => "vnd.android.cursor.item/vnd.limeblast.ideas"
+      case PrivateIdeaProvider.SEARCH => SearchManager.SUGGEST_MIME_TYPE
       case _ => throw new IllegalArgumentException("Unsupported URI: " + uri)
     }
 
@@ -130,7 +132,7 @@ class IdeaContentProvider extends ContentProvider {
 
     // Construct and return the URI of the newly inserted row
     if (id > -1) {
-      val insertedId = ContentUris.withAppendedId(RESTfulProvider.CONTENT_URI, id)
+      val insertedId = ContentUris.withAppendedId(PrivateIdeaProvider.CONTENT_URI, id)
       getContext.getContentResolver.notifyChange(insertedId, null)
 
       insertedId
@@ -145,8 +147,8 @@ class IdeaContentProvider extends ContentProvider {
 
     var select: String = null
     // If this is a row URI, limit the deletion to to the specified row
-    RESTfulProvider.uriMatcher.`match`(uri) match {
-      case RESTfulProvider.SINGLE_ROW => {
+    PrivateIdeaProvider.uriMatcher.`match`(uri) match {
+      case PrivateIdeaProvider.SINGLE_ROW => {
         val rowID = uri.getPathSegments.get(1)
         select = KEY_ID + "=" + rowID
         if (!TextUtils.isEmpty(selection)) select += " AND (" + selection + ")"
@@ -173,8 +175,8 @@ class IdeaContentProvider extends ContentProvider {
 
     var select: String = null
     // If this is a row URI, limit the deletion to the specified row
-    RESTfulProvider.uriMatcher.`match`(uri) match {
-      case RESTfulProvider.SINGLE_ROW => {
+    PrivateIdeaProvider.uriMatcher.`match`(uri) match {
+      case PrivateIdeaProvider.SINGLE_ROW => {
         val rowID = uri.getPathSegments.get(1)
         select = KEY_ID + "=" + rowID
         if (!TextUtils.isEmpty(selection)) select += " AND (" + selection + ")"

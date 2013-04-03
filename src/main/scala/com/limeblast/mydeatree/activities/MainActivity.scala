@@ -14,7 +14,7 @@ import android.net.Uri
 import com.limeblast.androidhelpers.{ScalifiedActivity, WhereClauseModule}
 import com.limeblast.mydeatree._
 import fragments.{FavoriteIdeaFragment, PrivateIdeaListFragment, PublicIdeaFragment}
-import providers.RESTfulProvider
+import providers.PrivateIdeaProvider
 import com.limeblast.mydeatree.AppSettings._
 
 import scala.Some
@@ -85,7 +85,7 @@ class MainActivity extends SherlockFragmentActivity with ScalifiedActivity with 
     }
     //val haveNewPublicIdeas = intent.getBooleanExtra(HAS_NEW_PUBLIC_IDEAS, false)
 
-    //  IdeaTableHelper.retrieveObject(this, RESTfulProvider.CONTENT_URI, classOf[Idea])
+    //  IdeaTableHelper.retrieveObject(this, PrivateIdeaProvider.CONTENT_URI, classOf[Idea])
     mTabsAdapter.addTab(publicIdeaTab, classOf[PublicIdeaFragment], null)
     mTabsAdapter.addTab(privateIdeaTab, classOf[PrivateIdeaListFragment], null)
     mTabsAdapter.addTab(favoriteIdeaTab, classOf[FavoriteIdeaFragment], null)
@@ -200,7 +200,7 @@ class MainActivity extends SherlockFragmentActivity with ScalifiedActivity with 
 
   private def removeUserDatabaseInfo() {
     // Remove all personal ideas
-    val uri = Uri.withAppendedPath(RESTfulProvider.CONTENT_URI, "/" + App.USERNAME)
+    val uri = Uri.withAppendedPath(PrivateIdeaProvider.CONTENT_URI, "/" + App.USERNAME)
     getContentResolver.delete(uri, null, null)
   }
 

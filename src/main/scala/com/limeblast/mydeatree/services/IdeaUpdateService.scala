@@ -4,10 +4,11 @@ import android.app.IntentService
 import android.content.{ContentUris, Intent}
 
 import com.limeblast.mydeatree._
-import com.limeblast.mydeatree.providers.RESTfulProvider
+import com.limeblast.mydeatree.providers.PrivateIdeaProvider
 import scala.Some
 import android.util.Log
 import com.limeblast.rest.JsonModule
+import storage.PrivateIdeaTableInfo
 
 
 /*
@@ -40,13 +41,13 @@ class IdeaUpdateService extends IntentService("IdeaUpdateService") with JsonModu
   private def updateIdea(idea: Idea) {
     if(App.DEBUG) Log.d("IdeaUpdateService", "Idea was successfully updated, reflecting the change onto the database.")
 
-    val ideaAddress = ContentUris.withAppendedId(RESTfulProvider.CONTENT_URI, idea.id.toLong)
+    val ideaAddress = ContentUris.withAppendedId(PrivateIdeaProvider.CONTENT_URI, idea.id.toLong)
     val cr = getContentResolver
 
     val values = getContentValues(idea)
     // Add personal idea specific values
-    values.put(IdeaHelper.KEY_PUBLIC, idea.public)
-    values.put(IdeaHelper.KEY_IS_IDEA_EDITED, false)
+    values.put(PrivateIdeaTableInfo.KEY_PUBLIC, idea.public)
+    values.put(PrivateIdeaTableInfo.KEY_IS_IDEA_EDITED, false)
 
     cr.update(ideaAddress, values, null, null)
   }

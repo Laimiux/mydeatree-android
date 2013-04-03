@@ -2,9 +2,9 @@ package com.limeblast.mydeatree.providers
 
 import android.content.{ContentUris, UriMatcher, ContentProvider}
 import com.limeblast.androidhelpers.{InsertProviderTrait, QueryProviderTrait, UpdateProviderTrait, DeleteProviderTrait}
-import com.limeblast.mydeatree.{PublicIdeaDatabaseModule, IdeaSQLiteHelper}
 import android.database.sqlite.{SQLiteQueryBuilder, SQLiteOpenHelper}
 import android.net.Uri
+import com.limeblast.mydeatree.storage.{PublicIdeaDatabaseModule, DatabaseHelper}
 
 
 object PublicIdeaProvider {
@@ -27,7 +27,7 @@ with UpdateProviderTrait with QueryProviderTrait with InsertProviderTrait with P
   var myDbHelper: SQLiteOpenHelper = _
 
   def onCreate(): Boolean = {
-    myDbHelper = new IdeaSQLiteHelper(getContext())
+    myDbHelper = new DatabaseHelper(getContext())
     true
   }
 

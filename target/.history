@@ -326,3 +326,17 @@ android:prepare-market
 compile
 android:prepare-market
 android:start-device
+android:prepare-market
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile

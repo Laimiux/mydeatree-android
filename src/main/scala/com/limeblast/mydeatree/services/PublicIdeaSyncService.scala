@@ -15,6 +15,7 @@ import com.limeblast.mydeatree.AppSettings._
 import providers.{PublicIdeaProvider}
 import com.limeblast.mydeatree.activities.MainActivity
 import scala.Some
+import storage.PublicIdeaDatabaseModule
 
 
 private object SyncServiceVars {

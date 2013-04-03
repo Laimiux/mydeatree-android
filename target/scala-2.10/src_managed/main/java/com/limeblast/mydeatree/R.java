@@ -10,7 +10,9 @@ package com.limeblast.mydeatree;
 public final class R {
     public static final class array {
         public static final int private_idea_options=0x7f0c0002;
-        public static final int sort_options=0x7f0c0003;
+        public static final int public_idea_options=0x7f0c0003;
+        public static final int public_idea_owner_options=0x7f0c0004;
+        public static final int sort_options=0x7f0c0005;
         public static final int update_freq_options=0x7f0c0000;
         public static final int update_freq_values=0x7f0c0001;
     }

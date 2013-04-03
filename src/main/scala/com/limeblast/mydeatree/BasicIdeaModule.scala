@@ -1,6 +1,7 @@
 package com.limeblast.mydeatree
 
 import android.content.ContentValues
+import storage.BasicIdeaColumns
 
 /**
  * Created with IntelliJ IDEA.

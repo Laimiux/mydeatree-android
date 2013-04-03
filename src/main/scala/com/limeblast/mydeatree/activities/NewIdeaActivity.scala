@@ -11,9 +11,10 @@ import android.text.TextUtils
 
 
 import com.limeblast.mydeatree._
-import providers.RESTfulProvider
+import providers.PrivateIdeaProvider
 
 import com.limeblast.androidhelpers.ScalifiedActivity
+import storage.PrivateIdeaTableInfo
 
 object NewIdeaActivity {
   val NEW_IDEA_RESULT = 99
@@ -67,11 +68,11 @@ class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule w
 
   private def createNewIdea(idea: Idea) {
     val values = getContentValues(idea)
-    values.put(IdeaHelper.KEY_PUBLIC, idea.public)
-    values.put(IdeaHelper.KEY_IS_IDEA_NEW, true)
+    values.put(PrivateIdeaTableInfo.KEY_PUBLIC, idea.public)
+    values.put(PrivateIdeaTableInfo.KEY_IS_IDEA_NEW, true)
 
-    val resolver = getContentResolver
-    resolver.insert(RESTfulProvider.CONTENT_URI, values)
+
+    getContentResolver.insert(PrivateIdeaProvider.CONTENT_URI, values)
 
 
     setResult(Activity.RESULT_OK)

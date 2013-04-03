@@ -7,7 +7,7 @@ import android.support.v4.content.{CursorLoader, Loader}
 import android.os.{Handler, Bundle}
 import java.util
 import android.view.{View, ViewGroup, LayoutInflater}
-import android.widget.{Toast, ListView, ArrayAdapter}
+import android.widget.{AdapterView, Toast, ListView, ArrayAdapter}
 
 
 import android.util.Log
@@ -25,6 +25,10 @@ import com.limeblast.mydeatree.AppSettings._
 import providers.PublicIdeaProvider
 import services.PublicIdeaSyncService
 import com.limeblast.androidhelpers.ScalifiedTraitModule
+import android.app.AlertDialog.Builder
+import annotation.switch
+import scala.Some
+import storage.PublicIdeaDatabaseModule
 
 class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallbacks[Cursor]
 with PublicIdeaDatabaseModule with ScalifiedTraitModule {
@@ -40,14 +44,20 @@ with PublicIdeaDatabaseModule with ScalifiedTraitModule {
   // Defines how to sort ideas
   private var sort_by = 0
 
-  // Currently not used
-  var parent_idea: String = null
+  private var parentIdea: Option[PublicIdea] = None
+
+  //-------------------------------------------------------\\
+  //------------ FRAGMENT LIFECYCLE EVENTS ----------------\\
+  //-------------------------------------------------------\\
 
   override def onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View = {
     val view = inflater.inflate(R.layout.public_ideas_layout, container, false)
 
+    view.setFocusableInTouchMode(true)
+    view.requestFocus()
 
     publicIdeaListView = view.findViewById(R.id.public_idea_list).asInstanceOf[ListView]
+
 
     view
   }
@@ -65,12 +75,23 @@ with PublicIdeaDatabaseModule with ScalifiedTraitModule {
 
     publicIdeaListView.setAdapter(aa)
 
+   // publicIdeaListView.setLongClickable(true)
+
+    publicIdeaListView.onItemLongClick((aView, view, position, id) => handleIdeaListLongClick(aView, view, position, id))
+
     getLoaderManager.initLoader(0, null, this)
 
     if (!isServiceRunning(classOf[PublicIdeaSyncService].getName)(getActivity))
       refreshPublicIdeas()
 
   }
+
+
+  override def onResume() {
+    refresh()
+    super.onResume()
+  }
+
 
 
   private def startNewIdeaActivity() {
@@ -112,22 +133,21 @@ with PublicIdeaDatabaseModule with ScalifiedTraitModule {
   def sortIdeas(mode: Int) {
     sort_by = mode
     updateSortStatus()
-    sortIdeas()
+    sortIdeas
   }
 
-  def sortIdeas() {
-    publicIdeas.synchronized {
-      if (sort_by == 0) {
-        Collections.sort(publicIdeas, new IdeaComparatorByModifiedDate[PublicIdea]())
-      } else if (sort_by == 1) {
-        Collections.sort(publicIdeas, new IdeaComparatorByCreatedDate[PublicIdea]())
-      } else if (sort_by == 2) {
-        Collections.sort(publicIdeas, new IdeaComparatorByTitle[PublicIdea]())
+  def sortIdeas = publicIdeas.synchronized {
+      IdeaSortStrategy.getStrategy[PublicIdea](sort_by) match {
+        case None =>
+        case Some(strategy) => {
+          strategy.sort(publicIdeas)
+          handler.post(aa.notifyDataSetChanged())
+        }
       }
     }
 
-    handler.post(aa.notifyDataSetChanged())
-  }
+
+
 
   def getSavedSortStatus(): Int = getActivity.getDefaultPreferences() match {
     case Some(preferences) => preferences.getInt(PREF_PUBLIC_SORT, 0)
@@ -165,9 +185,55 @@ with PublicIdeaDatabaseModule with ScalifiedTraitModule {
   }
 
 
+  private def openPublicIdeaOwnerOptions(pIdea: PublicIdea) {
+    val builder = new Builder(getActivity)
+    builder.setTitle(pIdea.title)
+
+    builder.setItems(R.array.public_idea_owner_options, (dialog: DialogInterface, which: Int) => (which: Int @switch) match {
+      case z => getActivity.shortToast("Ain't shit handled at " + z)
+    })
+
+    builder.show()
+  }
+
+  def openPublicIdeaOptions(pIdea: PublicIdea) {
+    if (App.DEBUG) Log.d(APP_TAG, "Creating public idea option menu.")
+
+    val builder = new Builder(getActivity)
+    builder.setTitle(pIdea.title + " by " + pIdea.owner.username)
+
+    builder.setItems(R.array.public_idea_options, (dialog: DialogInterface, which: Int) => (which: Int @switch) match {
+      case 0 => getActivity.shortToast("Share clicked")
+      case 1 => getActivity.shortToast("Favorite clicked")
+      case z => getActivity.shortToast("unhandled " + z)
+    })
+
+
+    builder.show()
+  }
+
+
   //-------------------------------------------------------\\
-  //--------- HANDLING ACTIONS FROM ACTIONBAR -------------\\
+  //------ HANDLING ACTIONS FROM VARIOUS LISTENERS --------\\
   //-------------------------------------------------------\\
+
+  private def handleIdeaListLongClick(adapterView: AdapterView[_], view: View, position: Int, id: Long): Boolean = {
+    if(App.DEBUG) Log.d(APP_TAG, "handleIdeaListLongClick has been called.")
+    adapterView.getItemAtPosition(position) match {
+      case publicIdea: PublicIdea => {
+        if (App.USERNAME != publicIdea.owner.username)
+          openPublicIdeaOptions(publicIdea)
+        else
+          openPublicIdeaOwnerOptions(publicIdea)
+        true
+      }
+      case _ => {
+        if (App.DEBUG) Log.d(APP_TAG, "There was a problem getting a public idea at position " + position)
+        false
+      }
+    }
+  }
+
 
   override def onOptionsItemSelected(item: MenuItem): Boolean = item.getItemId match {
     /* Sync public ideas */
@@ -199,25 +265,13 @@ with PublicIdeaDatabaseModule with ScalifiedTraitModule {
 
 
   //-------------------------------------------------------\\
-  //------------ FRAGMENT LIFECYCLE EVENTS ----------------\\
-  //-------------------------------------------------------\\
-
-
-  override def onResume() {
-    refresh()
-    super.onResume()
-  }
-
-  //-------------------------------------------------------\\
   //--------- LOADER MANAGER CALLBACK METHODS -------------\\
   //-------------------------------------------------------\\
   def onCreateLoader(id: Int, args: Bundle): Loader[Cursor] = {
-    val select =
-      if (parent_idea != null)
-        PublicIdeaHelper.KEY_PARENT + "='" + parent_idea + "'"
-      else
-        PublicIdeaHelper.KEY_PARENT + " IS NULL"
-
+    val select = parentIdea match {
+      case None => PublicIdeaHelper.KEY_PARENT + " IS NULL"
+      case Some(parentIdea) => PublicIdeaHelper.KEY_PARENT + "='" + parentIdea + "'"
+    }
 
     new CursorLoader(getActivity, PublicIdeaProvider.CONTENT_URI, null, select, null, null)
   }
@@ -252,7 +306,7 @@ with PublicIdeaDatabaseModule with ScalifiedTraitModule {
 
     if (App.DEBUG) Log.d(APP_TAG, "Retrieved " + publicIdeas.size() + " public ideas")
 
-    sortIdeas()
+    sortIdeas
   }
 
   def onLoaderReset(loader: Loader[Cursor]) {}

@@ -2,9 +2,9 @@ package com.limeblast.mydeatree.providers
 
 import android.content.{ContentUris, UriMatcher, ContentProvider}
 import android.net.Uri
-import com.limeblast.mydeatree.{FavoriteIdeaColumns, IdeaSQLiteHelper}
 import android.database.sqlite.SQLiteQueryBuilder
 import com.limeblast.androidhelpers.{InsertProviderTrait, QueryProviderTrait, UpdateProviderTrait, DeleteProviderTrait}
+import com.limeblast.mydeatree.storage.{FavoriteIdeaColumns, DatabaseHelper}
 
 object FavoriteIdeaProvider {
   val ALL_ROWS = 1
@@ -22,7 +22,7 @@ object FavoriteIdeaProvider {
 class FavoriteIdeaProvider extends ContentProvider with DeleteProviderTrait
 with UpdateProviderTrait with QueryProviderTrait with InsertProviderTrait {
 
-  lazy val myDbHelper = new IdeaSQLiteHelper(getContext())
+  lazy val myDbHelper = new DatabaseHelper(getContext())
 
   val table_name: String = FavoriteIdeaColumns.TABLE_NAME
 

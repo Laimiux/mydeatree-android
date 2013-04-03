@@ -48,7 +48,6 @@ object General {
       //libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0" artifacts(Artifact("actionbarsherlock", "apklib", "apklib")) from "https://oss.sonatype.org/content/groups/scala-tools/",
       //    libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0"  artifacts(Artifact("actionbarsherlock-4.2.0", "apklib", "apklib")) from "http://repo1.maven.org/maven2/",
       //artifacts(Artifact("actionbarsherlock", "apklib", "apklib")) from "https://oss.sonatype.org/content/groups/scala-tools/",
-      libraryDependencies += "com.j256.ormlite" % "ormlite-android" % "4.43",
       libraryDependencies += "org.scalaz" %% "scalaz-core" % "6.0.4",
       libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0" artifacts (Artifact("actionbarsherlock", "apklib", "apklib"))
       //libraryDependencies += "com.actionbarsherlock" % "library" % "4.0.2"  artifacts(Artifact("library", "apklib", "apklib")),

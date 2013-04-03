@@ -9,7 +9,7 @@ import android.database.Cursor
 
 import com.limeblast.androidhelpers.{Inflater}
 import com.limeblast.mydeatree._
-
+import storage.FavoriteIdeaColumns
 
 
 class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util.List[PublicIdea])
@@ -20,10 +20,12 @@ class PublicIdeaListAdapter(val context: Context, resourceId: Int, objects: util
     null, makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> false), null, null)
     */
 
-  def getFavoriteIdea(idea: Idea): Option[FavoriteIdea] = ???
+  //def getFavoriteIdea(idea: Idea): Option[FavoriteIdea] = ???
 
   override def getView(position: Int, convertView: View, parent: ViewGroup): View = {
     var cView = inflater.inflate(resourceId, null).asInstanceOf[LinearLayout]
+
+    //cView.setLongClickable(true)
 
     val idea: PublicIdea = getItem(position)
 

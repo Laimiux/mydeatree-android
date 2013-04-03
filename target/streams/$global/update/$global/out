@@ -52,83 +52,18 @@
 [0m[[0mdebug[0m] [0mloadData of com.google.android#support-v4;r7 of rootConf=compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.google.android#support-v4;r7 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of com.google.android#support-v4;r7 of rootConf=compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=compile[0m
-[0m[[0mdebug[0m] [0m	using sbt-chain to resolve com.j256.ormlite#ormlite-android;4.43[0m
-[0m[[0minfo[0m] [0mResolving com.j256.ormlite#ormlite-android;4.43 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.j256.ormlite#ormlite-android;4.43 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mNo entry is found in the ModuleDescriptorCache : /Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-android/ivy-4.43.xml[0m
-[0m[[0mdebug[0m] [0mpost 1.3 ivy file: using exact as default matcher[0m
-[0m[[0mdebug[0m] [0m	found ivy file in cache for com.j256.ormlite#ormlite-android;4.43 (resolved by Maven Search): /Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-android/ivy-4.43.xml[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.j256.ormlite#ormlite-android;4.43[0m
-[0m[[0mdebug[0m] [0mEntry is found in the ModuleDescriptorCache : /Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-android/ivy-4.43.xml[0m
-[0m[[0mdebug[0m] [0m	found ivy file in cache for com.j256.ormlite#ormlite-android;4.43 (resolved by Maven Search): /Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-android/ivy-4.43.xml[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: com.j256.ormlite#ormlite-android;4.43[0m
-[0m[[0mdebug[0m] [0m	checking com.j256.ormlite#ormlite-android;4.43 from Maven Search against [none][0m
-[0m[[0mdebug[0m] [0m	module revision kept as first found: com.j256.ormlite#ormlite-android;4.43 from Maven Search[0m
-[0m[[0mdebug[0m] [0m	found com.j256.ormlite#ormlite-android;4.43 in Maven Search[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->runtime][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->compile][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=compile[0m
-[0m[[0mdebug[0m] [0m	using sbt-chain to resolve com.j256.ormlite#ormlite-core;4.43[0m
-[0m[[0minfo[0m] [0mResolving com.j256.ormlite#ormlite-core;4.43 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.j256.ormlite#ormlite-core;4.43 {compile=[compile(*), master(*)], runtime=[runtime(*)], test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mNo entry is found in the ModuleDescriptorCache : /Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-core/ivy-4.43.xml[0m
-[0m[[0mdebug[0m] [0mpost 1.3 ivy file: using exact as default matcher[0m
-[0m[[0mdebug[0m] [0m	found ivy file in cache for com.j256.ormlite#ormlite-core;4.43 (resolved by Maven Search): /Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-core/ivy-4.43.xml[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.j256.ormlite#ormlite-core;4.43[0m
-[0m[[0mdebug[0m] [0mEntry is found in the ModuleDescriptorCache : /Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-core/ivy-4.43.xml[0m
-[0m[[0mdebug[0m] [0m	found ivy file in cache for com.j256.ormlite#ormlite-core;4.43 (resolved by Maven Search): /Users/Laimiux/.ivy2/cache/com.j256.ormlite/ormlite-core/ivy-4.43.xml[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: com.j256.ormlite#ormlite-core;4.43[0m
-[0m[[0mdebug[0m] [0m	checking com.j256.ormlite#ormlite-core;4.43 from Maven Search against [none][0m
-[0m[[0mdebug[0m] [0m	module revision kept as first found: com.j256.ormlite#ormlite-core;4.43 from Maven Search[0m
-[0m[[0mdebug[0m] [0m	found com.j256.ormlite#ormlite-core;4.43 in Maven Search[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->master][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->org.scalaz#scalaz-core_2.10;6.0.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scalaz#scalaz-core_2.10;6.0.4 of rootConf=compile[0m
 [0m[[0mdebug[0m] [0m	using sbt-chain to resolve org.scalaz#scalaz-core_2.10;6.0.4[0m
 [0m[[0minfo[0m] [0mResolving org.scalaz#scalaz-core_2.10;6.0.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalaz#scalaz-core_2.10;6.0.4 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for org.scalaz#scalaz-core_2.10;6.0.4: tried /Users/Laimiux/.ivy2/cache/org.scalaz/scalaz-core_2.10/ivy-6.0.4.xml[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for org.scalaz#scalaz-core_2.10;6.0.4: tried /Users/Laimiux/.ivy2/cache/org.scalaz/scalaz-core_2.10/ivy-6.0.4.xml[0m
-[0m[[0mdebug[0m] [0m	 trying /Users/Laimiux/.ivy2/local/org.scalaz/scalaz-core_2.10/6.0.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Laimiux/.ivy2/local/org.scalaz/scalaz-core_2.10/6.0.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: resource not reachable for org.scalaz#scalaz-core_2.10;6.0.4: res=/Users/Laimiux/.ivy2/local/org.scalaz/scalaz-core_2.10/6.0.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalaz#scalaz-core_2.10;6.0.4[0m
-[0m[[0mdebug[0m] [0mMaven Search: no namespace defined: using system[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for org.scalaz#scalaz-core_2.10;6.0.4: tried /Users/Laimiux/.ivy2/cache/org.scalaz/scalaz-core_2.10/ivy-6.0.4.xml[0m
-[0m[[0mdebug[0m] [0m	 trying http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.pom[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.pom[0m
-[0m[[0mdebug[0m] [0m	Maven Search: found md file for org.scalaz#scalaz-core_2.10;6.0.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.pom (6.0.4)[0m
-[0m[[0mdebug[0m] [0m	parser = sbt.CustomPomParser@4a529154[0m
-[0m[[0mdebug[0m] [0m	no ivy file in cache for org.scalaz#scalaz-core_2.10;6.0.4: tried /Users/Laimiux/.ivy2/cache/org.scalaz/scalaz-core_2.10/ivy-6.0.4.xml[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	Maven Search: downloading http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.pom[0m
-[0m[[0mdebug[0m] [0m		to /Users/Laimiux/.ivy2/cache/org.scalaz/scalaz-core_2.10/ivy-6.0.4.xml.original.part[0m
-[0m[[0mdebug[0m] [0msha1 file found for http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.pom: checking...[0m
-[0m[[0mdebug[0m] [0m	Maven Search: downloading http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0m		to /var/folders/p6/tq_p36kx39q3387xbs4z1n2c0000gn/T/ivytmp4840162781904360512sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalaz#scalaz-core_2.10;6.0.4!scalaz-core_2.10.pom(pom.original) (192ms)[0m
-[0m[[0mdebug[0m] [0m	 trying /Users/Laimiux/.ivy2/local/org.scalaz/scalaz-core_2.10/6.0.4/jars/scalaz-core_2.10.jar[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Laimiux/.ivy2/local/org.scalaz/scalaz-core_2.10/6.0.4/jars/scalaz-core_2.10.jar[0m
-[0m[[0mdebug[0m] [0m	local: resource not reachable for org.scalaz#scalaz-core_2.10;6.0.4: res=/Users/Laimiux/.ivy2/local/org.scalaz/scalaz-core_2.10/6.0.4/jars/scalaz-core_2.10.jar[0m
-[0m[[0mdebug[0m] [0m	 trying http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.jar[0m
-[0m[[0mdebug[0m] [0mno source artifact found for org.scalaz#scalaz-core_2.10;6.0.4[0m
-[0m[[0mdebug[0m] [0mno javadoc artifact found for org.scalaz#scalaz-core_2.10;6.0.4[0m
-[0m[[0mdebug[0m] [0m	default-cache: parsed downloaded md file for org.scalaz#scalaz-core_2.10;6.0.4; parsed=org.scalaz#scalaz-core_2.10;6.0.4[0m
+[0m[[0mdebug[0m] [0mNo entry is found in the ModuleDescriptorCache : /Users/Laimiux/.ivy2/cache/org.scalaz/scalaz-core_2.10/ivy-6.0.4.xml[0m
+[0m[[0mdebug[0m] [0mpost 1.3 ivy file: using exact as default matcher[0m
+[0m[[0mdebug[0m] [0m	found ivy file in cache for org.scalaz#scalaz-core_2.10;6.0.4 (resolved by Maven Search): /Users/Laimiux/.ivy2/cache/org.scalaz/scalaz-core_2.10/ivy-6.0.4.xml[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalaz#scalaz-core_2.10;6.0.4[0m
+[0m[[0mdebug[0m] [0mEntry is found in the ModuleDescriptorCache : /Users/Laimiux/.ivy2/cache/org.scalaz/scalaz-core_2.10/ivy-6.0.4.xml[0m
+[0m[[0mdebug[0m] [0m	found ivy file in cache for org.scalaz#scalaz-core_2.10;6.0.4 (resolved by Maven Search): /Users/Laimiux/.ivy2/cache/org.scalaz/scalaz-core_2.10/ivy-6.0.4.xml[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.scalaz#scalaz-core_2.10;6.0.4[0m
 [0m[[0mdebug[0m] [0m	checking org.scalaz#scalaz-core_2.10;6.0.4 from Maven Search against [none][0m
 [0m[[0mdebug[0m] [0m	module revision kept as first found: org.scalaz#scalaz-core_2.10;6.0.4 from Maven Search[0m
 [0m[[0mdebug[0m] [0m	found org.scalaz#scalaz-core_2.10;6.0.4 in Maven Search[0m
@@ -204,28 +139,6 @@
 [0m[[0mdebug[0m] [0mruntime is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.google.android#support-v4;r7 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of com.google.android#support-v4;r7 of rootConf=runtime[0m
-[0m[[0mdebug[0m] [0mruntime is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=runtime[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->runtime][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=runtime[0m
-[0m[[0mdebug[0m] [0mruntime is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->compile][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=runtime[0m
-[0m[[0mdebug[0m] [0mruntime is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=runtime[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=runtime[0m
-[0m[[0mdebug[0m] [0mruntime is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=runtime[0m
-[0m[[0mdebug[0m] [0mruntime is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=runtime[0m
-[0m[[0mdebug[0m] [0mruntime is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->master][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=runtime[0m
 [0m[[0mdebug[0m] [0mruntime is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->org.scalaz#scalaz-core_2.10;6.0.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scalaz#scalaz-core_2.10;6.0.4 of rootConf=runtime[0m
@@ -303,28 +216,6 @@
 [0m[[0mdebug[0m] [0mtest is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.google.android#support-v4;r7 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of com.google.android#support-v4;r7 of rootConf=test[0m
-[0m[[0mdebug[0m] [0mtest is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=test[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->runtime][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=test[0m
-[0m[[0mdebug[0m] [0mtest is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->compile][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=test[0m
-[0m[[0mdebug[0m] [0mtest is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=test[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=test[0m
-[0m[[0mdebug[0m] [0mtest is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=test[0m
-[0m[[0mdebug[0m] [0mtest is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=test[0m
-[0m[[0mdebug[0m] [0mtest is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->master][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=test[0m
 [0m[[0mdebug[0m] [0mtest is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->org.scalaz#scalaz-core_2.10;6.0.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scalaz#scalaz-core_2.10;6.0.4 of rootConf=test[0m
@@ -505,28 +396,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.google.android#support-v4;r7 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of com.google.android#support-v4;r7 of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=compile-internal[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->runtime][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=compile-internal[0m
-[0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->compile][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=compile-internal[0m
-[0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=compile-internal[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=compile-internal[0m
-[0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=compile-internal[0m
-[0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=compile-internal[0m
-[0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->master][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=compile-internal[0m
-[0m[[0mdebug[0m] [0mcompile-internal is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->org.scalaz#scalaz-core_2.10;6.0.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scalaz#scalaz-core_2.10;6.0.4 of rootConf=compile-internal[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->org.scalaz#scalaz-core_2.10;6.0.4 [compile->runtime][0m
@@ -610,28 +479,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.google.android#support-v4;r7 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of com.google.android#support-v4;r7 of rootConf=runtime-internal[0m
 [0m[[0mdebug[0m] [0mruntime-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=runtime-internal[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->runtime][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=runtime-internal[0m
-[0m[[0mdebug[0m] [0mruntime-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->compile][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=runtime-internal[0m
-[0m[[0mdebug[0m] [0mruntime-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=runtime-internal[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=runtime-internal[0m
-[0m[[0mdebug[0m] [0mruntime-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=runtime-internal[0m
-[0m[[0mdebug[0m] [0mruntime-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=runtime-internal[0m
-[0m[[0mdebug[0m] [0mruntime-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->master][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=runtime-internal[0m
-[0m[[0mdebug[0m] [0mruntime-internal is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->org.scalaz#scalaz-core_2.10;6.0.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scalaz#scalaz-core_2.10;6.0.4 of rootConf=runtime-internal[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->org.scalaz#scalaz-core_2.10;6.0.4 [compile->runtime][0m
@@ -714,28 +561,6 @@
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.google.android#support-v4;r7 [compile->master][0m
 [0m[[0mdebug[0m] [0mloadData of com.google.android#support-v4;r7 of rootConf=test-internal[0m
-[0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=test-internal[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->runtime][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=test-internal[0m
-[0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->compile][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=test-internal[0m
-[0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=test-internal[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=test-internal[0m
-[0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=test-internal[0m
-[0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.j256.ormlite#ormlite-android;4.43->com.j256.ormlite#ormlite-core;4.43 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-core;4.43 of rootConf=test-internal[0m
-[0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->com.j256.ormlite#ormlite-android;4.43 [compile->master][0m
-[0m[[0mdebug[0m] [0mloadData of com.j256.ormlite#ormlite-android;4.43 of rootConf=test-internal[0m
 [0m[[0mdebug[0m] [0mtest-internal is loaded and no conf to load.  Skip loading[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies mydeatree#mydeatree_2.10;0.1->org.scalaz#scalaz-core_2.10;6.0.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mloadData of org.scalaz#scalaz-core_2.10;6.0.4 of rootConf=test-internal[0m
@@ -870,22 +695,17 @@
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'pom'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for mydeatree#mydeatree_2.10;0.1 [pom][0m
 [0m[[0mdebug[0m] [0mloadData of mydeatree#mydeatree_2.10;0.1 of rootConf=pom[0m
-[0m[[0mdebug[0m] [0mNbr of module to sort : 9[0m
+[0m[[0mdebug[0m] [0mNbr of module to sort : 7[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-lang#scala-library;2.10.0 / Number of dependencies = 0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : com.google.android#support-v4;r7 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mSort done for : com.google.android#support-v4;r7[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-android;4.43 / Number of dependencies = 6[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-core;4.43 / Number of dependencies = 5[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-core;4.43[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-android;4.43[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scalaz#scalaz-core_2.10;6.0.4 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scalaz#scalaz-core_2.10;6.0.4[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : com.actionbarsherlock#actionbarsherlock;4.2.0 / Number of dependencies = 3[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : com.google.android#support-v4;r7[0m
 [0m[[0mdebug[0m] [0mSort done for : com.actionbarsherlock#actionbarsherlock;4.2.0[0m
-[0m[[0mdebug[0m] [0mModule descriptor is processed : com.j256.ormlite#ormlite-core;4.43[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scalatest#scalatest_2.10;1.9.1 / Number of dependencies = 15[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-lang#scala-actors;2.10.0 / Number of dependencies = 1[0m
@@ -918,33 +738,17 @@
 [0m[[0mdebug[0m] [0morg.scala-lang#scala-library;2.10.0 in runtime-internal: excluding org.scala-lang#scala-library;2.10.0!scala-library.jar[0m
 [0m[[0mdebug[0m] [0morg.scala-lang#scala-library;2.10.0 in compile-internal: excluding org.scala-lang#scala-library;2.10.0!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.android#support-v4;r7!support-v4.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.j256.ormlite#ormlite-android;4.43!ormlite-android.jar[0m
-[0m[[0mdebug[0m] [0m	 trying http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.jar ...[0m
-[0m[[0mdebug[0m] [0m	Maven Search: downloading http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.jar[0m
-[0m[[0mdebug[0m] [0m		to /Users/Laimiux/.ivy2/cache/org.scalaz/scalaz-core_2.10/jars/scalaz-core_2.10-6.0.4.jar.part[0m
-[0m[[0mdebug[0m] [0msha1 file found for http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.jar: checking...[0m
-[0m[[0mdebug[0m] [0m	Maven Search: downloading http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.jar.sha1[0m
-[0m[[0mdebug[0m] [0m		to /var/folders/p6/tq_p36kx39q3387xbs4z1n2c0000gn/T/ivytmp2577192660452302859sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/6.0.4/scalaz-core_2.10-6.0.4.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalaz#scalaz-core_2.10;6.0.4!scalaz-core_2.10.jar (12226ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalaz#scalaz-core_2.10;6.0.4!scalaz-core_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.actionbarsherlock#actionbarsherlock;4.2.0!actionbarsherlock.apklib[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.j256.ormlite#ormlite-core;4.43!ormlite-core.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalatest#scalatest_2.10;1.9.1!scalatest_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-actors;2.10.0!scala-actors.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.0!scala-reflect.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1258ms :: artifacts dl 12262ms[0m
-[0m[[0mdebug[0m] [0mNbr of module to sort : 6[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1042ms :: artifacts dl 45ms[0m
+[0m[[0mdebug[0m] [0mNbr of module to sort : 4[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-lang#scala-library;2.10.0 / Number of dependencies = 0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : com.google.android#support-v4;r7 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mSort done for : com.google.android#support-v4;r7[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-android;4.43 / Number of dependencies = 6[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-core;4.43 / Number of dependencies = 5[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-core;4.43[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-android;4.43[0m
-[0m[[0mdebug[0m] [0mModule descriptor is processed : com.j256.ormlite#ormlite-core;4.43[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scalaz#scalaz-core_2.10;6.0.4 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scalaz#scalaz-core_2.10;6.0.4[0m
@@ -952,16 +756,11 @@
 [0m[[0mdebug[0m] [0mModule descriptor is processed : com.google.android#support-v4;r7[0m
 [0m[[0mdebug[0m] [0mSort done for : com.actionbarsherlock#actionbarsherlock;4.2.0[0m
 [0m[[0mdebug[0m] [0m	report for mydeatree#mydeatree_2.10;0.1 compile produced in /Users/Laimiux/Dropbox/mydeatree-android/target/resolution-cache/reports/mydeatree-mydeatree_2.10/compile-resolved.xml[0m
-[0m[[0mdebug[0m] [0mNbr of module to sort : 6[0m
+[0m[[0mdebug[0m] [0mNbr of module to sort : 4[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-lang#scala-library;2.10.0 / Number of dependencies = 0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : com.google.android#support-v4;r7 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mSort done for : com.google.android#support-v4;r7[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-android;4.43 / Number of dependencies = 6[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-core;4.43 / Number of dependencies = 5[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-core;4.43[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-android;4.43[0m
-[0m[[0mdebug[0m] [0mModule descriptor is processed : com.j256.ormlite#ormlite-core;4.43[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scalaz#scalaz-core_2.10;6.0.4 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scalaz#scalaz-core_2.10;6.0.4[0m
@@ -969,16 +768,11 @@
 [0m[[0mdebug[0m] [0mModule descriptor is processed : com.google.android#support-v4;r7[0m
 [0m[[0mdebug[0m] [0mSort done for : com.actionbarsherlock#actionbarsherlock;4.2.0[0m
 [0m[[0mdebug[0m] [0m	report for mydeatree#mydeatree_2.10;0.1 runtime produced in /Users/Laimiux/Dropbox/mydeatree-android/target/resolution-cache/reports/mydeatree-mydeatree_2.10/runtime-resolved.xml[0m
-[0m[[0mdebug[0m] [0mNbr of module to sort : 9[0m
+[0m[[0mdebug[0m] [0mNbr of module to sort : 7[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-lang#scala-library;2.10.0 / Number of dependencies = 0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : com.google.android#support-v4;r7 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mSort done for : com.google.android#support-v4;r7[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-android;4.43 / Number of dependencies = 6[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-core;4.43 / Number of dependencies = 5[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-core;4.43[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-android;4.43[0m
-[0m[[0mdebug[0m] [0mModule descriptor is processed : com.j256.ormlite#ormlite-core;4.43[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scalaz#scalaz-core_2.10;6.0.4 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scalaz#scalaz-core_2.10;6.0.4[0m
@@ -1001,16 +795,11 @@
 [0m[[0mdebug[0m] [0m	report for mydeatree#mydeatree_2.10;0.1 provided produced in /Users/Laimiux/Dropbox/mydeatree-android/target/resolution-cache/reports/mydeatree-mydeatree_2.10/provided-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 0[0m
 [0m[[0mdebug[0m] [0m	report for mydeatree#mydeatree_2.10;0.1 optional produced in /Users/Laimiux/Dropbox/mydeatree-android/target/resolution-cache/reports/mydeatree-mydeatree_2.10/optional-resolved.xml[0m
-[0m[[0mdebug[0m] [0mNbr of module to sort : 6[0m
+[0m[[0mdebug[0m] [0mNbr of module to sort : 4[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-lang#scala-library;2.10.0 / Number of dependencies = 0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : com.google.android#support-v4;r7 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mSort done for : com.google.android#support-v4;r7[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-android;4.43 / Number of dependencies = 6[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-core;4.43 / Number of dependencies = 5[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-core;4.43[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-android;4.43[0m
-[0m[[0mdebug[0m] [0mModule descriptor is processed : com.j256.ormlite#ormlite-core;4.43[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scalaz#scalaz-core_2.10;6.0.4 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scalaz#scalaz-core_2.10;6.0.4[0m
@@ -1018,16 +807,11 @@
 [0m[[0mdebug[0m] [0mModule descriptor is processed : com.google.android#support-v4;r7[0m
 [0m[[0mdebug[0m] [0mSort done for : com.actionbarsherlock#actionbarsherlock;4.2.0[0m
 [0m[[0mdebug[0m] [0m	report for mydeatree#mydeatree_2.10;0.1 compile-internal produced in /Users/Laimiux/Dropbox/mydeatree-android/target/resolution-cache/reports/mydeatree-mydeatree_2.10/compile-internal-resolved.xml[0m
-[0m[[0mdebug[0m] [0mNbr of module to sort : 6[0m
+[0m[[0mdebug[0m] [0mNbr of module to sort : 4[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-lang#scala-library;2.10.0 / Number of dependencies = 0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : com.google.android#support-v4;r7 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mSort done for : com.google.android#support-v4;r7[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-android;4.43 / Number of dependencies = 6[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-core;4.43 / Number of dependencies = 5[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-core;4.43[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-android;4.43[0m
-[0m[[0mdebug[0m] [0mModule descriptor is processed : com.j256.ormlite#ormlite-core;4.43[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scalaz#scalaz-core_2.10;6.0.4 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scalaz#scalaz-core_2.10;6.0.4[0m
@@ -1035,16 +819,11 @@
 [0m[[0mdebug[0m] [0mModule descriptor is processed : com.google.android#support-v4;r7[0m
 [0m[[0mdebug[0m] [0mSort done for : com.actionbarsherlock#actionbarsherlock;4.2.0[0m
 [0m[[0mdebug[0m] [0m	report for mydeatree#mydeatree_2.10;0.1 runtime-internal produced in /Users/Laimiux/Dropbox/mydeatree-android/target/resolution-cache/reports/mydeatree-mydeatree_2.10/runtime-internal-resolved.xml[0m
-[0m[[0mdebug[0m] [0mNbr of module to sort : 9[0m
+[0m[[0mdebug[0m] [0mNbr of module to sort : 7[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scala-lang#scala-library;2.10.0 / Number of dependencies = 0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : com.google.android#support-v4;r7 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mSort done for : com.google.android#support-v4;r7[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-android;4.43 / Number of dependencies = 6[0m
-[0m[[0mdebug[0m] [0mSort dependencies of : com.j256.ormlite#ormlite-core;4.43 / Number of dependencies = 5[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-core;4.43[0m
-[0m[[0mdebug[0m] [0mSort done for : com.j256.ormlite#ormlite-android;4.43[0m
-[0m[[0mdebug[0m] [0mModule descriptor is processed : com.j256.ormlite#ormlite-core;4.43[0m
 [0m[[0mdebug[0m] [0mSort dependencies of : org.scalaz#scalaz-core_2.10;6.0.4 / Number of dependencies = 1[0m
 [0m[[0mdebug[0m] [0mModule descriptor is processed : org.scala-lang#scala-library;2.10.0[0m
 [0m[[0mdebug[0m] [0mSort done for : org.scalaz#scalaz-core_2.10;6.0.4[0m
@@ -1071,5 +850,5 @@
 [0m[[0mdebug[0m] [0m	report for mydeatree#mydeatree_2.10;0.1 docs produced in /Users/Laimiux/Dropbox/mydeatree-android/target/resolution-cache/reports/mydeatree-mydeatree_2.10/docs-resolved.xml[0m
 [0m[[0mdebug[0m] [0mNbr of module to sort : 0[0m
 [0m[[0mdebug[0m] [0m	report for mydeatree#mydeatree_2.10;0.1 pom produced in /Users/Laimiux/Dropbox/mydeatree-android/target/resolution-cache/reports/mydeatree-mydeatree_2.10/pom-resolved.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1258ms resolve - 12262ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (1042ms resolve - 45ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

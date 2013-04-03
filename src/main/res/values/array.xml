@@ -19,6 +19,17 @@
         <item>Edit</item>
         <item>Delete</item>
     </string-array>
+    <string-array name="public_idea_options">
+        <item>Share</item>
+        <item>Add to favorites</item>
+    </string-array>
+    <string-array name="public_idea_owner_options">
+        <item>New Children Idea</item>
+        <item>Edit</item>
+        <item>Delete</item>
+        <item>Make it private</item>
+        <item>Share</item>
+    </string-array>
     <string-array name="sort_options">
         <item>Modified Date</item>
         <item>Created Date</item>

@@ -3,7 +3,7 @@ package com.limeblast.mydeatree
 import android.content.{SharedPreferences, Context}
 import android.preference.PreferenceManager
 import com.limeblast.androidhelpers.ProviderAccessModule
-import providers.RESTfulProvider
+import providers.PrivateIdeaProvider
 
 object App extends MydeaRestModule {
   val DEBUG = true

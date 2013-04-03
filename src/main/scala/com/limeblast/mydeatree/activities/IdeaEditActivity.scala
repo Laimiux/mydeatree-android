@@ -10,10 +10,11 @@ import scala.concurrent.ops.spawn
 
 import android.app.Activity
 import com.limeblast.mydeatree._
-import com.limeblast.mydeatree.providers.RESTfulProvider
+import com.limeblast.mydeatree.providers.PrivateIdeaProvider
 import com.limeblast.rest.JsonModule
 
 import com.limeblast.androidhelpers.ScalifiedActivity
+import storage.PrivateIdeaTableInfo
 
 class IdeaEditActivity extends Activity with TypedActivity
 with JsonModule with BasicIdeaModule with ScalifiedActivity{
@@ -72,25 +73,25 @@ with JsonModule with BasicIdeaModule with ScalifiedActivity{
       // Get the values
       val values = getContentValues(idea)
       // Add personal idea specific values
-      values.put(IdeaHelper.KEY_PUBLIC, idea.public)
+      values.put(PrivateIdeaTableInfo.KEY_PUBLIC, idea.public)
 
       // If idea has id update it by finding it by id
       if (isIdeaOnServer) {
-        values.put(IdeaHelper.KEY_IS_IDEA_EDITED, true)
+        values.put(PrivateIdeaTableInfo.KEY_IS_IDEA_EDITED, true)
         // Get the address
         // Causes a crash
-        //val ideaAddress = ContentUris.withAppendedId(RESTfulProvider.CONTENT_URI, idea.id.toLong)
+        //val ideaAddress = ContentUris.withAppendedId(PrivateIdeaProvider.CONTENT_URI, idea.id.toLong)
 
-        val select = IdeaHelper.KEY_ID + "=" + idea.id
+        val select = PrivateIdeaTableInfo.KEY_ID + "=" + idea.id
         // Update the idea
 
-        getContentResolver.update(RESTfulProvider.CONTENT_URI, values, select, null)
+        getContentResolver.update(PrivateIdeaProvider.CONTENT_URI, values, select, null)
       } else {
         // No id exists so it will be a little harder to find it
-        val where = IdeaHelper.KEY_TITLE + "='" + oldIdea.title + "' AND " + IdeaHelper.KEY_TEXT +
-          "='" + oldIdea.text + "' AND " + IdeaHelper.KEY_CREATED_DATE + "='" + oldIdea.created_date + "'"
+        val where = PrivateIdeaTableInfo.KEY_TITLE + "='" + oldIdea.title + "' AND " + PrivateIdeaTableInfo.KEY_TEXT +
+          "='" + oldIdea.text + "' AND " + PrivateIdeaTableInfo.KEY_CREATED_DATE + "='" + oldIdea.created_date + "'"
 
-        getContentResolver.update(RESTfulProvider.CONTENT_URI, values, where, null)
+        getContentResolver.update(PrivateIdeaProvider.CONTENT_URI, values, where, null)
       }
     }
 

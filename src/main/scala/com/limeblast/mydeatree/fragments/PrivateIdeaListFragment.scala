@@ -30,13 +30,14 @@ import com.limeblast.mydeatree._
 import adapters.IdeaListAdapter
 import com.limeblast.mydeatree.activities.{IdeaEditActivity, NewIdeaActivity}
 import com.limeblast.mydeatree.AppSettings._
-import com.limeblast.mydeatree.providers.RESTfulProvider
+import com.limeblast.mydeatree.providers.PrivateIdeaProvider
 
 import services.{PrivateIdeaSyncService, IdeaUpdateService, IdeaDeleteService, IdeaCreateService}
 import com.limeblast.rest.JsonModule
 import android.app.AlertDialog.Builder
 import scala.Some
 import annotation.switch
+import storage.PrivateIdeaTableInfo
 
 class PrivateIdeaListFragment extends SherlockListFragment
 with LoaderManager.LoaderCallbacks[Cursor] with JsonModule with PersonalIdeaGetModule
@@ -123,7 +124,6 @@ with ScalifiedTraitModule with WhereClauseModule {
   }
 
 
-
   override def onListItemClick(l: ListView, v: View, position: Int, id: Long) =
     l.getItemAtPosition(position) match {
       case i: Idea => {
@@ -135,16 +135,15 @@ with ScalifiedTraitModule with WhereClauseModule {
     }
 
 
-
-
   //-------------------------------------------------------\\
   //--------------- LIST HEADER FUNCTIONS -----------------\\
   //-------------------------------------------------------\\
 
   override def onActivityResult(requestCode: Int, resultCode: Int, data: Intent) =
     requestCode match {
-      case NewIdeaActivity.NEW_IDEA_RESULT if(resultCode == Activity.RESULT_CANCELED) => {
-        moveToPreviousParent()
+      case NewIdeaActivity.NEW_IDEA_RESULT => {
+        // if(resultCode == Activity.RESULT_CANCELED)
+        //moveToPreviousParent()
       }
       case _ => super.onActivityResult(requestCode, resultCode, data)
     }
@@ -217,7 +216,6 @@ with ScalifiedTraitModule with WhereClauseModule {
   }
 
 
-
   private def moveToPreviousParent() {
     AppSettings.PRIVATE_PARENT_IDEA match {
       case Some(idea) => moveToPreviousParent(idea)
@@ -243,18 +241,18 @@ with ScalifiedTraitModule with WhereClauseModule {
   private def getIdea(resource_uri: String): Idea = {
     val cr = getActivity.getContentResolver
 
-    val selection = IdeaHelper.KEY_RESOURCE_URI + "='" + resource_uri + "'"
+    val selection = PrivateIdeaTableInfo.KEY_RESOURCE_URI + "='" + resource_uri + "'"
 
-    val cursor = cr.query(RESTfulProvider.CONTENT_URI, null, selection, null, null)
+    val cursor = cr.query(PrivateIdeaProvider.CONTENT_URI, null, selection, null, null)
 
-    val keyTitleIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_TITLE)
-    val keyTextIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_TEXT)
-    val keyResourceUriIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_RESOURCE_URI)
-    val keyModifiedDateIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_MODIFIED_DATE)
-    val keyCreatedDateIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_CREATED_DATE)
-    val keyParentIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_PARENT)
-    val keyIdIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_ID)
-    val keyPublicIndex = cursor.getColumnIndexOrThrow(IdeaHelper.KEY_PUBLIC)
+    val keyTitleIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_TITLE)
+    val keyTextIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_TEXT)
+    val keyResourceUriIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_RESOURCE_URI)
+    val keyModifiedDateIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_MODIFIED_DATE)
+    val keyCreatedDateIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_CREATED_DATE)
+    val keyParentIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_PARENT)
+    val keyIdIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_ID)
+    val keyPublicIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_PUBLIC)
 
 
     if (App.DEBUG) Log.d(APP_TAG, cursor.getColumnNames.toString)
@@ -282,22 +280,22 @@ with ScalifiedTraitModule with WhereClauseModule {
       // Idea isn't on server
       case null => {
         // This means we just need to get rid of this idea from the database
-        val where = makeWhereClause(IdeaHelper.KEY_TITLE -> idea.title, IdeaHelper.KEY_TEXT -> idea.text,
-          IdeaHelper.KEY_CREATED_DATE -> idea.created_date)
-        //val where = IdeaHelper.KEY_TITLE + "='" + idea.title + "' AND " + IdeaHelper.KEY_TEXT +
-          //"='" + idea.text + "' AND " + IdeaHelper.KEY_CREATED_DATE + "='" + idea.created_date + "'"
+        val where = makeWhereClause(PrivateIdeaTableInfo.KEY_TITLE -> idea.title, PrivateIdeaTableInfo.KEY_TEXT -> idea.text,
+          PrivateIdeaTableInfo.KEY_CREATED_DATE -> idea.created_date)
+        //val where = PrivateIdeaTableInfo.KEY_TITLE + "='" + idea.title + "' AND " + PrivateIdeaTableInfo.KEY_TEXT +
+        //"='" + idea.text + "' AND " + PrivateIdeaTableInfo.KEY_CREATED_DATE + "='" + idea.created_date + "'"
 
-        resolver.delete(RESTfulProvider.CONTENT_URI, where, null)
+        resolver.delete(PrivateIdeaProvider.CONTENT_URI, where, null)
       }
       case _ => {
 
         // Mark idea for deletion
-        val where = makeWhereClause(IdeaHelper.KEY_ID -> idea.id)
+        val where = makeWhereClause(PrivateIdeaTableInfo.KEY_ID -> idea.id)
 
         val values = new ContentValues()
-        values.put(IdeaHelper.KEY_IS_IDEA_DELETED, true)
+        values.put(PrivateIdeaTableInfo.KEY_IS_IDEA_DELETED, true)
 
-        resolver.update(RESTfulProvider.CONTENT_URI, values, where, null)
+        resolver.update(PrivateIdeaProvider.CONTENT_URI, values, where, null)
 
         // If there is internet connection
         // start service to delete the idea
@@ -332,19 +330,17 @@ with ScalifiedTraitModule with WhereClauseModule {
     sortIdeas(sort)
   }
 
-  def sortIdeas(sort_by: Int) {
-    privateIdeas.synchronized {
-      if (sort_by == 0) {
-        Collections.sort(privateIdeas, new IdeaComparatorByModifiedDate[Idea]())
-      } else if (sort_by == 1) {
-        Collections.sort(privateIdeas, new IdeaComparatorByCreatedDate[Idea]())
-      } else if (sort_by == 2) {
-        Collections.sort(privateIdeas, new IdeaComparatorByTitle[Idea]())
+  def sortIdeas(sort_by: Int) = privateIdeas.synchronized {
+    IdeaSortStrategy.getStrategy[Idea](sort_by) match {
+      case None =>
+      case Some(strategy) => {
+        strategy.sort(privateIdeas)
+        handler.post(aa.notifyDataSetChanged())
       }
     }
 
-    handler.post(aa.notifyDataSetChanged())
   }
+
 
   def getSavedSortStatus() =
     getActivity.getDefaultPreferences() match {
@@ -367,6 +363,12 @@ with ScalifiedTraitModule with WhereClauseModule {
     if (getActivity != null) {
       getLoaderManager().restartLoader(0, null, this)
     }
+
+    PRIVATE_PARENT_IDEA match {
+      case None => setDefaultHeader()
+      case Some(idea) => setHeaderIdea(idea)
+    }
+
     if (App.DEBUG) Log.d(APP_TAG, "PrivateIdeaListFragment refresh is finished.")
   }
 
@@ -381,13 +383,20 @@ with ScalifiedTraitModule with WhereClauseModule {
     startActivityForResult(intent, NewIdeaActivity.NEW_IDEA_RESULT)
   }
 
+
+  private def startEditActivity(idea: Idea) {
+    val intent = new Intent(getActivity, classOf[IdeaEditActivity])
+    intent.putExtra("idea", idea.toJson())
+    startActivity(intent)
+  }
+
   //-------------------------------------------------------\\
   //------------BUILDERS FOR VARIOUS DIALOG ---------------\\
   //-------------------------------------------------------\\
   private def showPrivateIdeaOptions(idea: Idea) {
     val builder: Builder = new AlertDialog.Builder(getActivity)
     builder.setTitle(idea.title)
-    builder.setItems(R.array.private_idea_options, (dialog: DialogInterface, which: Int) => (which: Int @switch) match {
+    builder.setItems(R.array.private_idea_options, (dialog: DialogInterface, which: Int) => (which: Int@switch) match {
       case 0 => {
         // New children idea
         AppSettings.PRIVATE_PARENT_IDEA = Some(idea)
@@ -397,9 +406,8 @@ with ScalifiedTraitModule with WhereClauseModule {
         //EDIT
         dialog.dismiss()
 
-        val intent = new Intent(getActivity, classOf[IdeaEditActivity])
-        intent.putExtra("idea", idea.toJson())
-        startActivity(intent)
+        startEditActivity(idea)
+
       }
       case 2 => {
         // DELETE
@@ -513,15 +521,15 @@ with ScalifiedTraitModule with WhereClauseModule {
   //--------- LOADER MANAGER CALLBACK METHODS -------------\\
   //-------------------------------------------------------\\
   def onCreateLoader(id: Int, args: Bundle): Loader[Cursor] = {
-    var select = IdeaHelper.KEY_IS_IDEA_DELETED + "=0"
+    var select = PrivateIdeaTableInfo.KEY_IS_IDEA_DELETED + "=0"
 
     AppSettings.PRIVATE_PARENT_IDEA match {
-      case Some(idea) => select += " AND " + IdeaHelper.KEY_PARENT + "='" + idea.resource_uri + "'"
-      case None => select += " AND " + IdeaHelper.KEY_PARENT + " IS NULL"
+      case Some(idea) => select += " AND " + PrivateIdeaTableInfo.KEY_PARENT + "='" + idea.resource_uri + "'"
+      case None => select += " AND " + PrivateIdeaTableInfo.KEY_PARENT + " IS NULL"
     }
 
 
-    new CursorLoader(getActivity.getApplicationContext, RESTfulProvider.CONTENT_URI, null, select, null, null)
+    new CursorLoader(getActivity.getApplicationContext, PrivateIdeaProvider.CONTENT_URI, null, select, null, null)
   }
 
   def onLoadFinished(loader: Loader[Cursor], cursor: Cursor) {
@@ -651,9 +659,9 @@ with ScalifiedTraitModule with WhereClauseModule {
   private def getIdeasToUpdate(): util.ArrayList[Idea] = {
     val resolver = getActivity.getContentResolver
 
-    val select = makeWhereClause(IdeaHelper.KEY_IS_IDEA_EDITED -> true, IdeaHelper.KEY_IS_IDEA_SYNCING -> false)
-    //val select = IdeaHelper.KEY_IS_IDEA_EDITED + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
-    val cursor = resolver.query(RESTfulProvider.CONTENT_URI, null, select, null, null)
+    val select = makeWhereClause(PrivateIdeaTableInfo.KEY_IS_IDEA_EDITED -> true, PrivateIdeaTableInfo.KEY_IS_IDEA_SYNCING -> false)
+    //val select = PrivateIdeaTableInfo.KEY_IS_IDEA_EDITED + "=1 AND " + PrivateIdeaTableInfo.KEY_IS_IDEA_SYNCING + "=0"
+    val cursor = resolver.query(PrivateIdeaProvider.CONTENT_URI, null, select, null, null)
 
     getIdeasFromCursor(cursor)
   }
@@ -661,10 +669,10 @@ with ScalifiedTraitModule with WhereClauseModule {
   private def getIdeasToDelete(): util.ArrayList[Idea] = {
     val resolver = getActivity.getContentResolver
 
-    val select = makeWhereClause(IdeaHelper.KEY_IS_IDEA_DELETED -> true, IdeaHelper.KEY_IS_IDEA_SYNCING -> false)
+    val select = makeWhereClause(PrivateIdeaTableInfo.KEY_IS_IDEA_DELETED -> true, PrivateIdeaTableInfo.KEY_IS_IDEA_SYNCING -> false)
 
-    //val select = IdeaHelper.KEY_IS_IDEA_DELETED + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
-    val cursor = resolver.query(RESTfulProvider.CONTENT_URI, null, select, null, null)
+    //val select = PrivateIdeaTableInfo.KEY_IS_IDEA_DELETED + "=1 AND " + PrivateIdeaTableInfo.KEY_IS_IDEA_SYNCING + "=0"
+    val cursor = resolver.query(PrivateIdeaProvider.CONTENT_URI, null, select, null, null)
 
     getIdeasFromCursor(cursor)
   }
@@ -672,9 +680,9 @@ with ScalifiedTraitModule with WhereClauseModule {
   private def getIdeasToUpload(): util.ArrayList[Idea] = {
     val resolver = getActivity.getContentResolver
 
-    val select = makeWhereClause(IdeaHelper.KEY_IS_IDEA_NEW -> true, IdeaHelper.KEY_IS_IDEA_SYNCING -> false)
-    //val select = IdeaHelper.KEY_IS_IDEA_NEW + "=1 AND " + IdeaHelper.KEY_IS_IDEA_SYNCING + "=0"
-    val cursor = resolver.query(RESTfulProvider.CONTENT_URI, null, select, null, null)
+    val select = makeWhereClause(PrivateIdeaTableInfo.KEY_IS_IDEA_NEW -> true, PrivateIdeaTableInfo.KEY_IS_IDEA_SYNCING -> false)
+    //val select = PrivateIdeaTableInfo.KEY_IS_IDEA_NEW + "=1 AND " + PrivateIdeaTableInfo.KEY_IS_IDEA_SYNCING + "=0"
+    val cursor = resolver.query(PrivateIdeaProvider.CONTENT_URI, null, select, null, null)
 
     getIdeasFromCursor(cursor)
   }

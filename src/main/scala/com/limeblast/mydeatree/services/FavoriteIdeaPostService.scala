@@ -3,8 +3,9 @@ package com.limeblast.mydeatree.services
 import android.app.IntentService
 import android.content.{ContentValues, Intent}
 import com.limeblast.rest.JsonModule
-import com.limeblast.mydeatree.{FavoriteIdeaProviderModule, FavoriteIdeaColumns, App, FavoriteIdea}
+import com.limeblast.mydeatree.{FavoriteIdeaProviderModule, App, FavoriteIdea}
 import android.util.Log
+import com.limeblast.mydeatree.storage.FavoriteIdeaColumns
 
 
 class FavoriteIdeaPostService extends IntentService("FavoriteIdeaPostService") with JsonModule with FavoriteIdeaProviderModule {

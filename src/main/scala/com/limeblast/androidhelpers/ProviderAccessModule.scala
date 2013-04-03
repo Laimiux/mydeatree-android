@@ -2,9 +2,9 @@ package com.limeblast.androidhelpers
 
 import android.content.{ContentValues, ContentResolver}
 
-import com.limeblast.mydeatree.{IdeaHelper, Idea}
+import com.limeblast.mydeatree.{Idea}
 import android.net.Uri
-import com.limeblast.mydeatree.providers.RESTfulProvider
+import com.limeblast.mydeatree.providers.PrivateIdeaProvider
 
 
 trait ProviderAccessModule extends WhereClauseImplicitModule {

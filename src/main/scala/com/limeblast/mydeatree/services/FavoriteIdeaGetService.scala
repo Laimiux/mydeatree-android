@@ -2,7 +2,7 @@ package com.limeblast.mydeatree.services
 
 import android.app.IntentService
 import android.content.Intent
-import com.limeblast.mydeatree.{FavoriteIdeaProviderModule, FavoriteIdeaColumns, FavoriteIdea, App}
+import com.limeblast.mydeatree.{FavoriteIdeaProviderModule, FavoriteIdea, App}
 import android.util.Log
 
 import java.util
@@ -10,6 +10,7 @@ import scala.collection.JavaConversions._
 import com.limeblast.androidhelpers.WhereClauseModule
 import android.os.ResultReceiver
 import android.database.sqlite.SQLiteConstraintException
+import com.limeblast.mydeatree.storage.FavoriteIdeaColumns
 
 
 sealed class ObjectWithUri(val uri: String)

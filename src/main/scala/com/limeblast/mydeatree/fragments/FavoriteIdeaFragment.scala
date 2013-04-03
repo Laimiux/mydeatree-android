@@ -23,6 +23,7 @@ import concurrent.ops._
 import com.limeblast.rest.JsonModule
 
 import android.app.Activity
+import storage.{FavoriteIdeaColumns, PublicIdeaDatabaseModule}
 
 /**
  * Created with IntelliJ IDEA.
@@ -64,17 +65,16 @@ with FavoriteIdeaProviderModule with ScalifiedTraitModule {
 
     setListAdapter(arrayAdapter)
 
+  }
+
+  override def onResume() {
+    refresh()
 
     // Refresh resources
     spawn {
       refreshResources()
     }
 
-
-  }
-
-  override def onResume() {
-    refresh()
     super.onResume()
   }
 

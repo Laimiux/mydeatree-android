@@ -10,6 +10,7 @@ import android.database.Cursor
 import com.limeblast.androidhelpers.{ProviderAccessModule, Inflater}
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.FavoriteIdeaProvider
+import storage.FavoriteIdeaColumns
 
 
 class FavoriteIdeaListAdapter(val context: Context, resourceId: Int, objects: util.List[PublicIdea])

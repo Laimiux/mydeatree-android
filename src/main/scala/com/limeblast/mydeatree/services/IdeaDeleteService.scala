@@ -4,9 +4,10 @@ import android.app.IntentService
 import android.content.Intent
 import com.limeblast.androidhelpers.{ProviderAccessModule}
 import com.limeblast.mydeatree._
-import com.limeblast.mydeatree.providers.RESTfulProvider
+import com.limeblast.mydeatree.providers.PrivateIdeaProvider
 import android.util.Log
 import com.limeblast.rest.JsonModule
+import storage.PrivateIdeaTableInfo
 
 
 class IdeaDeleteService extends IntentService("IdeaDeleteService") with JsonModule with ProviderAccessModule {
@@ -34,19 +35,19 @@ class IdeaDeleteService extends IntentService("IdeaDeleteService") with JsonModu
 
   private def removeIdea(idea:Idea) {
 
-    ProviderHelper.deleteObjects(getContentResolver, RESTfulProvider.CONTENT_URI, (IdeaHelper.KEY_ID, idea.id), null)
+    ProviderHelper.deleteObjects(getContentResolver, PrivateIdeaProvider.CONTENT_URI, (PrivateIdeaTableInfo.KEY_ID, idea.id), null)
   }
 
   /*
   /* Eventually move this function out of here */
   private def removeIdea(idea: Idea): Boolean = {
   /*  Get this to work at some point
-    App.IdeaProvider.deleteObjects(getContentResolver, (IdeaHelper.KEY_ID, idea.id), null) match {
+    App.IdeaProvider.deleteObjects(getContentResolver, (PrivateIdeaTableInfo.KEY_ID, idea.id), null) match {
       case deleted:Int if (deleted > 0) => true
       case _ => false
     }
      */
-    val deleted = ProviderHelper.deleteObjects(getContentResolver, RESTfulProvider.CONTENT_URI, (IdeaHelper.KEY_ID, idea.id), null)
+    val deleted = ProviderHelper.deleteObjects(getContentResolver, PrivateIdeaProvider.CONTENT_URI, (PrivateIdeaTableInfo.KEY_ID, idea.id), null)
     if (deleted > 0) true
     else false
   }

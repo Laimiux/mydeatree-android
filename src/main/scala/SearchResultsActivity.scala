@@ -7,7 +7,8 @@ import android.os.Bundle
 import android.support.v4.content.{CursorLoader, Loader}
 import android.content.Intent
 import android.app.SearchManager
-import providers.RESTfulProvider
+import providers.PrivateIdeaProvider
+import storage.PrivateIdeaTableInfo
 
 /**
  * Created with IntelliJ IDEA.
@@ -65,7 +66,7 @@ class SearchListFragment extends ListFragment with LoaderManager.LoaderCallbacks
     super.onActivityCreated(savedInstanceState)
 
     adapter = new SimpleCursorAdapter(getActivity, android.R.layout.simple_list_item_1, null,
-      Array[String](IdeaHelper.KEY_TITLE),
+      Array[String](PrivateIdeaTableInfo.KEY_TITLE),
       Array[Int](android.R.id.text1))
 
     setListAdapter(adapter)
@@ -87,14 +88,14 @@ class SearchListFragment extends ListFragment with LoaderManager.LoaderCallbacks
       query = bundle.getString(SearchResultsActivity.QUERY_EXTRA_KEY)
 
     // Construct the new query in the form of a Cursor Loader
-    val projection = Array[String](IdeaHelper.KEY_ID, IdeaHelper.KEY_TITLE)
+    val projection = Array[String](PrivateIdeaTableInfo.KEY_ID, PrivateIdeaTableInfo.KEY_TITLE)
 
-    val where = IdeaHelper.KEY_TITLE + " LIKE \"%" + query + "%\""
+    val where = PrivateIdeaTableInfo.KEY_TITLE + " LIKE \"%" + query + "%\""
     val whereArgs = null
-    val sortOrder = IdeaHelper.KEY_TITLE + " COLLATE LOCALIZED ASC"
+    val sortOrder = PrivateIdeaTableInfo.KEY_TITLE + " COLLATE LOCALIZED ASC"
 
     // Create the new Cursor Loader
-    new CursorLoader(getActivity.getApplicationContext, RESTfulProvider.CONTENT_URI, projection, where, whereArgs, sortOrder)
+    new CursorLoader(getActivity.getApplicationContext, PrivateIdeaProvider.CONTENT_URI, projection, where, whereArgs, sortOrder)
   }
 
   def onLoadFinished(loader: Loader[Cursor], cursor: Cursor) {

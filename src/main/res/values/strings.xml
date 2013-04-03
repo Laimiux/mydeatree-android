@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">mydeaTREE</string>
-    <string name="menu_preferences">Preferences</string>
+    <string name="menu_preferences">Settings</string>
     <string name="sign_out">Sign Out</string>
     <string name="login">Sign In</string>
     <string name="sign_up">Sign Up</string>

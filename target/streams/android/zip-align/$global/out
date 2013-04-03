@@ -1,812 +1,806 @@
 [0m[[0mdebug[0m] [0mAligning /Applications/adt-bundle-mac/sdk/tools/zipalign -v 4 /Users/Laimiux/Dropbox/mydeatree-android/target/mydeatree-0.1.apk /Users/Laimiux/Dropbox/mydeatree-android/target/mydeatree-0.1-market.apk[0m
 [0m[[0mdebug[0m] [0mVerifying alignment of /Users/Laimiux/Dropbox/mydeatree-android/target/mydeatree-0.1-market.apk (4)...[0m
 [0m[[0mdebug[0m] [0m      50 META-INF/MANIFEST.MF (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   23771 META-INF/MYDEATRE.SF (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   47907 META-INF/MYDEATRE.DSA (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   48793 res/color/abs__primary_text_disable_only_holo_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   49142 res/color/abs__primary_text_disable_only_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   49476 res/color/abs__primary_text_holo_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   49929 res/color/abs__primary_text_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   50392 res/drawable/abs__activated_background_holo_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   50746 res/drawable/abs__activated_background_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   51091 res/drawable/abs__btn_cab_done_holo_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   51477 res/drawable/abs__btn_cab_done_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   51849 res/drawable/abs__ic_clear.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   52187 res/drawable/abs__ic_clear_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   52536 res/drawable/abs__ic_menu_moreoverflow_holo_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   52837 res/drawable/abs__ic_menu_moreoverflow_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   53132 res/drawable/abs__item_background_holo_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   53566 res/drawable/abs__item_background_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   54019 res/drawable/abs__list_selector_background_transition_holo_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   54352 res/drawable/abs__list_selector_background_transition_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   54662 res/drawable/abs__list_selector_holo_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   55115 res/drawable/abs__list_selector_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   55573 res/drawable/abs__progress_horizontal_holo_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   56000 res/drawable/abs__progress_horizontal_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   56417 res/drawable/abs__progress_medium_holo.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   56841 res/drawable/abs__search_dropdown_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   57290 res/drawable/abs__search_dropdown_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   57736 res/drawable/abs__spinner_ab_holo_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   58134 res/drawable/abs__spinner_ab_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   58532 res/drawable/abs__tab_indicator_ab_holo.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   58990 res/drawable/abs__textfield_searchview_holo_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   59342 res/drawable/abs__textfield_searchview_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   59698 res/drawable/abs__textfield_searchview_right_holo_dark.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   60055 res/drawable/abs__textfield_searchview_right_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   60402 res/drawable/activated_background_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   60731 res/drawable/app_main_bg.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   61011 res/drawable/btn_check_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   61575 res/drawable/btn_default_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   62026 res/drawable/btn_radio_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   62592 res/drawable/btn_toggle_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   63149 res/drawable/button_holder.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   63450 res/drawable/edit_text_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   63912 res/drawable/fastscroll_thumb_holo.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   64238 res/drawable/idea_button.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   64450 res/drawable/idea_selector.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   64775 res/drawable/list_button_thin.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   65441 res/drawable/list_selector_background_transition_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   65747 res/drawable/list_selector_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   66185 res/drawable/login_gradient.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   66516 res/drawable/logo.png (OK)[0m
-[0m[[0mdebug[0m] [0m   69038 res/drawable/main_button.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   69757 res/drawable/main_button_text_color.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   70117 res/drawable/pressed_background_mydeatree.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   70405 res/drawable/progress_horizontal_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   70825 res/drawable/progress_horizontal_mydeatree.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   71261 res/drawable/progress_indeterminate_horizontal_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   71674 res/drawable/ratingbar_full_empty_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   72094 res/drawable/ratingbar_full_filled_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   72507 res/drawable/ratingbar_full_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   72844 res/drawable/ratingbar_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   73190 res/drawable/ratingbar_small_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   73522 res/drawable/rectangle_bg.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   73935 res/drawable/scrubber_control_selector_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   74337 res/drawable/scrubber_progress_horizontal_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   74759 res/drawable/selectable_background_mydeatree.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   75173 res/drawable/spinner_background_ab_mydeatree.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   75575 res/drawable/spinner_background_holo_light.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   75974 res/drawable/tab_indicator_ab_mydeatree.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   76406 res/drawable/title_bg.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   76823 res/drawable/title_selector.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   77148 res/layout/abs__action_bar_home.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   77788 res/layout/abs__action_bar_tab.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   78154 res/layout/abs__action_bar_tab_bar_view.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   78483 res/layout/abs__action_bar_title_item.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   79147 res/layout/abs__action_menu_item_layout.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   80067 res/layout/abs__action_menu_layout.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   80460 res/layout/abs__action_mode_bar.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   80863 res/layout/abs__action_mode_close_item.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   81478 res/layout/abs__activity_chooser_view.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   82230 res/layout/abs__activity_chooser_view_list_item.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   82914 res/layout/abs__dialog_title_holo.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   83647 res/layout/abs__list_menu_item_checkbox.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   84048 res/layout/abs__list_menu_item_icon.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   84518 res/layout/abs__list_menu_item_layout.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   85259 res/layout/abs__list_menu_item_radio.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   85664 res/layout/abs__popup_menu_item_layout.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   86418 res/layout/abs__screen_action_bar.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   87194 res/layout/abs__screen_action_bar_overlay.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   88012 res/layout/abs__screen_simple.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   88589 res/layout/abs__screen_simple_overlay_action_mode.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   89143 res/layout/abs__search_dropdown_item_icons_2line.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   90088 res/layout/abs__search_view.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   91478 res/layout/abs__simple_dropdown_hint.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   91914 res/layout/favorite_idea_layout.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   92498 res/layout/idea_edit_layout.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   93133 res/layout/idea_new.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   93770 res/layout/login_layout.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   94981 res/layout/main_controls.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   95425 res/layout/main_layout.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   95821 res/layout/need_user_layout.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   96852 res/layout/new_idea_notification.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   97312 res/layout/private_idea_empty_header.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   97790 res/layout/private_idea_entry.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   98609 res/layout/private_idea_header.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   99413 res/layout/private_idea_list_layout.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m   99901 res/layout/public_idea_entry.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  100895 res/layout/public_ideas_layout.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  101378 res/layout/register_layout.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  102019 res/layout/search_ideas.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  102443 res/layout/sherlock_spinner_dropdown_item.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  102857 res/layout/sherlock_spinner_item.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  103242 res/menu/main_menu.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  103800 res/xml/searchable.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  104206 res/xml/userpreferences.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  104772 AndroidManifest.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  106768 resources.arsc (OK)[0m
-[0m[[0mdebug[0m] [0m  273080 res/drawable-v11/abs__progress_medium_holo.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  273516 res/layout-v14/sherlock_spinner_dropdown_item.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  273938 res/layout-v14/sherlock_spinner_item.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  274356 res/drawable-hdpi/ab_bottom_solid_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  274648 res/drawable-hdpi/ab_solid_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  274952 res/drawable-hdpi/ab_stacked_solid_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  275252 res/drawable-hdpi/ab_transparent_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  275536 res/drawable-hdpi/abs__ab_bottom_solid_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  275836 res/drawable-hdpi/abs__ab_bottom_solid_inverse_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  276136 res/drawable-hdpi/abs__ab_bottom_solid_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  276440 res/drawable-hdpi/abs__ab_bottom_transparent_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  276756 res/drawable-hdpi/abs__ab_bottom_transparent_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  277064 res/drawable-hdpi/abs__ab_share_pack_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  277412 res/drawable-hdpi/abs__ab_share_pack_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  277744 res/drawable-hdpi/abs__ab_solid_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  278044 res/drawable-hdpi/abs__ab_solid_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  278344 res/drawable-hdpi/abs__ab_solid_shadow_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  278692 res/drawable-hdpi/abs__ab_stacked_solid_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  279000 res/drawable-hdpi/abs__ab_stacked_solid_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  279312 res/drawable-hdpi/abs__ab_stacked_transparent_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  279620 res/drawable-hdpi/abs__ab_stacked_transparent_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  279916 res/drawable-hdpi/abs__ab_transparent_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  280244 res/drawable-hdpi/abs__ab_transparent_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  280576 res/drawable-hdpi/abs__btn_cab_done_default_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  280840 res/drawable-hdpi/abs__btn_cab_done_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  281104 res/drawable-hdpi/abs__btn_cab_done_focused_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  281368 res/drawable-hdpi/abs__btn_cab_done_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  281640 res/drawable-hdpi/abs__btn_cab_done_pressed_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  281916 res/drawable-hdpi/abs__btn_cab_done_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  282192 res/drawable-hdpi/abs__cab_background_bottom_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  282500 res/drawable-hdpi/abs__cab_background_bottom_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  282804 res/drawable-hdpi/abs__cab_background_top_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  283112 res/drawable-hdpi/abs__cab_background_top_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  283408 res/drawable-hdpi/abs__dialog_full_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  284824 res/drawable-hdpi/abs__dialog_full_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  286276 res/drawable-hdpi/abs__ic_ab_back_holo_dark.png (OK)[0m
-[0m[[0mdebug[0m] [0m  286904 res/drawable-hdpi/abs__ic_ab_back_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  287420 res/drawable-hdpi/abs__ic_cab_done_holo_dark.png (OK)[0m
-[0m[[0mdebug[0m] [0m  288292 res/drawable-hdpi/abs__ic_cab_done_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  288972 res/drawable-hdpi/abs__ic_clear_disabled.png (OK)[0m
-[0m[[0mdebug[0m] [0m  290040 res/drawable-hdpi/abs__ic_clear_normal.png (OK)[0m
-[0m[[0mdebug[0m] [0m  291636 res/drawable-hdpi/abs__ic_clear_search_api_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  292132 res/drawable-hdpi/abs__ic_clear_search_api_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  292648 res/drawable-hdpi/abs__ic_go.png (OK)[0m
-[0m[[0mdebug[0m] [0m  293548 res/drawable-hdpi/abs__ic_go_search_api_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  293896 res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png (OK)[0m
-[0m[[0mdebug[0m] [0m  294120 res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  294336 res/drawable-hdpi/abs__ic_menu_share_holo_dark.png (OK)[0m
-[0m[[0mdebug[0m] [0m  294996 res/drawable-hdpi/abs__ic_menu_share_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  295672 res/drawable-hdpi/abs__ic_search.png (OK)[0m
-[0m[[0mdebug[0m] [0m  297040 res/drawable-hdpi/abs__ic_search_api_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  298088 res/drawable-hdpi/abs__ic_voice_search.png (OK)[0m
-[0m[[0mdebug[0m] [0m  300188 res/drawable-hdpi/abs__ic_voice_search_api_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  300972 res/drawable-hdpi/abs__list_activated_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  301232 res/drawable-hdpi/abs__list_divider_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  301448 res/drawable-hdpi/abs__list_divider_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  301656 res/drawable-hdpi/abs__list_focused_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  301912 res/drawable-hdpi/abs__list_longpressed_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  302172 res/drawable-hdpi/abs__list_pressed_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  302432 res/drawable-hdpi/abs__list_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  302700 res/drawable-hdpi/abs__list_selector_disabled_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  302996 res/drawable-hdpi/abs__list_selector_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  303288 res/drawable-hdpi/abs__menu_dropdown_panel_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  304264 res/drawable-hdpi/abs__menu_dropdown_panel_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  305344 res/drawable-hdpi/abs__progress_bg_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  305608 res/drawable-hdpi/abs__progress_bg_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  305876 res/drawable-hdpi/abs__progress_primary_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  306820 res/drawable-hdpi/abs__progress_primary_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  307768 res/drawable-hdpi/abs__progress_secondary_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  308040 res/drawable-hdpi/abs__progress_secondary_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  308304 res/drawable-hdpi/abs__spinner_48_inner_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  310204 res/drawable-hdpi/abs__spinner_48_outer_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  312672 res/drawable-hdpi/abs__spinner_ab_default_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  313084 res/drawable-hdpi/abs__spinner_ab_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  313500 res/drawable-hdpi/abs__spinner_ab_disabled_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  313904 res/drawable-hdpi/abs__spinner_ab_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  314308 res/drawable-hdpi/abs__spinner_ab_focused_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  314912 res/drawable-hdpi/abs__spinner_ab_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  315508 res/drawable-hdpi/abs__spinner_ab_pressed_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  316044 res/drawable-hdpi/abs__spinner_ab_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  316572 res/drawable-hdpi/abs__tab_selected_focused_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  316804 res/drawable-hdpi/abs__tab_selected_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  317040 res/drawable-hdpi/abs__tab_selected_pressed_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  317284 res/drawable-hdpi/abs__tab_unselected_pressed_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  317532 res/drawable-hdpi/abs__textfield_search_default_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  317800 res/drawable-hdpi/abs__textfield_search_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  318072 res/drawable-hdpi/abs__textfield_search_right_default_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  318348 res/drawable-hdpi/abs__textfield_search_right_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  318616 res/drawable-hdpi/abs__textfield_search_right_selected_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  318900 res/drawable-hdpi/abs__textfield_search_right_selected_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  319176 res/drawable-hdpi/abs__textfield_search_selected_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  319460 res/drawable-hdpi/abs__textfield_search_selected_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  319740 res/drawable-hdpi/btn_check_off_disabled_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  320096 res/drawable-hdpi/btn_check_off_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  320356 res/drawable-hdpi/btn_check_off_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  320712 res/drawable-hdpi/btn_check_off_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  320972 res/drawable-hdpi/btn_check_off_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  322360 res/drawable-hdpi/btn_check_on_disabled_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  323128 res/drawable-hdpi/btn_check_on_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  323688 res/drawable-hdpi/btn_check_on_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  325164 res/drawable-hdpi/btn_check_on_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  326464 res/drawable-hdpi/btn_check_on_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  328620 res/drawable-hdpi/btn_default_disabled_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  329048 res/drawable-hdpi/btn_default_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  329532 res/drawable-hdpi/btn_default_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  329984 res/drawable-hdpi/btn_default_normal_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  330420 res/drawable-hdpi/btn_default_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  331056 res/drawable-hdpi/btn_radio_off_disabled_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  332164 res/drawable-hdpi/btn_radio_off_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  332756 res/drawable-hdpi/btn_radio_off_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  334028 res/drawable-hdpi/btn_radio_off_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  334672 res/drawable-hdpi/btn_radio_off_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  336668 res/drawable-hdpi/btn_radio_on_disabled_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  338464 res/drawable-hdpi/btn_radio_on_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  339708 res/drawable-hdpi/btn_radio_on_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  341544 res/drawable-hdpi/btn_radio_on_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  342744 res/drawable-hdpi/btn_radio_on_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  344816 res/drawable-hdpi/btn_rating_star_off_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  348716 res/drawable-hdpi/btn_rating_star_off_normal_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  350368 res/drawable-hdpi/btn_rating_star_off_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  354904 res/drawable-hdpi/btn_rating_star_on_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  358944 res/drawable-hdpi/btn_rating_star_on_normal_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  361436 res/drawable-hdpi/btn_rating_star_on_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  366080 res/drawable-hdpi/btn_toggle_off_disabled_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  366660 res/drawable-hdpi/btn_toggle_off_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  367232 res/drawable-hdpi/btn_toggle_off_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  367776 res/drawable-hdpi/btn_toggle_off_normal_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  368384 res/drawable-hdpi/btn_toggle_off_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  369104 res/drawable-hdpi/btn_toggle_on_disabled_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  369700 res/drawable-hdpi/btn_toggle_on_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  370380 res/drawable-hdpi/btn_toggle_on_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  370960 res/drawable-hdpi/btn_toggle_on_normal_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  371652 res/drawable-hdpi/btn_toggle_on_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  372392 res/drawable-hdpi/fastscroll_thumb_default_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  372644 res/drawable-hdpi/fastscroll_thumb_pressed_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  373004 res/drawable-hdpi/ic_action_new.png (OK)[0m
-[0m[[0mdebug[0m] [0m  374320 res/drawable-hdpi/ic_action_sort.png (OK)[0m
-[0m[[0mdebug[0m] [0m  374600 res/drawable-hdpi/ic_action_sync.png (OK)[0m
-[0m[[0mdebug[0m] [0m  375852 res/drawable-hdpi/icon.png (OK)[0m
-[0m[[0mdebug[0m] [0m  384764 res/drawable-hdpi/icon_new.png (OK)[0m
-[0m[[0mdebug[0m] [0m  386612 res/drawable-hdpi/icon_public.png (OK)[0m
-[0m[[0mdebug[0m] [0m  389364 res/drawable-hdpi/icon_sort.png (OK)[0m
-[0m[[0mdebug[0m] [0m  391836 res/drawable-hdpi/icon_sync.png (OK)[0m
-[0m[[0mdebug[0m] [0m  394940 res/drawable-hdpi/list_activated_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  395188 res/drawable-hdpi/list_focused_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  395468 res/drawable-hdpi/list_focused_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  395768 res/drawable-hdpi/list_longpressed_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  396024 res/drawable-hdpi/list_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  396288 res/drawable-hdpi/list_selector_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  396576 res/drawable-hdpi/menu_dropdown_panel_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  397536 res/drawable-hdpi/menu_hardkey_panel_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  398212 res/drawable-hdpi/progress_bg_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  398460 res/drawable-hdpi/progress_bg_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  398720 res/drawable-hdpi/progress_primary_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  399184 res/drawable-hdpi/progress_primary_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  400064 res/drawable-hdpi/progress_secondary_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  400324 res/drawable-hdpi/progress_secondary_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  400592 res/drawable-hdpi/progressbar_indeterminate_holo1.png (OK)[0m
-[0m[[0mdebug[0m] [0m  401184 res/drawable-hdpi/progressbar_indeterminate_holo2.png (OK)[0m
-[0m[[0mdebug[0m] [0m  401852 res/drawable-hdpi/progressbar_indeterminate_holo3.png (OK)[0m
-[0m[[0mdebug[0m] [0m  402528 res/drawable-hdpi/progressbar_indeterminate_holo4.png (OK)[0m
-[0m[[0mdebug[0m] [0m  403252 res/drawable-hdpi/progressbar_indeterminate_holo5.png (OK)[0m
-[0m[[0mdebug[0m] [0m  403892 res/drawable-hdpi/progressbar_indeterminate_holo6.png (OK)[0m
-[0m[[0mdebug[0m] [0m  404632 res/drawable-hdpi/progressbar_indeterminate_holo7.png (OK)[0m
-[0m[[0mdebug[0m] [0m  405232 res/drawable-hdpi/progressbar_indeterminate_holo8.png (OK)[0m
-[0m[[0mdebug[0m] [0m  405884 res/drawable-hdpi/rate_star_big_half_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  408608 res/drawable-hdpi/rate_star_big_off_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  410096 res/drawable-hdpi/rate_star_big_on_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  412124 res/drawable-hdpi/rate_star_small_half_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  413332 res/drawable-hdpi/rate_star_small_off_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  414020 res/drawable-hdpi/rate_star_small_on_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  415032 res/drawable-hdpi/scrubber_control_disabled_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  415716 res/drawable-hdpi/scrubber_control_focused_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  416636 res/drawable-hdpi/scrubber_control_normal_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  417832 res/drawable-hdpi/scrubber_control_pressed_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  419312 res/drawable-hdpi/scrubber_primary_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  419572 res/drawable-hdpi/scrubber_secondary_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  419832 res/drawable-hdpi/scrubber_track_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  420080 res/drawable-hdpi/spinner_ab_default_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  420520 res/drawable-hdpi/spinner_ab_disabled_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  420956 res/drawable-hdpi/spinner_ab_focused_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  421552 res/drawable-hdpi/spinner_ab_pressed_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  422068 res/drawable-hdpi/spinner_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  422596 res/drawable-hdpi/spinner_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  423004 res/drawable-hdpi/spinner_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  423600 res/drawable-hdpi/spinner_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  424156 res/drawable-hdpi/tab_selected_focused_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  424388 res/drawable-hdpi/tab_selected_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  424624 res/drawable-hdpi/tab_selected_pressed_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  424868 res/drawable-hdpi/tab_unselected_focused_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  425100 res/drawable-hdpi/tab_unselected_pressed_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  425332 res/drawable-hdpi/textfield_activated_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  425656 res/drawable-hdpi/textfield_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  425952 res/drawable-hdpi/textfield_disabled_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  426332 res/drawable-hdpi/textfield_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  426620 res/drawable-hdpi/textfield_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  427008 res/drawable-ldpi/icon.png (OK)[0m
-[0m[[0mdebug[0m] [0m  429840 res/drawable-ldpi/icon_new.png (OK)[0m
-[0m[[0mdebug[0m] [0m  430612 res/drawable-ldpi/icon_public.png (OK)[0m
-[0m[[0mdebug[0m] [0m  431896 res/drawable-ldpi/icon_sort.png (OK)[0m
-[0m[[0mdebug[0m] [0m  432936 res/drawable-ldpi/icon_sync.png (OK)[0m
-[0m[[0mdebug[0m] [0m  434204 res/drawable-mdpi/ab_bottom_solid_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  434476 res/drawable-mdpi/ab_solid_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  434764 res/drawable-mdpi/ab_stacked_solid_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  435048 res/drawable-mdpi/ab_transparent_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  435328 res/drawable-mdpi/abs__ab_bottom_solid_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  435616 res/drawable-mdpi/abs__ab_bottom_solid_inverse_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  435900 res/drawable-mdpi/abs__ab_bottom_solid_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  436192 res/drawable-mdpi/abs__ab_bottom_transparent_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  436492 res/drawable-mdpi/abs__ab_bottom_transparent_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  436784 res/drawable-mdpi/abs__ab_share_pack_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  437112 res/drawable-mdpi/abs__ab_share_pack_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  437432 res/drawable-mdpi/abs__ab_solid_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  437716 res/drawable-mdpi/abs__ab_solid_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  438004 res/drawable-mdpi/abs__ab_solid_shadow_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  438328 res/drawable-mdpi/abs__ab_stacked_solid_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  438620 res/drawable-mdpi/abs__ab_stacked_solid_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  438920 res/drawable-mdpi/abs__ab_stacked_transparent_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  439212 res/drawable-mdpi/abs__ab_stacked_transparent_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  439496 res/drawable-mdpi/abs__ab_transparent_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  439804 res/drawable-mdpi/abs__ab_transparent_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  440116 res/drawable-mdpi/abs__btn_cab_done_default_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  440380 res/drawable-mdpi/abs__btn_cab_done_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  440644 res/drawable-mdpi/abs__btn_cab_done_focused_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  440908 res/drawable-mdpi/abs__btn_cab_done_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  441180 res/drawable-mdpi/abs__btn_cab_done_pressed_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  441456 res/drawable-mdpi/abs__btn_cab_done_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  441732 res/drawable-mdpi/abs__cab_background_bottom_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  442024 res/drawable-mdpi/abs__cab_background_bottom_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  442312 res/drawable-mdpi/abs__cab_background_top_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  442600 res/drawable-mdpi/abs__cab_background_top_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  442880 res/drawable-mdpi/abs__dialog_full_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  443828 res/drawable-mdpi/abs__dialog_full_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  444848 res/drawable-mdpi/abs__ic_ab_back_holo_dark.png (OK)[0m
-[0m[[0mdebug[0m] [0m  445312 res/drawable-mdpi/abs__ic_ab_back_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  445704 res/drawable-mdpi/abs__ic_cab_done_holo_dark.png (OK)[0m
-[0m[[0mdebug[0m] [0m  446340 res/drawable-mdpi/abs__ic_cab_done_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  446876 res/drawable-mdpi/abs__ic_clear_disabled.png (OK)[0m
-[0m[[0mdebug[0m] [0m  448456 res/drawable-mdpi/abs__ic_clear_normal.png (OK)[0m
-[0m[[0mdebug[0m] [0m  449576 res/drawable-mdpi/abs__ic_clear_search_api_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  450404 res/drawable-mdpi/abs__ic_clear_search_api_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  451020 res/drawable-mdpi/abs__ic_go.png (OK)[0m
-[0m[[0mdebug[0m] [0m  452124 res/drawable-mdpi/abs__ic_go_search_api_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  452796 res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png (OK)[0m
-[0m[[0mdebug[0m] [0m  453004 res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  453208 res/drawable-mdpi/abs__ic_menu_share_holo_dark.png (OK)[0m
-[0m[[0mdebug[0m] [0m  453756 res/drawable-mdpi/abs__ic_menu_share_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  454304 res/drawable-mdpi/abs__ic_search.png (OK)[0m
-[0m[[0mdebug[0m] [0m  455672 res/drawable-mdpi/abs__ic_search_api_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  457124 res/drawable-mdpi/abs__ic_voice_search.png (OK)[0m
-[0m[[0mdebug[0m] [0m  458156 res/drawable-mdpi/abs__ic_voice_search_api_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  458840 res/drawable-mdpi/abs__list_activated_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  459096 res/drawable-mdpi/abs__list_divider_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  459312 res/drawable-mdpi/abs__list_divider_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  459520 res/drawable-mdpi/abs__list_focused_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  459776 res/drawable-mdpi/abs__list_longpressed_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  460032 res/drawable-mdpi/abs__list_pressed_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  460292 res/drawable-mdpi/abs__list_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  460560 res/drawable-mdpi/abs__list_selector_disabled_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  460844 res/drawable-mdpi/abs__list_selector_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  461124 res/drawable-mdpi/abs__menu_dropdown_panel_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  461836 res/drawable-mdpi/abs__menu_dropdown_panel_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  462636 res/drawable-mdpi/abs__progress_bg_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  462892 res/drawable-mdpi/abs__progress_bg_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  463152 res/drawable-mdpi/abs__progress_primary_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  463784 res/drawable-mdpi/abs__progress_primary_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  464416 res/drawable-mdpi/abs__progress_secondary_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  464680 res/drawable-mdpi/abs__progress_secondary_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  464936 res/drawable-mdpi/abs__spinner_48_inner_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  466116 res/drawable-mdpi/abs__spinner_48_outer_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  467732 res/drawable-mdpi/abs__spinner_ab_default_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  468100 res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  468480 res/drawable-mdpi/abs__spinner_ab_disabled_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  468844 res/drawable-mdpi/abs__spinner_ab_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  469204 res/drawable-mdpi/abs__spinner_ab_focused_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  469712 res/drawable-mdpi/abs__spinner_ab_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  470220 res/drawable-mdpi/abs__spinner_ab_pressed_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  470672 res/drawable-mdpi/abs__spinner_ab_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  471116 res/drawable-mdpi/abs__tab_selected_focused_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  471348 res/drawable-mdpi/abs__tab_selected_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  471584 res/drawable-mdpi/abs__tab_selected_pressed_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  471828 res/drawable-mdpi/abs__tab_unselected_pressed_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  472080 res/drawable-mdpi/abs__textfield_search_default_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  472352 res/drawable-mdpi/abs__textfield_search_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  472620 res/drawable-mdpi/abs__textfield_search_right_default_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  472896 res/drawable-mdpi/abs__textfield_search_right_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  473164 res/drawable-mdpi/abs__textfield_search_right_selected_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  473440 res/drawable-mdpi/abs__textfield_search_right_selected_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  473712 res/drawable-mdpi/abs__textfield_search_selected_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  473992 res/drawable-mdpi/abs__textfield_search_selected_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  474268 res/drawable-mdpi/btn_check_off_disabled_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  474572 res/drawable-mdpi/btn_check_off_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  474812 res/drawable-mdpi/btn_check_off_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  475116 res/drawable-mdpi/btn_check_off_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  475356 res/drawable-mdpi/btn_check_off_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  476288 res/drawable-mdpi/btn_check_on_disabled_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  476940 res/drawable-mdpi/btn_check_on_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  477396 res/drawable-mdpi/btn_check_on_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  478312 res/drawable-mdpi/btn_check_on_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  479100 res/drawable-mdpi/btn_check_on_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  480364 res/drawable-mdpi/btn_default_disabled_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  480720 res/drawable-mdpi/btn_default_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  481124 res/drawable-mdpi/btn_default_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  481504 res/drawable-mdpi/btn_default_normal_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  481884 res/drawable-mdpi/btn_default_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  482392 res/drawable-mdpi/btn_radio_off_disabled_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  483092 res/drawable-mdpi/btn_radio_off_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  483480 res/drawable-mdpi/btn_radio_off_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  484236 res/drawable-mdpi/btn_radio_off_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  484660 res/drawable-mdpi/btn_radio_off_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  485908 res/drawable-mdpi/btn_radio_on_disabled_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  486936 res/drawable-mdpi/btn_radio_on_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  487636 res/drawable-mdpi/btn_radio_on_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  488636 res/drawable-mdpi/btn_radio_on_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  489292 res/drawable-mdpi/btn_radio_on_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  490544 res/drawable-mdpi/btn_rating_star_off_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  492796 res/drawable-mdpi/btn_rating_star_off_normal_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  494024 res/drawable-mdpi/btn_rating_star_off_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  496676 res/drawable-mdpi/btn_rating_star_on_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  498832 res/drawable-mdpi/btn_rating_star_on_normal_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  500124 res/drawable-mdpi/btn_rating_star_on_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  502640 res/drawable-mdpi/btn_toggle_off_disabled_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  503156 res/drawable-mdpi/btn_toggle_off_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  503648 res/drawable-mdpi/btn_toggle_off_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  504228 res/drawable-mdpi/btn_toggle_off_normal_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  504732 res/drawable-mdpi/btn_toggle_off_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  505416 res/drawable-mdpi/btn_toggle_on_disabled_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  505912 res/drawable-mdpi/btn_toggle_on_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  506448 res/drawable-mdpi/btn_toggle_on_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  506960 res/drawable-mdpi/btn_toggle_on_normal_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  507540 res/drawable-mdpi/btn_toggle_on_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  508132 res/drawable-mdpi/fastscroll_thumb_default_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  508356 res/drawable-mdpi/fastscroll_thumb_pressed_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  508648 res/drawable-mdpi/ic_action_new.png (OK)[0m
-[0m[[0mdebug[0m] [0m  509640 res/drawable-mdpi/ic_action_sort.png (OK)[0m
-[0m[[0mdebug[0m] [0m  509920 res/drawable-mdpi/ic_action_sync.png (OK)[0m
-[0m[[0mdebug[0m] [0m  510880 res/drawable-mdpi/icon.png (OK)[0m
-[0m[[0mdebug[0m] [0m  515480 res/drawable-mdpi/icon_new.png (OK)[0m
-[0m[[0mdebug[0m] [0m  516560 res/drawable-mdpi/icon_public.png (OK)[0m
-[0m[[0mdebug[0m] [0m  518096 res/drawable-mdpi/icon_sort.png (OK)[0m
-[0m[[0mdebug[0m] [0m  519580 res/drawable-mdpi/icon_sync.png (OK)[0m
-[0m[[0mdebug[0m] [0m  521368 res/drawable-mdpi/list_activated_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  521616 res/drawable-mdpi/list_focused_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  521880 res/drawable-mdpi/list_focused_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  522152 res/drawable-mdpi/list_longpressed_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  522404 res/drawable-mdpi/list_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  522668 res/drawable-mdpi/list_selector_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  522944 res/drawable-mdpi/menu_dropdown_panel_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  523636 res/drawable-mdpi/menu_hardkey_panel_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  524160 res/drawable-mdpi/progress_bg_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  524412 res/drawable-mdpi/progress_bg_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  524664 res/drawable-mdpi/progress_primary_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  525048 res/drawable-mdpi/progress_primary_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  525648 res/drawable-mdpi/progress_secondary_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  525904 res/drawable-mdpi/progress_secondary_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  526164 res/drawable-mdpi/progressbar_indeterminate_holo1.png (OK)[0m
-[0m[[0mdebug[0m] [0m  526556 res/drawable-mdpi/progressbar_indeterminate_holo2.png (OK)[0m
-[0m[[0mdebug[0m] [0m  526996 res/drawable-mdpi/progressbar_indeterminate_holo3.png (OK)[0m
-[0m[[0mdebug[0m] [0m  527460 res/drawable-mdpi/progressbar_indeterminate_holo4.png (OK)[0m
-[0m[[0mdebug[0m] [0m  527920 res/drawable-mdpi/progressbar_indeterminate_holo5.png (OK)[0m
-[0m[[0mdebug[0m] [0m  528364 res/drawable-mdpi/progressbar_indeterminate_holo6.png (OK)[0m
-[0m[[0mdebug[0m] [0m  528828 res/drawable-mdpi/progressbar_indeterminate_holo7.png (OK)[0m
-[0m[[0mdebug[0m] [0m  529264 res/drawable-mdpi/progressbar_indeterminate_holo8.png (OK)[0m
-[0m[[0mdebug[0m] [0m  529712 res/drawable-mdpi/rate_star_big_half_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  531068 res/drawable-mdpi/rate_star_big_off_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  532536 res/drawable-mdpi/rate_star_big_on_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  533736 res/drawable-mdpi/rate_star_small_half_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  534560 res/drawable-mdpi/rate_star_small_off_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  535012 res/drawable-mdpi/rate_star_small_on_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  535788 res/drawable-mdpi/scrubber_control_disabled_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  536328 res/drawable-mdpi/scrubber_control_focused_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  536980 res/drawable-mdpi/scrubber_control_normal_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  537800 res/drawable-mdpi/scrubber_control_pressed_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  538836 res/drawable-mdpi/scrubber_primary_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  539092 res/drawable-mdpi/scrubber_secondary_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  539348 res/drawable-mdpi/scrubber_track_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  539592 res/drawable-mdpi/spinner_ab_default_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  539996 res/drawable-mdpi/spinner_ab_disabled_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  540392 res/drawable-mdpi/spinner_ab_focused_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  540896 res/drawable-mdpi/spinner_ab_pressed_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  541324 res/drawable-mdpi/spinner_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  541744 res/drawable-mdpi/spinner_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  542112 res/drawable-mdpi/spinner_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  542588 res/drawable-mdpi/spinner_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  543012 res/drawable-mdpi/tab_selected_focused_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  543244 res/drawable-mdpi/tab_selected_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  543480 res/drawable-mdpi/tab_selected_pressed_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  543724 res/drawable-mdpi/tab_unselected_focused_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  543960 res/drawable-mdpi/tab_unselected_pressed_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  544192 res/drawable-mdpi/textfield_activated_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  544492 res/drawable-mdpi/textfield_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  544780 res/drawable-mdpi/textfield_disabled_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  545128 res/drawable-mdpi/textfield_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  545408 res/drawable-mdpi/textfield_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  545796 res/drawable-xhdpi/ab_bottom_solid_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  546100 res/drawable-xhdpi/ab_solid_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  546420 res/drawable-xhdpi/ab_stacked_solid_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  546732 res/drawable-xhdpi/ab_transparent_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  547024 res/drawable-xhdpi/abs__ab_bottom_solid_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  547340 res/drawable-xhdpi/abs__ab_bottom_solid_inverse_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  547656 res/drawable-xhdpi/abs__ab_bottom_solid_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  547976 res/drawable-xhdpi/abs__ab_bottom_transparent_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  548308 res/drawable-xhdpi/abs__ab_bottom_transparent_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  548628 res/drawable-xhdpi/abs__ab_share_pack_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  548992 res/drawable-xhdpi/abs__ab_share_pack_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  549340 res/drawable-xhdpi/abs__ab_solid_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  549656 res/drawable-xhdpi/abs__ab_solid_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  549972 res/drawable-xhdpi/abs__ab_solid_shadow_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  550404 res/drawable-xhdpi/abs__ab_stacked_solid_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  550728 res/drawable-xhdpi/abs__ab_stacked_solid_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  551056 res/drawable-xhdpi/abs__ab_stacked_transparent_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  551380 res/drawable-xhdpi/abs__ab_stacked_transparent_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  551692 res/drawable-xhdpi/abs__ab_transparent_dark_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  552032 res/drawable-xhdpi/abs__ab_transparent_light_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  552376 res/drawable-xhdpi/abs__btn_cab_done_default_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  552648 res/drawable-xhdpi/abs__btn_cab_done_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  552920 res/drawable-xhdpi/abs__btn_cab_done_focused_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  553196 res/drawable-xhdpi/abs__btn_cab_done_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  553488 res/drawable-xhdpi/abs__btn_cab_done_pressed_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  553780 res/drawable-xhdpi/abs__btn_cab_done_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  554072 res/drawable-xhdpi/abs__cab_background_bottom_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  554396 res/drawable-xhdpi/abs__cab_background_bottom_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  554716 res/drawable-xhdpi/abs__cab_background_top_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  555036 res/drawable-xhdpi/abs__cab_background_top_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  555348 res/drawable-xhdpi/abs__dialog_full_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  557468 res/drawable-xhdpi/abs__dialog_full_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  559604 res/drawable-xhdpi/abs__ic_ab_back_holo_dark.png (OK)[0m
-[0m[[0mdebug[0m] [0m  560312 res/drawable-xhdpi/abs__ic_ab_back_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  560920 res/drawable-xhdpi/abs__ic_cab_done_holo_dark.png (OK)[0m
-[0m[[0mdebug[0m] [0m  562052 res/drawable-xhdpi/abs__ic_cab_done_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  562912 res/drawable-xhdpi/abs__ic_clear_disabled.png (OK)[0m
-[0m[[0mdebug[0m] [0m  564536 res/drawable-xhdpi/abs__ic_clear_search_api_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  565844 res/drawable-xhdpi/abs__ic_clear_search_api_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  567440 res/drawable-xhdpi/abs__ic_go.png (OK)[0m
-[0m[[0mdebug[0m] [0m  569264 res/drawable-xhdpi/abs__ic_go_search_api_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  570200 res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png (OK)[0m
-[0m[[0mdebug[0m] [0m  570428 res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  570660 res/drawable-xhdpi/abs__ic_menu_share_holo_dark.png (OK)[0m
-[0m[[0mdebug[0m] [0m  571576 res/drawable-xhdpi/abs__ic_menu_share_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  572512 res/drawable-xhdpi/abs__ic_search.png (OK)[0m
-[0m[[0mdebug[0m] [0m  575380 res/drawable-xhdpi/abs__ic_search_api_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  578216 res/drawable-xhdpi/abs__ic_voice_search.png (OK)[0m
-[0m[[0mdebug[0m] [0m  580344 res/drawable-xhdpi/abs__ic_voice_search_api_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  581640 res/drawable-xhdpi/abs__list_activated_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  581900 res/drawable-xhdpi/abs__list_divider_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  582124 res/drawable-xhdpi/abs__list_divider_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  582340 res/drawable-xhdpi/abs__list_focused_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  582600 res/drawable-xhdpi/abs__list_longpressed_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  582860 res/drawable-xhdpi/abs__list_pressed_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  583124 res/drawable-xhdpi/abs__list_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  583396 res/drawable-xhdpi/abs__list_selector_disabled_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  583708 res/drawable-xhdpi/abs__list_selector_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  584016 res/drawable-xhdpi/abs__menu_dropdown_panel_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  585384 res/drawable-xhdpi/abs__menu_dropdown_panel_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  586900 res/drawable-xhdpi/abs__progress_bg_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  587164 res/drawable-xhdpi/abs__progress_bg_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  587432 res/drawable-xhdpi/abs__progress_primary_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  588760 res/drawable-xhdpi/abs__progress_primary_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  590088 res/drawable-xhdpi/abs__progress_secondary_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  590360 res/drawable-xhdpi/abs__progress_secondary_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  590620 res/drawable-xhdpi/abs__spinner_48_inner_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  593192 res/drawable-xhdpi/abs__spinner_48_outer_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  596364 res/drawable-xhdpi/abs__spinner_ab_default_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  596824 res/drawable-xhdpi/abs__spinner_ab_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  597284 res/drawable-xhdpi/abs__spinner_ab_disabled_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  597732 res/drawable-xhdpi/abs__spinner_ab_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  598180 res/drawable-xhdpi/abs__spinner_ab_focused_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  598896 res/drawable-xhdpi/abs__spinner_ab_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  599596 res/drawable-xhdpi/abs__spinner_ab_pressed_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  600236 res/drawable-xhdpi/abs__spinner_ab_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  600864 res/drawable-xhdpi/abs__tab_selected_focused_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  601100 res/drawable-xhdpi/abs__tab_selected_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  601336 res/drawable-xhdpi/abs__tab_selected_pressed_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  601580 res/drawable-xhdpi/abs__tab_unselected_pressed_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  601832 res/drawable-xhdpi/abs__textfield_search_default_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  602124 res/drawable-xhdpi/abs__textfield_search_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  602424 res/drawable-xhdpi/abs__textfield_search_right_default_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  602716 res/drawable-xhdpi/abs__textfield_search_right_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  603012 res/drawable-xhdpi/abs__textfield_search_right_selected_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  603308 res/drawable-xhdpi/abs__textfield_search_right_selected_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  603596 res/drawable-xhdpi/abs__textfield_search_selected_holo_dark.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  603876 res/drawable-xhdpi/abs__textfield_search_selected_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  604172 res/drawable-xhdpi/btn_check_off_disabled_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  604544 res/drawable-xhdpi/btn_check_off_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  604816 res/drawable-xhdpi/btn_check_off_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  605192 res/drawable-xhdpi/btn_check_off_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  605464 res/drawable-xhdpi/btn_check_off_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  607216 res/drawable-xhdpi/btn_check_on_disabled_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  608260 res/drawable-xhdpi/btn_check_on_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  608956 res/drawable-xhdpi/btn_check_on_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  610892 res/drawable-xhdpi/btn_check_on_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  612584 res/drawable-xhdpi/btn_check_on_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  615112 res/drawable-xhdpi/btn_default_disabled_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  615580 res/drawable-xhdpi/btn_default_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  616156 res/drawable-xhdpi/btn_default_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  616672 res/drawable-xhdpi/btn_default_normal_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  617160 res/drawable-xhdpi/btn_default_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  617964 res/drawable-xhdpi/btn_radio_off_disabled_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  619504 res/drawable-xhdpi/btn_radio_off_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  620248 res/drawable-xhdpi/btn_radio_off_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  622008 res/drawable-xhdpi/btn_radio_off_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  622808 res/drawable-xhdpi/btn_radio_off_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  625528 res/drawable-xhdpi/btn_radio_on_disabled_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  628024 res/drawable-xhdpi/btn_radio_on_disabled_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  629768 res/drawable-xhdpi/btn_radio_on_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  633224 res/drawable-xhdpi/btn_radio_on_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  634912 res/drawable-xhdpi/btn_radio_on_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  637680 res/drawable-xhdpi/btn_rating_star_off_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  643404 res/drawable-xhdpi/btn_rating_star_off_normal_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  645572 res/drawable-xhdpi/btn_rating_star_off_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  651848 res/drawable-xhdpi/btn_rating_star_on_focused_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  657308 res/drawable-xhdpi/btn_rating_star_on_normal_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  659604 res/drawable-xhdpi/btn_rating_star_on_pressed_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  665692 res/drawable-xhdpi/btn_toggle_off_disabled_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  666256 res/drawable-xhdpi/btn_toggle_off_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  666928 res/drawable-xhdpi/btn_toggle_off_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  667540 res/drawable-xhdpi/btn_toggle_off_normal_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  668252 res/drawable-xhdpi/btn_toggle_off_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  669144 res/drawable-xhdpi/btn_toggle_on_disabled_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  669752 res/drawable-xhdpi/btn_toggle_on_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  670524 res/drawable-xhdpi/btn_toggle_on_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  671200 res/drawable-xhdpi/btn_toggle_on_normal_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  671916 res/drawable-xhdpi/btn_toggle_on_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  672804 res/drawable-xhdpi/fastscroll_thumb_default_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  673084 res/drawable-xhdpi/fastscroll_thumb_pressed_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  673524 res/drawable-xhdpi/ic_action_new.png (OK)[0m
-[0m[[0mdebug[0m] [0m  675064 res/drawable-xhdpi/ic_action_sort.png (OK)[0m
-[0m[[0mdebug[0m] [0m  675352 res/drawable-xhdpi/ic_action_sync.png (OK)[0m
-[0m[[0mdebug[0m] [0m  676916 res/drawable-xhdpi/ic_share.png (OK)[0m
-[0m[[0mdebug[0m] [0m  679124 res/drawable-xhdpi/ic_star_empty.png (OK)[0m
-[0m[[0mdebug[0m] [0m  681608 res/drawable-xhdpi/ic_star_full.png (OK)[0m
-[0m[[0mdebug[0m] [0m  683444 res/drawable-xhdpi/icon.png (OK)[0m
-[0m[[0mdebug[0m] [0m  697396 res/drawable-xhdpi/icon_public.png (OK)[0m
-[0m[[0mdebug[0m] [0m  701440 res/drawable-xhdpi/list_activated_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  701692 res/drawable-xhdpi/list_focused_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  701976 res/drawable-xhdpi/list_focused_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  702276 res/drawable-xhdpi/list_longpressed_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  702532 res/drawable-xhdpi/list_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  702800 res/drawable-xhdpi/list_selector_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  703104 res/drawable-xhdpi/menu_dropdown_panel_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  704428 res/drawable-xhdpi/menu_hardkey_panel_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  705284 res/drawable-xhdpi/progress_bg_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  705540 res/drawable-xhdpi/progress_bg_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  705796 res/drawable-xhdpi/progress_primary_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  706364 res/drawable-xhdpi/progress_primary_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  707532 res/drawable-xhdpi/progress_secondary_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  707796 res/drawable-xhdpi/progress_secondary_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  708060 res/drawable-xhdpi/progressbar_indeterminate_holo1.png (OK)[0m
-[0m[[0mdebug[0m] [0m  708672 res/drawable-xhdpi/progressbar_indeterminate_holo2.png (OK)[0m
-[0m[[0mdebug[0m] [0m  709364 res/drawable-xhdpi/progressbar_indeterminate_holo3.png (OK)[0m
-[0m[[0mdebug[0m] [0m  710128 res/drawable-xhdpi/progressbar_indeterminate_holo4.png (OK)[0m
-[0m[[0mdebug[0m] [0m  710888 res/drawable-xhdpi/progressbar_indeterminate_holo5.png (OK)[0m
-[0m[[0mdebug[0m] [0m  711632 res/drawable-xhdpi/progressbar_indeterminate_holo6.png (OK)[0m
-[0m[[0mdebug[0m] [0m  712436 res/drawable-xhdpi/progressbar_indeterminate_holo7.png (OK)[0m
-[0m[[0mdebug[0m] [0m  713160 res/drawable-xhdpi/progressbar_indeterminate_holo8.png (OK)[0m
-[0m[[0mdebug[0m] [0m  713884 res/drawable-xhdpi/rate_star_big_half_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  717488 res/drawable-xhdpi/rate_star_big_off_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  719508 res/drawable-xhdpi/rate_star_big_on_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  721516 res/drawable-xhdpi/rate_star_small_half_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  723108 res/drawable-xhdpi/rate_star_small_off_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  724588 res/drawable-xhdpi/rate_star_small_on_holo_light.png (OK)[0m
-[0m[[0mdebug[0m] [0m  725972 res/drawable-xhdpi/scrubber_control_disabled_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  726756 res/drawable-xhdpi/scrubber_control_focused_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  727828 res/drawable-xhdpi/scrubber_control_normal_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  729072 res/drawable-xhdpi/scrubber_control_pressed_holo.png (OK)[0m
-[0m[[0mdebug[0m] [0m  730660 res/drawable-xhdpi/scrubber_primary_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  730924 res/drawable-xhdpi/scrubber_secondary_holo.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  731188 res/drawable-xhdpi/scrubber_track_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  731444 res/drawable-xhdpi/spinner_ab_default_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  731940 res/drawable-xhdpi/spinner_ab_disabled_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  732424 res/drawable-xhdpi/spinner_ab_focused_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  733180 res/drawable-xhdpi/spinner_ab_pressed_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  733824 res/drawable-xhdpi/spinner_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  734424 res/drawable-xhdpi/spinner_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  734884 res/drawable-xhdpi/spinner_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  735596 res/drawable-xhdpi/spinner_pressed_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  736232 res/drawable-xhdpi/tab_selected_focused_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  736468 res/drawable-xhdpi/tab_selected_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  736704 res/drawable-xhdpi/tab_selected_pressed_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  736948 res/drawable-xhdpi/tab_unselected_focused_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  737184 res/drawable-xhdpi/tab_unselected_pressed_mydeatree.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  737416 res/drawable-xhdpi/textfield_activated_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  737768 res/drawable-xhdpi/textfield_default_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  738076 res/drawable-xhdpi/textfield_disabled_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  738536 res/drawable-xhdpi/textfield_disabled_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  738836 res/drawable-xhdpi/textfield_focused_holo_light.9.png (OK)[0m
-[0m[[0mdebug[0m] [0m  739341 res/layout-large/abs__action_mode_close_item.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  740096 res/layout-xlarge/abs__screen_action_bar.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  740827 res/layout-xlarge/abs__screen_action_bar_overlay.xml (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m  741538 classes.dex (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1590242 help-doc.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1593156 index-all.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1604442 overview-summary.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1606027 allclasses-frame.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1607096 overview-tree.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1609409 serialized-form.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1611090 resources/inherit.gif (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1611203 index.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1611989 deprecated-list.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1613644 com/google/gson/ExclusionStrategy.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1616638 com/google/gson/JsonArray.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1621699 com/google/gson/package-use.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1624247 com/google/gson/JsonParser.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1626940 com/google/gson/package-summary.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1629931 com/google/gson/JsonSerializationContext.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1632293 com/google/gson/FieldNamingStrategy.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1634500 com/google/gson/FieldNamingPolicy.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1638403 com/google/gson/GsonBuilder.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1646881 com/google/gson/FieldAttributes.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1650304 com/google/gson/stream/package-use.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1652120 com/google/gson/stream/package-summary.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1653854 com/google/gson/stream/MalformedJsonException.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1656475 com/google/gson/stream/JsonReader.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1663666 com/google/gson/stream/class-use/MalformedJsonException.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1665091 com/google/gson/stream/class-use/JsonReader.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1667175 com/google/gson/stream/class-use/JsonWriter.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1669576 com/google/gson/stream/class-use/JsonToken.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1671462 com/google/gson/stream/JsonWriter.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1677610 com/google/gson/stream/JsonToken.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1681286 com/google/gson/stream/package-frame.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1682011 com/google/gson/stream/package-tree.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1683784 com/google/gson/JsonIOException.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1686545 com/google/gson/InstanceCreator.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1689643 com/google/gson/annotations/package-use.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1691035 com/google/gson/annotations/SerializedName.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1693755 com/google/gson/annotations/package-summary.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1695614 com/google/gson/annotations/Expose.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1698507 com/google/gson/annotations/Until.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1701217 com/google/gson/annotations/class-use/SerializedName.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1702639 com/google/gson/annotations/class-use/Expose.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1704055 com/google/gson/annotations/class-use/Until.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1705471 com/google/gson/annotations/class-use/Since.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1706885 com/google/gson/annotations/package-frame.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1707582 com/google/gson/annotations/Since.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1710164 com/google/gson/annotations/package-tree.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1711780 com/google/gson/JsonStreamParser.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1714998 com/google/gson/class-use/ExclusionStrategy.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1716859 com/google/gson/class-use/JsonArray.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1718801 com/google/gson/class-use/JsonParser.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1720212 com/google/gson/class-use/JsonSerializationContext.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1722134 com/google/gson/class-use/FieldNamingStrategy.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1724044 com/google/gson/class-use/FieldNamingPolicy.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1726076 com/google/gson/class-use/GsonBuilder.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1729185 com/google/gson/class-use/FieldAttributes.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1730921 com/google/gson/class-use/JsonIOException.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1733355 com/google/gson/class-use/InstanceCreator.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1734768 com/google/gson/class-use/JsonStreamParser.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1736179 com/google/gson/class-use/TypeAdapterFactory.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1738114 com/google/gson/class-use/JsonSyntaxException.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1740364 com/google/gson/class-use/JsonObject.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1742212 com/google/gson/class-use/Gson.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1744157 com/google/gson/class-use/JsonDeserializationContext.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1746079 com/google/gson/class-use/JsonDeserializer.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1747488 com/google/gson/class-use/TypeAdapter.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1749639 com/google/gson/class-use/LongSerializationPolicy.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1751672 com/google/gson/class-use/JsonPrimitive.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1753537 com/google/gson/class-use/JsonElement.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1756983 com/google/gson/class-use/JsonNull.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1758777 com/google/gson/class-use/JsonParseException.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1761000 com/google/gson/class-use/JsonSerializer.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1762404 com/google/gson/TypeAdapterFactory.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1766212 com/google/gson/JsonSyntaxException.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1769004 com/google/gson/JsonObject.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1773038 com/google/gson/Gson.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1781619 com/google/gson/JsonDeserializationContext.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1783965 com/google/gson/JsonDeserializer.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1787146 com/google/gson/TypeAdapter.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1792084 com/google/gson/LongSerializationPolicy.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1795467 com/google/gson/package-frame.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1796456 com/google/gson/JsonPrimitive.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1800420 com/google/gson/JsonElement.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1805157 com/google/gson/JsonNull.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1808079 com/google/gson/JsonParseException.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1811206 com/google/gson/reflect/package-use.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1812930 com/google/gson/reflect/package-summary.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1814631 com/google/gson/reflect/class-use/TypeToken.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1816986 com/google/gson/reflect/TypeToken.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1820422 com/google/gson/reflect/package-frame.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1821078 com/google/gson/reflect/package-tree.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1822634 com/google/gson/package-tree.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1824690 com/google/gson/JsonSerializer.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1827778 stylesheet.css (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1828264 package-list (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1828381 constant-values.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1829691 overview-frame.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1830384 allclasses-noframe.html (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1831428 library.properties (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1831653 com/j256/ormlite/android/LICENSE.txt (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1832260 com/j256/ormlite/android/README.txt (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1832669 com/j256/ormlite/android/VERSION.txt (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1832755 com/j256/ormlite/core/LICENSE.txt (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1833359 com/j256/ormlite/core/README.txt (OK - compressed)[0m
-[0m[[0mdebug[0m] [0m 1834080 com/j256/ormlite/core/VERSION.txt (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   23597 META-INF/MYDEATRE.SF (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   47512 META-INF/MYDEATRE.DSA (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   48398 res/color/abs__primary_text_disable_only_holo_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   48747 res/color/abs__primary_text_disable_only_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   49081 res/color/abs__primary_text_holo_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   49534 res/color/abs__primary_text_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   49997 res/drawable/abs__activated_background_holo_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   50351 res/drawable/abs__activated_background_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   50696 res/drawable/abs__btn_cab_done_holo_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   51082 res/drawable/abs__btn_cab_done_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   51454 res/drawable/abs__ic_clear.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   51792 res/drawable/abs__ic_clear_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   52141 res/drawable/abs__ic_menu_moreoverflow_holo_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   52442 res/drawable/abs__ic_menu_moreoverflow_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   52737 res/drawable/abs__item_background_holo_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   53171 res/drawable/abs__item_background_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   53624 res/drawable/abs__list_selector_background_transition_holo_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   53957 res/drawable/abs__list_selector_background_transition_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   54267 res/drawable/abs__list_selector_holo_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   54720 res/drawable/abs__list_selector_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   55178 res/drawable/abs__progress_horizontal_holo_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   55605 res/drawable/abs__progress_horizontal_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   56022 res/drawable/abs__progress_medium_holo.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   56446 res/drawable/abs__search_dropdown_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   56895 res/drawable/abs__search_dropdown_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   57341 res/drawable/abs__spinner_ab_holo_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   57739 res/drawable/abs__spinner_ab_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   58137 res/drawable/abs__tab_indicator_ab_holo.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   58595 res/drawable/abs__textfield_searchview_holo_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   58947 res/drawable/abs__textfield_searchview_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   59303 res/drawable/abs__textfield_searchview_right_holo_dark.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   59660 res/drawable/abs__textfield_searchview_right_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   60007 res/drawable/activated_background_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   60336 res/drawable/app_main_bg.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   60616 res/drawable/btn_check_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   61180 res/drawable/btn_default_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   61631 res/drawable/btn_radio_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   62197 res/drawable/btn_toggle_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   62754 res/drawable/button_holder.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   63055 res/drawable/edit_text_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   63517 res/drawable/fastscroll_thumb_holo.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   63843 res/drawable/idea_button.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   64055 res/drawable/idea_selector.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   64380 res/drawable/list_button_thin.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   65046 res/drawable/list_selector_background_transition_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   65352 res/drawable/list_selector_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   65790 res/drawable/login_gradient.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   66120 res/drawable/logo.png (OK)[0m
+[0m[[0mdebug[0m] [0m   68642 res/drawable/main_button.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   69361 res/drawable/main_button_text_color.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   69721 res/drawable/pressed_background_mydeatree.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   70009 res/drawable/progress_horizontal_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   70429 res/drawable/progress_horizontal_mydeatree.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   70865 res/drawable/progress_indeterminate_horizontal_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   71278 res/drawable/ratingbar_full_empty_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   71698 res/drawable/ratingbar_full_filled_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   72111 res/drawable/ratingbar_full_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   72448 res/drawable/ratingbar_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   72794 res/drawable/ratingbar_small_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   73126 res/drawable/rectangle_bg.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   73539 res/drawable/scrubber_control_selector_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   73941 res/drawable/scrubber_progress_horizontal_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   74363 res/drawable/selectable_background_mydeatree.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   74777 res/drawable/spinner_background_ab_mydeatree.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   75179 res/drawable/spinner_background_holo_light.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   75578 res/drawable/tab_indicator_ab_mydeatree.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   76010 res/drawable/title_bg.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   76427 res/drawable/title_selector.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   76752 res/layout/abs__action_bar_home.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   77392 res/layout/abs__action_bar_tab.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   77758 res/layout/abs__action_bar_tab_bar_view.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   78087 res/layout/abs__action_bar_title_item.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   78751 res/layout/abs__action_menu_item_layout.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   79671 res/layout/abs__action_menu_layout.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   80064 res/layout/abs__action_mode_bar.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   80467 res/layout/abs__action_mode_close_item.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   81082 res/layout/abs__activity_chooser_view.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   81834 res/layout/abs__activity_chooser_view_list_item.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   82518 res/layout/abs__dialog_title_holo.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   83251 res/layout/abs__list_menu_item_checkbox.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   83652 res/layout/abs__list_menu_item_icon.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   84122 res/layout/abs__list_menu_item_layout.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   84863 res/layout/abs__list_menu_item_radio.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   85268 res/layout/abs__popup_menu_item_layout.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   86022 res/layout/abs__screen_action_bar.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   86798 res/layout/abs__screen_action_bar_overlay.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   87616 res/layout/abs__screen_simple.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   88193 res/layout/abs__screen_simple_overlay_action_mode.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   88747 res/layout/abs__search_dropdown_item_icons_2line.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   89692 res/layout/abs__search_view.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   91082 res/layout/abs__simple_dropdown_hint.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   91518 res/layout/favorite_idea_layout.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   92102 res/layout/idea_edit_layout.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   92737 res/layout/idea_new.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   93374 res/layout/login_layout.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   94585 res/layout/main_controls.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   95029 res/layout/main_layout.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   95425 res/layout/need_user_layout.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   96456 res/layout/new_idea_notification.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   96916 res/layout/private_idea_empty_header.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   97394 res/layout/private_idea_entry.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   98213 res/layout/private_idea_header.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   99017 res/layout/private_idea_list_layout.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m   99505 res/layout/public_idea_entry.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  100499 res/layout/public_ideas_layout.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  100982 res/layout/register_layout.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  101623 res/layout/search_ideas.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  102047 res/layout/sherlock_spinner_dropdown_item.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  102461 res/layout/sherlock_spinner_item.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  102846 res/menu/main_menu.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  103404 res/xml/searchable.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  103810 res/xml/userpreferences.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  104376 AndroidManifest.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  106372 resources.arsc (OK)[0m
+[0m[[0mdebug[0m] [0m  272684 res/drawable-v11/abs__progress_medium_holo.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  273120 res/layout-v14/sherlock_spinner_dropdown_item.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  273542 res/layout-v14/sherlock_spinner_item.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  273960 res/drawable-hdpi/ab_bottom_solid_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  274252 res/drawable-hdpi/ab_solid_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  274556 res/drawable-hdpi/ab_stacked_solid_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  274856 res/drawable-hdpi/ab_transparent_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  275140 res/drawable-hdpi/abs__ab_bottom_solid_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  275440 res/drawable-hdpi/abs__ab_bottom_solid_inverse_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  275740 res/drawable-hdpi/abs__ab_bottom_solid_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  276044 res/drawable-hdpi/abs__ab_bottom_transparent_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  276360 res/drawable-hdpi/abs__ab_bottom_transparent_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  276668 res/drawable-hdpi/abs__ab_share_pack_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  277016 res/drawable-hdpi/abs__ab_share_pack_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  277348 res/drawable-hdpi/abs__ab_solid_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  277648 res/drawable-hdpi/abs__ab_solid_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  277948 res/drawable-hdpi/abs__ab_solid_shadow_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  278296 res/drawable-hdpi/abs__ab_stacked_solid_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  278604 res/drawable-hdpi/abs__ab_stacked_solid_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  278916 res/drawable-hdpi/abs__ab_stacked_transparent_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  279224 res/drawable-hdpi/abs__ab_stacked_transparent_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  279520 res/drawable-hdpi/abs__ab_transparent_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  279848 res/drawable-hdpi/abs__ab_transparent_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  280180 res/drawable-hdpi/abs__btn_cab_done_default_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  280444 res/drawable-hdpi/abs__btn_cab_done_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  280708 res/drawable-hdpi/abs__btn_cab_done_focused_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  280972 res/drawable-hdpi/abs__btn_cab_done_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  281244 res/drawable-hdpi/abs__btn_cab_done_pressed_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  281520 res/drawable-hdpi/abs__btn_cab_done_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  281796 res/drawable-hdpi/abs__cab_background_bottom_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  282104 res/drawable-hdpi/abs__cab_background_bottom_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  282408 res/drawable-hdpi/abs__cab_background_top_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  282716 res/drawable-hdpi/abs__cab_background_top_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  283012 res/drawable-hdpi/abs__dialog_full_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  284428 res/drawable-hdpi/abs__dialog_full_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  285880 res/drawable-hdpi/abs__ic_ab_back_holo_dark.png (OK)[0m
+[0m[[0mdebug[0m] [0m  286508 res/drawable-hdpi/abs__ic_ab_back_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  287024 res/drawable-hdpi/abs__ic_cab_done_holo_dark.png (OK)[0m
+[0m[[0mdebug[0m] [0m  287896 res/drawable-hdpi/abs__ic_cab_done_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  288576 res/drawable-hdpi/abs__ic_clear_disabled.png (OK)[0m
+[0m[[0mdebug[0m] [0m  289644 res/drawable-hdpi/abs__ic_clear_normal.png (OK)[0m
+[0m[[0mdebug[0m] [0m  291240 res/drawable-hdpi/abs__ic_clear_search_api_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  291736 res/drawable-hdpi/abs__ic_clear_search_api_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  292252 res/drawable-hdpi/abs__ic_go.png (OK)[0m
+[0m[[0mdebug[0m] [0m  293152 res/drawable-hdpi/abs__ic_go_search_api_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  293500 res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png (OK)[0m
+[0m[[0mdebug[0m] [0m  293724 res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  293940 res/drawable-hdpi/abs__ic_menu_share_holo_dark.png (OK)[0m
+[0m[[0mdebug[0m] [0m  294600 res/drawable-hdpi/abs__ic_menu_share_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  295276 res/drawable-hdpi/abs__ic_search.png (OK)[0m
+[0m[[0mdebug[0m] [0m  296644 res/drawable-hdpi/abs__ic_search_api_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  297692 res/drawable-hdpi/abs__ic_voice_search.png (OK)[0m
+[0m[[0mdebug[0m] [0m  299792 res/drawable-hdpi/abs__ic_voice_search_api_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  300576 res/drawable-hdpi/abs__list_activated_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  300836 res/drawable-hdpi/abs__list_divider_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  301052 res/drawable-hdpi/abs__list_divider_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  301260 res/drawable-hdpi/abs__list_focused_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  301516 res/drawable-hdpi/abs__list_longpressed_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  301776 res/drawable-hdpi/abs__list_pressed_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  302036 res/drawable-hdpi/abs__list_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  302304 res/drawable-hdpi/abs__list_selector_disabled_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  302600 res/drawable-hdpi/abs__list_selector_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  302892 res/drawable-hdpi/abs__menu_dropdown_panel_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  303868 res/drawable-hdpi/abs__menu_dropdown_panel_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  304948 res/drawable-hdpi/abs__progress_bg_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  305212 res/drawable-hdpi/abs__progress_bg_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  305480 res/drawable-hdpi/abs__progress_primary_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  306424 res/drawable-hdpi/abs__progress_primary_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  307372 res/drawable-hdpi/abs__progress_secondary_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  307644 res/drawable-hdpi/abs__progress_secondary_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  307908 res/drawable-hdpi/abs__spinner_48_inner_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  309808 res/drawable-hdpi/abs__spinner_48_outer_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  312276 res/drawable-hdpi/abs__spinner_ab_default_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  312688 res/drawable-hdpi/abs__spinner_ab_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  313104 res/drawable-hdpi/abs__spinner_ab_disabled_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  313508 res/drawable-hdpi/abs__spinner_ab_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  313912 res/drawable-hdpi/abs__spinner_ab_focused_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  314516 res/drawable-hdpi/abs__spinner_ab_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  315112 res/drawable-hdpi/abs__spinner_ab_pressed_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  315648 res/drawable-hdpi/abs__spinner_ab_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  316176 res/drawable-hdpi/abs__tab_selected_focused_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  316408 res/drawable-hdpi/abs__tab_selected_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  316644 res/drawable-hdpi/abs__tab_selected_pressed_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  316888 res/drawable-hdpi/abs__tab_unselected_pressed_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  317136 res/drawable-hdpi/abs__textfield_search_default_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  317404 res/drawable-hdpi/abs__textfield_search_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  317676 res/drawable-hdpi/abs__textfield_search_right_default_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  317952 res/drawable-hdpi/abs__textfield_search_right_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  318220 res/drawable-hdpi/abs__textfield_search_right_selected_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  318504 res/drawable-hdpi/abs__textfield_search_right_selected_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  318780 res/drawable-hdpi/abs__textfield_search_selected_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  319064 res/drawable-hdpi/abs__textfield_search_selected_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  319344 res/drawable-hdpi/btn_check_off_disabled_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  319700 res/drawable-hdpi/btn_check_off_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  319960 res/drawable-hdpi/btn_check_off_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  320316 res/drawable-hdpi/btn_check_off_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  320576 res/drawable-hdpi/btn_check_off_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  321964 res/drawable-hdpi/btn_check_on_disabled_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  322732 res/drawable-hdpi/btn_check_on_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  323292 res/drawable-hdpi/btn_check_on_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  324768 res/drawable-hdpi/btn_check_on_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  326068 res/drawable-hdpi/btn_check_on_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  328224 res/drawable-hdpi/btn_default_disabled_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  328652 res/drawable-hdpi/btn_default_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  329136 res/drawable-hdpi/btn_default_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  329588 res/drawable-hdpi/btn_default_normal_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  330024 res/drawable-hdpi/btn_default_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  330660 res/drawable-hdpi/btn_radio_off_disabled_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  331768 res/drawable-hdpi/btn_radio_off_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  332360 res/drawable-hdpi/btn_radio_off_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  333632 res/drawable-hdpi/btn_radio_off_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  334276 res/drawable-hdpi/btn_radio_off_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  336272 res/drawable-hdpi/btn_radio_on_disabled_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  338068 res/drawable-hdpi/btn_radio_on_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  339312 res/drawable-hdpi/btn_radio_on_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  341148 res/drawable-hdpi/btn_radio_on_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  342348 res/drawable-hdpi/btn_radio_on_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  344420 res/drawable-hdpi/btn_rating_star_off_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  348320 res/drawable-hdpi/btn_rating_star_off_normal_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  349972 res/drawable-hdpi/btn_rating_star_off_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  354508 res/drawable-hdpi/btn_rating_star_on_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  358548 res/drawable-hdpi/btn_rating_star_on_normal_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  361040 res/drawable-hdpi/btn_rating_star_on_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  365684 res/drawable-hdpi/btn_toggle_off_disabled_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  366264 res/drawable-hdpi/btn_toggle_off_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  366836 res/drawable-hdpi/btn_toggle_off_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  367380 res/drawable-hdpi/btn_toggle_off_normal_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  367988 res/drawable-hdpi/btn_toggle_off_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  368708 res/drawable-hdpi/btn_toggle_on_disabled_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  369304 res/drawable-hdpi/btn_toggle_on_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  369984 res/drawable-hdpi/btn_toggle_on_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  370564 res/drawable-hdpi/btn_toggle_on_normal_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  371256 res/drawable-hdpi/btn_toggle_on_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  371996 res/drawable-hdpi/fastscroll_thumb_default_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  372248 res/drawable-hdpi/fastscroll_thumb_pressed_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  372608 res/drawable-hdpi/ic_action_new.png (OK)[0m
+[0m[[0mdebug[0m] [0m  373924 res/drawable-hdpi/ic_action_sort.png (OK)[0m
+[0m[[0mdebug[0m] [0m  374204 res/drawable-hdpi/ic_action_sync.png (OK)[0m
+[0m[[0mdebug[0m] [0m  375456 res/drawable-hdpi/icon.png (OK)[0m
+[0m[[0mdebug[0m] [0m  384368 res/drawable-hdpi/icon_new.png (OK)[0m
+[0m[[0mdebug[0m] [0m  386216 res/drawable-hdpi/icon_public.png (OK)[0m
+[0m[[0mdebug[0m] [0m  388968 res/drawable-hdpi/icon_sort.png (OK)[0m
+[0m[[0mdebug[0m] [0m  391440 res/drawable-hdpi/icon_sync.png (OK)[0m
+[0m[[0mdebug[0m] [0m  394544 res/drawable-hdpi/list_activated_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  394792 res/drawable-hdpi/list_focused_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  395072 res/drawable-hdpi/list_focused_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  395372 res/drawable-hdpi/list_longpressed_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  395628 res/drawable-hdpi/list_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  395892 res/drawable-hdpi/list_selector_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  396180 res/drawable-hdpi/menu_dropdown_panel_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  397140 res/drawable-hdpi/menu_hardkey_panel_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  397816 res/drawable-hdpi/progress_bg_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  398064 res/drawable-hdpi/progress_bg_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  398324 res/drawable-hdpi/progress_primary_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  398788 res/drawable-hdpi/progress_primary_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  399668 res/drawable-hdpi/progress_secondary_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  399928 res/drawable-hdpi/progress_secondary_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  400196 res/drawable-hdpi/progressbar_indeterminate_holo1.png (OK)[0m
+[0m[[0mdebug[0m] [0m  400788 res/drawable-hdpi/progressbar_indeterminate_holo2.png (OK)[0m
+[0m[[0mdebug[0m] [0m  401456 res/drawable-hdpi/progressbar_indeterminate_holo3.png (OK)[0m
+[0m[[0mdebug[0m] [0m  402132 res/drawable-hdpi/progressbar_indeterminate_holo4.png (OK)[0m
+[0m[[0mdebug[0m] [0m  402856 res/drawable-hdpi/progressbar_indeterminate_holo5.png (OK)[0m
+[0m[[0mdebug[0m] [0m  403496 res/drawable-hdpi/progressbar_indeterminate_holo6.png (OK)[0m
+[0m[[0mdebug[0m] [0m  404236 res/drawable-hdpi/progressbar_indeterminate_holo7.png (OK)[0m
+[0m[[0mdebug[0m] [0m  404836 res/drawable-hdpi/progressbar_indeterminate_holo8.png (OK)[0m
+[0m[[0mdebug[0m] [0m  405488 res/drawable-hdpi/rate_star_big_half_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  408212 res/drawable-hdpi/rate_star_big_off_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  409700 res/drawable-hdpi/rate_star_big_on_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  411728 res/drawable-hdpi/rate_star_small_half_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  412936 res/drawable-hdpi/rate_star_small_off_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  413624 res/drawable-hdpi/rate_star_small_on_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  414636 res/drawable-hdpi/scrubber_control_disabled_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  415320 res/drawable-hdpi/scrubber_control_focused_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  416240 res/drawable-hdpi/scrubber_control_normal_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  417436 res/drawable-hdpi/scrubber_control_pressed_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  418916 res/drawable-hdpi/scrubber_primary_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  419176 res/drawable-hdpi/scrubber_secondary_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  419436 res/drawable-hdpi/scrubber_track_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  419684 res/drawable-hdpi/spinner_ab_default_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  420124 res/drawable-hdpi/spinner_ab_disabled_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  420560 res/drawable-hdpi/spinner_ab_focused_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  421156 res/drawable-hdpi/spinner_ab_pressed_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  421672 res/drawable-hdpi/spinner_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  422200 res/drawable-hdpi/spinner_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  422608 res/drawable-hdpi/spinner_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  423204 res/drawable-hdpi/spinner_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  423760 res/drawable-hdpi/tab_selected_focused_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  423992 res/drawable-hdpi/tab_selected_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  424228 res/drawable-hdpi/tab_selected_pressed_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  424472 res/drawable-hdpi/tab_unselected_focused_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  424704 res/drawable-hdpi/tab_unselected_pressed_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  424936 res/drawable-hdpi/textfield_activated_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  425260 res/drawable-hdpi/textfield_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  425556 res/drawable-hdpi/textfield_disabled_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  425936 res/drawable-hdpi/textfield_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  426224 res/drawable-hdpi/textfield_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  426612 res/drawable-ldpi/icon.png (OK)[0m
+[0m[[0mdebug[0m] [0m  429444 res/drawable-ldpi/icon_new.png (OK)[0m
+[0m[[0mdebug[0m] [0m  430216 res/drawable-ldpi/icon_public.png (OK)[0m
+[0m[[0mdebug[0m] [0m  431500 res/drawable-ldpi/icon_sort.png (OK)[0m
+[0m[[0mdebug[0m] [0m  432540 res/drawable-ldpi/icon_sync.png (OK)[0m
+[0m[[0mdebug[0m] [0m  433808 res/drawable-mdpi/ab_bottom_solid_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  434080 res/drawable-mdpi/ab_solid_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  434368 res/drawable-mdpi/ab_stacked_solid_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  434652 res/drawable-mdpi/ab_transparent_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  434932 res/drawable-mdpi/abs__ab_bottom_solid_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  435220 res/drawable-mdpi/abs__ab_bottom_solid_inverse_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  435504 res/drawable-mdpi/abs__ab_bottom_solid_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  435796 res/drawable-mdpi/abs__ab_bottom_transparent_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  436096 res/drawable-mdpi/abs__ab_bottom_transparent_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  436388 res/drawable-mdpi/abs__ab_share_pack_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  436716 res/drawable-mdpi/abs__ab_share_pack_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  437036 res/drawable-mdpi/abs__ab_solid_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  437320 res/drawable-mdpi/abs__ab_solid_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  437608 res/drawable-mdpi/abs__ab_solid_shadow_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  437932 res/drawable-mdpi/abs__ab_stacked_solid_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  438224 res/drawable-mdpi/abs__ab_stacked_solid_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  438524 res/drawable-mdpi/abs__ab_stacked_transparent_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  438816 res/drawable-mdpi/abs__ab_stacked_transparent_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  439100 res/drawable-mdpi/abs__ab_transparent_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  439408 res/drawable-mdpi/abs__ab_transparent_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  439720 res/drawable-mdpi/abs__btn_cab_done_default_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  439984 res/drawable-mdpi/abs__btn_cab_done_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  440248 res/drawable-mdpi/abs__btn_cab_done_focused_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  440512 res/drawable-mdpi/abs__btn_cab_done_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  440784 res/drawable-mdpi/abs__btn_cab_done_pressed_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  441060 res/drawable-mdpi/abs__btn_cab_done_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  441336 res/drawable-mdpi/abs__cab_background_bottom_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  441628 res/drawable-mdpi/abs__cab_background_bottom_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  441916 res/drawable-mdpi/abs__cab_background_top_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  442204 res/drawable-mdpi/abs__cab_background_top_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  442484 res/drawable-mdpi/abs__dialog_full_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  443432 res/drawable-mdpi/abs__dialog_full_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  444452 res/drawable-mdpi/abs__ic_ab_back_holo_dark.png (OK)[0m
+[0m[[0mdebug[0m] [0m  444916 res/drawable-mdpi/abs__ic_ab_back_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  445308 res/drawable-mdpi/abs__ic_cab_done_holo_dark.png (OK)[0m
+[0m[[0mdebug[0m] [0m  445944 res/drawable-mdpi/abs__ic_cab_done_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  446480 res/drawable-mdpi/abs__ic_clear_disabled.png (OK)[0m
+[0m[[0mdebug[0m] [0m  448060 res/drawable-mdpi/abs__ic_clear_normal.png (OK)[0m
+[0m[[0mdebug[0m] [0m  449180 res/drawable-mdpi/abs__ic_clear_search_api_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  450008 res/drawable-mdpi/abs__ic_clear_search_api_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  450624 res/drawable-mdpi/abs__ic_go.png (OK)[0m
+[0m[[0mdebug[0m] [0m  451728 res/drawable-mdpi/abs__ic_go_search_api_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  452400 res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png (OK)[0m
+[0m[[0mdebug[0m] [0m  452608 res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  452812 res/drawable-mdpi/abs__ic_menu_share_holo_dark.png (OK)[0m
+[0m[[0mdebug[0m] [0m  453360 res/drawable-mdpi/abs__ic_menu_share_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  453908 res/drawable-mdpi/abs__ic_search.png (OK)[0m
+[0m[[0mdebug[0m] [0m  455276 res/drawable-mdpi/abs__ic_search_api_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  456728 res/drawable-mdpi/abs__ic_voice_search.png (OK)[0m
+[0m[[0mdebug[0m] [0m  457760 res/drawable-mdpi/abs__ic_voice_search_api_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  458444 res/drawable-mdpi/abs__list_activated_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  458700 res/drawable-mdpi/abs__list_divider_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  458916 res/drawable-mdpi/abs__list_divider_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  459124 res/drawable-mdpi/abs__list_focused_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  459380 res/drawable-mdpi/abs__list_longpressed_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  459636 res/drawable-mdpi/abs__list_pressed_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  459896 res/drawable-mdpi/abs__list_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  460164 res/drawable-mdpi/abs__list_selector_disabled_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  460448 res/drawable-mdpi/abs__list_selector_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  460728 res/drawable-mdpi/abs__menu_dropdown_panel_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  461440 res/drawable-mdpi/abs__menu_dropdown_panel_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  462240 res/drawable-mdpi/abs__progress_bg_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  462496 res/drawable-mdpi/abs__progress_bg_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  462756 res/drawable-mdpi/abs__progress_primary_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  463388 res/drawable-mdpi/abs__progress_primary_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  464020 res/drawable-mdpi/abs__progress_secondary_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  464284 res/drawable-mdpi/abs__progress_secondary_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  464540 res/drawable-mdpi/abs__spinner_48_inner_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  465720 res/drawable-mdpi/abs__spinner_48_outer_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  467336 res/drawable-mdpi/abs__spinner_ab_default_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  467704 res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  468084 res/drawable-mdpi/abs__spinner_ab_disabled_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  468448 res/drawable-mdpi/abs__spinner_ab_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  468808 res/drawable-mdpi/abs__spinner_ab_focused_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  469316 res/drawable-mdpi/abs__spinner_ab_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  469824 res/drawable-mdpi/abs__spinner_ab_pressed_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  470276 res/drawable-mdpi/abs__spinner_ab_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  470720 res/drawable-mdpi/abs__tab_selected_focused_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  470952 res/drawable-mdpi/abs__tab_selected_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  471188 res/drawable-mdpi/abs__tab_selected_pressed_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  471432 res/drawable-mdpi/abs__tab_unselected_pressed_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  471684 res/drawable-mdpi/abs__textfield_search_default_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  471956 res/drawable-mdpi/abs__textfield_search_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  472224 res/drawable-mdpi/abs__textfield_search_right_default_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  472500 res/drawable-mdpi/abs__textfield_search_right_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  472768 res/drawable-mdpi/abs__textfield_search_right_selected_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  473044 res/drawable-mdpi/abs__textfield_search_right_selected_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  473316 res/drawable-mdpi/abs__textfield_search_selected_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  473596 res/drawable-mdpi/abs__textfield_search_selected_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  473872 res/drawable-mdpi/btn_check_off_disabled_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  474176 res/drawable-mdpi/btn_check_off_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  474416 res/drawable-mdpi/btn_check_off_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  474720 res/drawable-mdpi/btn_check_off_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  474960 res/drawable-mdpi/btn_check_off_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  475892 res/drawable-mdpi/btn_check_on_disabled_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  476544 res/drawable-mdpi/btn_check_on_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  477000 res/drawable-mdpi/btn_check_on_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  477916 res/drawable-mdpi/btn_check_on_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  478704 res/drawable-mdpi/btn_check_on_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  479968 res/drawable-mdpi/btn_default_disabled_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  480324 res/drawable-mdpi/btn_default_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  480728 res/drawable-mdpi/btn_default_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  481108 res/drawable-mdpi/btn_default_normal_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  481488 res/drawable-mdpi/btn_default_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  481996 res/drawable-mdpi/btn_radio_off_disabled_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  482696 res/drawable-mdpi/btn_radio_off_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  483084 res/drawable-mdpi/btn_radio_off_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  483840 res/drawable-mdpi/btn_radio_off_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  484264 res/drawable-mdpi/btn_radio_off_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  485512 res/drawable-mdpi/btn_radio_on_disabled_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  486540 res/drawable-mdpi/btn_radio_on_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  487240 res/drawable-mdpi/btn_radio_on_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  488240 res/drawable-mdpi/btn_radio_on_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  488896 res/drawable-mdpi/btn_radio_on_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  490148 res/drawable-mdpi/btn_rating_star_off_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  492400 res/drawable-mdpi/btn_rating_star_off_normal_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  493628 res/drawable-mdpi/btn_rating_star_off_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  496280 res/drawable-mdpi/btn_rating_star_on_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  498436 res/drawable-mdpi/btn_rating_star_on_normal_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  499728 res/drawable-mdpi/btn_rating_star_on_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  502244 res/drawable-mdpi/btn_toggle_off_disabled_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  502760 res/drawable-mdpi/btn_toggle_off_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  503252 res/drawable-mdpi/btn_toggle_off_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  503832 res/drawable-mdpi/btn_toggle_off_normal_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  504336 res/drawable-mdpi/btn_toggle_off_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  505020 res/drawable-mdpi/btn_toggle_on_disabled_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  505516 res/drawable-mdpi/btn_toggle_on_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  506052 res/drawable-mdpi/btn_toggle_on_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  506564 res/drawable-mdpi/btn_toggle_on_normal_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  507144 res/drawable-mdpi/btn_toggle_on_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  507736 res/drawable-mdpi/fastscroll_thumb_default_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  507960 res/drawable-mdpi/fastscroll_thumb_pressed_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  508252 res/drawable-mdpi/ic_action_new.png (OK)[0m
+[0m[[0mdebug[0m] [0m  509244 res/drawable-mdpi/ic_action_sort.png (OK)[0m
+[0m[[0mdebug[0m] [0m  509524 res/drawable-mdpi/ic_action_sync.png (OK)[0m
+[0m[[0mdebug[0m] [0m  510484 res/drawable-mdpi/icon.png (OK)[0m
+[0m[[0mdebug[0m] [0m  515084 res/drawable-mdpi/icon_new.png (OK)[0m
+[0m[[0mdebug[0m] [0m  516164 res/drawable-mdpi/icon_public.png (OK)[0m
+[0m[[0mdebug[0m] [0m  517700 res/drawable-mdpi/icon_sort.png (OK)[0m
+[0m[[0mdebug[0m] [0m  519184 res/drawable-mdpi/icon_sync.png (OK)[0m
+[0m[[0mdebug[0m] [0m  520972 res/drawable-mdpi/list_activated_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  521220 res/drawable-mdpi/list_focused_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  521484 res/drawable-mdpi/list_focused_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  521756 res/drawable-mdpi/list_longpressed_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  522008 res/drawable-mdpi/list_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  522272 res/drawable-mdpi/list_selector_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  522548 res/drawable-mdpi/menu_dropdown_panel_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  523240 res/drawable-mdpi/menu_hardkey_panel_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  523764 res/drawable-mdpi/progress_bg_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  524016 res/drawable-mdpi/progress_bg_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  524268 res/drawable-mdpi/progress_primary_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  524652 res/drawable-mdpi/progress_primary_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  525252 res/drawable-mdpi/progress_secondary_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  525508 res/drawable-mdpi/progress_secondary_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  525768 res/drawable-mdpi/progressbar_indeterminate_holo1.png (OK)[0m
+[0m[[0mdebug[0m] [0m  526160 res/drawable-mdpi/progressbar_indeterminate_holo2.png (OK)[0m
+[0m[[0mdebug[0m] [0m  526600 res/drawable-mdpi/progressbar_indeterminate_holo3.png (OK)[0m
+[0m[[0mdebug[0m] [0m  527064 res/drawable-mdpi/progressbar_indeterminate_holo4.png (OK)[0m
+[0m[[0mdebug[0m] [0m  527524 res/drawable-mdpi/progressbar_indeterminate_holo5.png (OK)[0m
+[0m[[0mdebug[0m] [0m  527968 res/drawable-mdpi/progressbar_indeterminate_holo6.png (OK)[0m
+[0m[[0mdebug[0m] [0m  528432 res/drawable-mdpi/progressbar_indeterminate_holo7.png (OK)[0m
+[0m[[0mdebug[0m] [0m  528868 res/drawable-mdpi/progressbar_indeterminate_holo8.png (OK)[0m
+[0m[[0mdebug[0m] [0m  529316 res/drawable-mdpi/rate_star_big_half_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  530672 res/drawable-mdpi/rate_star_big_off_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  532140 res/drawable-mdpi/rate_star_big_on_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  533340 res/drawable-mdpi/rate_star_small_half_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  534164 res/drawable-mdpi/rate_star_small_off_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  534616 res/drawable-mdpi/rate_star_small_on_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  535392 res/drawable-mdpi/scrubber_control_disabled_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  535932 res/drawable-mdpi/scrubber_control_focused_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  536584 res/drawable-mdpi/scrubber_control_normal_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  537404 res/drawable-mdpi/scrubber_control_pressed_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  538440 res/drawable-mdpi/scrubber_primary_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  538696 res/drawable-mdpi/scrubber_secondary_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  538952 res/drawable-mdpi/scrubber_track_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  539196 res/drawable-mdpi/spinner_ab_default_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  539600 res/drawable-mdpi/spinner_ab_disabled_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  539996 res/drawable-mdpi/spinner_ab_focused_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  540500 res/drawable-mdpi/spinner_ab_pressed_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  540928 res/drawable-mdpi/spinner_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  541348 res/drawable-mdpi/spinner_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  541716 res/drawable-mdpi/spinner_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  542192 res/drawable-mdpi/spinner_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  542616 res/drawable-mdpi/tab_selected_focused_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  542848 res/drawable-mdpi/tab_selected_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  543084 res/drawable-mdpi/tab_selected_pressed_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  543328 res/drawable-mdpi/tab_unselected_focused_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  543564 res/drawable-mdpi/tab_unselected_pressed_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  543796 res/drawable-mdpi/textfield_activated_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  544096 res/drawable-mdpi/textfield_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  544384 res/drawable-mdpi/textfield_disabled_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  544732 res/drawable-mdpi/textfield_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  545012 res/drawable-mdpi/textfield_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  545400 res/drawable-xhdpi/ab_bottom_solid_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  545704 res/drawable-xhdpi/ab_solid_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  546024 res/drawable-xhdpi/ab_stacked_solid_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  546336 res/drawable-xhdpi/ab_transparent_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  546628 res/drawable-xhdpi/abs__ab_bottom_solid_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  546944 res/drawable-xhdpi/abs__ab_bottom_solid_inverse_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  547260 res/drawable-xhdpi/abs__ab_bottom_solid_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  547580 res/drawable-xhdpi/abs__ab_bottom_transparent_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  547912 res/drawable-xhdpi/abs__ab_bottom_transparent_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  548232 res/drawable-xhdpi/abs__ab_share_pack_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  548596 res/drawable-xhdpi/abs__ab_share_pack_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  548944 res/drawable-xhdpi/abs__ab_solid_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  549260 res/drawable-xhdpi/abs__ab_solid_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  549576 res/drawable-xhdpi/abs__ab_solid_shadow_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  550008 res/drawable-xhdpi/abs__ab_stacked_solid_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  550332 res/drawable-xhdpi/abs__ab_stacked_solid_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  550660 res/drawable-xhdpi/abs__ab_stacked_transparent_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  550984 res/drawable-xhdpi/abs__ab_stacked_transparent_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  551296 res/drawable-xhdpi/abs__ab_transparent_dark_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  551636 res/drawable-xhdpi/abs__ab_transparent_light_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  551980 res/drawable-xhdpi/abs__btn_cab_done_default_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  552252 res/drawable-xhdpi/abs__btn_cab_done_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  552524 res/drawable-xhdpi/abs__btn_cab_done_focused_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  552800 res/drawable-xhdpi/abs__btn_cab_done_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  553092 res/drawable-xhdpi/abs__btn_cab_done_pressed_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  553384 res/drawable-xhdpi/abs__btn_cab_done_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  553676 res/drawable-xhdpi/abs__cab_background_bottom_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  554000 res/drawable-xhdpi/abs__cab_background_bottom_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  554320 res/drawable-xhdpi/abs__cab_background_top_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  554640 res/drawable-xhdpi/abs__cab_background_top_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  554952 res/drawable-xhdpi/abs__dialog_full_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  557072 res/drawable-xhdpi/abs__dialog_full_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  559208 res/drawable-xhdpi/abs__ic_ab_back_holo_dark.png (OK)[0m
+[0m[[0mdebug[0m] [0m  559916 res/drawable-xhdpi/abs__ic_ab_back_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  560524 res/drawable-xhdpi/abs__ic_cab_done_holo_dark.png (OK)[0m
+[0m[[0mdebug[0m] [0m  561656 res/drawable-xhdpi/abs__ic_cab_done_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  562516 res/drawable-xhdpi/abs__ic_clear_disabled.png (OK)[0m
+[0m[[0mdebug[0m] [0m  564140 res/drawable-xhdpi/abs__ic_clear_search_api_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  565448 res/drawable-xhdpi/abs__ic_clear_search_api_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  567044 res/drawable-xhdpi/abs__ic_go.png (OK)[0m
+[0m[[0mdebug[0m] [0m  568868 res/drawable-xhdpi/abs__ic_go_search_api_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  569804 res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png (OK)[0m
+[0m[[0mdebug[0m] [0m  570032 res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  570264 res/drawable-xhdpi/abs__ic_menu_share_holo_dark.png (OK)[0m
+[0m[[0mdebug[0m] [0m  571180 res/drawable-xhdpi/abs__ic_menu_share_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  572116 res/drawable-xhdpi/abs__ic_search.png (OK)[0m
+[0m[[0mdebug[0m] [0m  574984 res/drawable-xhdpi/abs__ic_search_api_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  577820 res/drawable-xhdpi/abs__ic_voice_search.png (OK)[0m
+[0m[[0mdebug[0m] [0m  579948 res/drawable-xhdpi/abs__ic_voice_search_api_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  581244 res/drawable-xhdpi/abs__list_activated_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  581504 res/drawable-xhdpi/abs__list_divider_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  581728 res/drawable-xhdpi/abs__list_divider_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  581944 res/drawable-xhdpi/abs__list_focused_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  582204 res/drawable-xhdpi/abs__list_longpressed_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  582464 res/drawable-xhdpi/abs__list_pressed_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  582728 res/drawable-xhdpi/abs__list_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  583000 res/drawable-xhdpi/abs__list_selector_disabled_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  583312 res/drawable-xhdpi/abs__list_selector_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  583620 res/drawable-xhdpi/abs__menu_dropdown_panel_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  584988 res/drawable-xhdpi/abs__menu_dropdown_panel_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  586504 res/drawable-xhdpi/abs__progress_bg_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  586768 res/drawable-xhdpi/abs__progress_bg_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  587036 res/drawable-xhdpi/abs__progress_primary_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  588364 res/drawable-xhdpi/abs__progress_primary_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  589692 res/drawable-xhdpi/abs__progress_secondary_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  589964 res/drawable-xhdpi/abs__progress_secondary_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  590224 res/drawable-xhdpi/abs__spinner_48_inner_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  592796 res/drawable-xhdpi/abs__spinner_48_outer_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  595968 res/drawable-xhdpi/abs__spinner_ab_default_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  596428 res/drawable-xhdpi/abs__spinner_ab_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  596888 res/drawable-xhdpi/abs__spinner_ab_disabled_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  597336 res/drawable-xhdpi/abs__spinner_ab_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  597784 res/drawable-xhdpi/abs__spinner_ab_focused_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  598500 res/drawable-xhdpi/abs__spinner_ab_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  599200 res/drawable-xhdpi/abs__spinner_ab_pressed_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  599840 res/drawable-xhdpi/abs__spinner_ab_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  600468 res/drawable-xhdpi/abs__tab_selected_focused_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  600704 res/drawable-xhdpi/abs__tab_selected_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  600940 res/drawable-xhdpi/abs__tab_selected_pressed_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  601184 res/drawable-xhdpi/abs__tab_unselected_pressed_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  601436 res/drawable-xhdpi/abs__textfield_search_default_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  601728 res/drawable-xhdpi/abs__textfield_search_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  602028 res/drawable-xhdpi/abs__textfield_search_right_default_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  602320 res/drawable-xhdpi/abs__textfield_search_right_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  602616 res/drawable-xhdpi/abs__textfield_search_right_selected_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  602912 res/drawable-xhdpi/abs__textfield_search_right_selected_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  603200 res/drawable-xhdpi/abs__textfield_search_selected_holo_dark.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  603480 res/drawable-xhdpi/abs__textfield_search_selected_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  603776 res/drawable-xhdpi/btn_check_off_disabled_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  604148 res/drawable-xhdpi/btn_check_off_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  604420 res/drawable-xhdpi/btn_check_off_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  604796 res/drawable-xhdpi/btn_check_off_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  605068 res/drawable-xhdpi/btn_check_off_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  606820 res/drawable-xhdpi/btn_check_on_disabled_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  607864 res/drawable-xhdpi/btn_check_on_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  608560 res/drawable-xhdpi/btn_check_on_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  610496 res/drawable-xhdpi/btn_check_on_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  612188 res/drawable-xhdpi/btn_check_on_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  614716 res/drawable-xhdpi/btn_default_disabled_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  615184 res/drawable-xhdpi/btn_default_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  615760 res/drawable-xhdpi/btn_default_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  616276 res/drawable-xhdpi/btn_default_normal_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  616764 res/drawable-xhdpi/btn_default_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  617568 res/drawable-xhdpi/btn_radio_off_disabled_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  619108 res/drawable-xhdpi/btn_radio_off_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  619852 res/drawable-xhdpi/btn_radio_off_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  621612 res/drawable-xhdpi/btn_radio_off_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  622412 res/drawable-xhdpi/btn_radio_off_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  625132 res/drawable-xhdpi/btn_radio_on_disabled_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  627628 res/drawable-xhdpi/btn_radio_on_disabled_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  629372 res/drawable-xhdpi/btn_radio_on_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  632828 res/drawable-xhdpi/btn_radio_on_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  634516 res/drawable-xhdpi/btn_radio_on_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  637284 res/drawable-xhdpi/btn_rating_star_off_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  643008 res/drawable-xhdpi/btn_rating_star_off_normal_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  645176 res/drawable-xhdpi/btn_rating_star_off_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  651452 res/drawable-xhdpi/btn_rating_star_on_focused_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  656912 res/drawable-xhdpi/btn_rating_star_on_normal_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  659208 res/drawable-xhdpi/btn_rating_star_on_pressed_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  665296 res/drawable-xhdpi/btn_toggle_off_disabled_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  665860 res/drawable-xhdpi/btn_toggle_off_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  666532 res/drawable-xhdpi/btn_toggle_off_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  667144 res/drawable-xhdpi/btn_toggle_off_normal_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  667856 res/drawable-xhdpi/btn_toggle_off_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  668748 res/drawable-xhdpi/btn_toggle_on_disabled_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  669356 res/drawable-xhdpi/btn_toggle_on_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  670128 res/drawable-xhdpi/btn_toggle_on_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  670804 res/drawable-xhdpi/btn_toggle_on_normal_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  671520 res/drawable-xhdpi/btn_toggle_on_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  672408 res/drawable-xhdpi/fastscroll_thumb_default_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  672688 res/drawable-xhdpi/fastscroll_thumb_pressed_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  673128 res/drawable-xhdpi/ic_action_new.png (OK)[0m
+[0m[[0mdebug[0m] [0m  674668 res/drawable-xhdpi/ic_action_sort.png (OK)[0m
+[0m[[0mdebug[0m] [0m  674956 res/drawable-xhdpi/ic_action_sync.png (OK)[0m
+[0m[[0mdebug[0m] [0m  676520 res/drawable-xhdpi/ic_share.png (OK)[0m
+[0m[[0mdebug[0m] [0m  678728 res/drawable-xhdpi/ic_star_empty.png (OK)[0m
+[0m[[0mdebug[0m] [0m  681212 res/drawable-xhdpi/ic_star_full.png (OK)[0m
+[0m[[0mdebug[0m] [0m  683048 res/drawable-xhdpi/icon.png (OK)[0m
+[0m[[0mdebug[0m] [0m  697000 res/drawable-xhdpi/icon_public.png (OK)[0m
+[0m[[0mdebug[0m] [0m  701044 res/drawable-xhdpi/list_activated_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  701296 res/drawable-xhdpi/list_focused_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  701580 res/drawable-xhdpi/list_focused_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  701880 res/drawable-xhdpi/list_longpressed_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  702136 res/drawable-xhdpi/list_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  702404 res/drawable-xhdpi/list_selector_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  702708 res/drawable-xhdpi/menu_dropdown_panel_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  704032 res/drawable-xhdpi/menu_hardkey_panel_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  704888 res/drawable-xhdpi/progress_bg_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  705144 res/drawable-xhdpi/progress_bg_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  705400 res/drawable-xhdpi/progress_primary_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  705968 res/drawable-xhdpi/progress_primary_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  707136 res/drawable-xhdpi/progress_secondary_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  707400 res/drawable-xhdpi/progress_secondary_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  707664 res/drawable-xhdpi/progressbar_indeterminate_holo1.png (OK)[0m
+[0m[[0mdebug[0m] [0m  708276 res/drawable-xhdpi/progressbar_indeterminate_holo2.png (OK)[0m
+[0m[[0mdebug[0m] [0m  708968 res/drawable-xhdpi/progressbar_indeterminate_holo3.png (OK)[0m
+[0m[[0mdebug[0m] [0m  709732 res/drawable-xhdpi/progressbar_indeterminate_holo4.png (OK)[0m
+[0m[[0mdebug[0m] [0m  710492 res/drawable-xhdpi/progressbar_indeterminate_holo5.png (OK)[0m
+[0m[[0mdebug[0m] [0m  711236 res/drawable-xhdpi/progressbar_indeterminate_holo6.png (OK)[0m
+[0m[[0mdebug[0m] [0m  712040 res/drawable-xhdpi/progressbar_indeterminate_holo7.png (OK)[0m
+[0m[[0mdebug[0m] [0m  712764 res/drawable-xhdpi/progressbar_indeterminate_holo8.png (OK)[0m
+[0m[[0mdebug[0m] [0m  713488 res/drawable-xhdpi/rate_star_big_half_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  717092 res/drawable-xhdpi/rate_star_big_off_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  719112 res/drawable-xhdpi/rate_star_big_on_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  721120 res/drawable-xhdpi/rate_star_small_half_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  722712 res/drawable-xhdpi/rate_star_small_off_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  724192 res/drawable-xhdpi/rate_star_small_on_holo_light.png (OK)[0m
+[0m[[0mdebug[0m] [0m  725576 res/drawable-xhdpi/scrubber_control_disabled_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  726360 res/drawable-xhdpi/scrubber_control_focused_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  727432 res/drawable-xhdpi/scrubber_control_normal_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  728676 res/drawable-xhdpi/scrubber_control_pressed_holo.png (OK)[0m
+[0m[[0mdebug[0m] [0m  730264 res/drawable-xhdpi/scrubber_primary_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  730528 res/drawable-xhdpi/scrubber_secondary_holo.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  730792 res/drawable-xhdpi/scrubber_track_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  731048 res/drawable-xhdpi/spinner_ab_default_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  731544 res/drawable-xhdpi/spinner_ab_disabled_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  732028 res/drawable-xhdpi/spinner_ab_focused_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  732784 res/drawable-xhdpi/spinner_ab_pressed_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  733428 res/drawable-xhdpi/spinner_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  734028 res/drawable-xhdpi/spinner_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  734488 res/drawable-xhdpi/spinner_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  735200 res/drawable-xhdpi/spinner_pressed_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  735836 res/drawable-xhdpi/tab_selected_focused_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  736072 res/drawable-xhdpi/tab_selected_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  736308 res/drawable-xhdpi/tab_selected_pressed_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  736552 res/drawable-xhdpi/tab_unselected_focused_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  736788 res/drawable-xhdpi/tab_unselected_pressed_mydeatree.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  737020 res/drawable-xhdpi/textfield_activated_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  737372 res/drawable-xhdpi/textfield_default_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  737680 res/drawable-xhdpi/textfield_disabled_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  738140 res/drawable-xhdpi/textfield_disabled_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  738440 res/drawable-xhdpi/textfield_focused_holo_light.9.png (OK)[0m
+[0m[[0mdebug[0m] [0m  738945 res/layout-large/abs__action_mode_close_item.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  739700 res/layout-xlarge/abs__screen_action_bar.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  740431 res/layout-xlarge/abs__screen_action_bar_overlay.xml (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m  741142 classes.dex (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1535729 help-doc.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1538643 index-all.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1549929 overview-summary.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1551514 allclasses-frame.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1552583 overview-tree.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1554896 serialized-form.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1556577 resources/inherit.gif (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1556690 index.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1557476 deprecated-list.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1559131 com/google/gson/ExclusionStrategy.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1562125 com/google/gson/JsonArray.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1567186 com/google/gson/package-use.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1569734 com/google/gson/JsonParser.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1572427 com/google/gson/package-summary.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1575418 com/google/gson/JsonSerializationContext.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1577780 com/google/gson/FieldNamingStrategy.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1579987 com/google/gson/FieldNamingPolicy.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1583890 com/google/gson/GsonBuilder.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1592368 com/google/gson/FieldAttributes.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1595791 com/google/gson/stream/package-use.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1597607 com/google/gson/stream/package-summary.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1599341 com/google/gson/stream/MalformedJsonException.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1601962 com/google/gson/stream/JsonReader.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1609153 com/google/gson/stream/class-use/MalformedJsonException.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1610578 com/google/gson/stream/class-use/JsonReader.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1612662 com/google/gson/stream/class-use/JsonWriter.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1615063 com/google/gson/stream/class-use/JsonToken.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1616949 com/google/gson/stream/JsonWriter.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1623097 com/google/gson/stream/JsonToken.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1626773 com/google/gson/stream/package-frame.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1627498 com/google/gson/stream/package-tree.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1629271 com/google/gson/JsonIOException.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1632032 com/google/gson/InstanceCreator.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1635130 com/google/gson/annotations/package-use.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1636522 com/google/gson/annotations/SerializedName.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1639242 com/google/gson/annotations/package-summary.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1641101 com/google/gson/annotations/Expose.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1643994 com/google/gson/annotations/Until.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1646704 com/google/gson/annotations/class-use/SerializedName.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1648126 com/google/gson/annotations/class-use/Expose.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1649542 com/google/gson/annotations/class-use/Until.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1650958 com/google/gson/annotations/class-use/Since.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1652372 com/google/gson/annotations/package-frame.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1653069 com/google/gson/annotations/Since.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1655651 com/google/gson/annotations/package-tree.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1657267 com/google/gson/JsonStreamParser.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1660485 com/google/gson/class-use/ExclusionStrategy.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1662346 com/google/gson/class-use/JsonArray.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1664288 com/google/gson/class-use/JsonParser.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1665699 com/google/gson/class-use/JsonSerializationContext.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1667621 com/google/gson/class-use/FieldNamingStrategy.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1669531 com/google/gson/class-use/FieldNamingPolicy.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1671563 com/google/gson/class-use/GsonBuilder.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1674672 com/google/gson/class-use/FieldAttributes.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1676408 com/google/gson/class-use/JsonIOException.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1678842 com/google/gson/class-use/InstanceCreator.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1680255 com/google/gson/class-use/JsonStreamParser.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1681666 com/google/gson/class-use/TypeAdapterFactory.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1683601 com/google/gson/class-use/JsonSyntaxException.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1685851 com/google/gson/class-use/JsonObject.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1687699 com/google/gson/class-use/Gson.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1689644 com/google/gson/class-use/JsonDeserializationContext.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1691566 com/google/gson/class-use/JsonDeserializer.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1692975 com/google/gson/class-use/TypeAdapter.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1695126 com/google/gson/class-use/LongSerializationPolicy.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1697159 com/google/gson/class-use/JsonPrimitive.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1699024 com/google/gson/class-use/JsonElement.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1702470 com/google/gson/class-use/JsonNull.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1704264 com/google/gson/class-use/JsonParseException.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1706487 com/google/gson/class-use/JsonSerializer.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1707891 com/google/gson/TypeAdapterFactory.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1711699 com/google/gson/JsonSyntaxException.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1714491 com/google/gson/JsonObject.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1718525 com/google/gson/Gson.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1727106 com/google/gson/JsonDeserializationContext.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1729452 com/google/gson/JsonDeserializer.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1732633 com/google/gson/TypeAdapter.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1737571 com/google/gson/LongSerializationPolicy.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1740954 com/google/gson/package-frame.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1741943 com/google/gson/JsonPrimitive.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1745907 com/google/gson/JsonElement.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1750644 com/google/gson/JsonNull.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1753566 com/google/gson/JsonParseException.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1756693 com/google/gson/reflect/package-use.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1758417 com/google/gson/reflect/package-summary.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1760118 com/google/gson/reflect/class-use/TypeToken.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1762473 com/google/gson/reflect/TypeToken.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1765909 com/google/gson/reflect/package-frame.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1766565 com/google/gson/reflect/package-tree.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1768121 com/google/gson/package-tree.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1770177 com/google/gson/JsonSerializer.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1773265 stylesheet.css (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1773751 package-list (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1773868 constant-values.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1775178 overview-frame.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1775871 allclasses-noframe.html (OK - compressed)[0m
+[0m[[0mdebug[0m] [0m 1776915 library.properties (OK - compressed)[0m
 [0m[[0mdebug[0m] [0mVerification succesful[0m
 [0m[[0minfo[0m] [0mAligned /Users/Laimiux/Dropbox/mydeatree-android/target/mydeatree-0.1-market.apk[0m

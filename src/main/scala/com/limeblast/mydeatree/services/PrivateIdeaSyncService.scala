@@ -11,8 +11,9 @@ import android.net.Uri
 import com.limeblast.mydeatree.AppSettings._
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.AppSettings.APP_TAG
-import com.limeblast.mydeatree.providers.RESTfulProvider
+import com.limeblast.mydeatree.providers.PrivateIdeaProvider
 import scala.Some
+import storage.PrivateIdeaTableInfo
 
 /**
  * Created with IntelliJ IDEA.
@@ -110,17 +111,17 @@ class PrivateIdeaSyncService extends IntentService("PrivateIdeaSyncService") wit
   }
 
   private def removeIdea(id: String): Boolean = {
-    val where = IdeaHelper.KEY_ID + "=" + id
+    val where = PrivateIdeaTableInfo.KEY_ID + "=" + id
     val whereArgs = null
 
     val cr = getContentResolver
-    val deletedRowCount = cr.delete(RESTfulProvider.CONTENT_URI, where, whereArgs)
+    val deletedRowCount = cr.delete(PrivateIdeaProvider.CONTENT_URI, where, whereArgs)
 
     if (deletedRowCount < 1) false
     else true
   }
 
-  private def getSavedUserIdeas(): util.ArrayList[DatedObject] = getDatedObjects(RESTfulProvider.CONTENT_URI, getContentResolver)
+  private def getSavedUserIdeas(): util.ArrayList[DatedObject] = getDatedObjects(PrivateIdeaProvider.CONTENT_URI, getContentResolver)
 
 
   /*
@@ -133,18 +134,18 @@ class PrivateIdeaSyncService extends IntentService("PrivateIdeaSyncService") wit
     //val values = IdeaTableHelper.createNewIdeaValues(idea)
     val values = getContentValues(idea)
     // Add personal idea specific values
-    values.put(IdeaHelper.KEY_PUBLIC, idea.public)
+    values.put(PrivateIdeaTableInfo.KEY_PUBLIC, idea.public)
 
-    cr.insert(RESTfulProvider.CONTENT_URI, values)
+    cr.insert(PrivateIdeaProvider.CONTENT_URI, values)
   }
 
   private def updateIdea(idea: Idea) {
-    val ideaAddress = ContentUris.withAppendedId(RESTfulProvider.CONTENT_URI, idea.id.toLong)
+    val ideaAddress = ContentUris.withAppendedId(PrivateIdeaProvider.CONTENT_URI, idea.id.toLong)
     val cr = getContentResolver
 
     val values = getContentValues(idea)
     // Add personal idea specific values
-    values.put(IdeaHelper.KEY_PUBLIC, idea.public)
+    values.put(PrivateIdeaTableInfo.KEY_PUBLIC, idea.public)
 
     cr.update(ideaAddress, values, null, null)
   }
