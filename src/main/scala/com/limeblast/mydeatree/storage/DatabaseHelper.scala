@@ -11,7 +11,7 @@ import com.limeblast.mydeatree.{PersonalResourceSync}
  */
 class DatabaseHelper(val context: Context) extends
 SQLiteOpenHelper(context, DatabaseInformation.DATABASE_NAME, null, DatabaseInformation.DATABASE_VERSION)
-with DatabaseHelperTrait with PublicIdeaDatabaseModule with PersonalResourceSync {
+with DatabaseHelperTrait with PersonalResourceSync {
 
   def tables: List[TableDefinition] = {
     var tempList: List[TableDefinition] = List()
@@ -48,7 +48,7 @@ with DatabaseHelperTrait with PublicIdeaDatabaseModule with PersonalResourceSync
     }
 
     {
-      import PublicIdeaHelper._
+      import PublicIdeaTableInfo._
       val public_idea_table = new TableDefinition(TABLE_NAME)
       public_idea_table insert(KEY_ID -> "TEXT PRIMARY KEY UNIQUE",
         KEY_OWNER -> "TEXT",
@@ -57,7 +57,8 @@ with DatabaseHelperTrait with PublicIdeaDatabaseModule with PersonalResourceSync
         KEY_MODIFIED_DATE -> "TEXT",
         KEY_TITLE -> "TEXT not null",
         KEY_TEXT -> "TEXT not null",
-        KEY_PARENT -> "TEXT")
+        KEY_PARENT -> "TEXT",
+        KEY_CHILDREN_COUNT -> "INTEGER default 0")
       tempList = tempList :+ public_idea_table
     }
 

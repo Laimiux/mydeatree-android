@@ -23,7 +23,7 @@ import concurrent.ops._
 import com.limeblast.rest.JsonModule
 
 import android.app.Activity
-import storage.{FavoriteIdeaColumns, PublicIdeaDatabaseModule}
+import storage.{PublicIdeaTableInfo, FavoriteIdeaColumns, PublicIdeaDatabaseModule}
 
 /**
  * Created with IntelliJ IDEA.
@@ -121,10 +121,6 @@ with FavoriteIdeaProviderModule with ScalifiedTraitModule {
         doesIdeaExist
       }
     }
-
-
-
-
 
 
   //-------------------------------------------------------\\
@@ -226,14 +222,15 @@ with FavoriteIdeaProviderModule with ScalifiedTraitModule {
   }
 
   def onLoadFinished(loader: Loader[Cursor], cursor: Cursor) {
-    val keyTitleIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_TITLE)
-    val keyTextIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_TEXT)
-    val keyResourceUriIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_RESOURCE_URI)
-    val keyModifiedDateIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_MODIFIED_DATE)
-    val keyCreatedDateIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_CREATED_DATE)
-    val keyIdIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_ID)
-    val keyOwnerIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_OWNER)
-    val keyParentIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_PARENT)
+    val keyTitleIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_TITLE)
+    val keyTextIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_TEXT)
+    val keyResourceUriIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_RESOURCE_URI)
+    val keyModifiedDateIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_MODIFIED_DATE)
+    val keyCreatedDateIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_CREATED_DATE)
+    val keyIdIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_ID)
+    val keyOwnerIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_OWNER)
+    val keyParentIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_PARENT)
+    val keyChildrenCount = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_CHILDREN_COUNT)
 
 
     favoriteIdeas.clear()
@@ -251,7 +248,8 @@ with FavoriteIdeaProviderModule with ScalifiedTraitModule {
           cursor.getString(keyCreatedDateIndex),
           cursor.getString(keyModifiedDateIndex),
           resource_uri,
-          new Owner(cursor.getString(keyOwnerIndex)))
+          new Owner(cursor.getString(keyOwnerIndex)),
+          cursor.getInt(keyChildrenCount))
 
 
 

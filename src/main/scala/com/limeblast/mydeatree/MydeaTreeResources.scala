@@ -1,6 +1,5 @@
 package com.limeblast.mydeatree
 
-
 import java.util.{List=>JList}
 
 
@@ -22,7 +21,7 @@ abstract class BasicIdea(val id: String, val title: String, val text: String, va
                          modified_date: String, resource_uri: String, val public: Boolean) extends BasicIdea(id, title, text, created_date, modified_date, resource_uri, parent)
 
 @scala.beans.BeanInfo class PublicIdea(title: String, text: String, id: String, parent: String, created_date: String, modified_date: String,
-                           resource_uri: String, val owner: Owner, val children_count: Int = 0) extends BasicIdea(id, title, text, created_date, modified_date, resource_uri, parent)
+                           resource_uri: String, val owner: Owner, val children_count: Int) extends BasicIdea(id, title, text, created_date, modified_date, resource_uri, parent)
 
 @scala.beans.BeanInfo class User(val username: String, val first_name: String, val last_name: String, val resource_uri: String)
 

@@ -6,12 +6,7 @@ import android.content.Context
 import com.limeblast.scaliteorm.{TableDefinition, DatabaseHelperTrait}
 
 
-object DatabaseInformation {
-  // Database specific info
-  val DATABASE_NAME = "mydeatree.db"
-  val DATABASE_VERSION = 12
 
-}
 
 
 trait BasicIdeaColumns {
@@ -42,20 +37,7 @@ object PrivateIdeaTableInfo extends BasicIdeaColumns {
   val KEY_IS_IDEA_SYNCING = "IS_IDEA_SYNCING"
 }
 
-/**
- * Singleton object that holds important
- * variables about the database.
- */
 
-trait PublicIdeaDatabaseModule {
-
-  object PublicIdeaHelper extends BasicIdeaColumns {
-    // For Idea Table
-    val TABLE_NAME = "public_ideas"
-    // Public Idea Specific Columns
-    val KEY_OWNER = "owner"
-  }
-}
 
 
 object FavoriteIdeaColumns {

@@ -28,77 +28,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bc3cf6a-7f06-4297-a281-b398d8758ba7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/IdeaSortStrategy.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/PrivateIdeaTableInfo.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$fullAndroidSettings$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/IdeaHelper.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/Sortable.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/IdeaHelper.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/DatabaseHelper.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/providers/RESTfulProvider.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/providers/PrivateIdeaProvider.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$1.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$2.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$3.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$4.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$5.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$6.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$7.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$8.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$main$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$1$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$1$$anonfun$apply$2.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$1$$anonfun$apply$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$1$$anonfun$apply$3.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$1$$anonfun$apply$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$1.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$2.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$3.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$4.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$5.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$6.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$7.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$8.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$9.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$$anonfun$tests$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/AndroidBuild$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$fullAndroidSettings$4.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$fullAndroidSettings$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$fullAndroidSettings$5.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$$anonfun$fullAndroidSettings$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General.class" afterPath="$PROJECT_DIR$/project/target/scala-2.9.2/sbt-0.12/classes/General.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/DatabaseInformation.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/NetworkAccessor.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/PublicIdeaDatabaseModule.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/MydeaTreeResources.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/MydeaTreeResources.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes.dex" afterPath="$PROJECT_DIR$/target/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes.min.jar" afterPath="$PROJECT_DIR$/target/classes.min.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resources.apk" afterPath="$PROJECT_DIR$/target/resources.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AdapterViewConversions.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AdapterViewConversions.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/App.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/App.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/BasicIdeaModule.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/BasicIdeaModule.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/Build.scala" afterPath="$PROJECT_DIR$/project/Build.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/DatedObjectModule.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/DatedObjectModule.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/FavoriteIdeaDeleteService.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/FavoriteIdeaDeleteService.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/DatabaseHelper.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/DatabaseHelper.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/FavoriteIdeaFragment.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/FavoriteIdeaFragment.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/FavoriteIdeaGetService.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/FavoriteIdeaGetService.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/adapters/FavoriteIdeaListAdapter.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/adapters/FavoriteIdeaListAdapter.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/FavoriteIdeaPostService.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/FavoriteIdeaPostService.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/providers/FavoriteIdeaProvider.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/providers/FavoriteIdeaProvider.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/IdeaCreateService.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/IdeaCreateService.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/IdeaDeleteService.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/IdeaDeleteService.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/IdeaEditActivity.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/IdeaEditActivity.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/IdeaUpdateService.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/IdeaUpdateService.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/MainActivity.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/MainActivity.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/MydeaTreeResources.scala" afterPath="$PROJECT_DIR$/src/main/scala/MydeaTreeResources.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/NewIdeaActivity.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/activities/NewIdeaActivity.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/PersonalIdeaGetModule.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/PersonalIdeaGetModule.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/PersonalResourceSync.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/PersonalResourceSync.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PrivateIdeaListFragment.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PrivateIdeaListFragment.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/PrivateIdeaSyncService.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/PrivateIdeaSyncService.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ProviderAccessModule.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/ProviderAccessModule.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/PrivateIdeaTableInfo.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/PrivateIdeaTableInfo.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PublicIdeaFragment.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PublicIdeaFragment.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/adapters/PublicIdeaListAdapter.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/adapters/PublicIdeaListAdapter.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/providers/PublicIdeaProvider.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/providers/PublicIdeaProvider.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/PublicIdeaSyncService.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/PublicIdeaSyncService.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/java/com/actionbarsherlock/R.java" afterPath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/java/com/actionbarsherlock/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/java/com/limeblast/mydeatree/R.java" afterPath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/java/com/limeblast/mydeatree/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/SearchResultsActivity.scala" afterPath="$PROJECT_DIR$/src/main/scala/SearchResultsActivity.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/TextViewConversions.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/TextViewConversions.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/array.xml" afterPath="$PROJECT_DIR$/src/main/res/values/array.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/public_idea_entry.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/public_idea_entry.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/public_ideas_layout.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/public_ideas_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mydeatree.iws" />
@@ -175,7 +116,7 @@
     <file path="/RestModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364264333255" ignored="false" />
     <file path="/ValidationModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363068794590" ignored="false" />
     <file path="/IdeaValidationModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363073870131" ignored="false" />
-    <file path="/fragment.java" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363806296936" ignored="false" />
+    <file path="/fragment.java" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1365020740901" ignored="false" />
     <file path="/MydeaRestModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364242938982" ignored="false" />
     <file path="/IdeaUpdateService.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363809407724" ignored="false" />
     <file path="/IdeaTableHelper.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363075622909" ignored="false" />
@@ -184,11 +125,11 @@
     <file path="/colors.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363143540114" ignored="false" />
     <file path="/login_layout.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363142763623" ignored="false" />
     <file path="/TwoWayForwardTrait.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363236660200" ignored="false" />
-    <file path="/FavoriteIdeaFragment.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364762000767" ignored="false" />
+    <file path="/FavoriteIdeaFragment.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1365021214788" ignored="false" />
     <file path="/PublicIdeaProvider.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363388788670" ignored="false" />
     <file path="/BasicIdeaModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363390262628" ignored="false" />
     <file path="/DatedObjectModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363391061085" ignored="false" />
-    <file path="/PublicIdeaFragment.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364945653415" ignored="false" />
+    <file path="/PublicIdeaFragment.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1365021299474" ignored="false" />
     <file path="/PersonalIdeaGetModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363802692481" ignored="false" />
     <file path="/public_idea_entry.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363645862798" ignored="false" />
     <file path="/list_button_thin.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1363650435453" ignored="false" />
@@ -230,9 +171,11 @@
     <file path="/IdeaSortStrategy.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364867822089" ignored="false" />
     <file path="/array.xml" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364945816243" ignored="false" />
     <file path="/AdapterViewConversions.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1364943999594" ignored="false" />
-    <file path="/IdeaSQLiteHelper.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1365015764284" ignored="false" />
+    <file path="/IdeaSQLiteHelper.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1365020976674" ignored="false" />
     <file path="/PrivateIdeaTableInfo.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1365015960328" ignored="false" />
-    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/scala/com/limeblast/mydeatree/TR.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1365016433914" ignored="false" />
+    <file path="/NetworkAccessor.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1365019884073" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/scala/com/limeblast/mydeatree/TR.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1365020788011" ignored="false" />
+    <file path="/PublicIdeaDatabaseModule.scala" changelist="2bc3cf6a-7f06-4297-a281-b398d8758ba7" time="1365020922789" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,19 +238,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PublicIdeaFragment.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PublicIdeaFragment.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PublicIdeaFragment.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="182" column="0" selection-start="5437" selection-end="5437" vertical-scroll-proportion="0.0">
+            <state line="303" column="38" selection-start="9948" selection-end="9948" vertical-scroll-proportion="0.6788009">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="array.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/values/array.xml">
+      <file leaf-file-name="DatabaseHelper.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/DatabaseHelper.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="29" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
+            <state line="51" column="69" selection-start="1922" selection-end="1922" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#41#71#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PublicIdeaDatabaseModule.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/PublicIdeaDatabaseModule.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="53" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -316,16 +270,16 @@
       <file leaf-file-name="PrivateIdeaListFragment.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PrivateIdeaListFragment.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="423" column="3" selection-start="12188" selection-end="12948" vertical-scroll-proportion="0.0">
+            <state line="600" column="93" selection-start="18581" selection-end="18581" vertical-scroll-proportion="-24.307692">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FavoriteIdeaFragment.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/FavoriteIdeaFragment.scala">
+      <file leaf-file-name="MydeaTreeResources.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/MydeaTreeResources.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="22" selection-start="3785" selection-end="3785" vertical-scroll-proportion="0.0">
+            <state line="24" column="86" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -334,16 +288,7 @@
       <file leaf-file-name="PrivateIdeaTableInfo.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/PrivateIdeaTableInfo.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrivateIdeaProvider.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/providers/PrivateIdeaProvider.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="7" selection-start="749" selection-end="749" vertical-scroll-proportion="0.17665952">
+            <state line="38" column="0" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -367,22 +312,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/TextViewConversions.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/PersonalResourceSync.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/MydeaTreeResources.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/Sortable.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/IdeaSortStrategy.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PrivateIdeaListFragment.scala" />
         <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/public_ideas_layout.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AdapterViewConversions.scala" />
         <option value="$PROJECT_DIR$/src/main/res/layout/public_idea_entry.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/adapters/PublicIdeaListAdapter.scala" />
         <option value="$PROJECT_DIR$/src/main/res/values/array.xml" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PublicIdeaFragment.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/IdeaSQLiteHelper.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/PrivateIdeaTableInfo.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/providers/PrivateIdeaProvider.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/NetworkAccessor.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/MydeaTreeResources.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/PublicIdeaDatabaseModule.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/DatabaseHelper.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/DatabaseInformation.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/FavoriteIdeaFragment.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PublicIdeaFragment.scala" />
       </list>
     </option>
   </component>
@@ -575,6 +520,44 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="mydeatree" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="limeblast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mydeatree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PublicIdeaDatabaseModule.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1038,31 +1021,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/public_ideas_layout.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/Build.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="56" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/adapters/IdeaListAdapter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="41" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/androidhelpers/AdapterViewConversions.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="341" selection-end="341" vertical-scroll-proportion="0.1124197">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/private_idea_entry.xml">
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -1093,20 +1051,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PrivateIdeaListFragment.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="423" column="3" selection-start="12188" selection-end="12948" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/MydeaTreeResources.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="70" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.40149894">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/PersonalResourceSync.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="59" selection-start="210" selection-end="210" vertical-scroll-proportion="0.12847966">
@@ -1114,39 +1058,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/FavoriteIdeaFragment.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/services/NetworkAccessor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="22" selection-start="3785" selection-end="3785" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/PrivateIdeaTableInfo.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/DatabaseHelper.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="5" selection-start="1857" selection-end="1857" vertical-scroll-proportion="0.7869379">
-          <folding>
-            <element signature="e#41#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PublicIdeaFragment.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="0" selection-start="5437" selection-end="5437" vertical-scroll-proportion="0.0">
+        <state line="6" column="4" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/providers/PrivateIdeaProvider.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="7" selection-start="749" selection-end="749" vertical-scroll-proportion="0.17665952">
+        <state line="32" column="51" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/PrivateIdeaTableInfo.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/MydeaRestModule.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="6" selection-start="252" selection-end="252" vertical-scroll-proportion="0.06423983">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/MydeaTreeResources.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="86" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/PublicIdeaDatabaseModule.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="53" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/DatabaseInformation.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="27" selection-start="316" selection-end="316" vertical-scroll-proportion="0.19758508">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/storage/DatabaseHelper.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="69" selection-start="1922" selection-end="1922" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#41#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/FavoriteIdeaFragment.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="224" column="72" selection-start="7310" selection-end="7310" vertical-scroll-proportion="0.06852248">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PrivateIdeaListFragment.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="600" column="93" selection-start="18581" selection-end="18581" vertical-scroll-proportion="-24.307692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/limeblast/mydeatree/fragments/PublicIdeaFragment.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="303" column="38" selection-start="9948" selection-end="9948" vertical-scroll-proportion="0.6788009">
           <folding />
         </state>
       </provider>

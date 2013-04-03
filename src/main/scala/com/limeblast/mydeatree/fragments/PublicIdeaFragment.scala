@@ -28,7 +28,7 @@ import com.limeblast.androidhelpers.ScalifiedTraitModule
 import android.app.AlertDialog.Builder
 import annotation.switch
 import scala.Some
-import storage.PublicIdeaDatabaseModule
+import storage.{PublicIdeaTableInfo, PublicIdeaDatabaseModule}
 
 class PublicIdeaFragment extends SherlockFragment with LoaderManager.LoaderCallbacks[Cursor]
 with PublicIdeaDatabaseModule with ScalifiedTraitModule {
@@ -278,14 +278,15 @@ with PublicIdeaDatabaseModule with ScalifiedTraitModule {
 
 
   def onLoadFinished(loader: Loader[Cursor], cursor: Cursor) {
-    val keyTitleIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_TITLE)
-    val keyTextIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_TEXT)
-    val keyResourceUriIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_RESOURCE_URI)
-    val keyModifiedDateIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_MODIFIED_DATE)
-    val keyCreatedDateIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_CREATED_DATE)
-    val keyIdIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_ID)
-    val keyOwnerIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_OWNER)
-    val keyParentIndex = cursor.getColumnIndexOrThrow(PublicIdeaHelper.KEY_PARENT)
+    val keyTitleIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_TITLE)
+    val keyTextIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_TEXT)
+    val keyResourceUriIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_RESOURCE_URI)
+    val keyModifiedDateIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_MODIFIED_DATE)
+    val keyCreatedDateIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_CREATED_DATE)
+    val keyIdIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_ID)
+    val keyOwnerIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_OWNER)
+    val keyParentIndex = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_PARENT)
+    val keyChildrenIdea = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_CHILDREN_COUNT)
 
 
     publicIdeas.clear()
@@ -299,7 +300,8 @@ with PublicIdeaDatabaseModule with ScalifiedTraitModule {
         cursor.getString(keyCreatedDateIndex),
         cursor.getString(keyModifiedDateIndex),
         cursor.getString(keyResourceUriIndex),
-        new Owner(cursor.getString(keyOwnerIndex)))
+        new Owner(cursor.getString(keyOwnerIndex)),
+        cursor.getInt(keyChildrenIdea))
 
       publicIdeas.add(0, idea)
     }
