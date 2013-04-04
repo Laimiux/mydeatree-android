@@ -111,7 +111,6 @@ class PublicIdeaListAdapter[T <: Fragment with HasParentState[PublicIdea]](val f
 
     if (idea.children_count > 0) {
        moreIdeasButton.onClick({
-         shortToast(idea.title + " has " + idea.children_count + " children.")(context)
          fragment.setParent(Some(idea))
        })
     } else {

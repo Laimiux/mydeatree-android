@@ -42,6 +42,8 @@ class NewIdeaActivity extends Activity with TypedActivity with BasicIdeaModule w
     parent_uri = getIntent.getStringExtra("parent_uri")
 
 
+    if(parent_uri != null && parent_uri != "")
+      setTitle("New Children Idea")
 
     // Set the submit button click listener
     findView(TR.idea_submit_button).onClick({

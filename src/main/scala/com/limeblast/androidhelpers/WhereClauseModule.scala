@@ -36,3 +36,6 @@ trait WhereClauseImplicitModule extends WhereClauseModule {
 
   implicit def tupleToString(tuple: (String, Any)): String = makeWhereClause(tuple)
 }
+
+
+object WhereClauseHelper extends WhereClauseModule

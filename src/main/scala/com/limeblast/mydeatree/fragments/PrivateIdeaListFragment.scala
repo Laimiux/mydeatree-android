@@ -21,7 +21,7 @@ import android.content
 
 import content._
 
-import com.limeblast.androidhelpers.{WhereClauseModule, ScalifiedTraitModule}
+import com.limeblast.androidhelpers.{AlertDialogHelper, WhereClauseModule, ScalifiedTraitModule}
 
 
 import com.actionbarsherlock.app.{SherlockFragmentActivity, SherlockListFragment}
@@ -431,7 +431,21 @@ with ScalifiedTraitModule with WhereClauseModule {
     builder.create().show()
   }
 
+
+
+
   private def showIdeaDeleteDialog(idea: Idea) {
+    val title = "Delete " + idea.title + "?"
+    val message = "Are you sure you want to delete this idea?"
+
+    AlertDialogHelper.showYesCancelDialog(title, message, (dialog: DialogInterface, arg: Int) => {
+      spawn {
+        removeIdeaRequest(idea)
+      }
+      dialog.dismiss()
+    })(getActivity)
+
+    /*
     val builder = new AlertDialog.Builder(getActivity)
     builder.setTitle("Delete " + idea.title + "?")
     builder.setMessage("Are you sure you want to delete this idea?")
@@ -447,6 +461,7 @@ with ScalifiedTraitModule with WhereClauseModule {
     builder.setNegativeButton(R.string.cancel, (dialog: DialogInterface, arg: Int) => dialog.cancel())
 
     builder.create().show()
+    */
   }
 
 

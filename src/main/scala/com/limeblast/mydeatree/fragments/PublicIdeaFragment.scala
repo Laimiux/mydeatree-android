@@ -20,17 +20,19 @@ import content.{Intent, DialogInterface}
 import com.limeblast.mydeatree._
 import adapters.PublicIdeaListAdapter
 import com.limeblast.mydeatree.Helpers._
-import com.limeblast.mydeatree.activities.NewIdeaActivity
+import activities.{IdeaEditActivity, NewIdeaActivity}
 import com.limeblast.mydeatree.AppSettings._
 import providers.{PrivateIdeaProvider, PublicIdeaProvider}
 import services.PublicIdeaSyncService
-import com.limeblast.androidhelpers.ScalifiedTraitModule
+import com.limeblast.androidhelpers.{WhereClauseHelper, AlertDialogHelper, ScalifiedTraitModule}
 import android.app.AlertDialog.Builder
 import annotation.switch
 import scala.Some
 import storage.{PrivateIdeaTableInfo, PublicIdeaTableInfo, PublicIdeaDatabaseModule}
 import com.limeblast.rest.JsonModule
 import scala.Some
+import scala.Some
+import concurrent.ops._
 import scala.Some
 
 class PublicIdeaFragment extends SherlockFragment
@@ -59,17 +61,18 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
 
     refresh()
 
-    shortToast("setParent method call has been handled.")(getActivity)
     if (App.DEBUG) Log.d(APP_TAG, "setParent method call has been handled.")
   }
 
 
+  /*
   private def moveToPreviousParent() {
     parentObject match {
       case Some(idea) => moveToPreviousParent(idea)
       case _ =>
     }
   }
+  */
 
 
   private def moveToPreviousParent(currentParent: PublicIdea) {
@@ -272,8 +275,28 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
   //-------------------------------------------------------\\
   //----------- BUILDERS FOR VARIOUS DIALOGS --------------\\
   //-------------------------------------------------------\\
+  private def showDeleteIdeaDialog(pIdea: PublicIdea) = {
+    val title = "Delete " + pIdea.title + "?"
+    val message = "Are you sure you want to delete this idea?"
 
-  def openSortOptions() {
+    AlertDialogHelper.showYesCancelDialog(title, message, (dialog, arg) => {
+      shortToast("not implemented yet. Should open delete idea dialog")(getActivity)
+    })(getActivity)
+  }
+
+  private def showMakeIdeaPrivateDialog(idea: PublicIdea) {
+    val title = "Make " + idea.title + " private?"
+    val message = "Are you sure you want to make this idea private?"
+
+    AlertDialogHelper.showYesCancelDialog(title, message, (dialog, arg) => {
+      shortToast("not implemented yet. Should make idea private.")(getActivity)
+    })(getActivity)
+  }
+
+
+
+
+  private def showSortOptions() {
     val builder = new AlertDialog.Builder(getActivity)
     builder.setTitle(R.string.sort_by)
     builder.setSingleChoiceItems(R.array.sort_options,
@@ -291,7 +314,13 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
     val builder = new Builder(getActivity)
     builder.setTitle(pIdea.title)
 
+
     builder.setItems(R.array.public_idea_owner_options, (dialog: DialogInterface, which: Int) => (which: Int@switch) match {
+      case 0 => shortToast("not implemented yet. Should open new children idea activity.")(getActivity)
+      case 1 => editIdea(pIdea)
+      case 2 => showDeleteIdeaDialog(pIdea)
+      case 3 => showMakeIdeaPrivateDialog(pIdea)
+      case 4 => shareIdea(pIdea)
       case z => getActivity.shortToast("Ain't shit handled at " + z)
     })
 
@@ -305,7 +334,7 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
     builder.setTitle(pIdea.title + " by " + pIdea.owner.username)
 
     builder.setItems(R.array.public_idea_options, (dialog: DialogInterface, which: Int) => (which: Int@switch) match {
-      case 0 => getActivity.shortToast("Share clicked")
+      case 0 => shareIdea(pIdea)
       case 1 => getActivity.shortToast("Favorite clicked")
       case z => getActivity.shortToast("unhandled " + z)
     })
@@ -313,6 +342,65 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
 
     builder.show()
   }
+
+  //-------------------------------------------------------\\
+  //--------- VARIOUS FRAGMENT HELPER FUNCTIONS -----------\\
+  //-------------------------------------------------------\\
+  /**
+   * Gets a personal idea resource from public idea resource.
+   * Used when editing or deleting a resource.
+   */
+  private def getPersonalIdea(idea: PublicIdea): Option[Idea] = {
+    getResolver() match {
+      case None => {
+        if (App.DEBUG) Log.d(APP_TAG, "getPersonalIdea couldn't get ContentResolver.")
+        None
+      }
+      case Some(resolver) => {
+        val where = WhereClauseHelper.makeWhereClause(PrivateIdeaTableInfo.KEY_ID -> idea.id)
+        val cursor = resolver.query(PrivateIdeaProvider.CONTENT_URI, null, where, null, null)
+
+        if(cursor.moveToNext()) {
+          // Get idea
+          val keyIndex = ???
+
+
+        } else {
+          if (App.DEBUG) Log.d(APP_TAG, "Couldn't find a personal idea with same id as public idea. This is odd situation, " +
+            "not sure how to handle it. Maybe download personal idea and then update. Who knows? Maybe it has been deleted, but public ideas haven't been updated.")
+
+          // Return NONE
+          None
+        }
+
+      }
+    }
+
+
+
+    None
+  }
+
+  //-------------------------------------------------------\\
+  //------------ VARIOUS FRAGMENT ACTIONS -----------------\\
+  //-------------------------------------------------------\\
+
+  private def editIdea(idea: PublicIdea) {
+    val id = idea.id
+
+    val intent = new Intent(getActivity, classOf[IdeaEditActivity])
+    intent.putExtra("idea_id", id)
+    startActivity(intent)
+  }
+
+
+  private def shareIdea(idea: PublicIdea) {
+    val sharingIntent = new Intent(Intent.ACTION_SEND)
+    sharingIntent.setType("text/plain")
+    sharingIntent.putExtra(Intent.EXTRA_TEXT, "https://mydeatree.appspot.com/idea/" + idea.id + "/")
+    startActivity(Intent.createChooser(sharingIntent, "Share with "))
+  }
+
 
 
   //-------------------------------------------------------\\
@@ -350,7 +438,7 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
     }
     /* sort public ideas */
     case R.id.menu_item_sort_public_ideas => {
-      openSortOptions()
+      showSortOptions()
       true
     }
     case _ => super.onOptionsItemSelected(item)

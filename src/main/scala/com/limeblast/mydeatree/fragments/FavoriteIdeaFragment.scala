@@ -40,7 +40,7 @@ with FavoriteIdeaProviderModule with ScalifiedTraitModule {
   private lazy val arrayAdapter = new FavoriteIdeaListAdapter(getActivity(), R.layout.public_idea_entry, favoriteIdeas)
   private var handler: Handler = _
 
-  private var noIdeasTextView: TextView = _
+  //private var noIdeasTextView: TextView = _
 
 
   //-------------------------------------------------------\\
@@ -52,7 +52,7 @@ with FavoriteIdeaProviderModule with ScalifiedTraitModule {
     fragmentView.setFocusableInTouchMode(true)
     fragmentView.requestFocus()
 
-    noIdeasTextView = fragmentView.findViewById(R.id.no_ideas_text_view).asInstanceOf[TextView]
+    //noIdeasTextView = fragmentView.findViewById(R.id.no_ideas_text_view).asInstanceOf[TextView]
 
     fragmentView
   }
@@ -261,11 +261,13 @@ with FavoriteIdeaProviderModule with ScalifiedTraitModule {
     handler.post(arrayAdapter.notifyDataSetChanged())
 
 
+    /*
     if (favoriteIdeas.size() > 0) {
       handler.post(noIdeasTextView.setVisibility(View.INVISIBLE))
     } else {
       handler.post(noIdeasTextView.setVisibility(View.VISIBLE))
     }
+    */
 
 
     Log.d(APP_TAG, "There are " + favoriteIdeas.size() + " favorite ideas.")

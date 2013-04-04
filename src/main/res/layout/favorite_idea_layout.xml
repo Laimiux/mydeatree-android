@@ -12,10 +12,16 @@
               android:divider="@android:color/transparent"
               android:cacheColorHint="#00000000"
               android:dividerHeight="5dp"/>
-    <TextView
+  <!--  <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="There are no favorite ideas."
-            android:id="@+id/no_ideas_text_view" android:gravity="center_horizontal" android:enabled="true"/>
+            android:id="@+id/no_ideas_text_view" android:gravity="center_horizontal" android:enabled="true"/>  -->
+
+    <ViewStub
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@android:id/empty"
+            android:layout="@layout/empty_idea_list_layout"/>
 
 </LinearLayout>

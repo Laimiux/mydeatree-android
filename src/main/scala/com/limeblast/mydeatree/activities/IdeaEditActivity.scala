@@ -13,7 +13,7 @@ import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.PrivateIdeaProvider
 import com.limeblast.rest.JsonModule
 
-import com.limeblast.androidhelpers.ScalifiedActivity
+import com.limeblast.androidhelpers.{WhereClauseHelper, ScalifiedActivity}
 import storage.PrivateIdeaTableInfo
 
 class IdeaEditActivity extends Activity with TypedActivity
@@ -21,16 +21,55 @@ with JsonModule with BasicIdeaModule with ScalifiedActivity{
 
   lazy val submitButton: Button = findView(TR.submit_button)
   lazy val publicCheckBox: CheckBox = findView(TR.idea_public_check_box)
-  lazy val titleEdit: EditText = findView(TR.title_edit)
-  lazy val textEdit: EditText = findView(TR.text_edit)
-  lazy val oldIdea = getMainObject(getIntent.getStringExtra("idea"), classOf[Idea])
+  lazy val titleEdit: EditText = findView(TR.idea_title_edit)
+  lazy val textEdit: EditText = findView(TR.idea_text_edit)
+
+
+  lazy val ideaId = getIntent.getStringExtra("idea_id")
+
+  private var oldIdea: Idea = _
 
   override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.idea_edit_layout)
 
+
+    val form = findView(TR.idea_edit_form_holder)
+    form.setVisibility(View.INVISIBLE)
+
     getWindow().setLayout(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT)
 
+    // if idea is passed, then everything is good. Otherwise we need to retrieve the idea.
+    val intent = getIntent()
+
+    val ideaJson = intent.getStringExtra("idea")
+
+
+
+    if (ideaJson == null || ideaJson == "") {
+      if (ideaId == null || ideaId == "")
+         throw new IllegalArgumentException("IdeaEditActivity either needs either idea json object or ideas id. Parameters: idea || idea_id")
+
+      // No idea json was passed so we have to get the idea
+      getIdeaFromDatabase(ideaId) match {
+        case None => //DOwnload idea from the server
+        case Some(idea) => oldIdea = idea
+      }
+
+
+    } else {
+      oldIdea = getMainObject(getIntent.getStringExtra("idea"), classOf[Idea])
+    }
+
+
+    // Hide the progress bar, show the form
+    findView(TR.idea_edit_form_loader).setVisibility(View.GONE)
+    form.setVisibility(View.VISIBLE)
+
+
+
+    // Should instead get an id. And using id try to retrieve from database
+    // If not on database, then try downloading it. If can't download, remove from database.
     titleEdit.setText(oldIdea.title)
     textEdit.setText(oldIdea.text)
 
@@ -98,5 +137,13 @@ with JsonModule with BasicIdeaModule with ScalifiedActivity{
 
 
     finish()
+  }
+
+
+  private def getIdeaFromDatabase(id: String): Option[Idea] = {
+    val select = WhereClauseHelper.makeWhereClause(PrivateIdeaTableInfo.KEY_ID -> id)
+    val cursor = getContentResolver.query(PrivateIdeaProvider.CONTENT_URI, null, select, null, null)
+
+    PersonalIdeaAccessor.getIdeaFromCursor(cursor)
   }
 }
