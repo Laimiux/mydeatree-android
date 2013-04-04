@@ -36,7 +36,7 @@ sealed trait IntentFunctionToResultReceiver extends FunctionToResultReceiver{
 }
 
 trait ScalifiedAndroid extends AdapterViewConversions with AlertDialogBuilderConversions with PreferenceConversions
-with ActivityConversions with ViewConversions with TextViewConversions {
+with ActivityConversions with ViewConversions with ToastModule {
 
 
   implicit def handlerToAcceptFunction(tv: Handler): HandlerPostTakesFunction = new HandlerPostTakesFunction {

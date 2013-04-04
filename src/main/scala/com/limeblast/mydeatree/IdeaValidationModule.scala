@@ -21,7 +21,7 @@ trait IdeaValidationModule extends ValidationModule {self: Idea =>
     else if(idea.text.length < 10)
       (false, "Text is too short; it has to be 10 or more characters")
     else if (idea.text.length > 140)
-      (false, "Text is too long: it has to be 140 or less characters")
+      (false, "Text is too long: it has to be 140 or less characters. You are " + (idea.text.length - 140) + " characters over the limit.")
     else
       (true, "Validated correctly")
   }

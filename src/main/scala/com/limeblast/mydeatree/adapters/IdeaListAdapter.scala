@@ -1,10 +1,9 @@
 package com.limeblast.mydeatree.adapters
 
 import android.content.Context
-import android.view.{View, ViewGroup}
+import android.view.{LayoutInflater, View, ViewGroup}
 import android.widget._
 import java.util
-import com.limeblast.androidhelpers.Inflater
 import com.limeblast.mydeatree.{Helpers, R, Idea}
 
 /**
@@ -15,10 +14,12 @@ import com.limeblast.mydeatree.{Helpers, R, Idea}
  * To change this template use File | Settings | File Templates.
  */
 class IdeaListAdapter(val context: Context, resourceId: Int, objects: util.List[Idea])
-  extends ArrayAdapter(context, resourceId, objects) with Inflater {
+  extends ArrayAdapter(context, resourceId, objects) {
 
 
   override def getView(position: Int, convertView: View, parent: ViewGroup): View = {
+    val inflater: LayoutInflater = LayoutInflater.from(context)
+
     var cView = inflater.inflate(resourceId, null).asInstanceOf[LinearLayout]
 
     val idea: Idea = getItem(position)

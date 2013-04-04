@@ -10,20 +10,13 @@ import com.limeblast.mydeatree.AppSettings._
 import scala.collection.JavaConversions._
 
 
-sealed trait ShowToastModuleWithImplicitContext{
-  def shortToast[T <: Context](msg: String)(implicit context: T) =
-    Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-
-  def longToast[T <: Context](msg: String)(implicit context: T) =
-    Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-}
 
 
 
 
 
-trait ScalifiedActivity extends Activity with ShowToastModuleWithImplicitContext
-with ContextModule with GetDefaultPreferencesModule with IsOnlineModule
+
+trait ScalifiedActivity extends Activity with ContextModule with GetDefaultPreferencesModule with IsOnlineModule
 with ScalifiedAndroid {
   self: Activity =>
   implicit val context = self

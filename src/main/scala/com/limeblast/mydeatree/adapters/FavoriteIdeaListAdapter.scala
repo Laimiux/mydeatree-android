@@ -3,23 +3,24 @@ package com.limeblast.mydeatree.adapters
 import android.content.{Intent, Context}
 import java.util
 import android.widget._
-import android.view.{ViewGroup, View}
+import android.view.{LayoutInflater, ViewGroup, View}
 import android.view.View.OnClickListener
 import android.database.Cursor
 
-import com.limeblast.androidhelpers.{ProviderAccessModule, Inflater}
+import com.limeblast.androidhelpers.{ProviderAccessModule}
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.providers.FavoriteIdeaProvider
 import storage.FavoriteIdeaColumns
 
 
 class FavoriteIdeaListAdapter(val context: Context, resourceId: Int, objects: util.List[PublicIdea])
-  extends ArrayAdapter(context, resourceId, objects) with Inflater with ProviderAccessModule {
+  extends ArrayAdapter(context, resourceId, objects) with ProviderAccessModule {
 
   def getFavoriteIdea(idea: Idea): Cursor = getContext.getApplicationContext.getContentResolver.query(FavoriteIdeaProvider.CONTENT_URI,
     null, makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> false), null, null)
 
   override def getView(position: Int, convertView: View, parent: ViewGroup): View = {
+    val inflater: LayoutInflater = LayoutInflater.from(context)
     var cView = inflater.inflate(resourceId, null).asInstanceOf[LinearLayout]
 
     val idea: PublicIdea = getItem(position)

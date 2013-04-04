@@ -9,6 +9,7 @@ sealed trait HasLongClickListener[T <: TextView] {
 
 }
 
+/*
 sealed class HasOnClickListener[T <: TextView](val tv: T) {
 
   def onClick[F](f: (View) => F) {
@@ -26,7 +27,8 @@ sealed class HasOnClickListener[T <: TextView](val tv: T) {
     })
   }
 }
+*/
 
 trait TextViewConversions {
-  implicit def textViewToHasOnClick[T <: TextView](tv: T): HasOnClickListener[T] = new HasOnClickListener[T](tv)
+  //implicit def textViewToHasOnClick[T <: TextView](tv: T): HasOnClickListener[T] = new HasOnClickListener[T](tv)
 }

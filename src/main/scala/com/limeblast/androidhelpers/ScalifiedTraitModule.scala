@@ -5,8 +5,7 @@ import android.content.{ComponentName, Intent, ContentResolver}
 import android.app.Activity
 
 trait ScalifiedTraitModule extends Fragment with ContextTraitModule
-with ScalifiedAndroid with IsOnlineModule { self: Fragment =>
-  implicit val fragment = self
+with ScalifiedAndroid with IsOnlineModule {
 
   def getResolver(): Option[ContentResolver] = getActivity match {
     case activity: Activity => Some(activity.getContentResolver)

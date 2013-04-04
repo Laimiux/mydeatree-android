@@ -226,7 +226,7 @@ with ScalifiedTraitModule with WhereClauseModule {
 
   private def moveToPreviousParent(currentParent: Idea) {
     if (currentParent.parent != null) {
-      AppSettings.PRIVATE_PARENT_IDEA = Some(getIdea(currentParent.parent))
+      AppSettings.PRIVATE_PARENT_IDEA = getIdea(currentParent.parent)
       setHeaderIdea(currentParent)
     } else {
       AppSettings.PRIVATE_PARENT_IDEA = None
@@ -238,41 +238,49 @@ with ScalifiedTraitModule with WhereClauseModule {
 
   /* Move this function eventually */
 
-  private def getIdea(resource_uri: String): Idea = {
-    val cr = getActivity.getContentResolver
+  private def getIdea(resource_uri: String): Option[Idea] = getResolver() match {
+      case None => {
+        if (App.DEBUG) Log.d(APP_TAG, "Could not retrieve ContentResolver in getIdea method")
 
-    val selection = PrivateIdeaTableInfo.KEY_RESOURCE_URI + "='" + resource_uri + "'"
+        None
+      }
+      case Some(cr) => {
+        val selection = PrivateIdeaTableInfo.KEY_RESOURCE_URI + "='" + resource_uri + "'"
 
-    val cursor = cr.query(PrivateIdeaProvider.CONTENT_URI, null, selection, null, null)
+        val cursor = cr.query(PrivateIdeaProvider.CONTENT_URI, null, selection, null, null)
 
-    val keyTitleIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_TITLE)
-    val keyTextIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_TEXT)
-    val keyResourceUriIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_RESOURCE_URI)
-    val keyModifiedDateIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_MODIFIED_DATE)
-    val keyCreatedDateIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_CREATED_DATE)
-    val keyParentIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_PARENT)
-    val keyIdIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_ID)
-    val keyPublicIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_PUBLIC)
+        val keyTitleIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_TITLE)
+        val keyTextIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_TEXT)
+        val keyResourceUriIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_RESOURCE_URI)
+        val keyModifiedDateIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_MODIFIED_DATE)
+        val keyCreatedDateIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_CREATED_DATE)
+        val keyParentIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_PARENT)
+        val keyIdIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_ID)
+        val keyPublicIndex = cursor.getColumnIndexOrThrow(PrivateIdeaTableInfo.KEY_PUBLIC)
 
 
-    if (App.DEBUG) Log.d(APP_TAG, cursor.getColumnNames.toString)
-    var idea: Idea = null
+        if (App.DEBUG) Log.d(APP_TAG, cursor.getColumnNames.toString)
+        var idea: Idea = null
 
-    // Should loop only once
-    while (cursor.moveToNext()) {
-      idea = new Idea(cursor.getString(keyTitleIndex),
-        cursor.getString(keyTextIndex),
-        cursor.getString(keyIdIndex),
-        cursor.getString(keyParentIndex),
-        cursor.getString(keyCreatedDateIndex),
-        cursor.getString(keyModifiedDateIndex),
-        cursor.getString(keyResourceUriIndex),
-        cursor.getInt(keyPublicIndex) > 0)
+        // Should loop only once
+        while (cursor.moveToNext()) {
+          idea = new Idea(cursor.getString(keyTitleIndex),
+            cursor.getString(keyTextIndex),
+            cursor.getString(keyIdIndex),
+            cursor.getString(keyParentIndex),
+            cursor.getString(keyCreatedDateIndex),
+            cursor.getString(keyModifiedDateIndex),
+            cursor.getString(keyResourceUriIndex),
+            cursor.getInt(keyPublicIndex) > 0)
+        }
+
+        cursor.close()
+        Some(idea)
+      }
     }
 
-    cursor.close()
-    idea
-  }
+
+
 
   private def removeIdea(resolver: ContentResolver, idea: Idea) {
     // Check if idea is on server

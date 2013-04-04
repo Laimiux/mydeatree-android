@@ -15,7 +15,8 @@ import com.limeblast.mydeatree.AppSettings._
 import providers.{PublicIdeaProvider}
 import com.limeblast.mydeatree.activities.MainActivity
 import scala.Some
-import storage.PublicIdeaDatabaseModule
+import storage.{PublicIdeaTableInfo, PublicIdeaDatabaseModule}
+import com.limeblast.androidhelpers.WhereClauseModule
 
 
 private object SyncServiceVars {
@@ -23,7 +24,7 @@ private object SyncServiceVars {
 }
 
 class PublicIdeaSyncService extends IntentService("PublicIdeaSyncService")
-with PublicIdeaDatabaseModule with BasicIdeaModule with DatedObjectModule {
+with PublicIdeaDatabaseModule with BasicIdeaModule with DatedObjectModule with WhereClauseModule {
 
   private var alarmManager: AlarmManager = _
   private var alarmIntent: PendingIntent = _
@@ -157,7 +158,8 @@ with PublicIdeaDatabaseModule with BasicIdeaModule with DatedObjectModule {
 
     val values = getContentValues(idea)
     // Add more specific content values
-    values.put(PublicIdeaHelper.KEY_OWNER, idea.owner.username)
+    values.put(PublicIdeaTableInfo.KEY_OWNER, idea.owner.username)
+    values.put(PublicIdeaTableInfo.KEY_CHILDREN_COUNT, new Integer(idea.children_count))
 
     cr.insert(PublicIdeaProvider.CONTENT_URI, values)
 
@@ -172,15 +174,18 @@ with PublicIdeaDatabaseModule with BasicIdeaModule with DatedObjectModule {
 
 
   private def updateIdea(idea: PublicIdea) {
-    val ideaAddress = ContentUris.withAppendedId(PublicIdeaProvider.CONTENT_URI, idea.id.toLong)
+    //val ideaAddress = ContentUris.withAppendedId(PublicIdeaProvider.CONTENT_URI, idea.id.toLong)
     val cr = getContentResolver
+
+    val where = makeWhereClause(PublicIdeaTableInfo.KEY_ID -> idea.id)
 
     val values = getContentValues(idea)
     // Add more specific content values
-    values.put(PublicIdeaHelper.KEY_OWNER, idea.owner.username)
+    values.put(PublicIdeaTableInfo.KEY_OWNER, idea.owner.username)
+    values.put(PublicIdeaTableInfo.KEY_CHILDREN_COUNT, new Integer(idea.children_count))
 
 
-    cr.update(ideaAddress, values, null, null)
+    cr.update(PublicIdeaProvider.CONTENT_URI, values, where, null)
   }
 }
 
