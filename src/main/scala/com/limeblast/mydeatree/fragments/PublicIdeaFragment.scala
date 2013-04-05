@@ -1,54 +1,67 @@
 package com.limeblast.mydeatree.fragments
 
 import com.actionbarsherlock.app.SherlockFragment
-import android.support.v4.app.LoaderManager
+import android.support.v4.app.{Fragment, LoaderManager}
 import android.database.Cursor
 import android.support.v4.content.{CursorLoader, Loader}
 import android.os.{Handler, Bundle}
-import java.util
+import java.util.{ArrayList, List => JList }
 import android.view.{KeyEvent, View, ViewGroup, LayoutInflater}
-import android.widget.{AdapterView, Toast, ListView, ArrayAdapter}
+import android.widget._
 
 
 import android.util.Log
-import util.Collections
 import com.actionbarsherlock.view.MenuItem
 import android.content
 import android.app.AlertDialog
 import content.{Intent, DialogInterface}
 
 import com.limeblast.mydeatree._
-import adapters.PublicIdeaListAdapter
-import com.limeblast.mydeatree.Helpers._
 import activities.{IdeaEditActivity, NewIdeaActivity}
 import com.limeblast.mydeatree.AppSettings._
 import providers.{PrivateIdeaProvider, PublicIdeaProvider}
 import services.PublicIdeaSyncService
-import com.limeblast.androidhelpers.{WhereClauseHelper, AlertDialogHelper, ScalifiedTraitModule}
+import com.limeblast.androidhelpers.{ScalifiedAndroid, AlertDialogHelper, ScalifiedTraitModule}
 import android.app.AlertDialog.Builder
 import annotation.switch
-import scala.Some
-import storage.{PrivateIdeaTableInfo, PublicIdeaTableInfo, PublicIdeaDatabaseModule}
+import storage.{PrivateIdeaTableInfo, PublicIdeaTableInfo}
 import com.limeblast.rest.JsonModule
 import scala.Some
-import scala.Some
-import concurrent.ops._
-import scala.Some
+
+import scala.collection.JavaConversions._
 
 class PublicIdeaFragment extends SherlockFragment
 with HasParentState[PublicIdea]
 with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonModule {
   private val APP_TAG = "PUBLIC_IDEA_FRAGMENT"
 
-  private val publicIdeas: util.ArrayList[PublicIdea] = new util.ArrayList()
+
   private lazy val handler: Handler = new Handler()
 
   private var publicIdeaListView: ListView = _
-  var aa: ArrayAdapter[PublicIdea] = _
-
+  //var aa: ArrayAdapter[PublicIdea] = _
+  var aa: ArrayAdapter[ListItem] = _
 
   // Defines how to sort ideas
   private var sort_by = 0
+
+
+
+
+  //-------------------------------------------------------\\
+  //-------- USED FOR SECTIONING IMPLEMENTATION -----------\\
+  //-------------------------------------------------------\\
+  sealed trait ListItem
+
+  class SectionItem(val dividerText: String) extends ListItem
+  //class EntryItem(val item: PublicIdea) extends ListItem
+
+
+  private var ideas = List[PublicIdea]()
+
+
+  //private val publicIdeas: ArrayList[PublicIdea] = new ArrayList()
+  private var listItems = new ArrayList[ListItem]()
 
 
   //-------------------------------------------------------\\
@@ -170,7 +183,8 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
     val layoutID = R.layout.public_idea_entry
 
 
-    aa = new PublicIdeaListAdapter(this, layoutID, publicIdeas)
+    //aa = new PublicIdeaListAdapter(this, layoutID, publicIdeas)
+    aa = new EntryArrayAdapter(this, layoutID, listItems)
 
     publicIdeaListView.setAdapter(aa)
 
@@ -243,14 +257,35 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
     sortIdeas
   }
 
-  def sortIdeas = publicIdeas.synchronized {
-    IdeaSortStrategy.getStrategy[PublicIdea](sort_by) match {
-      case None =>
-      case Some(strategy) => {
-        strategy.sort(publicIdeas)
-        handler.post(aa.notifyDataSetChanged())
+  def sortIdeas = {
+    sort_by match {
+      case 0 => ideas = ideas.sortWith(IdeaSortStrategy.compareByModifiedDate)
+      case 1 => ideas = ideas.sortWith(IdeaSortStrategy.compareByCreatedDate)
+      case 2 => ideas = ideas.sortWith(_.title.toUpperCase < _.title.toUpperCase)
+    }
+
+
+    listItems.clear()
+
+    var previousOption: String = null
+
+    for(idea <- ideas) {
+      sort_by match {
+        case 2 => {
+          val firstLetter = idea.title.take(1).toUpperCase
+          if(firstLetter != previousOption) {
+            listItems.add(new SectionItem(firstLetter))
+            previousOption = firstLetter
+          }
+        }
+        case z =>
+      }
+      idea match {
+        case item: ListItem => listItems.add(item)
       }
     }
+
+    handler.post(aa.notifyDataSetChanged())
   }
 
 
@@ -346,40 +381,7 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
   //-------------------------------------------------------\\
   //--------- VARIOUS FRAGMENT HELPER FUNCTIONS -----------\\
   //-------------------------------------------------------\\
-  /**
-   * Gets a personal idea resource from public idea resource.
-   * Used when editing or deleting a resource.
-   */
-  private def getPersonalIdea(idea: PublicIdea): Option[Idea] = {
-    getResolver() match {
-      case None => {
-        if (App.DEBUG) Log.d(APP_TAG, "getPersonalIdea couldn't get ContentResolver.")
-        None
-      }
-      case Some(resolver) => {
-        val where = WhereClauseHelper.makeWhereClause(PrivateIdeaTableInfo.KEY_ID -> idea.id)
-        val cursor = resolver.query(PrivateIdeaProvider.CONTENT_URI, null, where, null, null)
 
-        if(cursor.moveToNext()) {
-          // Get idea
-          val keyIndex = ???
-
-
-        } else {
-          if (App.DEBUG) Log.d(APP_TAG, "Couldn't find a personal idea with same id as public idea. This is odd situation, " +
-            "not sure how to handle it. Maybe download personal idea and then update. Who knows? Maybe it has been deleted, but public ideas haven't been updated.")
-
-          // Return NONE
-          None
-        }
-
-      }
-    }
-
-
-
-    None
-  }
 
   //-------------------------------------------------------\\
   //------------ VARIOUS FRAGMENT ACTIONS -----------------\\
@@ -509,7 +511,12 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
     val keyChildrenIdea = cursor.getColumnIndexOrThrow(PublicIdeaTableInfo.KEY_CHILDREN_COUNT)
 
 
-    publicIdeas.clear()
+
+
+    ideas = List()
+
+
+
 
 
     while (cursor.moveToNext()) {
@@ -521,12 +528,13 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
         cursor.getString(keyModifiedDateIndex),
         cursor.getString(keyResourceUriIndex),
         new Owner(cursor.getString(keyOwnerIndex)),
-        cursor.getInt(keyChildrenIdea))
+        cursor.getInt(keyChildrenIdea)) with ListItem
 
-      publicIdeas.add(0, idea)
+      ideas = ideas :+ idea
+
     }
 
-    if (App.DEBUG) Log.d(APP_TAG, "Retrieved " + publicIdeas.size() + " public ideas")
+    if (App.DEBUG) Log.d(APP_TAG, "Retrieved " + ideas.length + " public ideas")
 
     sortIdeas
   }
@@ -536,4 +544,132 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
   //-------------------------------------------------------\\
   //------ END OF LOADER MANAGER CALLBACK METHODS ---------\\
   //-------------------------------------------------------\\
+
+
+
+  private class EntryArrayAdapter[T <: Fragment with HasParentState[PublicIdea]](val fragment: T, resourceId: Int, objects: JList[ListItem])
+    extends ArrayAdapter(fragment.getActivity, resourceId, objects) with FavoriteIdeaProviderModule with ScalifiedAndroid {
+
+    import com.limeblast.mydeatree.storage.FavoriteIdeaColumns
+
+    val context = fragment.getActivity
+
+
+    override def getView(position: Int, convertView: View, parent: ViewGroup): View = {
+      val inflater: LayoutInflater = LayoutInflater.from(context)
+      val cView = inflater.inflate(resourceId, null).asInstanceOf[LinearLayout]
+
+      //cView.setLongClickable(true)
+
+      getItem(position) match {
+        case a: SectionItem => {
+          val separator = cView.findViewById(R.id.separator).asInstanceOf[TextView]
+          separator.setText(a.dividerText)
+
+          val ideaHolder = cView.findViewById(R.id.public_idea_entry_holder)
+          ideaHolder.setVisibility(View.GONE)
+        }
+        case idea: PublicIdea => {
+          val separator = cView.findViewById(R.id.separator)
+          separator.setVisibility(View.GONE)
+
+
+          val txtTitle = cView.findViewById(R.id.idea_title).asInstanceOf[TextView]
+          txtTitle.setText(idea.title)
+
+          val txtOwner = cView.findViewById(R.id.idea_owner).asInstanceOf[TextView]
+          txtOwner.setText(" by " + idea.owner.username)
+
+          val txtText = cView.findViewById(R.id.idea_text).asInstanceOf[TextView]
+          txtText.setText(idea.text)
+
+          val dateText = cView.findViewById(R.id.public_idea_date).asInstanceOf[TextView]
+          val date = Helpers.stringToDate(idea.modified_date)
+          dateText.setText(Helpers.formatDate(date))
+
+
+
+          // Remove fav/share buttons.
+
+          val viewBtns = cView.findViewById(R.id.public_idea_button_holder).asInstanceOf[LinearLayout]
+          viewBtns.setVisibility(View.GONE)
+
+          // Checks if idea is favorited
+          var favorited: Boolean = isFavorite(idea)
+
+          val moreIdeasButton = cView.findViewById(R.id.public_more_ideas_button).asInstanceOf[ImageButton]
+
+
+          if (idea.children_count > 0) {
+            moreIdeasButton.onClick({
+              fragment.setParent(Some(idea))
+            })
+          } else {
+            moreIdeasButton.setVisibility(View.GONE)
+          }
+
+        }
+
+      }
+
+      return cView
+    }
+
+    private def isFavorite(idea: PublicIdea): Boolean = {
+
+      val resolver = context.getContentResolver
+      val select = makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> false)
+
+      val cursor: Cursor = getObjects(resolver, null, select, null, null)
+
+      val isIdeaFavorited = cursor.getCount() > 0
+      cursor.close()
+
+      isIdeaFavorited
+
+    }
+
+    /**
+     * Save to database a favorite idea
+     * @param idea PublicIdea that is being favorited
+     */
+    private def setToFavorite(idea: PublicIdea) {
+      val resolver = context.getContentResolver
+      val select = makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_DELETED -> true)
+      val cursor = getObjects(resolver, null, select, null, null)
+
+
+      val isNew = cursor.getCount > 0
+
+      cursor.close()
+
+      if (isNew)  // Update the favorite
+        updateObjects(resolver, (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri), null, Map(FavoriteIdeaColumns.KEY_IS_DELETED -> false))
+      else  // Insert a new favorite
+        insertObject(resolver)(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_NEW -> true)
+    }
+
+
+    /**
+     * Checks if favorite is on server than marks it for deletion,
+     * otherwise completely removes it from database
+     * @param idea PublicIdea to be removed from favorites
+     */
+    private def removeFavorite(idea: PublicIdea) {
+      val resolver = context.getContentResolver
+      val select = makeWhereClause(FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri, FavoriteIdeaColumns.KEY_IS_NEW -> true)
+      val cursor = getObjects(resolver, null, select, null, null)
+
+      val isOnServer = cursor.getCount == 0
+
+      cursor.close()
+
+      if (isOnServer) {
+        updateObjects(resolver, (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri), null, Map(FavoriteIdeaColumns.KEY_IS_DELETED -> true))
+      } else {
+        deleteObjects(resolver, (FavoriteIdeaColumns.KEY_IDEA -> idea.resource_uri), null)
+      }
+    }
+  }
+
 }

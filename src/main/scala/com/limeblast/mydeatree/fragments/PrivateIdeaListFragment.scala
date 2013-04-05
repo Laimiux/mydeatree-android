@@ -709,4 +709,12 @@ with ScalifiedTraitModule with WhereClauseModule {
 
     getIdeasFromCursor(cursor)
   }
+
+
+  //-------------------------------------------------------\\
+  //-------------- Personal Idea Adapter ------------------\\
+  //-------------------------------------------------------\\
+
+
+
 }

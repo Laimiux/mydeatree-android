@@ -23,6 +23,22 @@ object IdeaSortStrategy {
       None
     }
   }
+
+
+  def compareByModifiedDate(first: BasicIdea, second: BasicIdea): Boolean = {
+    val firstDate = Helpers.stringToDate(first.modified_date)
+    val secondDate = Helpers.stringToDate(second.modified_date)
+
+    firstDate.after(secondDate)
+  }
+
+  def compareByCreatedDate(first: BasicIdea, second: BasicIdea): Boolean = {
+    val firstDate = Helpers.stringToDate(first.modified_date)
+    val secondDate = Helpers.stringToDate(second.modified_date)
+
+    firstDate.after(secondDate)
+  }
+
 }
 
 
@@ -55,9 +71,10 @@ class IdeaComparatorByCreatedDate[A <: BasicIdea] extends Comparator[A] {
 
 class IdeaComparatorByTitle[A <: BasicIdea] extends Comparator[A] {
   def compare(first: A, second: A): Int = {
-    val firstTitle = first.title
-    val secondTitle = second.title
+    val firstTitle = first.title.toUpperCase()
+    val secondTitle = second.title.toUpperCase()
 
     firstTitle.compareTo(secondTitle)
   }
 }
+
