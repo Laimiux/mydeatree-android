@@ -95,6 +95,11 @@ class MainActivity extends SherlockFragmentActivity with ScalifiedActivity with 
     Log.d(APP_TAG, "Setting tab to " + tabSelected)
     getSupportActionBar.setSelectedNavigationItem(tabSelected)
 
+
+
+    // Just a hook for testing random things
+    SimpleFeatureTest.test()
+
     //
     //val provider = new PersonalIdeaProvider(getContentResolver)
     //provider.get_all()

@@ -25,6 +25,10 @@ class FavoriteIdeaListAdapter(val context: Context, resourceId: Int, objects: ut
 
     val idea: PublicIdea = getItem(position)
 
+    // Temporarily remove separator from favorite idea entry
+    val separator = cView.findViewById(R.id.separator)
+    separator.setVisibility(View.GONE)
+
 
 
 

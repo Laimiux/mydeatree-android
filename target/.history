@@ -380,3 +380,46 @@ compile
 android:start-device
 compile
 android:start-device
+compile
+android:start-device
+compile
+android:start-device
+compile
+android:start-device
+console
+android:start-device
+console
+compile
+console
+android:start-device
+compile
+gen-idea no-classifiers
+gen-idea
+compile
+clean
+compile
+gen-idea
+compile
+gen-idea
+compile
+gen-idea
+compile
+console
+test
+compile
+gen-idea no-classifiers
+compile
+compile
+android:start-device
+compile
+console
+compile
+android:start-device
+compile
+java
+show java-home
+show java-options
+show javac-options
+compile
+reload
+compile

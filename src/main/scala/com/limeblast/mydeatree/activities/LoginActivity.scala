@@ -11,7 +11,7 @@ import com.actionbarsherlock.app.SherlockActivity
 
 import android.net.Uri
 
-import com.limeblast.androidhelpers._
+import com.limeblast.androidhelpers.ScalifiedActivity
 import com.actionbarsherlock.view.Window
 import com.limeblast.mydeatree._
 import com.limeblast.mydeatree.AppSettings._

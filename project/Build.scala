@@ -6,13 +6,14 @@ import AndroidKeys._
 object General {
   val settings = Defaults.defaultSettings ++ Seq(
     name := "MydeaTree",
+    organization := "com.limeblast",
     version := "0.1",
     versionCode := 0,
-    scalaVersion := "2.10.0",
+    scalaVersion := "2.10.1",
     platformName in Android := "android-14",
     compileOrder := CompileOrder.JavaThenScala,
     javacOptions += "-g:none",
-    javacOptions ++= Seq("-source", "1.6"),
+    //javacOptions ++= Seq("-source", "1.6"),
     resolvers += "Maven Search" at "http://repo1.maven.org/maven2/",
     resolvers += "Sonatype" at "https://oss.sonatype.org/content/groups/scala-tools/",
     resolvers += "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/"
@@ -34,23 +35,47 @@ object General {
     proguardOption in Android := pgOptions
   )
 
-  lazy val fullAndroidSettings =
+  // Base settings for other projects
+  lazy val baseSettings =
     General.settings ++
       AndroidProject.androidSettings ++
       TypedResources.settings ++
       proguardSettings ++
-      AndroidManifestGenerator.settings ++
+      AndroidManifestGenerator.settings
+
+
+  /*
+  lazy val androidSettings = General.baseSettings ++
+    AndroidManifestGenerator.settings ++
+    AndroidMarketPublish.settings ++ Seq(
+    keyalias in Android := "mydeatree",
+    libraryDependencies += "com.google.android" % "support-v4" % "r7",
+    libraryDependencies += "org.scalatest" %% "scalatest" % "1.9.1" % "test",
+    //libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0" artifacts(Artifact("actionbarsherlock", "apklib", "apklib")) from "https://oss.sonatype.org/content/groups/scala-tools/",
+    //    libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0"  artifacts(Artifact("actionbarsherlock-4.2.0", "apklib", "apklib")) from "http://repo1.maven.org/maven2/",
+    //artifacts(Artifact("actionbarsherlock", "apklib", "apklib")) from "https://oss.sonatype.org/content/groups/scala-tools/",
+    libraryDependencies += "org.scalaz" %% "scalaz-core" % "6.0.4",
+    libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0" artifacts (Artifact("actionbarsherlock", "apklib", "apklib"))
+
+  )
+  */
+
+
+  //lazy val fullAndroidSettings = ???
+
+
+  // Settings for the main app.
+  lazy val mainSettings =
+    General.baseSettings ++
       AndroidMarketPublish.settings ++ Seq(
       keyalias in Android := "mydeatree",
-      //libraryDependencies <+= (scalaVersion)("org.scala-lang" % "scala-reflect" % _),
-      libraryDependencies += "org.scalatest" %% "scalatest" % "1.9.1" % "test",
       libraryDependencies += "com.google.android" % "support-v4" % "r7",
+      libraryDependencies += "org.scalatest" %% "scalatest" % "1.9.1" % "test",
       //libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0" artifacts(Artifact("actionbarsherlock", "apklib", "apklib")) from "https://oss.sonatype.org/content/groups/scala-tools/",
       //    libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0"  artifacts(Artifact("actionbarsherlock-4.2.0", "apklib", "apklib")) from "http://repo1.maven.org/maven2/",
       //artifacts(Artifact("actionbarsherlock", "apklib", "apklib")) from "https://oss.sonatype.org/content/groups/scala-tools/",
       libraryDependencies += "org.scalaz" %% "scalaz-core" % "6.0.4",
       libraryDependencies += "com.actionbarsherlock" % "actionbarsherlock" % "4.2.0" artifacts (Artifact("actionbarsherlock", "apklib", "apklib"))
-      //libraryDependencies += "com.actionbarsherlock" % "library" % "4.0.2"  artifacts(Artifact("library", "apklib", "apklib")),
 
     )
 }
@@ -59,7 +84,17 @@ object AndroidBuild extends Build {
   lazy val main = Project(
     "MydeaTree",
     file("."),
-    settings = General.fullAndroidSettings
+    settings = General.mainSettings
+  ) dependsOn macros
+
+  lazy val macros = Project(
+    "androidmacros",
+    file("androidmacros"),
+    settings = General.baseSettings ++ Seq(
+      name := "AndroidMacros",
+      libraryDependencies <+= (scalaVersion)("org.scala-lang" % "scala-reflect" % _),
+      libraryDependencies <+= (scalaVersion)("org.scala-lang" % "scala-compiler" % _)
+    )
   )
 
   lazy val tests = Project(

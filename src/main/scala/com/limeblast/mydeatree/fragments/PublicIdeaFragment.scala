@@ -14,14 +14,14 @@ import android.util.Log
 import com.actionbarsherlock.view.MenuItem
 import android.content
 import android.app.AlertDialog
-import content.{Intent, DialogInterface}
+import content.{ContentValues, Intent, DialogInterface}
 
 import com.limeblast.mydeatree._
 import activities.{IdeaEditActivity, NewIdeaActivity}
 import com.limeblast.mydeatree.AppSettings._
 import providers.{PrivateIdeaProvider, PublicIdeaProvider}
 import services.PublicIdeaSyncService
-import com.limeblast.androidhelpers.{ScalifiedAndroid, AlertDialogHelper, ScalifiedTraitModule}
+import com.limeblast.androidhelpers.{WhereClauseHelper, ScalifiedAndroid, AlertDialogHelper, ScalifiedTraitModule}
 import android.app.AlertDialog.Builder
 import annotation.switch
 import storage.{PrivateIdeaTableInfo, PublicIdeaTableInfo}
@@ -99,6 +99,8 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
     }
     refresh()
   }
+
+
 
   private def getIdea(resource_uri: String): Option[PublicIdea] = getResolver() match {
     case None => {
@@ -386,6 +388,9 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
   //-------------------------------------------------------\\
   //------------ VARIOUS FRAGMENT ACTIONS -----------------\\
   //-------------------------------------------------------\\
+  private def removePublicIdea(idea: PublicIdea) = ???
+
+
 
   private def editIdea(idea: PublicIdea) {
     val id = idea.id
@@ -401,6 +406,32 @@ with LoaderManager.LoaderCallbacks[Cursor] with ScalifiedTraitModule with JsonMo
     sharingIntent.setType("text/plain")
     sharingIntent.putExtra(Intent.EXTRA_TEXT, "https://mydeatree.appspot.com/idea/" + idea.id + "/")
     startActivity(Intent.createChooser(sharingIntent, "Share with "))
+  }
+
+
+
+  private def makeIdeaPrivate(idea: PublicIdea) {
+    // try to update by id. If none are returned,
+    // then talk to server and try to get this idea.
+    // if some are returned then delete public idea.
+
+    val updateValues = new ContentValues()
+    updateValues.put(PrivateIdeaTableInfo.KEY_IS_IDEA_EDITED, true)
+    updateValues.put(PrivateIdeaTableInfo.KEY_PUBLIC, false)
+
+
+    val where = WhereClauseHelper.makeWhereClause(PrivateIdeaTableInfo.KEY_ID -> idea.id)
+
+    val updated: Int = getResolver() match {
+      case None => -1
+      case Some(resolver) => resolver.update(PrivateIdeaProvider.CONTENT_URI, updateValues, where, null)
+    }
+
+
+    (updated: Int @scala.annotation.switch) match {
+      case 1 => removePublicIdea(idea)
+      case z => // something weird is happening.
+    }
   }
 
 

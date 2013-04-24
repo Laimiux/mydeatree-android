@@ -1,3 +1,0 @@
-[0m[[0minfo[0m] [0m[32mTableDefinitionSpecs:[0m[0m
-[0m[[0minfo[0m] [0m[32mDatabase Table Definitions [0m[0m
-[0m[[0minfo[0m] [0m[32m- CREATE TABLE simple_table ( column TEXT, column2 TEXT not null );[0m[0m
