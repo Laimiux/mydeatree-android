@@ -1,4 +1,7 @@
 # Ignore certain folders #
+.idea
+.idea_modules
+.DS_Store
 target
 project/target
 project/project
